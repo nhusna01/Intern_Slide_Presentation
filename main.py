@@ -1,51 +1,56 @@
 import streamlit as st
 
-# --- Page Config (full screen effect) ---
-st.set_page_config(
-    page_title="Internship Presentation",
-    layout="wide",
-)
+# --- Page Config ---
+st.set_page_config(page_title="Internship Presentation", layout="wide")
 
-# --- Custom CSS for background & styling ---
-page_bg = """
-<style>
-[data-testid="stAppViewContainer"] {
-    background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-[data-testid="stHeader"] {
-    background: rgba(0,0,0,0);
-}
-</style>
-"""
-st.markdown(page_bg, unsafe_allow_html=True)
+# --- Sidebar Navigation ---
+st.sidebar.title("📑 Navigation")
 
-# --- Cover Page Content ---
-st.markdown("<h1 style='text-align: center; color: white;'>Internship Presentation</h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center; color: white;'>Kaneka Malaysia – HR & IT Internship</h2>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center; color: white;'>Prepared by Husna, UMK</h3>", unsafe_allow_html=True)
+# Home button
+if st.sidebar.button("🏠 Home"):
+    st.session_state.page = "Home"
 
-st.markdown("---")
+# Contents section with expandable menu
+with st.sidebar.expander("📂 Contents", expanded=True):
+    choice = st.radio(
+        "Select a page:",
+        ["Intro Page", "HR Department Page", "Company Background", "Internship Tasks", "Reflection", "Thank You"],
+        key="contents_choice"
+    )
+    st.session_state.page = choice
 
-# --- Interactive Buttons ---
-col1, col2, col3 = st.columns(3)
-with col1:
-    if st.button("👩 Self Introduction"):
-        st.success("Navigate to Self Introduction in the sidebar!")
-with col2:
-    if st.button("🏢 Company Background"):
-        st.success("Navigate to Company Background in the sidebar!")
-with col3:
-    if st.button("📊 HR Chart"):
-        st.success("Navigate to HR Organizational Chart in the sidebar!")
+# --- Main Display ---
+if "page" not in st.session_state:
+    st.session_state.page = "Home"
 
-# --- Fun Interactive Element ---
-st.markdown("### 🎉 Click below to celebrate the start!")
-if st.button("Start Presentation"):
-    st.balloons()
+if st.session_state.page == "Home":
+    st.markdown("<h1 style='text-align:center;'>Internship Presentation</h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align:center;'>Kaneka Malaysia – HR & IT Internship</h3>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align:center;'>Prepared by Husna, UMK</p>", unsafe_allow_html=True)
+    st.image("cover_image.png", use_column_width=True)
+    st.markdown("---")
+    st.success("Use the sidebar to explore the Contents!")
 
-# --- Footer ---
-st.markdown("---")
-st.markdown("<p style='text-align: center; color: white;'>Use the sidebar to explore each section</p>", unsafe_allow_html=True)
+elif st.session_state.page == "Intro Page":
+    st.header("👩 Self Introduction")
+    st.write("Year 4 student at Fakulti Sains Data dan Komputeran (UMK)...")
+
+elif st.session_state.page == "HR Department Page":
+    st.header("📊 HR Organizational Chart")
+    st.write("Here is the HR department structure...")
+
+elif st.session_state.page == "Company Background":
+    st.header("🏢 Company Background")
+    st.write("Kaneka Malaysia overview...")
+
+elif st.session_state.page == "Internship Tasks":
+    st.header("📝 Internship Tasks")
+    st.write("Tasks completed during internship...")
+
+elif st.session_state.page == "Reflection":
+    st.header("💡 Reflection")
+    st.write("Key learnings and experiences...")
+
+elif st.session_state.page == "Thank You":
+    st.header("🙏 Thank You")
+    st.write("Appreciation message and closing remarks.")
