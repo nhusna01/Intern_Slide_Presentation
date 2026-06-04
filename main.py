@@ -1,3 +1,5 @@
+import streamlit as st
+
 # --- Page Config (full screen effect) ---
 st.set_page_config(
     page_title="Internship Presentation",
