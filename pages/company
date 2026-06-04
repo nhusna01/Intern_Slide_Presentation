@@ -1,3 +1,5 @@
+import streamlit as st
+
 elif st.session_state.page == "Company Background":
     st.header("🏢 Company Background")
     st.write("Kaneka Malaysia operates six companies under the Kaneka Group. Select a company below to explore its products:")
