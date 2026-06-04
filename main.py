@@ -30,8 +30,8 @@ if st.session_state.page == "Home":
     if st.button("🎉 Start Presentation"):
         st.balloons()
 
-# --- INTRO PAGE ---
-elif st.session_state.page == "Intro Page":
+# --- INTRODUCTION PAGE ---
+elif st.session_state.page == "Introduction":
     st.header("👩 Self Introduction – IT Student")
     st.write("I’m Husna, Year 4 student at Fakulti Sains Data dan Komputeran (UMK).")
     st.write("💡 Passionate about data analytics, e-learning tools, and interactive presentations.")
