@@ -1,0 +1,34 @@
+elif st.session_state.page == "Company Background":
+    st.header("🏢 Company Background")
+    st.write("Kaneka Malaysia is part of the global Kaneka Group, producing a wide range of innovative products. Select a company below to explore its products:")
+
+    # Company list with checkboxes
+    companies = {
+        "Kaneka Apical Malaysia": {
+            "products": [
+                {"name": "Polyimide Film", "image": "polyimide_film.png", "desc": "High-performance film used in electronics and aerospace."},
+                {"name": "Resin Materials", "image": "resin_material.png", "desc": "Durable resins for industrial applications."}
+            ]
+        },
+        "Kaneka Paste Malaysia": {
+            "products": [
+                {"name": "PVC Paste Resin", "image": "pvc_resin.png", "desc": "Used in flooring, wall coverings, and synthetic leather."},
+                {"name": "Plasticizers", "image": "plasticizer.png", "desc": "Additives to improve flexibility of plastics."}
+            ]
+        },
+        "Kaneka Nutrients Malaysia": {
+            "products": [
+                {"name": "Coenzyme Q10", "image": "coenzyme_q10.png", "desc": "Nutritional supplement supporting energy and heart health."},
+                {"name": "Vitamin E", "image": "vitamin_e.png", "desc": "Antioxidant for food and health industries."}
+            ]
+        }
+    }
+
+    # Display products based on selected companies
+    for company, details in companies.items():
+        if st.checkbox(company):
+            st.subheader(f"Products by {company}")
+            for product in details["products"]:
+                st.image(product["image"], caption=product["name"], use_column_width=True)
+                st.info(f"📌 {product['desc']}")
+            st.markdown("---")
