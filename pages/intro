@@ -1,1 +1,17 @@
+import streamlit as st
+
+st.header("👩 Self Introduction – IT Student")
+st.write("I’m Husna, Year 4 student at Fakulti Sains Data dan Komputeran (UMK).")
+st.write("💡 Passionate about data analytics, e-learning tools, and interactive presentations.")
+
+# Example: Skills with progress bars
+st.subheader("Technical Skills")
+st.progress(80)  # Python
+st.write("Python – Intermediate")
+st.progress(60)  # Streamlit
+st.write("Streamlit – Beginner")
+st.progress(50)  # GitHub
+st.write("GitHub – Beginner")
+st.progress(40)  # Power BI
+st.write("Power BI – Beginner")
 
