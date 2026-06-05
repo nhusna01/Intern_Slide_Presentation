@@ -48,7 +48,7 @@ if st.session_state.page == "Home":
         st.toast("Welcome Husna! Let’s dive into my internship journey.")
 
     st.subheader("📊 My Technical Skills")
-    skills = {"Python": 70, "Streamlit": 80, "GitHub": 70, "Figma": , 65, "Data Analytics": 80}
+    skills = {"Python": 70, "Streamlit": 80, "GitHub": 70, "Figma": 70, "Data Analytics": 80}
     for skill, level in skills.items():
         st.write(f"**{skill}**")
         st.progress(level)
