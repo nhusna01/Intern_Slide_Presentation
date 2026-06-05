@@ -1,5 +1,5 @@
 # --- INTRODUCTION ---
-elif st.session_state.page == "Introduction":
+elif st.session_state.page == "intro":
     st.header("👩 Self Introduction – IT Student")
     st.write("I’m Husna, Year 4 student at Fakulti Sains Data dan Komputeran (UMK).")
     st.write("💡 Passionate about data analytics, e-learning tools, and interactive presentations.")
