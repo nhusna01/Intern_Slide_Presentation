@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import streamlit.components.v1 as components
 
 # --- Page Config ---
 st.set_page_config(page_title="Internship Presentation", layout="wide")
@@ -23,38 +24,35 @@ with st.sidebar.expander("📂 Outline", expanded=True):
         ["Introduction", "Company Background", "HR Division", "Internship Tasks", "Reflection", "Thank You"],
         key="contents_choice"
     )
-    # Only update if not clicking Home
     if st.session_state.page != "Home":
         st.session_state.page = choice
 
 # --- HOME ---
 if st.session_state.page == "Home":
-    st.markdown("<h1 style='text-align:center; color:#2E86C1;'>💻 Internship Presentation</h1>", unsafe_allow_html=True)
-    st.markdown("<h3 style='text-align:center; color:#117A65;'>Kaneka Malaysia – HR & IT Internship</h3>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align:center; font-size:18px;'>Prepared by Nurul Husna, UMK – IT Student</p>", unsafe_allow_html=True)
+    # Background video using HTML
+    video_html = """
+    <video autoplay muted loop style="position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1;">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+    """
+    components.html(video_html, height=0)  # height=0 so it doesn't take space
 
-    st.image("cover_image.png", use_column_width=True)
+    # Overlay content
+    st.markdown("<h1 style='text-align:center; color:white;'>💻 Internship Presentation</h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align:center; color:white;'>Kaneka Malaysia – HR & IT Internship</h3>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align:center; color:white;'>Prepared by Nurul Husna, UMK – IT Student</p>", unsafe_allow_html=True)
 
-    # Interactive welcome
     st.success("🚀 Use the sidebar to explore the Contents!")
     if st.button("🎉 Start Presentation"):
         st.balloons()
         st.toast("Welcome Husna! Let’s dive into Data Science 🚀")
 
-    # Fun progress bars for skills
     st.subheader("📊 My Technical Skills")
-    skills = {
-        "Python": 80,
-        "Streamlit": 60,
-        "GitHub": 50,
-        "Power BI": 40,
-        "Data Analytics": 70
-    }
+    skills = {"Python": 80, "Streamlit": 60, "GitHub": 50, "Power BI": 40, "Data Analytics": 70}
     for skill, level in skills.items():
         st.write(f"**{skill}**")
         st.progress(level)
 
-    # Interactive chart
     st.subheader("📈 Internship Learning Journey")
     data = pd.DataFrame({
         "Week": list(range(1, 7)),
@@ -63,7 +61,6 @@ if st.session_state.page == "Home":
     })
     st.line_chart(data.set_index("Week"))
 
-    # Fun interactive widget
     st.subheader("🔍 Quick Poll")
     choice = st.radio("Which skill should I improve next?", ["Python", "Streamlit", "Power BI", "GitHub"])
     st.write(f"Thanks! You voted for **{choice}** 💡")
