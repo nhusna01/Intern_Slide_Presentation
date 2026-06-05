@@ -14,7 +14,7 @@ if st.sidebar.button("🏠 Home"):
 with st.sidebar.expander("📂 Contents", expanded=True):
     choice = st.radio(
         "Select a page:",
-        ["Introduction", "Company Background", "HR Division", "Internship Tasks", "Reflection", "Thank You"],
+        ["intro", "Company Background", "HR Division", "Internship Tasks", "Reflection", "Thank You"],
         key="contents_choice"
     )
     st.session_state.page = choice
