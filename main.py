@@ -45,7 +45,7 @@ if st.session_state.page == "Home":
     st.success("🚀 Use the sidebar to explore the Contents!")
     if st.button("🎉 Start Presentation"):
         st.balloons()
-        st.toast("Welcome Husna! Let’s dive into my internship journey.")
+        st.toast("Welcome Everyone! Let’s dive into my internship journey.")
 
     st.subheader("📊 My Technical Skills")
     skills = {"Python": 70, "Streamlit": 80, "GitHub": 70, "Figma": 70, "Data Analytics": 80}
