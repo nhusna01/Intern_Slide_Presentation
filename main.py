@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 import numpy as np
 
@@ -54,7 +55,6 @@ if st.session_state.page == "Home":
         st.progress(level)
 
     # Interactive chart
-
     st.subheader("📈 Internship Learning Journey")
     data = pd.DataFrame({
         "Week": list(range(1, 7)),
@@ -67,7 +67,6 @@ if st.session_state.page == "Home":
     st.subheader("🔍 Quick Poll")
     choice = st.radio("Which skill should I improve next?", ["Python", "Streamlit", "Power BI", "GitHub"])
     st.write(f"Thanks! You voted for **{choice}** 💡")
-
 
 # --- INTRODUCTION ---
 elif st.session_state.page == "Introduction":
