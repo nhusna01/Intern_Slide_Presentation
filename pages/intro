@@ -14,4 +14,3 @@ st.progress(50)  # GitHub
 st.write("GitHub – Beginner")
 st.progress(40)  # Power BI
 st.write("Power BI – Beginner")
-
