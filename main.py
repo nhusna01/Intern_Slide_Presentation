@@ -1,16 +1,27 @@
 import streamlit as st
 
+# --- Page Config ---
 st.set_page_config(page_title="Internship Presentation", layout="wide")
 
+# --- Sidebar Navigation ---
 st.sidebar.title("📑 Navigation")
 
+# Home button
+if st.sidebar.button("🏠 Home"):
+    st.session_state.page = "Home"
+
 # Contents section with expandable menu
-choice = st.radio(
-    "Select a page:",
-    ["Home", "Introduction", "Company Background", "HR Division", "Internship Tasks", "Reflection", "Thank You"],
-    key="contents_choice"
-)
-st.session_state.page = choice
+with st.sidebar.expander("📂 Contents", expanded=True):
+    choice = st.radio(
+        "Select a page:",
+        ["Introduction", "Company Background", "HR Division", "Internship Tasks", "Reflection", "Thank You"],
+        key="contents_choice"
+    )
+    st.session_state.page = choice
+
+# Default page
+if "page" not in st.session_state:
+    st.session_state.page = "Home"
 
 # --- HOME ---
 if st.session_state.page == "Home":
@@ -20,4 +31,4 @@ if st.session_state.page == "Home":
     st.image("cover_image.png", use_column_width=True)
     st.success("🚀 Use the sidebar to explore the Contents!")
     if st.button("🎉 Start Presentation"):
-        st.balloons()
+        st.balloons(),
