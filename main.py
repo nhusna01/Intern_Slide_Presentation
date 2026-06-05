@@ -45,10 +45,10 @@ if st.session_state.page == "Home":
     st.success("🚀 Use the sidebar to explore the Contents!")
     if st.button("🎉 Start Presentation"):
         st.balloons()
-        st.toast("Welcome Husna! Let’s dive into Data Science 🚀")
+        st.toast("Welcome Husna! Let’s dive into my internship journey.")
 
     st.subheader("📊 My Technical Skills")
-    skills = {"Python": 80, "Streamlit": 60, "GitHub": 50, "Power BI": 40, "Data Analytics": 70}
+    skills = {"Python": 70, "Streamlit": 80, "GitHub": 70, "Figma": , 65, "Data Analytics": 80}
     for skill, level in skills.items():
         st.write(f"**{skill}**")
         st.progress(level)
