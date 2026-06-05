@@ -1,37 +1,36 @@
 import streamlit as st
 
-elif st.session_state.page == "Company Background":
-    st.header("🏢 Company Background")
-    st.write("Kaneka Malaysia operates six companies under the Kaneka Group. Select a company below to explore its products:")
+st.header("🏢 Company Background")
+st.write("Kaneka Malaysia operates six companies under the Kaneka Group. Select a company below to explore its products:")
 
-    companies = {
-        "Kaneka Malaysia": [
-            {"name": "Kane Ace", "desc": "Impact modifiers used in plastics for toughness."},
-            {"name": "Graphite Sheet", "desc": "Thermal management material for electronics."}
-        ],
-        "Kaneka Innovative Fibers Malaysia – FPW Plant": [
-            {"name": "Kanekalon (FPW)", "desc": "Synthetic fiber produced at FPW plant, used in wigs and hair extensions."}
-        ],
-        "Kaneka Innovative Fibers Malaysia – iModa Plant": [
-            {"name": "Kanekalon (iModa)", "desc": "Specialized fiber produced at iModa plant for fashion and styling."}
-        ],
-        "Kaneka Eperan Malaysia": [
-            {"name": "Eperan", "desc": "Foam material used in automotive and packaging."}
-        ],
-        "Kaneka Paste Polymer Malaysia": [
-            {"name": "Paste PVC", "desc": "Resin for flooring, wall coverings, and synthetic leather."}
-        ],
-        "Kaneka Apical Malaysia": [
-            {"name": "Apical Polyimide Film", "desc": "High-performance film for aerospace and electronics."}
-        ],
-        "Kaneka MS Malaysia": [
-            {"name": "MS Polymer", "desc": "Base material for adhesives and sealants."}
-        ]
-    }
+companies = {
+    "Kaneka Malaysia": [
+        {"name": "Kane Ace", "desc": "Impact modifiers used in plastics for toughness."},
+        {"name": "Graphite Sheet", "desc": "Thermal management material for electronics."}
+    ],
+    "Kaneka Innovative Fibers Malaysia – FPW Plant": [
+        {"name": "Kanekalon (FPW)", "desc": "Synthetic fiber produced at FPW plant, used in wigs and hair extensions."}
+    ],
+    "Kaneka Innovative Fibers Malaysia – iModa Plant": [
+        {"name": "Kanekalon (iModa)", "desc": "Specialized fiber produced at iModa plant for fashion and styling."}
+    ],
+    "Kaneka Eperan Malaysia": [
+        {"name": "Eperan", "desc": "Foam material used in automotive and packaging."}
+    ],
+    "Kaneka Paste Polymer Malaysia": [
+        {"name": "Paste PVC", "desc": "Resin for flooring, wall coverings, and synthetic leather."}
+    ],
+    "Kaneka Apical Malaysia": [
+        {"name": "Apical Polyimide Film", "desc": "High-performance film for aerospace and electronics."}
+    ],
+    "Kaneka MS Malaysia": [
+        {"name": "MS Polymer", "desc": "Base material for adhesives and sealants."}
+    ]
+}
 
-    for company, products in companies.items():
-        if st.checkbox(company):
-            st.subheader(f"Products by {company}")
-            for product in products:
-                st.write(f"🔹 **{product['name']}** – {product['desc']}")
-            st.markdown("---")
+for company, products in companies.items():
+    if st.checkbox(company):
+        st.subheader(f"Products by {company}")
+        for product in products:
+            st.write(f"🔹 **{product['name']}** – {product['desc']}")
+        st.markdown("---")
