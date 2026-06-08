@@ -115,19 +115,39 @@ def page_container(content_func, bg_color="#3366cc"):
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
+import streamlit.components.v1 as components
+
 if st.session_state.page == "Home":
+    # Video background
+    video_html = """
+    <video autoplay muted loop style="
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    ">
+        <source src="images/intro_vid.mp4" type="video/mp4">
+    </video>
+    """
+    components.html(video_html, height=600)
+
+    # Overlay content
     st.markdown(
         """
         <div class="hero-banner" style="
-            background: linear-gradient(90deg, #001233, #003366);
             padding: 2rem;
             border-radius: 14px;
             text-align: center;
             color: white;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+            position: relative;
+            z-index: 1;
+            background: rgba(0,0,0,0.4); /* semi-transparent overlay for readability */
         ">
             <img src="images/home_icon.png" width="100">
-            <h1>Intern Slide Presentation ✨</h1>
+            <h1>Welcome to Your Dashboard ✨</h1>
             <p>Premium design, smooth navigation, and clear insights.</p>
         </div>
         """,
