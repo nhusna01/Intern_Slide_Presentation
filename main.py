@@ -12,46 +12,42 @@ st.markdown(
     /* Sidebar title - make it pop */
     [data-testid="stSidebar"] h2 {
         color: #ffd700; /* Gold accent */
-        font-weight: 900; /* Extra bold */
+        font-weight: 900;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 22px;
-        text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.7); /* Glow effect */
+        text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.7);
     }
 
-    /* Sidebar buttons */
-    .sidebar-button {
-        display: flex;
-        align-items: center;
-        background-color: #0d2748;
+    /* Home button styling */
+    div[data-testid="stSidebar"] button[kind="secondary"] {
+        background-color: #0d2748; /* Dark blue */
+        color: #ffffff;
+        border: 2px solid #ffd700; /* Gold border */
         border-radius: 10px;
-        padding: 12px 18px;
-        margin-bottom: 12px;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        border: 1px solid #ffd700;
         font-weight: bold;
-        color: #ffffff;
+        padding: 10px 16px;
+        transition: all 0.3s ease;
     }
-    .sidebar-button:hover {
-        background-color: #4a90e2; /* Lighter blue */
-        border: 1px solid #ffd700;
+    div[data-testid="stSidebar"] button[kind="secondary"]:hover {
+        background-color: #3366cc; /* Lighter blue on hover */
         color: #ffffff;
+        border: 2px solid #ffd700;
     }
 
-    /* Expander styling - distinct color */
+    /* Expander styling - distinct color to pop out */
     [data-testid="stExpander"] {
-        background-color: #3366cc !important; /* Brighter blue */
+        background-color: #0d2748 !important; /* Same blue as Home */
         border-radius: 8px;
-        border: 1px solid #ffd700;
+        border: 2px solid #ffd700;
     }
     [data-testid="stExpander"] div {
         color: #ffffff !important;
         font-weight: bold;
     }
     [data-testid="stExpander"]:hover {
-        background-color: #5fa8f5 !important; /* Even lighter hover */
-        border: 1px solid #ffd700;
+        background-color: #3366cc !important; /* Lighter hover */
+        border: 2px solid #ffd700;
     }
     </style>
     """,
@@ -61,7 +57,7 @@ st.markdown(
 # --- Sidebar Navigation ---
 st.sidebar.title("Navigation")
 
-# Home button (separate)
+# Home button (styled in blue + gold border)
 if st.sidebar.button("🏠 Home", key="home_btn"):
     st.session_state.page = "Home"
 
@@ -77,55 +73,3 @@ with st.sidebar.expander("📚 Slide Chapter", expanded=True):
         st.session_state.page = "Chapter 4"
     if st.button("📖 Chapter 5"):
         st.session_state.page = "Chapter 5"
-
-# --- Page Rendering ---
-def page_container(content_func, bg_color="#f8f9fa"):
-    st.markdown(
-        f"""
-        <style>
-        .page-box {{
-            background-color: {bg_color};
-            padding: 2rem;
-            border-radius: 14px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-            transition: all 0.3s ease-in-out;
-            margin-top: 1rem;
-        }}
-        .page-box:hover {{
-            transform: scale(1.01);
-            box-shadow: 0 8px 18px rgba(0,0,0,0.35);
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-    with st.container():
-        st.markdown("<div class='page-box'>", unsafe_allow_html=True)
-        content_func()
-        st.markdown("</div>", unsafe_allow_html=True)
-
-# Example homepage + chapters
-if "page" not in st.session_state:
-    st.session_state.page = "Home"
-
-if st.session_state.page == "Home":
-    st.markdown(
-        """
-        <div class="hero-banner">
-            <img src="images/home_icon.png" width="100">
-            <h1>Welcome to Your Dashboard ✨</h1>
-            <p>Premium design, smooth navigation, and clear insights.</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-elif st.session_state.page == "Chapter 1":
-    page_container(lambda: st.write("📖 Content for Chapter 1"))
-elif st.session_state.page == "Chapter 2":
-    page_container(lambda: st.write("📖 Content for Chapter 2"))
-elif st.session_state.page == "Chapter 3":
-    page_container(lambda: st.write("📖 Content for Chapter 3"))
-elif st.session_state.page == "Chapter 4":
-    page_container(lambda: st.write("📖 Content for Chapter 4"))
-elif st.session_state.page == "Chapter 5":
-    page_container(lambda: st.write("📖 Content for Chapter 5"))
