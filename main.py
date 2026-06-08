@@ -128,13 +128,13 @@ if st.session_state.page == "Home":
         width: 100%;
         height: 100vh;
         z-index: -1;
-        object-fit: cover;
+        object-fit: contain;
         background-color: black;
     ">
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
     """
-    components.html(video_html, height=500)
+    components.html(video_html, height=550)
 
     # Overlay content
     def home_content():
@@ -148,20 +148,21 @@ if st.session_state.page == "Home":
             color: white;
             position: relative;
             z-index: 1;
-            background: rgba(0,0,0,0.4); /* semi-transparent overlay for readability */
-            ">
+            background: rgba(0,51,102,0.5); /* premium deep blue overlay */            ">
             <img src="images/home_icon.png" width="100">
             <h1>Welcome to My Internship Journey ✨</h1>
-            <p>Use the sidebar to explore the Contents!</p>
+            <p style="color:red; font-weight:bold;">Use the sidebar to explore the Contents!</p>
             </div>
             """,
             unsafe_allow_html=True
         )
 
-        # Success + Start Presentation directly under banner
+        # Button directly under banner
+        st.markdown("<div style='text-align:center; margin-top:1rem;'>", unsafe_allow_html=True)
         if st.button("🎉 Start Presentation"):
             st.balloons()
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
+        st.markdown("</div>", unsafe_allow_html=True)
 
         # Title & Intro
         st.markdown("<h1 style='text-align:center;'>💻 Internship Presentation</h1>", unsafe_allow_html=True)
