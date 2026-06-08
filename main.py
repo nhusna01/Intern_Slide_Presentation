@@ -12,7 +12,7 @@ st.markdown(
     }
 
     /* Sidebar title */
-    [data-testid="stSidebar"] h2 {
+    [data-testid="stSidebar"] h1 {
         color: #ffffff;       /* White text */
         font-weight: bold;    /* Bold font */
         text-transform: uppercase;
