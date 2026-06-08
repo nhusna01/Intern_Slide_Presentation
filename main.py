@@ -157,37 +157,50 @@ if st.session_state.page == "Home":
             unsafe_allow_html=True
         )
 
-        # Button directly under banner
+    
+        # Centered button under banner
         st.markdown("<div style='text-align:center; margin-top:1rem;'>", unsafe_allow_html=True)
         if st.button("🎉 Start Presentation", key="start_btn"):
             st.balloons()
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
         st.markdown("</div>", unsafe_allow_html=True)
-
+        
         # Custom CSS for button styling
         st.markdown(
             """
             <style>
-            /* Target the specific button by key */
+            /* Center the button container */
+            div[data-testid="stButton"][key="start_btn"] {
+                display: flex;
+                justify-content: center;
+            }
+        
+            /* Actual button styling */
             [data-testid="stButton"][key="start_btn"] {
-                background-color: #3366cc !important;  
+                background-color: #3366cc !important;  /* Default deep blue */
                 border: 2px solid #ffd700;             /* Gold border */
                 border-radius: 10px;
                 padding: 0.6rem 1.2rem;
+                margin: auto;
             }
+        
+            /* Button text */
             [data-testid="stButton"][key="start_btn"] div {
                 color: #ffffff !important;             /* White text */
                 font-weight: bold;
                 font-size: 16px;
             }
+        
+            /* Hover effect */
             [data-testid="stButton"][key="start_btn"]:hover {
-                background-color: #5fa8f5 !important;  /* Hover background */
-                border: 2px solid #ffd700;
+                background-color: #5fa8f5 !important;  /* Lighter blue on hover */
+                border: 2px solid #ffd700;             /* Gold border stays */
             }
             </style>
             """,
             unsafe_allow_html=True
         )
+
 
 
         # Title & Intro
