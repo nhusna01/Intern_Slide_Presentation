@@ -19,31 +19,33 @@ st.markdown(
         letter-spacing: 1.5px;
     }
 
-    /* Sidebar buttons */
-    .sidebar-button {
-        display: flex;
-        align-items: center;
-        background-color: #3366cc; /* Default dark blue */
-        border-radius: 10px;
-        padding: 12px 18px;
-        margin-bottom: 12px;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        border: 1px solid #ffd700; /* Gold border */
-        font-weight: bold;
-        color: #ffffff;
-    }
-    .sidebar-button:hover {
-        background-color: #4a90e2; /* Lighter blue for hover */
-        border: 1px solid #ffd700;
-        color: #ffffff; /* Text stays visible */
-    }
 
-    /* Active button styling */
-    .sidebar-button:active {
-        background-color: #ffd700; /* Gold highlight */
-        color: #000000; /* Black text for contrast */
-    }
+    /* Sidebar buttons - styled like Slide Chapter expander */
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    background-color: #3366cc;   /* Same as expander */
+    border-radius: 8px;          /* Match expander corners */
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #ffd700;   /* Gold border */
+    font-weight: bold;
+    color: #ffffff;              /* White text */
+}
+
+.sidebar-button:hover {
+    background-color: #5fa8f5;   /* Same hover as expander */
+    border: 1px solid #ffd700;
+    color: #ffffff;
+}
+
+.sidebar-button:active {
+    background-color: #ffd700;   /* Gold highlight */
+    color: #000000;              /* Black text for contrast */
+}
+
 
     /* Expander styling - distinct color to pop out */
     [data-testid="stExpander"] {
