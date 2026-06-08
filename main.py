@@ -181,8 +181,7 @@ if st.session_state.page == "Home":
                 border: 2px solid #ffd700 !important;  /* Gold border */
                 border-radius: 10px !important;
                 padding: 0.6rem 1.2rem !important;
-                margin: auto !important;
-                cursor: pointer;
+                margin-left: 40px !important;  /* moves button slightly
             }
         
             /* Button text */
