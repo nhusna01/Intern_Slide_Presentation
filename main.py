@@ -3,36 +3,63 @@ import pandas as pd
 import numpy as np
 import streamlit.components.v1 as components
 
-# --- Page Config ---
-st.set_page_config(page_title="Internship Presentation", layout="wide")
-
-# --- Sidebar Navigation ---
-st.sidebar.title("📑 Navigation")
-
-# Default page setup
+# Initialize session state
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
-# Home button (separate from other pages)
-if st.sidebar.button("🏠 Home"):
-    st.session_state.page = "Home"
+# Sidebar layout
+st.sidebar.title("Navigation")
 
-# Contents section with expandable menu
-with st.sidebar.expander("📂 Outline", expanded=True):
-    choice = st.radio(
-        "Select a page:",
-        ["Introduction", "Company Background", "HR Division", "Internship Tasks", "Reflection", "Thank You"],
-        key="contents_choice"
-    )
-    if st.session_state.page != "Home":
-        st.session_state.page = choice
+# Home button with image
+col1, col2 = st.sidebar.columns([1,4])
+with col1:
+    st.image("images/home_icon.jpg", width=30)  # Your uploaded image
+with col2:
+    if st.button("Home"):
+        st.session_state.page = "Home"
+
+# Other pages
+if st.sidebar.button("Introduction"):
+    st.session_state.page = "Introduction"
+
+if st.sidebar.button("Company Background"):
+    st.session_state.page = "Company Background"
+
+if st.sidebar.button("HR Division"):
+    st.session_state.page = "HR Division"
+
+if st.sidebar.button("Training Development"):
+    st.session_state.page = "Training Development"
+
+# Page content
+if st.session_state.page == "Home":
+    st.header("Welcome to the Home Page")
+    st.write("This is your cover page with the Home icon.")
+
+elif st.session_state.page == "Introduction":
+    st.header("Introduction")
+    st.write("Content for the Introduction page.")
+
+elif st.session_state.page == "Company Background":
+    st.header("Company Background")
+    st.write("Content for the Company Background page.")
+
+elif st.session_state.page == "HR Division":
+    st.header("HR Division")
+    st.write("Content for the HR Division page.")
+
+elif st.session_state.page == "Training Development":
+    st.header("Training Development")
+    st.write("Content for the Training Development page.")
+col1, col2 = st.sidebar.columns([1,4])
+
 
 # --- HOME ---
 if st.session_state.page == "Home":
     # Background video using HTML
     video_html = """
     <video autoplay muted loop style="position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1;">
-        <source src="background.mp4" type="video/mp4">
+        <source src="intro_vid.mp4" type="video/mp4">
     </video>
     """
     components.html(video_html, height=0)  # height=0 so it doesn't take space
