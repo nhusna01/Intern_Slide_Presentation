@@ -170,7 +170,7 @@ if st.session_state.page == "Home":
             <style>
             /* Target the specific button by key */
             [data-testid="stButton"][key="start_btn"] {
-                background-color: #3366cc !important;  /* Default background */
+                background-color: #3366cc !important;  
                 border: 2px solid #ffd700;             /* Gold border */
                 border-radius: 10px;
                 padding: 0.6rem 1.2rem;
