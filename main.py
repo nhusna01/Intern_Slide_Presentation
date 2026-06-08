@@ -22,17 +22,19 @@ st.markdown(
     
     /* Sidebar button */
     [data-testid="stButton"] {
-        background-color: #3366cc !important; /* Brighter blue */
+        background-color: #3366cc !important; /* Default blue */
         border-radius: 8px;
-        border: 1px solid #ffd700;
+        border: 1px solid #ffd700;            /* Border same as background */
     }
+
     [data-testid="stButton"] div {
-        color:#3366cc !important;
+        color: #ffffff !important;            /* White text */
         font-weight: bold;
     }
+
     [data-testid="stButton"]:hover {
-        background-color: #3366cc !important; /* Even lighter hover */
-        border: 1px solid #ffd700;
+        background-color: #5fa8f5 !important; /* Lighter hover blue */
+        border: 1px solid #5fa8f5;            /* Border matches hover background */
     }
 
 
