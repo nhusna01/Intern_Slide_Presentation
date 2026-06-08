@@ -23,7 +23,7 @@ nav_button("images/home_icon.jpg", "Home", "Home")
 nav_button("images/self_intro.svg", "Introduction", "Introduction")
 nav_button("images/company_icon.png", "Company Background", "Company Background")
 nav_button("images/hr_icon.png", "HR Division", "HR Division")
-nav_button("images/self_development.png", "Growth Roadmap", "The Growth Roadmap")
+nav_button("images/self_development.png", "The Growth Roadmap", "The Growth Roadmap")
 
 # --- Helper function for consistent container style ---
 def page_container(content_func, bg_color="#f0f8ff"):
@@ -113,7 +113,7 @@ elif st.session_state.page == "HR Division":
 
 # --- TRAINING DEVELOPMENT ---
 elif st.session_state.page == "The Growth Roadmap":
-    def training_content():
+    def growth_content():
         st.header("📚 The Growth Roadmap")
         st.write("Learning modules and SPL creation tasks.")
     page_container(growth_content, bg_color="#f0fff0")
