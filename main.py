@@ -4,12 +4,9 @@ import streamlit as st
 st.markdown(
     """
     <style>
-    /* Sidebar background - premium dark navy with sparkle effect */
+    /* Sidebar background - premium dark blue */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0a1a3c, #001233);
-        background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 1px, transparent 1px),
-                          radial-gradient(circle at 70% 80%, rgba(255,255,255,0.1) 1px, transparent 1px);
-        background-size: 120px 120px;
+        background: linear-gradient(180deg, #002147, #001233); /* Deep Blue Gradient */
     }
 
     /* Sidebar title */
@@ -43,11 +40,11 @@ st.markdown(
         color: #ffffff;
     }
 
-    /* Expander styling - make it pop */
+    /* Expander styling - distinct color to pop out */
     [data-testid="stExpander"] {
-        background-color: #142850 !important; /* Different shade to stand out */
+        background-color: #1a3a6e !important; /* Lighter navy shade */
         border-radius: 8px;
-        border: 1px solid #ffd700;
+        border: 1px solid #ffd700; /* Gold border */
     }
     [data-testid="stExpander"] div {
         color: #ffffff !important;
