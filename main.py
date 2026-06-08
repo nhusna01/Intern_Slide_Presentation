@@ -127,7 +127,8 @@ if st.session_state.page == "Home":
         min-width: 100%;
         min-height: 100%;
         z-index: -1;
-        object-fit: cover;
+        object-fit: contain;
+        background-color: black;
     ">
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
