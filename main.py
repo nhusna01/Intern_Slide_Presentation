@@ -1,6 +1,8 @@
 import streamlit as st
 
-# --- Sidebar Styling ---
+# ==============================
+# 🎨 Sidebar Styling (CSS)
+# ==============================
 st.markdown(
     """
     <style>
@@ -62,8 +64,25 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# --- Sidebar Navigation ---
+# ==============================
+# 📂 Sidebar Navigation
+# ==============================
 st.sidebar.title("Navigation")
+
+st.sidebar.markdown(
+    """
+    <style>
+    .sidebar-title {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.sidebar.markdown("<div class='sidebar-title'>Navigation</div>", unsafe_allow_html=True)
 
 # Home button (separate)
 if st.sidebar.button("🏠 Home", key="home_btn"):
@@ -82,7 +101,9 @@ with st.sidebar.expander("📚 Slide Chapter", expanded=True):
     if st.button("📖 Chapter 5"):
         st.session_state.page = "Chapter 5"
 
-# --- Page Rendering ---
+# ==============================
+# 🖼️ Page Rendering Function
+# ==============================
 def page_container(content_func, bg_color="#f8f9fa"):
     st.markdown(
         f"""
@@ -108,7 +129,9 @@ def page_container(content_func, bg_color="#f8f9fa"):
         content_func()
         st.markdown("</div>", unsafe_allow_html=True)
 
-# Example homepage + chapters
+# ==============================
+# 🏠 Homepage + Chapters Content
+# ==============================
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
