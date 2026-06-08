@@ -20,10 +20,10 @@ def nav_button(icon_path, label, page_name):
 
 # Add buttons with icons
 nav_button("images/home_icon.jpg", "Home", "Home")
-nav_button("images/intro_icon.jpg", "Introduction", "Introduction")
+nav_button("images/self_intro.jpg", "Self Introduction", "Self Introduction")
 nav_button("images/company_icon.jpg", "Company Background", "Company Background")
 nav_button("images/hr_icon.jpg", "HR Division", "HR Division")
-nav_button("images/training_icon.jpg", "Training Development", "Training Development")
+nav_button("images/self_development.jpg", "The Growth Roadmap", "The Growth Roadmap")
 
 # --- Helper function for consistent layout ---
 def page_container(content_func):
