@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 # ==============================
 # 🎨 Sidebar Styling (CSS)
@@ -129,7 +130,7 @@ if st.session_state.page == "Home":
         z-index: -1;
         object-fit: cover;
     ">
-        <source src="images/intro_vid.mp4" type="video/mp4">
+        <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
     """
     components.html(video_html, height=600)
