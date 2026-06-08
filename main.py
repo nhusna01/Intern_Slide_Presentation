@@ -31,7 +31,7 @@ st.markdown(
         font-weight: bold;
     }
     [data-testid="stButton"]:hover {
-        background-color: #5fa8f5 !important; /* Even lighter hover */
+        background-color: #3366cc !important; /* Even lighter hover */
         border: 1px solid #ffd700;
     }
 
