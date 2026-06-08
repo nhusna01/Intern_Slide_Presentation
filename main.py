@@ -159,10 +159,36 @@ if st.session_state.page == "Home":
 
         # Button directly under banner
         st.markdown("<div style='text-align:center; margin-top:1rem;'>", unsafe_allow_html=True)
-        if st.button("🎉 Start Presentation"):
+        if st.button("🎉 Start Presentation", key="start_btn"):
             st.balloons()
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
         st.markdown("</div>", unsafe_allow_html=True)
+
+        # Custom CSS for button styling
+        st.markdown(
+            """
+            <style>
+            /* Target the specific button by key */
+            [data-testid="stButton"][key="start_btn"] {
+                background-color: #3366cc !important;  /* Default background */
+                border: 2px solid #ffd700;             /* Gold border */
+                border-radius: 10px;
+                padding: 0.6rem 1.2rem;
+            }
+            [data-testid="stButton"][key="start_btn"] div {
+                color: #ffffff !important;             /* White text */
+                font-weight: bold;
+                font-size: 16px;
+            }
+            [data-testid="stButton"][key="start_btn"]:hover {
+                background-color: #5fa8f5 !important;  /* Hover background */
+                border: 2px solid #ffd700;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+
 
         # Title & Intro
         st.markdown("<h1 style='text-align:center;'>💻 Internship Presentation</h1>", unsafe_allow_html=True)
