@@ -159,7 +159,6 @@ if st.session_state.page == "Home":
         )
 
         # Success + Start Presentation directly under banner
-        st.success("")
         if st.button("🎉 Start Presentation"):
             st.balloons()
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
