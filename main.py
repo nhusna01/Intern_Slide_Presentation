@@ -20,10 +20,10 @@ def nav_button(icon_path, label, page_name):
 
 # Add buttons with icons
 nav_button("images/home_icon.jpg", "Home", "Home")
-nav_button("images/self_intro.jpg", "Self Introduction", "Self Introduction")
-nav_button("images/company_icon.jpg", "Company Background", "Company Background")
-nav_button("images/hr_icon.jpg", "HR Division", "HR Division")
-nav_button("images/self_development.jpg", "The Growth Roadmap", "The Growth Roadmap")
+nav_button("images/self_intro.svg", "Self Introduction", "Self Introduction")
+nav_button("images/company_icon.png", "Company Background", "Company Background")
+nav_button("images/hr_icon.png", "HR Division", "HR Division")
+nav_button("images/self_development.png", "The Growth Roadmap", "The Growth Roadmap")
 
 # --- Helper function for consistent layout ---
 def page_container(content_func):
@@ -47,7 +47,7 @@ if st.session_state.page == "Home":
     # Background video
     video_html = """
     <video autoplay muted loop style="position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1;">
-        <source src="images/intro_vid.mp4" type="video/mp4">
+        <source src="images/intro_vid.mp4" type="video/mp4"
     </video>
     """
     components.html(video_html, height=400)  # give height so video renders
