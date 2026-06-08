@@ -8,15 +8,53 @@ if "page" not in st.session_state:
     st.session_state.page = "Home"
 
 # --- Sidebar Navigation ---
-st.sidebar.title("Navigation")
+st.sidebar.title("CONTENTS")
+
+# Custom CSS for sidebar buttons
+st.markdown(
+    """
+    <style>
+    .sidebar-button {
+        display: flex;
+        align-items: center;
+        background-color: #f0f8ff;
+        border-radius: 8px;
+        padding: 8px;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .sidebar-button:hover {
+        background-color: #cce7ff;
+        transform: scale(1.02);
+    }
+    .sidebar-icon {
+        width: 30px;
+        margin-right: 10px;
+    }
+    .sidebar-label {
+        font-weight: 600;
+        font-size: 16px;
+        color: #333;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 def nav_button(icon_path, label, page_name):
-    col1, col2 = st.sidebar.columns([1,4])
-    with col1:
-        st.image(icon_path, width=30)
-    with col2:
-        if st.button(label, key=page_name):
-            st.session_state.page = page_name
+    # Render custom HTML button
+    if st.sidebar.button(label, key=page_name):
+        st.session_state.page = page_name
+    st.sidebar.markdown(
+        f"""
+        <div class="sidebar-button">
+            <img src="{icon_path}" class="sidebar-icon">
+            <span class="sidebar-label">{label}</span>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 # Add buttons with icons
 nav_button("images/home_icon.jpg", "Home", "Home")
@@ -24,6 +62,7 @@ nav_button("images/self_intro.svg", "Introduction", "Introduction")
 nav_button("images/company_icon.png", "Company Background", "Company Background")
 nav_button("images/hr_icon.png", "HR Division", "HR Division")
 nav_button("images/self_development.png", "The Growth Roadmap", "The Growth Roadmap")
+
 
 # --- Helper function for consistent container style ---
 def page_container(content_func, bg_color="#f0f8ff"):
