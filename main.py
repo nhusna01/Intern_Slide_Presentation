@@ -28,7 +28,7 @@ st.markdown(
     }
 
     [data-testid="stButton"] div {
-        color: #3366cc !important;            /* White text */
+        color: #ffffff !important;            /* White text */
         font-weight: bold;
     }
 
