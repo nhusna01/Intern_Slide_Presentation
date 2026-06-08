@@ -5,11 +5,13 @@ import streamlit as st
 # ==============================
 st.markdown(
     """
-    <style>
     /* Sidebar background - premium deep blue gradient */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #002147, #001233);
+        background: linear-gradient(180deg, #001233, #002147, #003366); /* Multi-tone gradient */
+        box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.2);             /* Subtle golden glow */
+        border-right: 2px solid #ffd700;                               /* Gold accent line */
     }
+
 
     /* Sidebar title */
     [data-testid="stSidebar"] h1 {
