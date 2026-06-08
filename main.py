@@ -82,7 +82,7 @@ with st.sidebar.expander("📚 Slide Chapter", expanded=True):
 # ==============================
 # 🖼️ Page Rendering Function
 # ==============================
-def page_container(content_func, bg_color="#f8f9fa"):
+def page_container(content_func, bg_color="#3366cc"):
     st.markdown(
         f"""
         <style>
