@@ -136,24 +136,60 @@ if st.session_state.page == "Home":
     components.html(video_html, height=550)
 
     # Overlay content
-    st.markdown(
-        """
-        <div class="hero-banner" style="
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            color: white;
-            position: relative;
-            z-index: 1;
-            background: rgba(0,0,0,0.4); /* semi-transparent overlay for readability */
-        ">
-            <img src="images/home_icon.png" width="100">
-            <h1>Welcome to My Internship Journey ✨</h1>
-            <p>Premium design, smooth navigation, and clear insights.</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+        def home_content():
+        # Hero Banner
+        st.markdown(
+            """
+            <div class="hero-banner" style="
+                padding: 2rem;
+                border-radius: 20px;
+                text-align: center;
+                color: white;
+                position: relative;
+                z-index: 1;
+                background: rgba(0,0,0,0.4); /* semi-transparent overlay for readability */
+            ">
+                <img src="images/home_icon.png" width="100">
+                <h1>Welcome to My Internship Journey ✨</h1>
+                <p>Premium design, smooth navigation, and clear insights.</p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        # Success + Start Presentation directly under banner
+        st.success("🚀 Use the sidebar to explore the Contents!")
+        if st.button("🎉 Start Presentation"):
+            st.balloons()
+            st.toast("Welcome Everyone! Let’s dive into my internship journey.")
+
+        # Title & Intro
+        st.markdown("<h1 style='text-align:center;'>💻 Internship Presentation</h1>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align:center;'>Kaneka Malaysia – HR & IT Internship</h3>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align:center;'>Prepared by Nurul Husna, UMK – IT Student</p>", unsafe_allow_html=True)
+
+        # Technical Skills
+        st.subheader("📊 My Technical Skills")
+        skills = {"Python": 70, "Streamlit": 80, "GitHub": 70, "Figma": 70, "Data Analytics": 80}
+        for skill, level in skills.items():
+            st.write(f"**{skill}**")
+            st.progress(level)
+
+        # Internship Learning Journey
+        st.subheader("📈 Internship Learning Journey")
+        data = pd.DataFrame({
+            "Week": list(range(1, 7)),
+            "Tasks Completed": np.random.randint(2, 10, 6),
+            "Skills Improved": np.random.randint(1, 5, 6)
+        })
+        st.line_chart(data.set_index("Week"))
+
+        # Quick Poll
+        st.subheader("🔍 Quick Poll")
+        choice = st.radio("Which skill should I improve next?", ["Python", "Streamlit", "Power BI", "GitHub"])
+        st.write(f"Thanks! You voted for **{choice}** 💡")
+
+    page_container(home_content, bg_color="#e6f7ff"
 
 elif st.session_state.page == "Chapter 1":
     page_container(lambda: st.write("📖 Content for Chapter 1"))
