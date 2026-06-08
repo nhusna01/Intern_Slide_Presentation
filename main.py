@@ -122,8 +122,8 @@ if st.session_state.page == "Home":
     video_html = """
     <video autoplay muted loop style="
         position: fixed;
-        top: 20;
-        left: 20;
+        top: 50;
+        left: 50;
         width: 100%;
         height: 100vh;
         z-index: -1;
@@ -133,7 +133,7 @@ if st.session_state.page == "Home":
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
     """
-    components.html(video_html, height=600)
+    components.html(video_html, height=550)
 
     # Overlay content
     st.markdown(
