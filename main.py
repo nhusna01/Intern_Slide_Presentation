@@ -61,10 +61,6 @@ st.markdown(
 # --- Sidebar Navigation ---
 st.sidebar.title("Navigation")
 
-
-# --- Sidebar Navigation ---
-st.sidebar.title("Navigation")
-
 # Home button (separate)
 if st.sidebar.button("🏠 Home", key="home_btn"):
     st.session_state.page = "Home"
