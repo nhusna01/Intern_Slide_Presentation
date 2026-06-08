@@ -35,7 +35,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# --- Home button separate ---
+# --- Home button with icon ---
 col1, col2 = st.sidebar.columns([1,4])
 with col1:
     st.image("images/home_icon.jpg", width=30)  # your uploaded icon
@@ -53,7 +53,6 @@ with st.sidebar.expander("📂 Contents", expanded=True):
         st.session_state.page = "HR Division"
     if st.button("The Growth Roadmap"):
         st.session_state.page = "The Growth Roadmap"
-
 
 # --- Helper function for consistent container style ---
 def page_container(content_func, bg_color="#f0f8ff"):
