@@ -123,8 +123,8 @@ if st.session_state.page == "Home":
     video_html = """
     <video autoplay muted loop style="
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 50;
+        left: 50;
         width: 100%;
         height: 100vh;
         z-index: -1;
@@ -134,7 +134,7 @@ if st.session_state.page == "Home":
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
     """
-    components.html(video_html, height=550)
+    components.html(video_html, height=500)
 
     # Overlay content
     def home_content():
@@ -152,14 +152,14 @@ if st.session_state.page == "Home":
             ">
             <img src="images/home_icon.png" width="100">
             <h1>Welcome to My Internship Journey ✨</h1>
-            <p>Premium design, smooth navigation, and clear insights.</p>
+            <p>Use the sidebar to explore the Contents!</p>
             </div>
             """,
             unsafe_allow_html=True
         )
 
         # Success + Start Presentation directly under banner
-        st.success("🚀 Use the sidebar to explore the Contents!")
+        st.success("")
         if st.button("🎉 Start Presentation"):
             st.balloons()
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
