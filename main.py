@@ -5,46 +5,51 @@ import streamlit as st
 # ==============================
 st.markdown(
     """
+    <style>
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #001233, #002147, #003366, #004080); /* Richer gradient */
-        box-shadow: inset 0 0 25px rgba(255, 215, 0, 0.25);                      /* Stronger glow */
-        border-right: 3px solid #ffd700;                                        /* Thicker gold accent */
-        transition: background 0.8s ease-in-out;                                /* Smooth gradient shift */
+        background: linear-gradient(180deg, #001233, #002147, #003366, #004080);
+        background-size: 200% 200%;
+        animation: sparkle 6s ease-in-out infinite;   /* Shimmer effect */
+        box-shadow: inset 0 0 25px rgba(255, 215, 0, 0.25);
+        border-right: 3px solid #ffd700;
+        transition: background 0.8s ease-in-out;
     }
     [data-testid="stSidebar"]:hover {
-        background: linear-gradient(180deg, #002147, #003366, #004080, #0055aa); /* Dynamic hover effect */
+        background: linear-gradient(180deg, #002147, #003366, #004080, #0055aa);
+    }
+
+    @keyframes sparkle {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
     /* Sidebar title */
     [data-testid="stSidebar"] h1 {
-        color: #ffffff;       /* White text */
-        font-weight: bold;    /* Bold font */
+        color: #ffffff;
+        font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1.5px;
     }
 
-    
     /* Sidebar button */
     [data-testid="stButton"] {
-        background-color: #3366cc !important; /* Default blue */
+        background-color: #3366cc !important;
         border-radius: 8px;
-        border: 1px solid #ffd700;            /* Border same as background */
+        border: 1px solid #ffd700;
     }
-
     [data-testid="stButton"] div {
-        color: #ffffff !important;            /* White text */
+        color: #ffffff !important;
         font-weight: bold;
     }
-
     [data-testid="stButton"]:hover {
-        background-color: #5fa8f5 !important; /* Lighter hover blue */
-        border: 1px solid #ffd700;            /* Border matches hover background */
+        background-color: #5fa8f5 !important;
+        border: 1px solid #ffd700;
     }
 
-
-    /* Expander styling - distinct color to pop out */
+    /* Expander styling */
     [data-testid="stExpander"] {
-        background-color: #3366cc !important; /* Brighter blue */
+        background-color: #3366cc !important;
         border-radius: 8px;
         border: 1px solid #ffd700;
     }
@@ -53,7 +58,7 @@ st.markdown(
         font-weight: bold;
     }
     [data-testid="stExpander"]:hover {
-        background-color: #5fa8f5 !important; /* Even lighter hover */
+        background-color: #5fa8f5 !important;
         border: 1px solid #ffd700;
     }
     </style>
@@ -64,7 +69,6 @@ st.markdown(
 # ==============================
 # 📂 Sidebar Navigation
 # ==============================
-# Sidebar Navigation
 st.sidebar.title("Navigation")
 
 # Home button
@@ -76,7 +80,6 @@ with st.sidebar.expander("📚 Slide Chapter", expanded=True):
     for i in range(1, 6):
         if st.sidebar.button(f"📖 Chapter {i}", key=f"chapter_{i}"):
             st.session_state.page = f"Chapter {i}"
-
 
 # ==============================
 # 🖼️ Page Rendering Function
@@ -115,7 +118,14 @@ if "page" not in st.session_state:
 if st.session_state.page == "Home":
     st.markdown(
         """
-        <div class="hero-banner">
+        <div class="hero-banner" style="
+            background: linear-gradient(90deg, #001233, #003366);
+            padding: 2rem;
+            border-radius: 14px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+        ">
             <img src="images/home_icon.png" width="100">
             <h1>Welcome to Your Dashboard ✨</h1>
             <p>Premium design, smooth navigation, and clear insights.</p>
@@ -123,13 +133,5 @@ if st.session_state.page == "Home":
         """,
         unsafe_allow_html=True
     )
-elif st.session_state.page == "Chapter 1":
-    page_container(lambda: st.write("📖 Content for Chapter 1"))
-elif st.session_state.page == "Chapter 2":
-    page_container(lambda: st.write("📖 Content for Chapter 2"))
-elif st.session_state.page == "Chapter 3":
-    page_container(lambda: st.write("📖 Content for Chapter 3"))
-elif st.session_state.page == "Chapter 4":
-    page_container(lambda: st.write("📖 Content for Chapter 4"))
-elif st.session_state.page == "Chapter 5":
-    page_container(lambda: st.write("📖 Content for Chapter 5"))
+elif st.session_state.page.startswith("Chapter"):
+    page_container(lambda: st.write(f"📖 Content for {st.session_state.page}"))
