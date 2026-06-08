@@ -132,13 +132,13 @@ if st.session_state.page == "Home":
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
     """
-    components.html(video_html, height=1000)
+    components.html(video_html, height=800)
 
     # Overlay content
     st.markdown(
         """
         <div class="hero-banner" style="
-            padding: 2rem;
+            padding: 6rem;
             border-radius: 14px;
             text-align: center;
             color: white;
