@@ -122,8 +122,8 @@ if st.session_state.page == "Home":
     video_html = """
     <video autoplay muted loop style="
         position: fixed;
-        top: 50;
-        left: 50;
+        top: 100;
+        left: 100;
         width: 100%;
         height: 100vh;
         z-index: -1;
