@@ -27,7 +27,7 @@ st.markdown(
         border: 1px solid #ffd700;
     }
     [data-testid="stButton"] div {
-        color: #ffffff !important;
+        color:#3366cc !important;
         font-weight: bold;
     }
     [data-testid="stButton"]:hover {
