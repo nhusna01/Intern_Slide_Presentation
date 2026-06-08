@@ -125,7 +125,7 @@ if st.session_state.page == "Home":
         top: 50;
         left: 50;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         z-index: -1;
         object-fit: contain;
         background-color: black;
