@@ -140,7 +140,7 @@ if st.session_state.page == "Home":
         """
         <div class="hero-banner" style="
             padding: 2rem;
-            border-radius: 14px;
+            border-radius: 20px;
             text-align: center;
             color: white;
             position: relative;
@@ -148,7 +148,7 @@ if st.session_state.page == "Home":
             background: rgba(0,0,0,0.4); /* semi-transparent overlay for readability */
         ">
             <img src="images/home_icon.png" width="100">
-            <h1>Welcome to Your Dashboard ✨</h1>
+            <h1>Welcome to My Internship Journey ✨</h1>
             <p>Premium design, smooth navigation, and clear insights.</p>
         </div>
         """,
