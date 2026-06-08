@@ -9,41 +9,37 @@ st.markdown(
         background: linear-gradient(180deg, #002147, #001233);
     }
 
-    /* Sidebar title */
+    /* Sidebar title - make it pop */
     [data-testid="stSidebar"] h2 {
-        color: #ffffff;
-        font-weight: 700;
+        color: #ffd700; /* Gold accent */
+        font-weight: 900; /* Extra bold */
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
+        font-size: 22px;
+        text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.7); /* Glow effect */
     }
 
     /* Sidebar buttons */
     .sidebar-button {
         display: flex;
         align-items: center;
-        background-color: #0d2748; /* Default dark blue */
+        background-color: #0d2748;
         border-radius: 10px;
         padding: 12px 18px;
         margin-bottom: 12px;
         transition: all 0.3s ease;
         cursor: pointer;
-        border: 1px solid #ffd700; /* Gold border */
+        border: 1px solid #ffd700;
         font-weight: bold;
         color: #ffffff;
     }
     .sidebar-button:hover {
-        background-color: #4a90e2; /* Lighter blue for hover */
+        background-color: #4a90e2; /* Lighter blue */
         border: 1px solid #ffd700;
-        color: #ffffff; /* Text stays visible */
+        color: #ffffff;
     }
 
-    /* Active button styling */
-    .sidebar-button:active {
-        background-color: #ffd700; /* Gold highlight */
-        color: #000000; /* Black text for contrast */
-    }
-
-    /* Expander styling - distinct color to pop out */
+    /* Expander styling - distinct color */
     [data-testid="stExpander"] {
         background-color: #3366cc !important; /* Brighter blue */
         border-radius: 8px;
@@ -61,6 +57,10 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+# --- Sidebar Navigation ---
+st.sidebar.title("Navigation")
+
 
 # --- Sidebar Navigation ---
 st.sidebar.title("Navigation")
