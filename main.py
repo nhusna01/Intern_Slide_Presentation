@@ -4,25 +4,35 @@ import streamlit as st
 st.markdown(
     """
     <style>
-    /* Sidebar background */
+    /* Sidebar background - premium dark navy */
     [data-testid="stSidebar"] {
-        background-color: #001f4d; /* Dark Blue */
+        background: linear-gradient(180deg, #0a1a3c, #001233); /* Deep Navy Gradient */
+    }
+
+    /* Sidebar title */
+    [data-testid="stSidebar"] h2 {
+        color: #f0f0f0;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     /* Sidebar buttons */
     .sidebar-button {
         display: flex;
         align-items: center;
-        background-color: #003366;
-        border-radius: 8px;
-        padding: 10px 16px;
-        margin-bottom: 10px;
+        background-color: #0d2748;
+        border-radius: 10px;
+        padding: 12px 18px;
+        margin-bottom: 12px;
         transition: all 0.3s ease;
         cursor: pointer;
+        border: 1px solid #1a3a6e;
     }
     .sidebar-button:hover {
-        background-color: #004080;
-        transform: scale(1.02);
+        background-color: #1a3a6e;
+        transform: translateX(5px);
+        border: 1px solid #ffd700; /* Gold accent */
     }
     .sidebar-label {
         font-weight: 600;
@@ -53,20 +63,20 @@ with st.sidebar.expander("📂 Contents", expanded=True):
         st.session_state.page = "The Growth Roadmap"
 
 # --- Page Rendering ---
-def page_container(content_func, bg_color="#f0f8ff"):
+def page_container(content_func, bg_color="#f8f9fa"):
     st.markdown(
         f"""
         <style>
         .page-box {{
             background-color: {bg_color};
             padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 14px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.25);
             transition: all 0.3s ease-in-out;
         }}
         .page-box:hover {{
             transform: scale(1.01);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.35);
         }}
         </style>
         """,
@@ -82,7 +92,7 @@ if "page" not in st.session_state:
     st.session_state.page = "Home"
 
 if st.session_state.page == "Home":
-    page_container(lambda: st.write("Welcome to the Homepage! 🎉"))
+    page_container(lambda: st.write("✨ Welcome to the Premium Homepage! 🎉"))
 elif st.session_state.page == "Introduction":
     page_container(lambda: st.write("This is the Introduction page."))
 elif st.session_state.page == "Company Background":
