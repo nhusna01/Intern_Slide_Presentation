@@ -28,13 +28,13 @@ st.markdown(
     }
 
     [data-testid="stButton"] div {
-        color: #ffffff !important;            /* White text */
+        color: #3366cc !important;            /* White text */
         font-weight: bold;
     }
 
     [data-testid="stButton"]:hover {
         background-color: #5fa8f5 !important; /* Lighter hover blue */
-        border: 1px solid #5fa8f5;            /* Border matches hover background */
+        border: 1px solid #ffd700;            /* Border matches hover background */
     }
 
 
