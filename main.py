@@ -4,9 +4,12 @@ import streamlit as st
 st.markdown(
     """
     <style>
-    /* Sidebar background - premium dark navy */
+    /* Sidebar background - premium dark navy with sparkle effect */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0a1a3c, #001233); /* Deep Navy Gradient */
+        background: linear-gradient(180deg, #0a1a3c, #001233);
+        background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 1px, transparent 1px),
+                          radial-gradient(circle at 70% 80%, rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 120px 120px;
     }
 
     /* Sidebar title */
@@ -38,6 +41,16 @@ st.markdown(
         font-weight: 600;
         font-size: 16px;
         color: #ffffff;
+    }
+
+    /* Expander styling - make it pop */
+    [data-testid="stExpander"] {
+        background-color: #142850 !important; /* Different shade to stand out */
+        border-radius: 8px;
+        border: 1px solid #ffd700;
+    }
+    [data-testid="stExpander"] div {
+        color: #ffffff !important;
     }
     </style>
     """,
@@ -92,7 +105,7 @@ if "page" not in st.session_state:
     st.session_state.page = "Home"
 
 if st.session_state.page == "Home":
-    page_container(lambda: st.write("✨ Welcome to the Premium Homepage! 🎉"))
+    page_container(lambda: st.image("images/home_icon.png", width=120))
 elif st.session_state.page == "Introduction":
     page_container(lambda: st.write("This is the Introduction page."))
 elif st.session_state.page == "Company Background":
