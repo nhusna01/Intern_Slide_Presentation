@@ -1,5 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
+import pandas as pd
+import numpy as np
 
 # ==============================
 # 🎨 Sidebar Styling (CSS)
@@ -116,18 +118,17 @@ def page_container(content_func, bg_color="#3366cc"):
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
-
 if st.session_state.page == "Home":
     # Video background
     video_html = """
     <video autoplay muted loop style="
         position: fixed;
-        top: 50;
-        left: 50;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100vh;
         z-index: -1;
-        object-fit: contain;
+        object-fit: cover;
         background-color: black;
     ">
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
@@ -135,26 +136,26 @@ if st.session_state.page == "Home":
     """
     components.html(video_html, height=550)
 
-# Overlay content
-def home_content():
-    # Hero Banner
-    st.markdown(
-        """
-        <div class="hero-banner" style="
-        padding: 2rem;
-        border-radius: 20px;
-        text-align: center;
-        color: white;
-        position: relative;
-        z-index: 1;
-        background: rgba(0,0,0,0.4); /* semi-transparent overlay for readability */
-        ">
-        <img src="images/home_icon.png" width="100">
-        <h1>Welcome to My Internship Journey ✨</h1>
-        <p>Premium design, smooth navigation, and clear insights.</p>
-        </div>
-        """,
-        unsafe_allow_html=True
+    # Overlay content
+    def home_content():
+        # Hero Banner
+        st.markdown(
+            """
+            <div class="hero-banner" style="
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+            background: rgba(0,0,0,0.4); /* semi-transparent overlay for readability */
+            ">
+            <img src="images/home_icon.png" width="100">
+            <h1>Welcome to My Internship Journey ✨</h1>
+            <p>Premium design, smooth navigation, and clear insights.</p>
+            </div>
+            """,
+            unsafe_allow_html=True
         )
 
         # Success + Start Presentation directly under banner
@@ -189,7 +190,7 @@ def home_content():
         choice = st.radio("Which skill should I improve next?", ["Python", "Streamlit", "Power BI", "GitHub"])
         st.write(f"Thanks! You voted for **{choice}** 💡")
 
-    page_container(home_content, bg_color="#e6f7ff"
+    page_container(home_content, bg_color="#e6f7ff")
 
 elif st.session_state.page == "Chapter 1":
     page_container(lambda: st.write("📖 Content for Chapter 1"))
@@ -205,4 +206,3 @@ elif st.session_state.page == "Chapter 4":
 
 elif st.session_state.page == "Chapter 5":
     page_container(lambda: st.write("📖 Content for Chapter 5"))
-
