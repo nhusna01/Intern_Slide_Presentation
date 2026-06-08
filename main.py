@@ -135,26 +135,26 @@ if st.session_state.page == "Home":
     """
     components.html(video_html, height=550)
 
-    # Overlay content
-        def home_content():
-        # Hero Banner
-        st.markdown(
-            """
-            <div class="hero-banner" style="
-                padding: 2rem;
-                border-radius: 20px;
-                text-align: center;
-                color: white;
-                position: relative;
-                z-index: 1;
-                background: rgba(0,0,0,0.4); /* semi-transparent overlay for readability */
-            ">
-                <img src="images/home_icon.png" width="100">
-                <h1>Welcome to My Internship Journey ✨</h1>
-                <p>Premium design, smooth navigation, and clear insights.</p>
-            </div>
-            """,
-            unsafe_allow_html=True
+# Overlay content
+def home_content():
+    # Hero Banner
+    st.markdown(
+        """
+        <div class="hero-banner" style="
+        padding: 2rem;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        position: relative;
+        z-index: 1;
+        background: rgba(0,0,0,0.4); /* semi-transparent overlay for readability */
+        ">
+        <img src="images/home_icon.png" width="100">
+        <h1>Welcome to My Internship Journey ✨</h1>
+        <p>Premium design, smooth navigation, and clear insights.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
         )
 
         # Success + Start Presentation directly under banner
