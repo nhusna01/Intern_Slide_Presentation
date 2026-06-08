@@ -10,7 +10,7 @@ if "page" not in st.session_state:
 # --- Sidebar Navigation ---
 st.sidebar.title("Navigation")
 
-# Custom CSS to style Streamlit buttons
+# Custom CSS to standardize all sidebar buttons
 st.markdown(
     """
     <style>
@@ -20,8 +20,10 @@ st.markdown(
         font-weight: 600;
         font-size: 16px;
         border-radius: 8px;
-        padding: 8px 16px;
-        margin-bottom: 8px;
+        padding: 12px 20px;   /* consistent padding */
+        margin-bottom: 12px;  /* consistent spacing */
+        width: 100%;          /* full width for all buttons */
+        height: 50px;         /* fixed height for uniform size */
         transition: all 0.3s ease;
     }
     div.stButton > button:hover {
@@ -48,6 +50,7 @@ with st.sidebar.expander("📂 Contents", expanded=True):
         st.session_state.page = "HR Division"
     if st.button("The Growth Roadmap"):
         st.session_state.page = "The Growth Roadmap"
+
 
 # --- Helper function for consistent container style ---
 def page_container(content_func, bg_color="#f0f8ff"):
