@@ -8,7 +8,7 @@ if "page" not in st.session_state:
     st.session_state.page = "Home"
 
 # --- Sidebar Navigation ---
-st.sidebar.title("CONTENTS")
+st.sidebar.title("Navigation")
 
 # Custom CSS for sidebar buttons
 st.markdown(
@@ -42,6 +42,30 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+def nav_button(icon_path, label, page_name):
+    clicked = st.button(label, key=page_name)
+    if clicked:
+        st.session_state.page = page_name
+    st.markdown(
+        f"""
+        <div class="sidebar-button">
+            <img src="{icon_path}" class="sidebar-icon">
+            <span class="sidebar-label">{label}</span>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+# --- Home button separate ---
+st.sidebar.subheader("🏠 Home")
+nav_button("images/home_icon.jpg", "Home", "Home")
+
+# --- Expander for contents ---
+with st.sidebar.expander("📂 Contents", expanded=True):
+    nav_button("images/self_intro.svg", "Introduction", "Introduction")
+    nav_button("images/company_icon.png", "Company Background", "Company Background")
+    nav_button("images/hr_icon.png", "HR Division", "HR Division")
+    nav_button("images/self_development.png", "The Growth Roadmap", "The Growth Roadmap")
 
 # --- Helper function for consistent container style ---
 def page_container(content_func, bg_color="#f0f8ff"):
