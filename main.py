@@ -23,7 +23,7 @@ st.markdown(
     .sidebar-button {
         display: flex;
         align-items: center;
-        background-color: #0d2748; /* Default dark blue */
+        background-color: #3366cc; /* Default dark blue */
         border-radius: 10px;
         padding: 12px 18px;
         margin-bottom: 12px;
