@@ -33,6 +33,7 @@ st.markdown(
     }
     .sidebar-button:hover {
         background-color: #3366cc; /* Lighter royal blue */
+        transform: translateX(5px);
         border: 1px solid #ffd700;
         color: #ffffff; /* Keep text visible */
     }
@@ -48,10 +49,22 @@ st.markdown(
         font-weight: bold;
     }
 
-    /* Active button styling */
-    .sidebar-button:active {
-        background-color: #ffd700; /* Gold highlight */
-        color: #000000; /* Black text for contrast */
+    /* Hero banner styling */
+    .hero-banner {
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(90deg, #001f4d, #003366);
+        color: white;
+        border-radius: 12px;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    }
+    .hero-banner h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .hero-banner p {
+        font-size: 1.2rem;
+        font-weight: 300;
     }
     </style>
     """,
