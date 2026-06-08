@@ -133,5 +133,19 @@ if st.session_state.page == "Home":
         """,
         unsafe_allow_html=True
     )
-elif st.session_state.page.startswith("Chapter"):
-    page_container(lambda: st.write(f"📖 Content for {st.session_state.page}"))
+
+elif st.session_state.page == "Chapter 1":
+    page_container(lambda: st.write("📖 Content for Chapter 1"))
+
+elif st.session_state.page == "Chapter 2":
+    page_container(lambda: st.write("📖 Content for Chapter 2"))
+
+elif st.session_state.page == "Chapter 3":
+    page_container(lambda: st.write("📖 Content for Chapter 3"))
+
+elif st.session_state.page == "Chapter 4":
+    page_container(lambda: st.write("📖 Content for Chapter 4"))
+
+elif st.session_state.page == "Chapter 5":
+    page_container(lambda: st.write("📖 Content for Chapter 5"))
+
