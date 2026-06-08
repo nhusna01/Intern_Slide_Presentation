@@ -18,33 +18,30 @@ st.markdown(
         text-transform: uppercase;
         letter-spacing: 1.5px;
     }
-
-
+    
     /* Sidebar buttons - styled like Slide Chapter expander */
-.sidebar-button {
-    display: flex;
-    align-items: center;
-    background-color: #3366cc;   /* Same as expander */
-    border-radius: 8px;          /* Match expander corners */
-    padding: 12px 18px;
-    margin-bottom: 12px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 1px solid #ffd700;   /* Gold border */
-    font-weight: bold;
-    color: #ffffff;              /* White text */
-}
+    div[data-testid="stSidebar"] button
+    {
+        background-color: #3366cc;   /* Same as expander */
+        border-radius: 8px;
+        border: 1px solid #ffd700;   /* Gold border */
+        font-weight: bold;
+        color: #ffffff;
+        padding: 12px 18px;
+        margin-bottom: 12px;
+        transition: all 0.3s ease;
+    }
 
-.sidebar-button:hover {
-    background-color: #5fa8f5;   /* Same hover as expander */
-    border: 1px solid #ffd700;
-    color: #ffffff;
-}
+    div[data-testid="stSidebar"] button:hover {
+        background-color: #5fa8f5;   /* Same hover as expander */
+        border: 1px solid #ffd700;
+        color: #ffffff;
+    }
 
-.sidebar-button:active {
-    background-color: #ffd700;   /* Gold highlight */
-    color: #000000;              /* Black text for contrast */
-}
+    div[data-testid="stSidebar"] button:active {
+        background-color: #ffd700;   /* Gold highlight */
+        color: #000000;
+    }
 
 
     /* Expander styling - distinct color to pop out */
