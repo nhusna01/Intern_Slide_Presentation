@@ -132,7 +132,7 @@ if st.session_state.page == "Home":
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
     """
-    components.html(video_html, height=500)
+    components.html(video_html, height=100)
 
     # Overlay content
     st.markdown(
