@@ -169,39 +169,39 @@ if st.session_state.page == "Home":
         st.markdown(
             """
             <style>
-            /* Center the button container */
-            div[data-testid="stButton"][key="start_btn"] {
+            /* Force all buttons to center-align */
+            div[data-testid="stButton"] {
                 display: flex;
                 justify-content: center;
             }
         
-            /* Actual button styling */
-            [data-testid="stButton"][key="start_btn"] {
-                background-color: #3366cc !important;  /* Default deep blue */
-                border: 2px solid #ffd700;             /* Gold border */
-                border-radius: 10px;
-                padding: 0.6rem 1.2rem;
-                margin: auto;
+            /* Style the actual button */
+            div[data-testid="stButton"] > button {
+                background-color: #3366cc !important;  /* Deep blue */
+                border: 2px solid #ffd700 !important;  /* Gold border */
+                border-radius: 10px !important;
+                padding: 0.6rem 1.2rem !important;
+                margin: auto !important;
+                cursor: pointer;
             }
         
             /* Button text */
-            [data-testid="stButton"][key="start_btn"] div {
+            div[data-testid="stButton"] > button p {
                 color: #ffffff !important;             /* White text */
-                font-weight: bold;
-                font-size: 16px;
+                font-weight: bold !important;
+                font-size: 16px !important;
             }
         
             /* Hover effect */
-            [data-testid="stButton"][key="start_btn"]:hover {
-                background-color: #5fa8f5 !important;  /* Lighter blue on hover */
-                border: 2px solid #ffd700;             /* Gold border stays */
+            div[data-testid="stButton"] > button:hover {
+                background-color: #5fa8f5 !important;  /* Lighter blue */
+                border: 2px solid #ffd700 !important;  /* Gold border stays */
+                box-shadow: 0 0 10px #ffd700;          /* Optional glow */
             }
             </style>
             """,
             unsafe_allow_html=True
         )
-
-
 
         # Title & Intro
         st.markdown("<h1 style='text-align:center;'>💻 Internship Presentation</h1>", unsafe_allow_html=True)
