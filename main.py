@@ -171,8 +171,8 @@ if st.session_state.page == "Home":
             <style>
             /* Force all buttons to center-align */
             div[data-testid="stButton"] {
-                display: flex;
-                justify-content: center;
+                display: flex-start;
+                padding: 80px;
             }
         
             /* Style the actual button */
@@ -181,7 +181,8 @@ if st.session_state.page == "Home":
                 border: 2px solid #ffd700 !important;  /* Gold border */
                 border-radius: 10px !important;
                 padding: 0.6rem 1.2rem !important;
-                margin-left: 40px !important;  /* moves button slightly
+                margin: auto !important;
+                cursor: pointer;
             }
         
             /* Button text */
