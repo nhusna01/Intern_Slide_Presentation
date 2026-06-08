@@ -21,7 +21,7 @@ st.markdown(
     .sidebar-button {
         display: flex;
         align-items: center;
-        background-color: #0d2748; /* Default dark blue */
+        background-color: #0d2748;
         border-radius: 10px;
         padding: 12px 18px;
         margin-bottom: 12px;
@@ -32,26 +32,26 @@ st.markdown(
         color: #ffffff;
     }
     .sidebar-button:hover {
-        background-color: #4a90e2; /* Lighter royal/sky blue */
+        background-color: #3366cc; /* Lighter royal blue */
         border: 1px solid #ffd700;
-        color: #ffffff; /* Text stays visible */
-    }
-
-    /* Active button styling */
-    .sidebar-button:active {
-        background-color: #ffd700; /* Gold highlight */
-        color: #000000; /* Black text for contrast */
+        color: #ffffff; /* Keep text visible */
     }
 
     /* Expander styling - distinct color to pop out */
     [data-testid="stExpander"] {
-        background-color: #1a3a6e !important; /* Lighter navy shade */
+        background-color: #0d2748 !important; /* Same blue as Home */
         border-radius: 8px;
         border: 1px solid #ffd700;
     }
     [data-testid="stExpander"] div {
         color: #ffffff !important;
         font-weight: bold;
+    }
+
+    /* Active button styling */
+    .sidebar-button:active {
+        background-color: #ffd700; /* Gold highlight */
+        color: #000000; /* Black text for contrast */
     }
     </style>
     """,
