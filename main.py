@@ -64,24 +64,19 @@ st.markdown(
 # ==============================
 # 📂 Sidebar Navigation
 # ==============================
+# Sidebar Navigation
 st.sidebar.title("Navigation")
 
-# Home button (separate)
+# Home button
 if st.sidebar.button("🏠 Home", key="home_btn"):
     st.session_state.page = "Home"
 
 # Expander for Slide Chapters
 with st.sidebar.expander("📚 Slide Chapter", expanded=True):
-    if st.button("📖 Chapter 1"):
-        st.session_state.page = "Chapter 1"
-    if st.button("📖 Chapter 2"):
-        st.session_state.page = "Chapter 2"
-    if st.button("📖 Chapter 3"):
-        st.session_state.page = "Chapter 3"
-    if st.button("📖 Chapter 4"):
-        st.session_state.page = "Chapter 4"
-    if st.button("📖 Chapter 5"):
-        st.session_state.page = "Chapter 5"
+    for i in range(1, 6):
+        if st.sidebar.button(f"📖 Chapter {i}", key=f"chapter_{i}"):
+            st.session_state.page = f"Chapter {i}"
+
 
 # ==============================
 # 🖼️ Page Rendering Function
