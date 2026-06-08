@@ -13,8 +13,8 @@ st.markdown(
 
     /* Sidebar title */
     [data-testid="stSidebar"] h2 {
-        color: #ffffff;
-        font-weight: 1000;
+        color: #ffffff;       /* White text */
+        font-weight: bold;    /* Bold font */
         text-transform: uppercase;
         letter-spacing: 1.5px;
     }
