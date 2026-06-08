@@ -22,8 +22,8 @@ st.markdown(
         border-radius: 8px;
         padding: 12px 20px;   /* consistent padding */
         margin-bottom: 12px;  /* consistent spacing */
-        width: 125%;          /* full width for all buttons */
-        height: 15px;         /* fixed height for uniform size */
+        width: 100%;          /* full width for all buttons */
+        min-height: 45px;     /* consistent height for all buttons */
         transition: all 0.3s ease;
     }
     div.stButton > button:hover {
@@ -34,6 +34,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 # --- Home button separate ---
 st.sidebar.subheader("🏠 Home")
