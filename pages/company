@@ -1,24 +1,25 @@
 import streamlit as st
 
-st.header("🏢 Company Background")
-st.write("Kaneka Malaysia operates six companies under the Kaneka Group. Explore each company below:")
+def company_background():
+    st.header("🏢 Company Background")
+    st.write("Kaneka Malaysia operates six companies under the Kaneka Group. Explore each company below:")
 
-companies = {
-    "Kaneka Malaysia": "Produces Kane Ace (impact modifiers) and Graphite Sheet (thermal management).",
-    "Kaneka Innovative Fibers Malaysia – FPW Plant": "Makes Kanekalon (FPW) synthetic fibers for wigs and hair extensions.",
-    "Kaneka Innovative Fibers Malaysia – iModa Plant": "Specialized Kanekalon fibers for fashion and styling.",
-    "Kaneka Eperan Malaysia": "Produces Eperan foam for automotive and packaging.",
-    "Kaneka Paste Polymer Malaysia": "Manufactures Paste PVC resin for flooring, wall coverings, and synthetic leather.",
-    "Kaneka Apical Malaysia": "Creates Apical Polyimide Film for aerospace and electronics.",
-    "Kaneka MS Malaysia": "Develops MS Polymer for adhesives and sealants."
-}
+    companies = {
+        "Kaneka Malaysia": "Produces Kane Ace (impact modifiers) and Graphite Sheet (thermal management).",
+        "Kaneka Innovative Fibers Malaysia – FPW Plant": "Makes Kanekalon (FPW) synthetic fibers for wigs and hair extensions.",
+        "Kaneka Innovative Fibers Malaysia – iModa Plant": "Specialized Kanekalon fibers for fashion and styling.",
+        "Kaneka Eperan Malaysia": "Produces Eperan foam for automotive and packaging.",
+        "Kaneka Paste Polymer Malaysia": "Manufactures Paste PVC resin for flooring, wall coverings, and synthetic leather.",
+        "Kaneka Apical Malaysia": "Creates Apical Polyimide Film for aerospace and electronics.",
+        "Kaneka MS Malaysia": "Develops MS Polymer for adhesives and sealants."
+    }
 
-# Display each company in an interactive box
-cols = st.columns(2)  # create 2 columns for a grid layout
-i = 0
-for company, desc in companies.items():
-    with cols[i % 2]:  # alternate between the two columns
-        with st.container():
-            st.markdown(f"### 📦 {company}")
-            st.info(desc)
-    i += 1
+    # Display each company in a grid layout
+    cols = st.columns(2)
+    i = 0
+    for company, desc in companies.items():
+        with cols[i % 2]:
+            with st.container():
+                st.markdown(f"### 📦 {company}")
+                st.info(desc)
+        i += 1
