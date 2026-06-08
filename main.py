@@ -116,7 +116,6 @@ def page_container(content_func, bg_color="#3366cc"):
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
-import streamlit.components.v1 as components
 
 if st.session_state.page == "Home":
     # Video background
@@ -133,7 +132,7 @@ if st.session_state.page == "Home":
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
     """
-    components.html(video_html, height=600)
+    components.html(video_html, height=1000)
 
     # Overlay content
     st.markdown(
