@@ -69,21 +69,6 @@ st.markdown(
 # ==============================
 st.sidebar.title("Navigation")
 
-st.sidebar.markdown(
-    """
-    <style>
-    .sidebar-title {
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.sidebar.markdown("<div class='sidebar-title'>Navigation</div>", unsafe_allow_html=True)
-
 # Home button (separate)
 if st.sidebar.button("🏠 Home", key="home_btn"):
     st.session_state.page = "Home"
