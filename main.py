@@ -28,7 +28,7 @@ st.markdown(
     }
     div.stButton > button:hover {
         background-color: #cce7ff;
-        transform: scale(1.02);
+        transform: scale(2.02);
     }
     </style>
     """,
