@@ -8,7 +8,7 @@ if "page" not in st.session_state:
     st.session_state.page = "Home"
 
 # --- Sidebar Navigation ---
-st.sidebar.title("Navigation")
+st.sidebar.title("Homepage")
 
 # Custom CSS to standardize all sidebar buttons
 st.markdown(
@@ -35,11 +35,13 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
 # --- Home button separate ---
-st.sidebar.subheader("🏠 Home")
-if st.sidebar.button("Home"):
-    st.session_state.page = "Home"
+col1, col2 = st.sidebar.columns([1,4])
+with col1:
+    st.image("images/home_icon.jpg", width=30)  # your uploaded icon
+with col2:
+    if st.sidebar.button("Home"):
+        st.session_state.page = "Home"
 
 # --- Expander for contents ---
 with st.sidebar.expander("📂 Contents", expanded=True):
