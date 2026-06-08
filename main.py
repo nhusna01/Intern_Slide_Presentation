@@ -14,9 +14,9 @@ st.markdown(
     /* Sidebar title */
     [data-testid="stSidebar"] h2 {
         color: #ffffff;
-        font-weight: 700;
+        font-weight: 1000;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
     }
 
     /* Sidebar buttons */
