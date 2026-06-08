@@ -32,7 +32,7 @@ st.markdown(
         color: #ffffff;
     }
     .sidebar-button:hover {
-        background-color: #1a3a6e;
+        background-color: #3366cc; /* Lighter royal blue */
         transform: translateX(5px);
         border: 1px solid #ffd700;
         color: #ffffff; /* Keep text visible */
