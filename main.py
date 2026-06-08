@@ -127,7 +127,7 @@ if st.session_state.page == "Home":
             box-shadow: 0 6px 14px rgba(0,0,0,0.35);
         ">
             <img src="images/home_icon.png" width="100">
-            <h1>Welcome to Your Dashboard ✨</h1>
+            <h1>Intern Slide Presentation ✨</h1>
             <p>Premium design, smooth navigation, and clear insights.</p>
         </div>
         """,
