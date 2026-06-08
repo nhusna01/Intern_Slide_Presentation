@@ -23,7 +23,7 @@ st.markdown(
         padding: 12px 20px;   /* consistent padding */
         margin-bottom: 12px;  /* consistent spacing */
         width: 100%;          /* full width for all buttons */
-        height: 50px;         /* fixed height for uniform size */
+        height: 25px;         /* fixed height for uniform size */
         transition: all 0.3s ease;
     }
     div.stButton > button:hover {
