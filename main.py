@@ -18,29 +18,21 @@ st.markdown(
         text-transform: uppercase;
         letter-spacing: 1.5px;
     }
+
     
-    /* Sidebar buttons - styled like Slide Chapter expander */
-    div[data-testid="stSidebar"] button
-    {
-        background-color: #3366cc;   /* Same as expander */
+    /* Sidebar button */
+    [data-testid="stButton"] {
+        background-color: #3366cc !important; /* Brighter blue */
         border-radius: 8px;
-        border: 1px solid #ffd700;   /* Gold border */
-        font-weight: bold;
-        color: #ffffff;
-        padding: 12px 18px;
-        margin-bottom: 12px;
-        transition: all 0.3s ease;
-    }
-
-    div[data-testid="stSidebar"] button:hover {
-        background-color: #5fa8f5;   /* Same hover as expander */
         border: 1px solid #ffd700;
-        color: #ffffff;
     }
-
-    div[data-testid="stSidebar"] button:active {
-        background-color: #ffd700;   /* Gold highlight */
-        color: #000000;
+    [data-testid="stButton"] div {
+        color: #ffffff !important;
+        font-weight: bold;
+    }
+    [data-testid="stButton"]:hover {
+        background-color: #5fa8f5 !important; /* Even lighter hover */
+        border: 1px solid #ffd700;
     }
 
 
