@@ -20,7 +20,7 @@ def nav_button(icon_path, label, page_name):
 
 # Add buttons with icons
 nav_button("images/home_icon.jpg", "Home", "Home")
-nav_button("images/intro_icon.svg", "Introduction", "Introduction")
+nav_button("images/self_intro.svg", "Introduction", "Introduction")
 nav_button("images/company_icon.png", "Company Background", "Company Background")
 nav_button("images/hr_icon.png", "HR Division", "HR Division")
 nav_button("images/self_development.png", "Growth Roadmap", "The Growth Roadmap")
