@@ -124,8 +124,8 @@ if st.session_state.page == "Home":
         position: fixed;
         right: 0;
         bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
+        min-width: 50%;
+        min-height: 50%;
         z-index: -1;
         object-fit: cover;
     ">
@@ -138,7 +138,7 @@ if st.session_state.page == "Home":
     st.markdown(
         """
         <div class="hero-banner" style="
-            padding: 6rem;
+            padding: 2rem;
             border-radius: 14px;
             text-align: center;
             color: white;
