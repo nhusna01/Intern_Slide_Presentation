@@ -11,7 +11,7 @@ st.markdown(
 
     /* Sidebar title */
     [data-testid="stSidebar"] h2 {
-        color: #f0f0f0;
+        color: #ffffff;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -27,27 +27,26 @@ st.markdown(
         margin-bottom: 12px;
         transition: all 0.3s ease;
         cursor: pointer;
-        border: 1px solid #1a3a6e;
+        border: 1px solid #ffd700; /* Gold border */
+        font-weight: bold;
+        color: #ffffff;
     }
     .sidebar-button:hover {
         background-color: #1a3a6e;
         transform: translateX(5px);
-        border: 1px solid #ffd700; /* Gold accent */
-    }
-    .sidebar-label {
-        font-weight: 600;
-        font-size: 16px;
-        color: #ffffff;
+        border: 1px solid #ffd700;
+        color: #ffffff; /* Keep text visible */
     }
 
     /* Expander styling - distinct color to pop out */
     [data-testid="stExpander"] {
-        background-color: #1a3a6e !important; /* Lighter navy shade */
+        background-color: #0d2748 !important; /* Same blue as Home */
         border-radius: 8px;
         border: 1px solid #ffd700;
     }
     [data-testid="stExpander"] div {
         color: #ffffff !important;
+        font-weight: bold;
     }
 
     /* Hero banner styling */
@@ -76,19 +75,21 @@ st.markdown(
 st.sidebar.title("Navigation")
 
 # Home button (separate)
-if st.sidebar.button("🏠 Home"):
+if st.sidebar.button("🏠 Home", key="home_btn"):
     st.session_state.page = "Home"
 
-# Expander for contents
-with st.sidebar.expander("📂 Contents", expanded=True):
-    if st.button("👤 Introduction"):
-        st.session_state.page = "Introduction"
-    if st.button("🏢 Company Background"):
-        st.session_state.page = "Company Background"
-    if st.button("👥 HR Division"):
-        st.session_state.page = "HR Division"
-    if st.button("🌱 The Growth Roadmap"):
-        st.session_state.page = "The Growth Roadmap"
+# Expander for Slide Chapters
+with st.sidebar.expander("📚 Slide Chapter", expanded=True):
+    if st.button("📖 Chapter 1"):
+        st.session_state.page = "Chapter 1"
+    if st.button("📖 Chapter 2"):
+        st.session_state.page = "Chapter 2"
+    if st.button("📖 Chapter 3"):
+        st.session_state.page = "Chapter 3"
+    if st.button("📖 Chapter 4"):
+        st.session_state.page = "Chapter 4"
+    if st.button("📖 Chapter 5"):
+        st.session_state.page = "Chapter 5"
 
 # --- Page Rendering ---
 def page_container(content_func, bg_color="#f8f9fa"):
@@ -116,7 +117,7 @@ def page_container(content_func, bg_color="#f8f9fa"):
         content_func()
         st.markdown("</div>", unsafe_allow_html=True)
 
-# Example homepage content
+# Example homepage + chapters
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
@@ -131,11 +132,13 @@ if st.session_state.page == "Home":
         """,
         unsafe_allow_html=True
     )
-elif st.session_state.page == "Introduction":
-    page_container(lambda: st.write("👤 This is the Introduction page."))
-elif st.session_state.page == "Company Background":
-    page_container(lambda: st.write("🏢 Company Background details here."))
-elif st.session_state.page == "HR Division":
-    page_container(lambda: st.write("👥 HR Division information here."))
-elif st.session_state.page == "The Growth Roadmap":
-    page_container(lambda: st.write("🌱 Growth Roadmap content here."))
+elif st.session_state.page == "Chapter 1":
+    page_container(lambda: st.write("📖 Content for Chapter 1"))
+elif st.session_state.page == "Chapter 2":
+    page_container(lambda: st.write("📖 Content for Chapter 2"))
+elif st.session_state.page == "Chapter 3":
+    page_container(lambda: st.write("📖 Content for Chapter 3"))
+elif st.session_state.page == "Chapter 4":
+    page_container(lambda: st.write("📖 Content for Chapter 4"))
+elif st.session_state.page == "Chapter 5":
+    page_container(lambda: st.write("📖 Content for Chapter 5"))
