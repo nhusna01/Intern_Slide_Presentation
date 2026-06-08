@@ -42,27 +42,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-def nav_button(icon_path, label, page_name):
-    # Render custom HTML button with click detection
-    clicked = st.sidebar.button(label, key=page_name)
-    st.sidebar.markdown(
-        f"""
-        <div class="sidebar-button">
-            <img src="{icon_path}" class="sidebar-icon">
-            <span class="sidebar-label">{label}</span>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    if clicked:
-        st.session_state.page = page_name
-
-# Add buttons with icons (only once!)
-nav_button("images/home_icon.jpg", "Home", "Home")
-nav_button("images/self_intro.svg", "Introduction", "Introduction")
-nav_button("images/company_icon.png", "Company Background", "Company Background")
-nav_button("images/hr_icon.png", "HR Division", "HR Division")
-nav_button("images/self_development.png", "The Growth Roadmap", "The Growth Roadmap")
 
 # --- Helper function for consistent container style ---
 def page_container(content_func, bg_color="#f0f8ff"):
