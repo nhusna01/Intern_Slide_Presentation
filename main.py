@@ -124,15 +124,15 @@ if st.session_state.page == "Home":
         position: fixed;
         right: 0;
         bottom: 0;
-        min-width: 50%;
-        min-height: 50%;
+        min-width: 100%;
+        min-height: 100%;
         z-index: -1;
         object-fit: cover;
     ">
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
     """
-    components.html(video_html, height=800)
+    components.html(video_html, height=500)
 
     # Overlay content
     st.markdown(
