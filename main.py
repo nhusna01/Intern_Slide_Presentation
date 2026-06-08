@@ -10,62 +10,44 @@ if "page" not in st.session_state:
 # --- Sidebar Navigation ---
 st.sidebar.title("Navigation")
 
-# Custom CSS for sidebar buttons
+# Custom CSS to style Streamlit buttons
 st.markdown(
     """
     <style>
-    .sidebar-button {
-        display: flex;
-        align-items: center;
+    div.stButton > button {
         background-color: #f0f8ff;
-        border-radius: 8px;
-        padding: 8px;
-        margin-bottom: 8px;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-    .sidebar-button:hover {
-        background-color: #cce7ff;
-        transform: scale(1.02);
-    }
-    .sidebar-icon {
-        width: 30px;
-        margin-right: 10px;
-    }
-    .sidebar-label {
+        color: #333;
         font-weight: 600;
         font-size: 16px;
-        color: #333;
+        border-radius: 8px;
+        padding: 8px 16px;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+    }
+    div.stButton > button:hover {
+        background-color: #cce7ff;
+        transform: scale(1.02);
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-def nav_button(icon_path, label, page_name):
-    clicked = st.button(label, key=page_name)
-    if clicked:
-        st.session_state.page = page_name
-    st.markdown(
-        f"""
-        <div class="sidebar-button">
-            <img src="{icon_path}" class="sidebar-icon">
-            <span class="sidebar-label">{label}</span>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
 # --- Home button separate ---
 st.sidebar.subheader("🏠 Home")
-nav_button("images/home_icon.jpg", "Home", "Home")
+if st.sidebar.button("Home"):
+    st.session_state.page = "Home"
 
 # --- Expander for contents ---
 with st.sidebar.expander("📂 Contents", expanded=True):
-    nav_button("images/self_intro.svg", "Introduction", "Introduction")
-    nav_button("images/company_icon.png", "Company Background", "Company Background")
-    nav_button("images/hr_icon.png", "HR Division", "HR Division")
-    nav_button("images/self_development.png", "The Growth Roadmap", "The Growth Roadmap")
+    if st.button("Introduction"):
+        st.session_state.page = "Introduction"
+    if st.button("Company Background"):
+        st.session_state.page = "Company Background"
+    if st.button("HR Division"):
+        st.session_state.page = "HR Division"
+    if st.button("The Growth Roadmap"):
+        st.session_state.page = "The Growth Roadmap"
 
 # --- Helper function for consistent container style ---
 def page_container(content_func, bg_color="#f0f8ff"):
