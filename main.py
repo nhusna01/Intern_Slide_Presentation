@@ -179,7 +179,7 @@ if st.session_state.page == "Home":
                 border: 2px solid #ffd700 !important;
                 border-radius: 10px !important;
                 padding: 0.6rem 1.2rem !important;
-                margin-left: 40px !important;  /* 👈 moves button right */
+                margin-left: 60px !important;  /* 👈 moves button right */
                 cursor: pointer;
             }
             #start-btn-container div[data-testid="stButton"] > button p {
