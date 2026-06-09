@@ -73,7 +73,6 @@ st.markdown(
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        padding: 0.5rem 1rem !important;
     }
 
     /* Expander styling */
@@ -99,7 +98,7 @@ st.markdown(
 # 📂 Sidebar Navigation
 # ==============================
 # UMK logo with custom spacing
-st.sidebar.markdown("<div style='margin-top:-20px; margin-bottom:-35px;'>", unsafe_allow_html=True)
+st.sidebar.markdown("<div style='margin-top:-5px; margin-bottom:-50px;'>", unsafe_allow_html=True)
 st.sidebar.image("images/UMK_logo2.png", width=200)  # adjust width to make it smaller
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
