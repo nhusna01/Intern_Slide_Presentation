@@ -142,16 +142,17 @@ if st.session_state.page == "Home":
         st.markdown(
             """
             <div class="hero-banner" style="
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            color: white;
-            position: relative;
-            z-index: 1;
-            background: rgba(0,51,102,0.5); /* premium deep blue overlay */            ">
-            <img src="images/home_icon.png" width="100">
-            <h1>Welcome to My Internship Journey ✨</h1>
-            <p style="color:red; font-weight:bold;">Use the sidebar to explore the Contents!</p>
+                padding: 2rem;
+                border-radius: 20px;
+                text-align: center;
+                color: white;
+                position: relative;
+                z-index: 1;
+                background: rgba(0,51,102,0.5); /* premium deep blue overlay */
+            ">
+                <img src="images/Kaneka_logo.png" width="100">
+                <h1>Welcome to My Internship Journey ✨</h1>
+                <p style="color:red; font-weight:bold;">Use the sidebar to explore the Contents!</p>
             </div>
             """,
             unsafe_allow_html=True
