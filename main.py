@@ -73,6 +73,8 @@ st.markdown(
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1.5px;
+        font-size: 28px;   
+        margin-top:-10px;
     }
 
     /* Expander styling */
