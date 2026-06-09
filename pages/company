@@ -1,6 +1,6 @@
 import streamlit as st
 
-def company_background():
+def company_page():
     st.header("🏢 Company Background")
     st.write("Kaneka Malaysia operates six companies under the Kaneka Group. Explore each company below:")
 
@@ -14,12 +14,10 @@ def company_background():
         "Kaneka MS Malaysia": "Develops MS Polymer for adhesives and sealants."
     }
 
-    # Display each company in a grid layout
     cols = st.columns(2)
     i = 0
     for company, desc in companies.items():
         with cols[i % 2]:
-            with st.container():
-                st.markdown(f"### 📦 {company}")
-                st.info(desc)
+            st.markdown(f"### 📦 {company}")
+            st.info(desc)
         i += 1
