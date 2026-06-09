@@ -99,6 +99,9 @@ st.markdown(
 # ==============================
 st.sidebar.title("Navigation")
 
+# ✅ Add UMK logo at the top of sidebar
+st.sidebar.image("images/UMK_logo.png", use_column_width=True)
+
 # Home button
 if st.sidebar.button("🏠 Home", key="home_btn"):
     st.session_state.page = "Home"
