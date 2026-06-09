@@ -4,6 +4,46 @@ import pandas as pd
 import numpy as np
 
 # ==============================
+# 🎨 Global Button Styling (CSS)
+# ==============================
+st.markdown(
+    """
+    <style>
+    /* Force all buttons to center-align */
+    div[data-testid="stButton"] {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Style the actual button */
+    div[data-testid="stButton"] > button {
+        background-color: #3366cc !important;  /* Deep blue */
+        border: 2px solid #ffd700 !important;  /* Gold border */
+        border-radius: 10px !important;
+        padding: 0.6rem 1.2rem !important;
+        margin: auto !important;
+        cursor: pointer;
+    }
+
+    /* Button text */
+    div[data-testid="stButton"] > button p {
+        color: #ffffff !important;             /* White text */
+        font-weight: bold !important;
+        font-size: 16px !important;
+    }
+
+    /* Hover effect */
+    div[data-testid="stButton"] > button:hover {
+        background-color: #5fa8f5 !important;  /* Lighter blue */
+        border: 2px solid #ffd700 !important;  /* Gold border stays */
+        box-shadow: 0 0 10px #ffd700;          /* Optional glow */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# ==============================
 # 🎨 Sidebar Styling (CSS)
 # ==============================
 st.markdown(
@@ -12,7 +52,7 @@ st.markdown(
     [data-testid="stSidebar"] {
         background: linear-gradient(180deg, #001233, #002147, #003366, #004080);
         background-size: 200% 200%;
-        animation: sparkle 6s ease-in-out infinite;   /* Shimmer effect */
+        animation: sparkle 6s ease-in-out infinite;
         box-shadow: inset 0 0 25px rgba(255, 215, 0, 0.25);
         border-right: 3px solid #ffd700;
         transition: background 0.8s ease-in-out;
@@ -70,37 +110,6 @@ with st.sidebar.expander("📚 Slide Chapter", expanded=True):
         if st.sidebar.button(f"📖 Chapter {i}", key=f"chapter_{i}"):
             st.session_state.page = f"Chapter {i}"
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
-
-# ✅ Custom CSS only for Chapter buttons
-st.markdown(
-    """
-    <style>
-    #chapter-btn-container div[data-testid="stButton"] {
-        display: flex;
-        justify-content: center;
-    }
-    #chapter-btn-container div[data-testid="stButton"] > button {
-        background-color: #3366cc !important;
-        border: 2px solid #ffd700 !important;
-        border-radius: 10px !important;
-        padding: 0.6rem 1.2rem !important;
-        margin: auto !important;
-        cursor: pointer;
-    }
-    #chapter-btn-container div[data-testid="stButton"] > button p {
-        color: #ffffff !important;
-        font-weight: bold !important;
-        font-size: 16px !important;
-    }
-    #chapter-btn-container div[data-testid="stButton"] > button:hover {
-        background-color: #5fa8f5 !important;
-        border: 2px solid #ffd700 !important;
-        box-shadow: 0 0 10px #ffd700;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # ==============================
 # 🖼️ Page Rendering Function
@@ -183,31 +192,12 @@ if st.session_state.page == "Home":
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
         st.markdown("</div>", unsafe_allow_html=True)
 
-        # ✅ Custom CSS only for Start Presentation button
+        # ✅ Scoped CSS only for Start Presentation button
         st.markdown(
             """
             <style>
-            #start-btn-container div[data-testid="stButton"] {
-                display: flex;
-                justify-content: center;
-            }
             #start-btn-container div[data-testid="stButton"] > button {
-                background-color: #3366cc !important;
-                border: 2px solid #ffd700 !important;
-                border-radius: 10px !important;
-                padding: 0.6rem 1.2rem !important;
-                margin-left: 60px !important;
-                cursor: pointer;
-            }
-            #start-btn-container div[data-testid="stButton"] > button p {
-                color: #ffffff !important;
-                font-weight: bold !important;
-                font-size: 16px !important;
-            }
-            #start-btn-container div[data-testid="stButton"] > button:hover {
-                background-color: #5fa8f5 !important;
-                border: 2px solid #ffd700 !important;
-                box-shadow: 0 0 10px #ffd700;
+                margin-left: 60px !important;  /* 👈 special offset only for Start Presentation */
             }
             </style>
             """,
@@ -246,7 +236,7 @@ elif st.session_state.page == "Chapter 1":
     page_container(lambda: st.write("📖 Content for Chapter 1"))
 
 elif st.session_state.page == "Chapter 2":
-    page_container(company_background)
+    page_container(lambda: st.write("📖 Content for Chapter 2"))
 
 elif st.session_state.page == "Chapter 3":
     page_container(lambda: st.write("📖 Content for Chapter 3"))
