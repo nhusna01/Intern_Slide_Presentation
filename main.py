@@ -245,10 +245,10 @@ if st.session_state.page == "Home":
 
 
 elif st.session_state.page == "Chapter 1":
-    page_container(intro_page)
+    intro_page()
 
 elif st.session_state.page == "Chapter 2":
-    page_container(company_page)
+    company_page()
 
 elif st.session_state.page == "Chapter 3":
     page_container(lambda: st.write("📖 Content for Chapter 3"))
