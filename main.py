@@ -2,7 +2,8 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
-from pages.company import company_page
+from intro import intro_page
+from company import company_page
 
 # ==============================
 # 🎨 Global Button Styling (CSS)
