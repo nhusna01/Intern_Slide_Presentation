@@ -101,7 +101,7 @@ st.markdown(
 st.sidebar.markdown(
     """
     <div style="text-align:center; margin-top:-10px; margin-bottom:-20px;">
-        <img src="images/UMK_logo1.png" width="150">
+        <img src="images/UMK_logo1.png" width="250">
     </div>
     """,
     unsafe_allow_html=True
