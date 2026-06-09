@@ -250,7 +250,6 @@ elif st.session_state.page == "Chapter 1":
 elif st.session_state.page == "Chapter 2":
     page_container(company_page)
 
-
 elif st.session_state.page == "Chapter 3":
     page_container(lambda: st.write("📖 Content for Chapter 3"))
 
