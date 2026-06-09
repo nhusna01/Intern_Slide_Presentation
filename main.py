@@ -2,6 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
+from pages.company import company_page
 
 # ==============================
 # 🎨 Global Button Styling (CSS)
@@ -241,11 +242,12 @@ if st.session_state.page == "Home":
 
     page_container(home_content, bg_color="#e6f7ff")
 
-elif st.session_state.page == "Chapter 1":
-    page_container(lambda: st.write("📖 Content for Chapter 1"))
 
 elif st.session_state.page == "Chapter 2":
-    page_container(lambda: st.write("📖 Content for Chapter 2"))
+    page_container(company_page)
+
+elif st.session_state.page == "Chapter 1":
+    page_container(lambda: st.write("📖 Content for Chapter 1"))
 
 elif st.session_state.page == "Chapter 3":
     page_container(lambda: st.write("📖 Content for Chapter 3"))
