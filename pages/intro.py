@@ -7,10 +7,10 @@ def intro_page():
     st.markdown(
         """
         <div style="text-align:center; padding:1rem; background:rgba(0,51,102,0.1); border-radius:12px;">
-            <img src="images/profile_photo.png" width="150" style="border-radius:50%; border:3px solid #ffd700;">
-            <h2 style="color:#003366;">Nurul Husna</h2>
-            <p style="font-weight:bold; color:#3366cc;">Year 4 Student – Fakulti Sains Data dan Komputeran (UMK)</p>
-            <p>Intern at Kaneka Malaysia – HR & IT Department</p>
+            <img src="images/profile_photo.png" width="200" style="border-radius:50%; border:3px solid #ffd700;">
+            <h2 style="color:#003366;">Nurul Husna Binti Mohd Napi</h2>
+            <p style="font-weight:bold; color:#3366cc;">Year 4 Student – Bachelor of Information Technology with Honours (UMK)</p>
+            <p style= "color:#3366cc;">Intern at Kaneka Malaysia – HR Department</p>
         </div>
         """,
         unsafe_allow_html=True
@@ -21,8 +21,8 @@ def intro_page():
     st.write(
         """
         Hi, my name is Husna! I am currently a Year 4 student at UMK, 
-        pursuing Data Science and Computer Science. During my internship at Kaneka Malaysia, 
-        I support HR and IT tasks including training development, SPL module creation, 
+        pursuing Data Science. During my internship at Kaneka Malaysia, 
+        I support HR and IT tasks including eform creation, SPL module development, 
         and administrative work. I enjoy learning new tools and improving my technical skills.
         """
     )
