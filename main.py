@@ -194,7 +194,7 @@ if st.session_state.page == "Home":
         )
 
         # ✅ Start Presentation button with its own container
-        st.markdown("<div id='start-btn-container' style='text-align:center; margin-top:1rem;'>", unsafe_allow_html=True)
+        st.markdown("<div id='start-btn-container' style='text-align:center; margin-top:1rem; margin-left:80px,'>", unsafe_allow_html=True)
         if st.button("🎉 Start Presentation", key="start_btn"):
             st.balloons()
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
@@ -205,7 +205,7 @@ if st.session_state.page == "Home":
             """
             <style>
             #start-btn-container div[data-testid="stButton"] > button {
-                margin-left: 500px !important;  /* 👈 special offset only for Start Presentation */
+                margin-left: 60px !important;  /* 👈 special offset only for Start Presentation */
             }
             </style>
             """,
