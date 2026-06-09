@@ -182,7 +182,7 @@ if st.session_state.page == "Home":
                 border-radius: 10px !important;
                 padding: 0.6rem 1.2rem !important;
                 margin-left: 40px !important;
-                cursor: pointer;
+            
             }
         
             /* Button text */
