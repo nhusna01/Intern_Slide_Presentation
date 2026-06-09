@@ -105,7 +105,7 @@ st.sidebar.markdown("<div style='margin-top:-5px; margin-bottom:-50px;'>", unsaf
 st.sidebar.image("images/UMK_logo2.png", width=200)  # adjust width to make it smaller
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
-st.sidebar.title("Navigation")
+st.sidebar.title("HomePage")
 
 # Home button
 if st.sidebar.button("🏠 Home", key="home_btn"):
