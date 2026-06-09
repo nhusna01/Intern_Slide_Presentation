@@ -194,23 +194,24 @@ if st.session_state.page == "Home":
         )
 
         # ✅ Start Presentation button with its own container
-        st.markdown("<div id='start-btn-container' style='text-align:center; margin-top:1rem; margin-left:80px,'>", unsafe_allow_html=True)
-        if st.button("🎉 Start Presentation", key="start_btn"):
-            st.balloons()
-            st.toast("Welcome Everyone! Let’s dive into my internship journey.")
-        st.markdown("</div>", unsafe_allow_html=True)
-
-        # ✅ Scoped CSS only for Start Presentation button
         st.markdown(
             """
-            <style>
-            #start-btn-container div[data-testid="stButton"] > button {
-                margin-left: 60px !important;  /* 👈 special offset only for Start Presentation */
-            }
-            </style>
+            <div id="start-btn-container" style="
+                display: flex;
+                justify-content: flex-end;   /* 👈 pushes container to the right */
+                margin-top: 1rem;
+                margin-right: 60px;          /* 👈 adjust how far right it goes */
+            ">
             """,
             unsafe_allow_html=True
         )
+        
+        if st.button("🎉 Start Presentation", key="start_btn"):
+            st.balloons()
+            st.toast("Welcome Everyone! Let’s dive into my internship journey.")
+        
+        st.markdown("</div>", unsafe_allow_html=True)
+
 
         # Title & Intro
         st.markdown("<h1 style='text-align:center;'>💻 Internship Presentation</h1>", unsafe_allow_html=True)
