@@ -97,8 +97,15 @@ st.markdown(
 # ==============================
 # 📂 Sidebar Navigation
 # ==============================
-# ✅ Add UMK logo at the top of sidebar
-st.sidebar.image("images/UMK_logo1.png", width=250)
+# ✅ Add UMK logo at the top of sidebar (smaller + reduced spacing)
+st.sidebar.markdown(
+    """
+    <div style="text-align:center; margin-bottom:-10px; margin-top:-15px;">
+        <img src="images/UMK_logo1.png" width="120">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 st.sidebar.title("Navigation")
 
