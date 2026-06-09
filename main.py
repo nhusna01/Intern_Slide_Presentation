@@ -159,11 +159,43 @@ if st.session_state.page == "Home":
         )
 
         # Centered button under banner
-        st.markdown("<div style='text-align:center; margin-top:1rem;'>", unsafe_allow_html=True)
+        # ✅ Start Presentation button with its own container
+        st.markdown("<div id='start-btn-container' style='text-align:center; margin-top:1rem;'>", unsafe_allow_html=True)
         if st.button("🎉 Start Presentation", key="start_btn"):
             st.balloons()
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
         st.markdown("</div>", unsafe_allow_html=True)
+        
+        # ✅ Custom CSS only for Start Presentation button
+        st.markdown(
+            """
+            <style>
+            #start-btn-container div[data-testid="stButton"] {
+                display: flex;
+                justify-content: center;
+            }
+            #start-btn-container div[data-testid="stButton"] > button {
+                background-color: #3366cc !important;
+                border: 2px solid #ffd700 !important;
+                border-radius: 10px !important;
+                padding: 0.6rem 1.2rem !important;
+                margin-left: 40px !important;  /* 👈 moves button right */
+                cursor: pointer;
+            }
+            #start-btn-container div[data-testid="stButton"] > button p {
+                color: #ffffff !important;
+                font-weight: bold !important;
+                font-size: 16px !important;
+            }
+            #start-btn-container div[data-testid="stButton"] > button:hover {
+                background-color: #5fa8f5 !important;
+                border: 2px solid #ffd700 !important;
+                box-shadow: 0 0 10px #ffd700;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
         
         # Custom CSS for button styling
         st.markdown(
