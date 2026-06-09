@@ -100,7 +100,7 @@ st.markdown(
 # UMK logo with custom spacing
 st.sidebar.markdown(
     """
-    <div style="text-align:center; margin-top:-10px; margin-bottom:-20px;">
+    <div style="text-align:center; margin-top:-10px; margin-bottom:-5px;">
         <img src="images/UMK_logo1.png" width="250">
     </div>
     """,
