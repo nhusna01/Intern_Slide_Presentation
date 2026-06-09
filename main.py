@@ -205,7 +205,7 @@ if st.session_state.page == "Home":
             """
             <style>
             #start-btn-container div[data-testid="stButton"] > button {
-                margin-left: 150px !important;  /* 👈 special offset only for Start Presentation */
+                margin-left: 500px !important;  /* 👈 special offset only for Start Presentation */
             }
             </style>
             """,
