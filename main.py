@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Import the Company Background page
-from company import company_background
+from pages.company import company_background
 
 # ==============================
 # 🎨 Sidebar Styling (CSS)
