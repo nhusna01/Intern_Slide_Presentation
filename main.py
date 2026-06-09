@@ -99,7 +99,7 @@ st.markdown(
 # ==============================
 # UMK logo with custom spacing
 st.sidebar.markdown("<div style='margin-top:0px; margin-bottom:-15px;'>", unsafe_allow_html=True)
-st.sidebar.image("images/UMK_logo1.png", width=250)  # adjust width to make it smaller
+st.sidebar.image("images/UMK_logo1.png", width=200)  # adjust width to make it smaller
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.sidebar.title("Navigation")
