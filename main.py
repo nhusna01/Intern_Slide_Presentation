@@ -200,7 +200,7 @@ if st.session_state.page == "Home":
                 display: flex;
                 justify-content: flex-end;   /* 👈 pushes container to the right */
                 margin-top: 1rem;
-                margin-right: 60px;          /* 👈 adjust how far right it goes */
+                margin-right: 1000px;          /* 👈 adjust how far right it goes */
             ">
             """,
             unsafe_allow_html=True
