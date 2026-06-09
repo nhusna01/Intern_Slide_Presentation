@@ -238,7 +238,7 @@ if st.session_state.page == "Home":
         # Quick Poll
         st.subheader("🔍 Quick Poll")
         choice = st.radio("Which skill should I improve next?", ["Python", "Streamlit", "Power BI", "GitHub"])
-        st.write(f"Thanks! You voted
+        st.write(f"Thanks! You voted for **{choice}** 💡")
 
     page_container(home_content, bg_color="#e6f7ff")
 
