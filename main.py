@@ -3,6 +3,9 @@ import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 
+# Import the Company Background page
+from company import company_background
+
 # ==============================
 # 🎨 Sidebar Styling (CSS)
 # ==============================
@@ -157,7 +160,6 @@ if st.session_state.page == "Home":
             unsafe_allow_html=True
         )
 
-    
         # Centered button under banner
         st.markdown("<div style='text-align:center; margin-top:1rem;'>", unsafe_allow_html=True)
         if st.button("🎉 Start Presentation", key="start_btn"):
@@ -235,7 +237,7 @@ elif st.session_state.page == "Chapter 1":
     page_container(lambda: st.write("📖 Content for Chapter 1"))
 
 elif st.session_state.page == "Chapter 2":
-    page_container(lambda: st.write("📖 Content for Chapter 2"))
+    page_container(company_background)
 
 elif st.session_state.page == "Chapter 3":
     page_container(lambda: st.write("📖 Content for Chapter 3"))
