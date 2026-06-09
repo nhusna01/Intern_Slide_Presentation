@@ -103,6 +103,10 @@ st.sidebar.image("images/UMK_logo2.png", width=200)  # adjust width to make it s
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.sidebar.title("Navigation")
+st.sidebar.markdown(
+    "<h1 style='color:white; font-weight:bold; margin-top:-10px; text-align:center;'>Navigation</h1>",
+    unsafe_allow_html=True
+)
 
 # Home button
 if st.sidebar.button("🏠 Home", key="home_btn"):
