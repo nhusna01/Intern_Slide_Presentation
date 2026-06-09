@@ -2,7 +2,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
-from pages.company import company_background
 
 # ==============================
 # 🎨 Sidebar Styling (CSS)
@@ -81,16 +80,9 @@ if st.sidebar.button("🏠 Home", key="home_btn"):
 
 # Expander for Slide Chapters
 with st.sidebar.expander("📚 Slide Chapter", expanded=True):
-    if st.sidebar.button("📖 Chapter 1", key="chapter_1"):
-        st.session_state.page = "Chapter 1"
-    if st.sidebar.button("📖 Chapter 2", key="chapter_2"):
-        st.session_state.page = "Chapter 2"
-    if st.sidebar.button("📖 Chapter 3", key="chapter_3"):
-        st.session_state.page = "Chapter 3"
-    if st.sidebar.button("📖 Chapter 4", key="chapter_4"):
-        st.session_state.page = "Chapter 4"
-    if st.sidebar.button("📖 Chapter 5", key="chapter_5"):
-        st.session_state.page = "Chapter 5"
+    for i in range(1, 6):
+        if st.sidebar.button(f"📖 Chapter {i}", key=f"chapter_{i}"):
+            st.session_state.page = f"Chapter {i}"
 
 # ==============================
 # 🖼️ Page Rendering Function
