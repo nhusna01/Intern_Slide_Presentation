@@ -35,21 +35,6 @@ st.markdown(
         letter-spacing: 1.5px;
     }
 
-    /* Sidebar button */
-    [data-testid="stButton"] {
-        background-color: #3366cc !important;
-        border-radius: 8px;
-        border: 1px solid #ffd700;
-    }
-    [data-testid="stButton"] div {
-        color: #ffffff !important;
-        font-weight: bold;
-    }
-    [data-testid="stButton"]:hover {
-        background-color: #5fa8f5 !important;
-        border: 1px solid #ffd700;
-    }
-
     /* Expander styling */
     [data-testid="stExpander"] {
         background-color: #3366cc !important;
@@ -79,10 +64,43 @@ if st.sidebar.button("🏠 Home", key="home_btn"):
     st.session_state.page = "Home"
 
 # Expander for Slide Chapters
+st.sidebar.markdown("<div id='chapter-btn-container'>", unsafe_allow_html=True)
 with st.sidebar.expander("📚 Slide Chapter", expanded=True):
     for i in range(1, 6):
         if st.sidebar.button(f"📖 Chapter {i}", key=f"chapter_{i}"):
             st.session_state.page = f"Chapter {i}"
+st.sidebar.markdown("</div>", unsafe_allow_html=True)
+
+# ✅ Custom CSS only for Chapter buttons
+st.markdown(
+    """
+    <style>
+    #chapter-btn-container div[data-testid="stButton"] {
+        display: flex;
+        justify-content: center;
+    }
+    #chapter-btn-container div[data-testid="stButton"] > button {
+        background-color: #3366cc !important;
+        border: 2px solid #ffd700 !important;
+        border-radius: 10px !important;
+        padding: 0.6rem 1.2rem !important;
+        margin: auto !important;
+        cursor: pointer;
+    }
+    #chapter-btn-container div[data-testid="stButton"] > button p {
+        color: #ffffff !important;
+        font-weight: bold !important;
+        font-size: 16px !important;
+    }
+    #chapter-btn-container div[data-testid="stButton"] > button:hover {
+        background-color: #5fa8f5 !important;
+        border: 2px solid #ffd700 !important;
+        box-shadow: 0 0 10px #ffd700;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # ==============================
 # 🖼️ Page Rendering Function
@@ -148,7 +166,7 @@ if st.session_state.page == "Home":
                 color: white;
                 position: relative;
                 z-index: 1;
-                background: rgba(0,51,102,0.5); /* premium deep blue overlay */
+                background: rgba(0,51,102,0.5);
             ">
                 <img src="images/Kaneka_logo.png" width="100">
                 <h1>Welcome to My Internship Journey ✨</h1>
@@ -158,14 +176,13 @@ if st.session_state.page == "Home":
             unsafe_allow_html=True
         )
 
-        # Centered button under banner
         # ✅ Start Presentation button with its own container
         st.markdown("<div id='start-btn-container' style='text-align:center; margin-top:1rem;'>", unsafe_allow_html=True)
         if st.button("🎉 Start Presentation", key="start_btn"):
             st.balloons()
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
         st.markdown("</div>", unsafe_allow_html=True)
-        
+
         # ✅ Custom CSS only for Start Presentation button
         st.markdown(
             """
@@ -179,7 +196,7 @@ if st.session_state.page == "Home":
                 border: 2px solid #ffd700 !important;
                 border-radius: 10px !important;
                 padding: 0.6rem 1.2rem !important;
-                margin-left: 60px !important;  /* 👈 moves button right */
+                margin-left: 60px !important;
                 cursor: pointer;
             }
             #start-btn-container div[data-testid="stButton"] > button p {
@@ -191,45 +208,6 @@ if st.session_state.page == "Home":
                 background-color: #5fa8f5 !important;
                 border: 2px solid #ffd700 !important;
                 box-shadow: 0 0 10px #ffd700;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-        
-        # Custom CSS for button styling
-        st.markdown(
-            """
-            <style>
-            /* Force all buttons to center-align */
-            div[data-testid="stButton"] {
-                display: flex;
-                justify-content: center;
-            }
-        
-            /* Style the actual button */
-            div[data-testid="stButton"] > button {
-                background-color: #3366cc !important;  /* Deep blue */
-                border: 2px solid #ffd700 !important;  /* Gold border */
-                border-radius: 10px !important;
-                padding: 0.6rem 1.2rem !important;
-                margin: auto !important;
-                cursor: point;
-            
-            }
-        
-            /* Button text */
-            div[data-testid="stButton"] > button p {
-                color: #ffffff !important;             /* White text */
-                font-weight: bold !important;
-                font-size: 16px !important;
-            }
-        
-            /* Hover effect */
-            div[data-testid="stButton"] > button:hover {
-                background-color: #5fa8f5 !important;  /* Lighter blue */
-                border: 2px solid #ffd700 !important;  /* Gold border stays */
-                box-shadow: 0 0 10px #ffd700;          /* Optional glow */
             }
             </style>
             """,
@@ -260,7 +238,7 @@ if st.session_state.page == "Home":
         # Quick Poll
         st.subheader("🔍 Quick Poll")
         choice = st.radio("Which skill should I improve next?", ["Python", "Streamlit", "Power BI", "GitHub"])
-        st.write(f"Thanks! You voted for **{choice}** 💡")
+        st.write(f"Thanks! You voted
 
     page_container(home_content, bg_color="#e6f7ff")
 
