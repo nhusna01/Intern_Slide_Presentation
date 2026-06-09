@@ -77,7 +77,7 @@ st.markdown(
         letter-spacing: 1.5px;
         font-size: 30px;   
         margin-top:-25px;
-        margin-bottom: -10px:
+        margin-bottom: -10px;
     }
 
     /* Expander styling */
