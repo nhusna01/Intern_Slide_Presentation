@@ -9,6 +9,8 @@ def company_page():
     # ==============================
     companies = {
         "Kaneka Malaysia": {
+            "establishment": "Established in Malaysia (Year not specified)",
+            "group": "Kaneka Corporation Group",
             "products": [
                 {
                     "name": "Kane Ace",
@@ -34,6 +36,8 @@ def company_page():
         },
 
         "Kaneka Innovative Fibers Malaysia": {
+            "establishment": "Established in Malaysia (Year not specified)",
+            "group": "Kaneka Corporation Group",
             "products": [
                 {
                     "name": "Kanekalon Fiber",
@@ -49,6 +53,8 @@ def company_page():
         },
 
         "Kaneka Eperan Malaysia": {
+            "establishment": "Established in Malaysia (Year not specified)",
+            "group": "Kaneka Corporation Group",
             "products": [
                 {
                     "name": "Eperan Foam",
@@ -90,36 +96,50 @@ def company_page():
         filtered_companies = companies
 
     else:
-        # default: show first 2 only
         filtered_companies = dict(list(companies.items())[:2])
 
     # ==============================
-    # DISPLAY COMPANIES (CLICKABLE)
+    # DISPLAY COMPANIES
     # ==============================
     for company_name, data in filtered_companies.items():
 
         with st.expander(f"🏭 {company_name}"):
 
-            for product in data["products"]:
+            # ==============================
+            # NEW: COMPANY INFO EXPANDER
+            # ==============================
+            with st.expander("📌 Company Info"):
+                st.write(f"**Group:** {data.get('group', 'N/A')}")
+                st.write(f"**Establishment:** {data.get('establishment', 'N/A')}")
+                st.write("**Kaneka Company List:**")
+                st.write("- Kaneka Malaysia")
+                st.write("- Kaneka Innovative Fibers Malaysia")
+                st.write("- Kaneka Eperan Malaysia")
 
-                st.markdown("### 📦 Product")
+            # ==============================
+            # PRODUCTS EXPANDER
+            # ==============================
+            with st.expander("📦 Products"):
+                for product in data["products"]:
 
-                col1, col2 = st.columns([1, 2])
+                    st.markdown("### 📦 Product")
 
-                with col1:
-                    st.image(product["image"], width=150)
+                    col1, col2 = st.columns([1, 2])
 
-                with col2:
-                    st.subheader(product["name"])
+                    with col1:
+                        st.image(product["image"], width=150)
 
-                    st.write("**Description**")
-                    st.write(product["desc"])
+                    with col2:
+                        st.subheader(product["name"])
 
-                    st.write("**Kegunaan / Uses**")
-                    for use in product["uses"]:
-                        st.write(f"• {use}")
+                        st.write("**Description**")
+                        st.write(product["desc"])
 
-                st.markdown("---")
+                        st.write("**Kegunaan / Uses**")
+                        for use in product["uses"]:
+                            st.write(f"• {use}")
+
+                    st.markdown("---")
 
     # ==============================
     # NO RESULT HANDLING
