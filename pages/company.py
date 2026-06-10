@@ -1,60 +1,128 @@
 import streamlit as st
 
 def company_page():
-    st.header("🏢 Company Background")
-    st.write("Kaneka Malaysia operates several companies under the Kaneka Group. Explore each company below:")
 
-    # Dictionary of companies with descriptions and optional logo paths
+    st.header("🏢 Company Background")
+
+    # ==============================
+    # DATA (Companies + Products)
+    # ==============================
     companies = {
         "Kaneka Malaysia": {
-            "desc": "Produces Kane Ace (impact modifiers) and Graphite Sheet (thermal management).",
-            "logo": "images/Kaneka_logo.png"
+            "products": [
+                {
+                    "name": "Kane Ace",
+                    "image": "images/kane_ace.png",
+                    "desc": "Impact modifier used to improve toughness of PVC and plastics.",
+                    "uses": [
+                        "PVC pipes",
+                        "Window frames",
+                        "Construction materials"
+                    ]
+                },
+                {
+                    "name": "Graphite Sheet",
+                    "image": "images/graphite_sheet.png",
+                    "desc": "Thermal management material with high heat conductivity.",
+                    "uses": [
+                        "Smartphones",
+                        "Laptops",
+                        "Automotive electronics"
+                    ]
+                }
+            ]
         },
-        "Kaneka Innovative Fibers Malaysia – FPW Plant": {
-            "desc": "Makes Kanekalon (FPW) synthetic fibers for wigs and hair extensions.",
-            "logo": "images/fiber_logo.png"
+
+        "Kaneka Innovative Fibers Malaysia": {
+            "products": [
+                {
+                    "name": "Kanekalon Fiber",
+                    "image": "images/fiber.png",
+                    "desc": "Synthetic fiber used for wigs and hair extensions.",
+                    "uses": [
+                        "Fashion wigs",
+                        "Hair extensions",
+                        "Cosmetics industry"
+                    ]
+                }
+            ]
         },
-        "Kaneka Innovative Fibers Malaysia – iModa Plant": {
-            "desc": "Specialized Kanekalon fibers for fashion and styling.",
-            "logo": "images/imoda_logo.png"
-        },
+
         "Kaneka Eperan Malaysia": {
-            "desc": "Produces Eperan foam for automotive and packaging.",
-            "logo": "images/eperan_logo.png"
-        },
-        "Kaneka Paste Polymer Malaysia": {
-            "desc": "Manufactures Paste PVC resin for flooring, wall coverings, and synthetic leather.",
-            "logo": "images/polymer_logo.png"
-        },
-        "Kaneka Apical Malaysia": {
-            "desc": "Creates Apical Polyimide Film for aerospace and electronics.",
-            "logo": "images/apical_logo.png"
-        },
-        "Kaneka MS Malaysia": {
-            "desc": "Develops MS Polymer for adhesives and sealants.",
-            "logo": "images/ms_logo.png"
+            "products": [
+                {
+                    "name": "Eperan Foam",
+                    "image": "images/eperan.png",
+                    "desc": "Lightweight foam material used for protection and packaging.",
+                    "uses": [
+                        "Automotive parts",
+                        "Packaging",
+                        "Shock absorption"
+                    ]
+                }
+            ]
         }
     }
 
-    # Display companies in two columns
-    cols = st.columns(2)
-    i = 0
-    for company, details in companies.items():
-        with cols[i % 2]:
-            st.markdown(f"### 📦 {company}")
-            st.info(details["desc"])
-            # Show logo if available
-            try:
-                st.image(details["logo"], width=120)
-            except:
-                st.write("🔹 Logo not available")
-        i += 1
+    # ==============================
+    # SEARCH BAR
+    # ==============================
+    search_term = st.text_input("🔍 Search Company", placeholder="Enter company name...")
 
-    # Reflection / Summary
-    st.markdown(
-        """
-        ---
-        **Kaneka Malaysia’s diverse operations** highlight its role in advanced materials, 
-        polymers, and specialty chemicals — supporting industries from automotive to aerospace.
-        """
-    )
+    # ==============================
+    # SEE ALL BUTTON
+    # ==============================
+    see_all = st.button("See All Companies")
+
+    st.write("---")
+
+    # ==============================
+    # FILTER LOGIC
+    # ==============================
+    if search_term:
+        filtered_companies = {
+            name: data
+            for name, data in companies.items()
+            if search_term.lower() in name.lower()
+        }
+
+    elif see_all:
+        filtered_companies = companies
+
+    else:
+        # default: show first 2 only
+        filtered_companies = dict(list(companies.items())[:2])
+
+    # ==============================
+    # DISPLAY COMPANIES (CLICKABLE)
+    # ==============================
+    for company_name, data in filtered_companies.items():
+
+        with st.expander(f"🏭 {company_name}"):
+
+            for product in data["products"]:
+
+                st.markdown("### 📦 Product")
+
+                col1, col2 = st.columns([1, 2])
+
+                with col1:
+                    st.image(product["image"], width=150)
+
+                with col2:
+                    st.subheader(product["name"])
+
+                    st.write("**Description**")
+                    st.write(product["desc"])
+
+                    st.write("**Kegunaan / Uses**")
+                    for use in product["uses"]:
+                        st.write(f"• {use}")
+
+                st.markdown("---")
+
+    # ==============================
+    # NO RESULT HANDLING
+    # ==============================
+    if search_term and len(filtered_companies) == 0:
+        st.warning("No company found. Try another keyword.")
