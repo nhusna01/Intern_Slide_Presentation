@@ -83,16 +83,17 @@ def intro_page():
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown(
-    """
-    <div style="display: flex; justify-content: center;">
-    """,
-    unsafe_allow_html=True,
-    )
     
-    st.image("images/myself_icon.jpg", width=220)
-    
-    st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div style="text-align:center;">
+        <img src="app/static/myself_icon.jpg"
+             width="220"
+             style="
+                border-radius:50%;
+                border:5px solid gold;
+             ">
+    </div>
+    """, unsafe_allow_html=True)
 
     st.markdown(
         """
