@@ -9,8 +9,8 @@ def company_page():
     # ==============================
     companies = {
         "Kaneka Malaysia": {
-            "establishment": "Established in Malaysia (Year not specified)",
-            "group": "Kaneka Corporation Group",
+            "establishment": "Established in Osaka, Japan (September 1, 1949)",
+            "main": "Kaneka Corporation Group",
             "products": [
                 {
                     "name": "Kane Ace",
@@ -36,7 +36,7 @@ def company_page():
         },
 
         "Kaneka Innovative Fibers Malaysia": {
-            "establishment": "Established in Malaysia (Year not specified)",
+            "establishment": "Established in Osaka, Japan (September 1, 1949)",
             "group": "Kaneka Corporation Group",
             "products": [
                 {
@@ -53,7 +53,7 @@ def company_page():
         },
 
         "Kaneka Eperan Malaysia": {
-            "establishment": "Established in Malaysia (Year not specified)",
+            "establishment": "Established in Osaka, Japan (September 1, 1949)",
             "group": "Kaneka Corporation Group",
             "products": [
                 {
@@ -109,12 +109,16 @@ def company_page():
             # NEW: COMPANY INFO EXPANDER
             # ==============================
             with st.expander("📌 Company Info"):
-                st.write(f"**Group:** {data.get('group', 'N/A')}")
+                st.write(f"**Main Company:** {data.get('main', 'N/A')}")
                 st.write(f"**Establishment:** {data.get('establishment', 'N/A')}")
-                st.write("**Kaneka Company List:**")
-                st.write("- Kaneka Malaysia")
-                st.write("- Kaneka Innovative Fibers Malaysia")
-                st.write("- Kaneka Eperan Malaysia")
+                st.write("**List of Kaneka Company at Malaysia:**")
+                st.write("- Kaneka (Malaysia) Sdn. Bhd. (KM)")
+                st.write("- Kaneka Paste Polymers Sdn. Bhd. (KPP)")
+                st.write("- Kaneka Eperan Sdn. Bhd." (KEP))
+                st.write("- Kaneka Innovative Fibers Sdn. Bhd. (KIF)")
+                st.write("- Kaneka Apical Malaysia Sdn. Bhd. (KAM)")
+                st.write("- Kaneka MS Malaysia Sdn. Bhd." (KMS))
+                
 
             # ==============================
             # PRODUCTS EXPANDER
