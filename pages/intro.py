@@ -59,42 +59,42 @@ def intro_page():
     </style>
     """, unsafe_allow_html=True)
     
-st.markdown('<div class="profile-card">', unsafe_allow_html=True)
-
-st.image("images/myself_icon.jpg", width=220)
-
-st.markdown("""
-<h1 style="color:#003366;text-align:center;">
-    Nurul Husna Binti Mohd Napi
-</h1>
-
-<div class="typing" style="color:#3366CC;font-size:18px;text-align:center;">
-    Welcome to My Internship Journey ✨
-</div>
-
-<div style="text-align:center; margin-top:20px;">
-    <span class="badge">🎓 Year 4 Student</span>
-    <span class="badge">💻 Information Technology</span>
-    <span class="badge">🏫 Universiti Malaysia Kelantan</span>
-    <span class="badge">🏢 HR Intern @ Kaneka Malaysia</span>
-</div>
-""", unsafe_allow_html=True)
-
-
-st.markdown("</div>", unsafe_allow_html=True)
-    st.markdown("### 🌟 Quick Facts About Me")
-
-    col1, col2, col3 = st.columns(3)
+    st.markdown('<div class="profile-card">', unsafe_allow_html=True)
     
-    with col1:
-        st.metric("Internship Duration", "20 Weeks")
+    st.image("images/myself_icon.jpg", width=220)
     
-    with col2:
-        st.metric("Department", "HR")
+    st.markdown("""
+    <h1 style="color:#003366;text-align:center;">
+        Nurul Husna Binti Mohd Napi
+    </h1>
     
-    with col3:
-        st.metric("Current Year", "Year 4")
+    <div class="typing" style="color:#3366CC;font-size:18px;text-align:center;">
+        Welcome to My Internship Journey ✨
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <span class="badge">🎓 Year 4 Student</span>
+        <span class="badge">💻 Information Technology</span>
+        <span class="badge">🏫 Universiti Malaysia Kelantan</span>
+        <span class="badge">🏢 HR Intern @ Kaneka Malaysia</span>
+    </div>
+    """, unsafe_allow_html=True)
 
+  st.markdown("</div>", unsafe_allow_html=True)
+            st.markdown("### 🌟 Quick Facts About Me")
+        
+            col1, col2, col3 = st.columns(3)
+            
+            with col1:
+                st.metric("Internship Duration", "20 Weeks")
+            
+            with col2:
+                st.metric("Department", "HR")
+            
+            with col3:
+                st.metric("Current Year", "Year 4")
+
+      
     # About Me
     st.subheader("🌸 About Me")
     st.write(
