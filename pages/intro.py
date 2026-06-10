@@ -58,34 +58,30 @@ def intro_page():
     }
     </style>
     """, unsafe_allow_html=True)
+    
+st.markdown('<div class="profile-card">', unsafe_allow_html=True)
 
-    st.markdown(
-        """
-        <div class="profile-card">
+st.image("images/myself_icon.jpg", width=220)
 
-            <img class="profile-img"
-                  st.image("images/myself_icon.jpg", width=220)
+st.markdown("""
+<h1 style="color:#003366;text-align:center;">
+    Nurul Husna Binti Mohd Napi
+</h1>
 
-            <h1 style="color:#003366;">
-                Nurul Husna Binti Mohd Napi
-            </h1>
+<div class="typing" style="color:#3366CC;font-size:18px;text-align:center;">
+    Welcome to My Internship Journey ✨
+</div>
 
-            <div class="typing" style="color:#3366CC;font-size:18px;">
-                Welcome to My Internship Journey ✨
-            </div>
+<div style="text-align:center; margin-top:20px;">
+    <span class="badge">🎓 Year 4 Student</span>
+    <span class="badge">💻 Information Technology</span>
+    <span class="badge">🏫 Universiti Malaysia Kelantan</span>
+    <span class="badge">🏢 HR Intern @ Kaneka Malaysia</span>
+</div>
+""", unsafe_allow_html=True)
 
-            <br>
 
-            <span class="badge">🎓 Year 4 Student</span>
-            <span class="badge">💻 Information Technology</span>
-            <span class="badge">🏫 Universiti Malaysia Kelantan</span>
-            <span class="badge">🏢 HR Intern @ Kaneka Malaysia</span>
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
+st.markdown("</div>", unsafe_allow_html=True)
     st.markdown("### 🌟 Quick Facts About Me")
 
     col1, col2, col3 = st.columns(3)
