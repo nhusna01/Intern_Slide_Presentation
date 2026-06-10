@@ -64,8 +64,7 @@ def intro_page():
         <div class="profile-card">
 
             <img class="profile-img"
-                 src="https://raw.githubusercontent.com/yourusername/yourrepo/main/images/profile_photo.png"
-                 width="180">
+                  st.image("images/myself_icon.jpg", width=220)
 
             <h1 style="color:#003366;">
                 Nurul Husna Binti Mohd Napi
