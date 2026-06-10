@@ -1,20 +1,104 @@
 import streamlit as st
 
 def intro_page():
-    st.header("🙋‍♀️ Self Introduction")
+    st.markdown("""
+    <style>
+    .profile-card {
+        background: linear-gradient(135deg,
+                    rgba(255,255,255,0.15),
+                    rgba(255,255,255,0.05));
+        backdrop-filter: blur(12px);
+        padding: 30px;
+        border-radius: 25px;
+        border: 2px solid rgba(255,215,0,0.5);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
 
-    # Profile section
+    .profile-card:hover {
+        transform: scale(1.02);
+    }
+
+    .profile-img {
+        border-radius: 50%;
+        border: 5px solid #FFD700;
+        box-shadow: 0 0 20px rgba(255,215,0,0.6);
+        margin-bottom: 15px;
+    }
+
+    .badge {
+        display: inline-block;
+        background-color: #3366CC;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        margin: 5px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .typing {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: .15em solid orange;
+        animation:
+            typing 4s steps(40, end),
+            blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
     st.markdown(
         """
-        <div style="text-align:center; padding:1rem; background:rgba(0,51,102,0.1); border-radius:12px;">
-            <img src="images/profile_photo.png" width="200" style="border-radius:50%; border:3px solid #ffd700;">
-            <h2 style="color:#003366;">Nurul Husna Binti Mohd Napi</h2>
-            <p style="font-weight:bold; color:#3366cc;">Year 4 Student – Bachelor of Information Technology with Honours (UMK)</p>
-            <p style= "color:#3366cc;">Intern at Kaneka Malaysia – HR Department</p>
+        <div class="profile-card">
+
+            <img class="profile-img"
+                 src="https://raw.githubusercontent.com/yourusername/yourrepo/main/images/profile_photo.png"
+                 width="180">
+
+            <h1 style="color:#003366;">
+                Nurul Husna Binti Mohd Napi
+            </h1>
+
+            <div class="typing" style="color:#3366CC;font-size:18px;">
+                Welcome to My Internship Journey ✨
+            </div>
+
+            <br>
+
+            <span class="badge">🎓 Year 4 Student</span>
+            <span class="badge">💻 Information Technology</span>
+            <span class="badge">🏫 Universiti Malaysia Kelantan</span>
+            <span class="badge">🏢 HR Intern @ Kaneka Malaysia</span>
+
         </div>
         """,
         unsafe_allow_html=True
     )
+
+    st.markdown("### 🌟 Quick Facts About Me")
+
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.metric("Internship Duration", "20 Weeks")
+    
+    with col2:
+        st.metric("Department", "HR")
+    
+    with col3:
+        st.metric("Current Year", "Year 4")
 
     # About Me
     st.subheader("🌸 About Me")
