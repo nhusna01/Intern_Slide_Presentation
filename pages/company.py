@@ -2,151 +2,131 @@ import streamlit as st
 
 def company_page():
 
-    st.header("🏢 Company Background")
+    # Sidebar branding
+    st.sidebar.image("images/kaneka_logo.png", use_container_width=True)
+    st.sidebar.markdown("### Kaneka Corporate Portal")
+    st.sidebar.caption("Kaneka Future")
+
+    st.header("🏢 Kaneka Corporate Portal")
+    st.image("images/Kaneka_logo.png", width=200)
+    st.write("---")
 
     # ==============================
-    # DATA (Companies + Products)
+    # DATA
     # ==============================
-    companies = {
-        "Kaneka Malaysia": {
-            "establishment": "Established in Osaka, Japan (September 1, 1949)",
-            "main": "Kaneka Corporation Group",
-            "products": [
-                {
-                    "name": "Kane Ace",
-                    "image": "images/kane_ace.png",
-                    "desc": "Impact modifier used to improve toughness of PVC and plastics.",
-                    "uses": [
-                        "PVC pipes",
-                        "Window frames",
-                        "Construction materials"
-                    ]
-                },
-                {
-                    "name": "Graphite Sheet",
-                    "image": "images/graphite_sheet.png",
-                    "desc": "Thermal management material with high heat conductivity.",
-                    "uses": [
-                        "Smartphones",
-                        "Laptops",
-                        "Automotive electronics"
-                    ]
-                }
-            ]
-        },
+    data = {
+        "establishment": "September 1, 1949 (Osaka, Japan)",
+        "founder": "Kanehide Sakurada",
+        "address": "Lot 123, Industrial Zone, Selangor, Malaysia",
+        "map_embed": "https://www.google.com/maps",
 
-        "Kaneka Innovative Fibers Malaysia": {
-            "establishment": "Established in Osaka, Japan (September 1, 1949)",
-            "group": "Kaneka Corporation Group",
-            "products": [
-                {
-                    "name": "Kanekalon Fiber",
-                    "image": "images/fiber.png",
-                    "desc": "Synthetic fiber used for wigs and hair extensions.",
-                    "uses": [
-                        "Fashion wigs",
-                        "Hair extensions",
-                        "Cosmetics industry"
-                    ]
-                }
-            ]
-        },
+        "philosophy": """
+        Kaneka aims to contribute to society through innovation in chemistry.
+        We focus on sustainability, human well-being, and advanced materials
+        that support global industries and daily life.
+        """,
 
-        "Kaneka Eperan Malaysia": {
-            "establishment": "Established in Osaka, Japan (September 1, 1949)",
-            "group": "Kaneka Corporation Group",
-            "products": [
-                {
-                    "name": "Eperan Foam",
-                    "image": "images/eperan.png",
-                    "desc": "Lightweight foam material used for protection and packaging.",
-                    "uses": [
-                        "Automotive parts",
-                        "Packaging",
-                        "Shock absorption"
-                    ]
-                }
-            ]
-        }
+        "history": [
+            ["Kaneka Malaysia (KM)", "1990", "PVC & Industrial Materials"],
+            ["Kaneka Paste Polymers (KPP)", "1995", "Resins & Polymers"],
+            ["Kaneka Eperan (KEP)", "2000", "Foam Technology"],
+            ["Kaneka Innovative Fibers (KIF)", "2005", "Synthetic Fibers"],
+            ["Kaneka Apical Malaysia (KAM)", "2010", "Advanced Chemicals"],
+            ["Kaneka MS Malaysia (KMS)", "2015", "Specialty Materials"],
+        ],
+
+        "products": [
+            {
+                "name": "Kane Ace",
+                "image": "images/kane_ace.png",
+                "desc": "Impact modifier used to improve toughness of PVC and plastics.",
+                "uses": ["PVC pipes", "Window frames", "Construction materials"]
+            },
+            {
+                "name": "Graphite Sheet",
+                "image": "images/graphite_sheet.png",
+                "desc": "High thermal conductivity material for heat management.",
+                "uses": ["Smartphones", "Laptops", "Automotive electronics"]
+            }
+        ]
     }
 
     # ==============================
-    # SEARCH BAR
+    # SIDEBAR NAVIGATION
     # ==============================
-    search_term = st.text_input("🔍 Search Company", placeholder="Enter company name...")
-
-    # ==============================
-    # SEE ALL BUTTON
-    # ==============================
-    see_all = st.button("See All Companies")
+    menu = st.sidebar.radio(
+        "📌 Navigation",
+        ["Kaneka Group", "Corporate Philosophy", "Location", "History", "Products"]
+    )
 
     st.write("---")
 
     # ==============================
-    # FILTER LOGIC
+    # 1. KANEKA GROUP
     # ==============================
-    if search_term:
-        filtered_companies = {
-            name: data
-            for name, data in companies.items()
-            if search_term.lower() in name.lower()
-        }
+    if menu == "Kaneka Group":
+        st.subheader("🏢 Kaneka Corporation Group")
 
-    elif see_all:
-        filtered_companies = companies
+        col1, col2 = st.columns(2)
 
-    else:
-        filtered_companies = dict(list(companies.items())[:2])
+        with col1:
+            st.metric("Established", data["establishment"])
 
-    # ==============================
-    # DISPLAY COMPANIES
-    # ==============================
-    for company_name, data in filtered_companies.items():
+        with col2:
+            st.metric("Founder", data["founder"])
 
-        with st.expander(f"🏭 {company_name}"):
-
-            # ==============================
-            # NEW: COMPANY INFO EXPANDER
-            # ==============================
-            with st.expander("📌 Company Info"):
-                st.write(f"**Main Company:** {data.get('main', 'N/A')}")
-                st.write(f"**Establishment:** {data.get('establishment', 'N/A')}")
-                st.write("**List of Kaneka Company at Malaysia:**")
-                st.write("- Kaneka (Malaysia) Sdn. Bhd. (KM)")
-                st.write("- Kaneka Paste Polymers Sdn. Bhd. (KPP)")
-                st.write("- Kaneka Eperan Sdn. Bhd." (KEP))
-                st.write("- Kaneka Innovative Fibers Sdn. Bhd. (KIF)")
-                st.write("- Kaneka Apical Malaysia Sdn. Bhd. (KAM)")
-                st.write("- Kaneka MS Malaysia Sdn. Bhd." (KMS))
-                
-
-            # ==============================
-            # PRODUCTS EXPANDER
-            # ==============================
-            with st.expander("📦 Products"):
-                for product in data["products"]:
-
-                    st.markdown("### 📦 Product")
-
-                    col1, col2 = st.columns([1, 2])
-
-                    with col1:
-                        st.image(product["image"], width=150)
-
-                    with col2:
-                        st.subheader(product["name"])
-
-                        st.write("**Description**")
-                        st.write(product["desc"])
-
-                        st.write("**Kegunaan / Uses**")
-                        for use in product["uses"]:
-                            st.write(f"• {use}")
-
-                    st.markdown("---")
+        st.info(
+            "Kaneka Corporation is a Japanese chemical company focusing on "
+            "materials science, healthcare, and advanced polymers."
+        )
 
     # ==============================
-    # NO RESULT HANDLING
+    # 2. PHILOSOPHY
     # ==============================
-    if search_term and len(filtered_companies) == 0:
-        st.warning("No company found. Try another keyword.")
+    elif menu == "Corporate Philosophy":
+        st.subheader("🧭 Corporate Philosophy")
+
+        st.success(data["philosophy"])
+
+    # ==============================
+    # 3. LOCATION
+    # ==============================
+    elif menu == "Location":
+        st.subheader("📍 Company Location")
+
+        st.write(f"**Address:** {data['address']}")
+
+        st.map()
+
+        st.link_button("🌍 Open in Google Maps", data["map_embed"])
+
+    # ==============================
+    # 4. HISTORY
+    # ==============================
+    elif menu == "History":
+        st.subheader("📜 Company History in Malaysia")
+
+        st.table(data["history"])
+
+    # ==============================
+    # 5. PRODUCTS (CARD STYLE UI)
+    # ==============================
+    elif menu == "Products":
+        st.subheader("📦 Kaneka Products")
+
+        for product in data["products"]:
+
+            with st.container():
+                col1, col2 = st.columns([1, 3])
+
+                with col1:
+                    st.image(product["image"], width=150)
+
+                with col2:
+                    st.markdown(f"### {product['name']}")
+                    st.write(product["desc"])
+
+                    st.write("**Uses:**")
+                    st.write(" | ".join(product["uses"]))
+
+            st.divider()
