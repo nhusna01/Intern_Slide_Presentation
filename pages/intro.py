@@ -75,9 +75,13 @@ def intro_page():
     # 🙋‍♀️ Self Introduction
     # ==============================
     # Profile Card
-    st.markdown('<div class="profile-card">')
-    st.write("🙋‍♀️ Self-Introduction")
-    st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class="profile-card">
+        <h2 style="color:#003366; margin:0;">
+            🙋‍♀️ Self-Introduction
+        </h2>
+    </div>
+    """, unsafe_allow_html=True)
 
     st.markdown(
     """
