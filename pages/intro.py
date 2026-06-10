@@ -24,7 +24,11 @@ def intro_page():
         }
 
         .badge {
-            display: inline-block;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 280px;
+            height: 50px;
             background-color: #3366CC;
             color: white;
             padding: 8px 16px;
@@ -32,6 +36,8 @@ def intro_page():
             margin: 5px;
             font-size: 14px;
             font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
         .typing {
@@ -68,12 +74,21 @@ def intro_page():
     # ==============================
     # 🙋‍♀️ Self Introduction
     # ==============================
-    st.header("🙋‍♀️ Self Introduction")
-
     # Profile Card
     st.markdown('<div class="profile-card">', unsafe_allow_html=True)
+    st.write("🙋‍♀️ Self-Introduction")
+    st.markdown("</div>", unsafe_allow_html=True)
 
+    st.markdown(
+    """
+    <div style="display: flex; justify-content: center;">
+    """,
+    unsafe_allow_html=True,
+    )
+    
     st.image("images/myself_icon.jpg", width=220)
+    
+    st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown(
         """
@@ -83,14 +98,14 @@ def intro_page():
 
         <div style="text-align:center;">
             <div class="typing" style="color:#3366CC; font-size:18px;">
-                Welcome to My Internship Journey ✨
+                Here's a quick introduction to who I am.💖
             </div>
         </div>
 
         <br>
 
         <div style="text-align:center;">
-            <span class="badge">🎓 Year 4 Student</span>
+            <span class="badge">👩‍💼 Year 4 Student</span>
             <span class="badge">💻 Information Technology</span>
             <span class="badge">🏫 Universiti Malaysia Kelantan</span>
             <span class="badge">🏢 HR Intern @ Kaneka Malaysia</span>
@@ -109,13 +124,13 @@ def intro_page():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.metric("Internship Duration", "20 Weeks")
+        st.metric("Major", "Data Science")
 
     with col2:
-        st.metric("Department", "HR")
+        st.metric("Supervisor", "Norkamariah Othman")
 
     with col3:
-        st.metric("Current Year", "Year 4")
+        st.metric("Internship Duration", "26 Weeks, 21.07.26")
 
     # ==============================
     # 🌸 About Me
