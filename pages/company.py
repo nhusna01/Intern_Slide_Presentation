@@ -3,7 +3,7 @@ import streamlit as st
 def company_page():
 
     # Sidebar branding
-    st.sidebar.image("images/kaneka_logo.png", use_container_width=True)
+    st.sidebar.image("images/Kaneka_logo.png", use_container_width=True)
     st.sidebar.markdown("### Kaneka Corporate Portal")
     st.sidebar.caption("Kaneka Future")
 
