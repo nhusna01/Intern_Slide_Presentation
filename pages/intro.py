@@ -46,13 +46,13 @@ def intro_page():
     st.markdown(
         """
         - 📚 Learning e-learning tools (iSpring, NotebookLM)
-        - ✉️ Improving professional communication and email writing
-        - 📊 Exploring data analytics fundamentals
-        - 🎨 Interactive presentation tools (Canva, Streamlit)
+        - ✉️ Improving professional communication and email writing 
+        - 📊 Exploring data analytics fundamentals (draw.io)
+        - 🎨 Interactive presentation tools (Canva, Streamlit, Figma)
         """
     )
 
     # Contact
     st.subheader("📞 Contact Me")
     st.write("Phone: 011-12957400")
-    st.write("Email: husna@example.com")
+    st.write("Email: nhusna.napi@gmail.com")
