@@ -170,7 +170,7 @@ def intro_page():
     }
     
     .fact-value {
-        font-size: 22px;
+        font-size: 12px;
         font-weight: bold;
     }
     </style>
