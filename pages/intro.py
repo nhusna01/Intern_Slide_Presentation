@@ -158,7 +158,7 @@ def intro_page():
     }
     
     .fact-icon {
-        font-size: 40px;
+        font-size: 35px;
         margin-bottom: 10px;
     }
     
