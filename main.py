@@ -45,8 +45,15 @@ st.markdown(
         cursor: pointer;
     }
 
-    /* Button text */
+    /* Button text (All Chapters Button) */
     div[data-testid="stButton"] > button p {
+        color: #ffffff !important;             /* White text */
+        font-weight: bold !important;
+        font-size: 16px !important;
+    }
+
+    /* Expander text (Slide Chapter) */
+    [data-testid="stExpander"] div[data-testid="stButton"] > button p {
         color: #ffffff !important;             /* White text */
         font-weight: bold !important;
         font-size: 16px !important;
