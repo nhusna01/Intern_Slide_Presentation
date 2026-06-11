@@ -105,16 +105,23 @@ st.markdown(
         margin-bottom: -10px;
     }
 
-    /* Expander styling */
-    [data-testid="stExpander"] {
+    /* Slide Chapter expander header */
+    [data-testid="stExpander"] details summary {
         background-color: #3366cc !important;
-        border-radius: 8px;
-        border: 1px solid #ffd700;
-        overflow: visible !important;
-    }
-    [data-testid="stExpander"] div {
-        color: #ffffff !important;
+        border: 2px solid #ffd700 !important;
+        border-radius: 10px !important;
+        padding: 0.6rem 1.2rem !important;
+        color: white !important;
         font-weight: bold !important;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    /* Hover effect - same as Home button */
+    [data-testid="stExpander"] details summary:hover {
+        background-color: #5fa8f5 !important;
+        border: 2px solid #ffd700 !important;
+        box-shadow: 0 0 10px #ffd700 !important;
     }
     
     </style>
