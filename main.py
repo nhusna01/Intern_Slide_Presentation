@@ -164,7 +164,7 @@ if st.sidebar.button(
     st.session_state.page = "Home"
 
 # Slide Chapters Expander
-with st.sidebar.expander("📚 Slide Chapter", expanded=False):
+with st.sidebar.expander("**📚 Slide Chapter**", expanded=False):
 
     if st.button("📖 Chapter 1", key="chapter1", use_container_width=True):
         st.session_state.page = "Chapter 1"
