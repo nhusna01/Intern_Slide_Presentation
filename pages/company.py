@@ -114,75 +114,74 @@ def company_page():
     else:
         st.info("🔎 Search a company or click 'See All Companies' to display results.")
 
-   import streamlit as st
 
-st.set_page_config(page_title="Kaneka Malaysia", layout="wide")
-
-st.title("🏢 Kaneka Malaysia")
-st.caption("Innovation • Sustainability • Human Well-being")
-
-st.divider()
-
-# Initialize session state
-if "page" not in st.session_state:
-    st.session_state.page = "Kaneka Group"
-
-# Navigation Cards
-col1, col2, col3, col4, col5 = st.columns(5)
-
-with col1:
-    if st.button("🏢\nKaneka Group", use_container_width=True):
+    st.set_page_config(page_title="Kaneka Malaysia", layout="wide")
+    
+    st.title("🏢 Kaneka Malaysia")
+    st.caption("Innovation • Sustainability • Human Well-being")
+    
+    st.divider()
+    
+    # Initialize session state
+    if "page" not in st.session_state:
         st.session_state.page = "Kaneka Group"
-
-with col2:
-    if st.button("🧭\nPhilosophy", use_container_width=True):
-        st.session_state.page = "Corporate Philosophy"
-
-with col3:
-    if st.button("📍\nLocation", use_container_width=True):
-        st.session_state.page = "Location"
-
-with col4:
-    if st.button("📜\nHistory", use_container_width=True):
-        st.session_state.page = "History"
-
-with col5:
-    if st.button("📦\nProducts", use_container_width=True):
-        st.session_state.page = "Products"
-
-st.divider()
-
-page = st.session_state.page
-
-if page == "Kaneka Group":
-    st.header("🏢 Kaneka Group")
-    st.info(
-        "Kaneka Corporation is a Japanese chemical company founded in 1949."
-    )
-
-elif page == "Corporate Philosophy":
-    st.header("🧭 Corporate Philosophy")
-    st.success(
-        "Innovation, Sustainability, and Human Well-being."
-    )
-
-elif page == "Location":
-    st.header("📍 Global Locations")
-    st.map()
-
-elif page == "History":
-    st.header("📜 Company History")
-
-    st.timeline([
-        {"content": "Kaneka (Malaysia) Sdn Bhd Established", "start": "1990"},
-        {"content": "Kaneka Eperan Sdn Bhd Expansion", "start": "2000"},
-        {"content": "Kaneka Innovative Fibers Sdn Bhd Development", "start": "2005"},
-        {"content": "Kaneka MS Malaysia Sdn Bhd Established", "start": "1990"},
-        {"content": "Kaneka Paste Polymers Expansion", "start": "2000"},
-        {"content": "Kaneka Apical Malaysia Sdn Bhd", "start": "2005"},
-        
-    ])
-
-elif page == "Products":
-    st.header("📦 Products")
+    
+    # Navigation Cards
+    col1, col2, col3, col4, col5 = st.columns(5)
+    
+    with col1:
+        if st.button("🏢\nKaneka Group", use_container_width=True):
+            st.session_state.page = "Kaneka Group"
+    
+    with col2:
+        if st.button("🧭\nPhilosophy", use_container_width=True):
+            st.session_state.page = "Corporate Philosophy"
+    
+    with col3:
+        if st.button("📍\nLocation", use_container_width=True):
+            st.session_state.page = "Location"
+    
+    with col4:
+        if st.button("📜\nHistory", use_container_width=True):
+            st.session_state.page = "History"
+    
+    with col5:
+        if st.button("📦\nProducts", use_container_width=True):
+            st.session_state.page = "Products"
+    
+    st.divider()
+    
+    page = st.session_state.page
+    
+    if page == "Kaneka Group":
+        st.header("🏢 Kaneka Group")
+        st.info(
+            "Kaneka Corporation is a Japanese chemical company founded in 1949."
+        )
+    
+    elif page == "Corporate Philosophy":
+        st.header("🧭 Corporate Philosophy")
+        st.success(
+            "Innovation, Sustainability, and Human Well-being."
+        )
+    
+    elif page == "Location":
+        st.header("📍 Global Locations")
+        st.map()
+    
+    elif page == "History":
+        st.header("📜 Company History")
+    
+        st.timeline([
+            {"content": "Kaneka (Malaysia) Sdn Bhd Established", "start": "1990"},
+            {"content": "Kaneka Eperan Sdn Bhd Expansion", "start": "2000"},
+            {"content": "Kaneka Innovative Fibers Sdn Bhd Development", "start": "2005"},
+            {"content": "Kaneka MS Malaysia Sdn Bhd Established", "start": "1990"},
+            {"content": "Kaneka Paste Polymers Expansion", "start": "2000"},
+            {"content": "Kaneka Apical Malaysia Sdn Bhd", "start": "2005"},
+            
+        ])
+    
+    elif page == "Products":
+        st.header("📦 Products")
     st.write("Product section coming soon...")
