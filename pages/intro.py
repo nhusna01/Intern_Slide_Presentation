@@ -179,6 +179,8 @@ def intro_page():
     col1, col2, col3 = st.columns(3)
     
     with col1:
+        with st.popover("❓"):
+            st.write("Data Science")
         st.markdown("""
         <div class="fact-card">
             <div class="fact-icon">🎓</div>
@@ -191,6 +193,8 @@ def intro_page():
         """, unsafe_allow_html=True)
     
     with col2:
+        with st.popover("❓"):
+            st.write("HR Industry Supervisor")
         st.markdown("""
         <div class="fact-card">
             <div class="fact-icon">👩‍💼</div>
@@ -202,6 +206,8 @@ def intro_page():
         """, unsafe_allow_html=True)
     
     with col3:
+        with st.popover("❓"):
+            st.write("3rd February 2026 – 21st July 2026")
         st.markdown("""
         <div class="fact-card">
             <div class="fact-icon">📅</div>
