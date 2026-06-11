@@ -229,7 +229,7 @@ def intro_page():
                 <span class="tooltiptext">HR Industry Supervisor</span>
             </div>
             <div class="fact-icon">👩‍💼</div>
-            <div class="fact-title">Internship Supervisor</div>
+            <div class="fact-title">Supervisor</div>
             <div class="fact-value">
                 Pn. Norkamariah Othman
             </div>
