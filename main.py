@@ -52,11 +52,18 @@ st.markdown(
         font-size: 16px !important;
     }
 
-    /* Hover effect */
+    /* Hover effect for All Chapters */
     div[data-testid="stButton"] > button:hover {
         background-color: #5fa8f5 !important;  /* Lighter blue */
         border: 2px solid #ffd700 !important;  /* Gold border stays */
         box-shadow: 0 0 10px #ffd700;          /* Optional glow */
+    }
+
+    /* Hover effect for Slide Chapter */
+    [data-testid="stExpander"] div[data-testid="stButton"] > button:hover {
+        background-color: #5fa8f5 !important;
+        border: 2px solid #ffd700 !important;
+        box-shadow: 0 0 10px #ffd700 !important;
     }
     </style>
     """,
@@ -103,15 +110,13 @@ st.markdown(
         background-color: #3366cc !important;
         border-radius: 8px;
         border: 1px solid #ffd700;
+        overflow: visible !important;
     }
     [data-testid="stExpander"] div {
         color: #ffffff !important;
         font-weight: bold !important;
     }
-    [data-testid="stExpander"]:hover {
-        background-color: #5fa8f5 !important;
-        border: 1px solid #ffd700;
-    }
+    
     </style>
     """,
     unsafe_allow_html=True
