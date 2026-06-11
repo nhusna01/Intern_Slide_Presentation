@@ -150,6 +150,7 @@ def intro_page():
         box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         transition: all 0.3s ease;
         height: 180px;
+        position: relative;   /* ADD THIS */
     }
     
     .fact-card:hover {
@@ -173,30 +174,60 @@ def intro_page():
         font-size: 12px;
         font-weight: bold;
     }
+    
+    /* ADD EVERYTHING BELOW */
+    .tooltip {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .tooltiptext {
+        visibility: hidden;
+        width: 140px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        border-radius: 8px;
+        padding: 8px;
+        position: absolute;
+        top: -5px;
+        right: 25px;
+        z-index: 1;
+        font-size: 12px;
+    }
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    
     </style>
     """, unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        with st.popover("❓"):
-            st.write("Data Science")
         st.markdown("""
         <div class="fact-card">
+            <div class="tooltip">❓
+                <span class="tooltiptext">Data Science</span>
+            </div>
             <div class="fact-icon">🎓</div>
             <div class="fact-title">Specialization</div>
             <div class="fact-value">
-                Bachelor of Information Technology<br>
-                (Data Science)
+                Bachelor of Information Technology
             </div>
         </div>
         """, unsafe_allow_html=True)
     
     with col2:
-        with st.popover("❓"):
-            st.write("HR Industry Supervisor")
         st.markdown("""
         <div class="fact-card">
+            <div class="tooltip">❓
+                <span class="tooltiptext">HR Industry Supervisor</span>
+            </div>
             <div class="fact-icon">👩‍💼</div>
             <div class="fact-title">Internship Supervisor</div>
             <div class="fact-value">
@@ -206,15 +237,15 @@ def intro_page():
         """, unsafe_allow_html=True)
     
     with col3:
-        with st.popover("❓"):
-            st.write("3rd February 2026 – 21st July 2026")
         st.markdown("""
         <div class="fact-card">
+            <div class="tooltip">❓
+                <span class="tooltiptext">3/2/2026 - 21/7/2026</span>
+            </div>
             <div class="fact-icon">📅</div>
             <div class="fact-title">Internship Journey</div>
             <div class="fact-value">
-                26 Weeks<br>
-                July 2025 – January 2026
+                26 Weeks
             </div>
         </div>
         """, unsafe_allow_html=True)
