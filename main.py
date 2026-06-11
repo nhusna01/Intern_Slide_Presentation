@@ -106,7 +106,7 @@ st.markdown(
     }
     [data-testid="stExpander"] div {
         color: #ffffff !important;
-        font-weight: bold;
+        font-weight: bold !important;
     }
     [data-testid="stExpander"]:hover {
         background-color: #5fa8f5 !important;
