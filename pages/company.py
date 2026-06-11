@@ -178,10 +178,12 @@ def company_page():
 
         st.success(
             """
-            Innovation • Sustainability • Human Well-being
+            Innovation • Environmental • Sustainability
 
-            Through our technologies and products,
-            we aim to improve people's lives and create value for society.
+            With people and technology growing together into creative fusion,
+            we will break fresh ground for the future and tie in to explore
+            new values. We are also committed to challenge the environmental
+            issues of our planet and contribute to upgrading the quality of life.
             """
         )
 
