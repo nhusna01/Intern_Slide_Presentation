@@ -93,7 +93,7 @@ st.markdown(
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        font-size: 40px;   
+        font-size: 34px;   
         margin-top:-25px;
         margin-bottom: -10px;
     }
