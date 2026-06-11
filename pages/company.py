@@ -19,17 +19,36 @@ def company_page():
             "address": "Lot 123, Industrial Zone, Selangor, Malaysia",
         },
 
-        "Kaneka Innovative Fibers Malaysia": {
+        "Kaneka Innovative Fibers": {
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
             "address": "Penang Industrial Park, Malaysia",
         },
 
-        "Kaneka Eperan Malaysia": {
+        "Kaneka Eperan": {
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
             "address": "Johor Industrial Zone, Malaysia",
         }
+
+         "Kaneka MS Malaysia": {
+            "establishment": "September 1, 1949 (Osaka, Japan)",
+            "founder": "Kanehide Sakurada",
+            "address": "Johor Industrial Zone, Malaysia",
+        }
+
+         "Kaneka Apical Malaysia": {
+                "establishment": "September 1, 1949 (Osaka, Japan)",
+                "founder": "Kanehide Sakurada",
+                "address": "Johor Industrial Zone, Malaysia",
+        }
+
+         "Kaneka Paste Polymers Malaysia": {
+                    "establishment": "September 1, 1949 (Osaka, Japan)",
+                    "founder": "Kanehide Sakurada",
+                    "address": "Johor Industrial Zone, Malaysia",
+        }
+    
     }
 
     # ==============================
@@ -102,40 +121,75 @@ def company_page():
     else:
         st.info("🔎 Search a company or click 'See All Companies' to display results.")
 
-    # ==============================
-    # SIDEBAR NAVIGATION
-    # (Optional structure for future expansion)
-    # ==============================
-    st.sidebar.write("---")
-    menu = st.sidebar.radio(
-        "📌 Navigation",
-        ["Kaneka Group", "Corporate Philosophy", "Location", "History", "Products"]
+   import streamlit as st
+
+st.set_page_config(page_title="Kaneka Malaysia", layout="wide")
+
+st.title("🏢 Kaneka Malaysia")
+st.caption("Innovation • Sustainability • Human Well-being")
+
+st.divider()
+
+# Initialize session state
+if "page" not in st.session_state:
+    st.session_state.page = "Kaneka Group"
+
+# Navigation Cards
+col1, col2, col3, col4, col5 = st.columns(5)
+
+with col1:
+    if st.button("🏢\nKaneka Group", use_container_width=True):
+        st.session_state.page = "Kaneka Group"
+
+with col2:
+    if st.button("🧭\nPhilosophy", use_container_width=True):
+        st.session_state.page = "Corporate Philosophy"
+
+with col3:
+    if st.button("📍\nLocation", use_container_width=True):
+        st.session_state.page = "Location"
+
+with col4:
+    if st.button("📜\nHistory", use_container_width=True):
+        st.session_state.page = "History"
+
+with col5:
+    if st.button("📦\nProducts", use_container_width=True):
+        st.session_state.page = "Products"
+
+st.divider()
+
+page = st.session_state.page
+
+if page == "Kaneka Group":
+    st.header("🏢 Kaneka Group")
+    st.info(
+        "Kaneka Corporation is a Japanese chemical company founded in 1949."
     )
 
-    # ==============================
-    # NAV CONTENT (SIMPLE PLACEHOLDER)
-    # ==============================
-    if menu == "Kaneka Group":
-        st.subheader("🏢 Kaneka Group")
-        st.info("Kaneka Corporation is a Japanese chemical company founded in 1949.")
+elif page == "Corporate Philosophy":
+    st.header("🧭 Corporate Philosophy")
+    st.success(
+        "Innovation, Sustainability, and Human Well-being."
+    )
 
-    elif menu == "Corporate Philosophy":
-        st.subheader("🧭 Philosophy")
-        st.success("Innovation, Sustainability, and Human Well-being.")
+elif page == "Location":
+    st.header("📍 Global Locations")
+    st.map()
 
-    elif menu == "Location":
-        st.subheader("📍 Location")
-        st.write("Malaysia & Global Sites")
-        st.map()
+elif page == "History":
+    st.header("📜 Company History")
 
-    elif menu == "History":
-        st.subheader("📜 History")
-        st.table([
-            ["Kaneka Malaysia", "1990"],
-            ["Kaneka Fibers", "2005"],
-            ["Kaneka Eperan", "2000"],
-        ])
+    st.timeline([
+        {"content": "Kaneka (Malaysia) Sdn Bhd Established", "start": "1990"},
+        {"content": "Kaneka Eperan Sdn Bhd Expansion", "start": "2000"},
+        {"content": "Kaneka Innovative Fibers Sdn Bhd Development", "start": "2005"},
+        {"content": "Kaneka MS Malaysia Sdn Bhd Established", "start": "1990"},
+        {"content": "Kaneka Paste Polymers Expansion", "start": "2000"},
+        {"content": "Kaneka Apical Malaysia Sdn Bhd", "start": "2005"},
+        
+    ])
 
-    elif menu == "Products":
-        st.subheader("📦 Products")
-        st.write("Product section coming soon...")
+elif page == "Products":
+    st.header("📦 Products")
+    st.write("Product section coming soon...")
