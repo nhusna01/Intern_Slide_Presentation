@@ -121,99 +121,99 @@ def intro_page():
 
     st.markdown("</div>", unsafe_allow_html=True)
 
-# ==============================
-# 🌟 Quick Facts
-# ==============================
-st.markdown(
-    """
-    <h2 style="
-        text-align:center;
-        color:#003366;
-        margin-bottom:30px;
-    ">
-        🌟 Quick Facts About Me
-    </h2>
-    """,
-    unsafe_allow_html=True
-)
-
-# Custom card styling
-st.markdown("""
-<style>
-.fact-card {
-    background: linear-gradient(135deg, #3366CC, #5FA8F5);
-    color: white;
-    padding: 25px 20px;
-    border-radius: 20px;
-    text-align: center;
-    border: 2px solid #FFD700;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    height: 180px;
-}
-
-.fact-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-.fact-icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.fact-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFD700;
-    margin-bottom: 12px;
-}
-
-.fact-value {
-    font-size: 22px;
-    font-weight: bold;
-}
-</style>
-""", unsafe_allow_html=True)
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("""
-    <div class="fact-card">
-        <div class="fact-icon">🎓</div>
-        <div class="fact-title">Specialization</div>
-        <div class="fact-value">
-            Bachelor of Information Technology<br>
-            (Data Science)
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-with col2:
-    st.markdown("""
-    <div class="fact-card">
-        <div class="fact-icon">👩‍💼</div>
-        <div class="fact-title">Internship Supervisor</div>
-        <div class="fact-value">
-            Pn. Norkamariah Othman
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-with col3:
-    st.markdown("""
-    <div class="fact-card">
-        <div class="fact-icon">📅</div>
-        <div class="fact-title">Internship Journey</div>
-        <div class="fact-value">
-            26 Weeks<br>
-            July 2025 – January 2026
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
+    # ==============================
+    # 🌟 Quick Facts
+    # ==============================
+    st.markdown(
+        """
+        <h2 style="
+            text-align:center;
+            color:#003366;
+            margin-bottom:30px;
+        ">
+            🌟 Quick Facts About Me
+        </h2>
+        """,
+        unsafe_allow_html=True
+    )
     
+    # Custom card styling
+    st.markdown("""
+    <style>
+    .fact-card {
+        background: linear-gradient(135deg, #3366CC, #5FA8F5);
+        color: white;
+        padding: 25px 20px;
+        border-radius: 20px;
+        text-align: center;
+        border: 2px solid #FFD700;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        height: 180px;
+    }
+    
+    .fact-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+    
+    .fact-icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .fact-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFD700;
+        margin-bottom: 12px;
+    }
+    
+    .fact-value {
+        font-size: 22px;
+        font-weight: bold;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("""
+        <div class="fact-card">
+            <div class="fact-icon">🎓</div>
+            <div class="fact-title">Specialization</div>
+            <div class="fact-value">
+                Bachelor of Information Technology<br>
+                (Data Science)
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div class="fact-card">
+            <div class="fact-icon">👩‍💼</div>
+            <div class="fact-title">Internship Supervisor</div>
+            <div class="fact-value">
+                Pn. Norkamariah Othman
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown("""
+        <div class="fact-card">
+            <div class="fact-icon">📅</div>
+            <div class="fact-title">Internship Journey</div>
+            <div class="fact-value">
+                26 Weeks<br>
+                July 2025 – January 2026
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+        
     # ==============================
     # 🌸 About Me
     # ==============================
