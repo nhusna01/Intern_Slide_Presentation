@@ -3,13 +3,6 @@ import streamlit as st
 def company_page():
 
     # ==============================
-    # SIDEBAR BRANDING
-    # ==============================
-    st.sidebar.image("images/Kaneka_logo.png", use_container_width=True)
-    st.sidebar.markdown("### Kaneka Corporate Portal")
-    st.sidebar.caption("Kaneka Future")
-
-    # ==============================
     # DATA
     # ==============================
     companies = {
@@ -29,25 +22,25 @@ def company_page():
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
             "address": "Johor Industrial Zone, Malaysia",
-        }
+        },
 
          "Kaneka MS Malaysia": {
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
             "address": "Johor Industrial Zone, Malaysia",
-        }
+        },
 
          "Kaneka Apical Malaysia": {
                 "establishment": "September 1, 1949 (Osaka, Japan)",
                 "founder": "Kanehide Sakurada",
                 "address": "Johor Industrial Zone, Malaysia",
-        }
+        },
 
          "Kaneka Paste Polymers Malaysia": {
                     "establishment": "September 1, 1949 (Osaka, Japan)",
                     "founder": "Kanehide Sakurada",
                     "address": "Johor Industrial Zone, Malaysia",
-        }
+        },
     
     }
 
