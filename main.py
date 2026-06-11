@@ -2,8 +2,18 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
+
 from pages.intro import intro_page
 from pages.company import company_page
+from pages.hr import hr_page
+from pages.myself import myself_page
+from pages.additional import additional_page
+
+st.set_page_config(
+    page_title="Internship Presentation",
+    page_icon="🎓",
+    layout="wide"
+) 
 
 # ==============================
 # 🎨 Global Button Styling (CSS)
@@ -102,24 +112,52 @@ st.markdown(
 # ==============================
 # 📂 Sidebar Navigation
 # ==============================
+
+# Initialize session state
+if "page" not in st.session_state:
+    st.session_state.page = "Home"
+
 # UMK logo with custom spacing
-st.sidebar.markdown("<div style='margin-top:-5px; margin-bottom:-50px;'>", unsafe_allow_html=True)
-st.sidebar.image("images/UMK_logo2.png", width=200)  # adjust width to make it smaller
+st.sidebar.markdown(
+    "<div style='margin-top:-5px; margin-bottom:-50px;'>",
+    unsafe_allow_html=True
+)
+st.sidebar.image("images/UMK_logo2.png", width=200)
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
+# Sidebar title
 st.sidebar.title("HomePage")
 
 # Home button
-if st.sidebar.button("🏠 Home", key="home_btn"):
+if st.sidebar.button(
+    "🏠 Home",
+    key="home_btn",
+    use_container_width=True
+):
     st.session_state.page = "Home"
 
-# Expander for Slide Chapters
-st.sidebar.markdown("<div id='chapter-btn-container'>", unsafe_allow_html=True)
-with st.sidebar.expander("📚 Slide Chapter", expanded=True):
-    for i in range(1, 6):
-        if st.sidebar.button(f"📖 Chapter {i}", key=f"chapter_{i}"):
-            st.session_state.page = f"Chapter {i}"
-st.sidebar.markdown("</div>", unsafe_allow_html=True)
+# Slide Chapters Expander
+with st.sidebar.expander("📚 Slide Chapter", expanded=False):
+
+    if st.button("📖 Chapter 1", key="chapter1", use_container_width=True):
+        st.session_state.page = "Chapter 1"
+        st.rerun()
+
+    if st.button("📖 Chapter 2", key="chapter2", use_container_width=True):
+        st.session_state.page = "Chapter 2"
+        st.rerun()
+
+    if st.button("📖 Chapter 3", key="chapter3", use_container_width=True):
+        st.session_state.page = "Chapter 3"
+        st.rerun()
+
+    if st.button("📖 Chapter 4", key="chapter4", use_container_width=True):
+        st.session_state.page = "Chapter 4"
+        st.rerun()
+
+    if st.button("📖 Chapter 5", key="chapter5", use_container_width=True):
+        st.session_state.page = "Chapter 5"
+        st.rerun()
 
 # ==============================
 # 🖼️ Page Rendering Function
@@ -152,9 +190,6 @@ def page_container(content_func, bg_color="#3366cc"):
 # ==============================
 # 🏠 Homepage + Chapters Content
 # ==============================
-if "page" not in st.session_state:
-    st.session_state.page = "Home"
-
 if st.session_state.page == "Home":
     # Video background
     video_html = """
@@ -217,7 +252,7 @@ if st.session_state.page == "Home":
 
         # Title & Intro
         st.markdown("<h1 style='text-align:center;'>💻 Internship Presentation</h1>", unsafe_allow_html=True)
-        st.markdown("<h3 style='text-align:center;'>Kaneka Malaysia – HR & IT Internship</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align:center;'>Kaneka Malaysia – HR Internship</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align:center;'>Prepared by Nurul Husna, UMK – IT Student</p>", unsafe_allow_html=True)
 
         # Technical Skills
@@ -251,10 +286,10 @@ elif st.session_state.page == "Chapter 2":
     company_page()
 
 elif st.session_state.page == "Chapter 3":
-    page_container(lambda: st.write("📖 Content for Chapter 3"))
+    hr_page()
 
 elif st.session_state.page == "Chapter 4":
-    page_container(lambda: st.write("📖 Content for Chapter 4"))
+    myself_page()
 
 elif st.session_state.page == "Chapter 5":
-    page_container(lambda: st.write("📖 Content for Chapter 5"))
+    additional_page()
