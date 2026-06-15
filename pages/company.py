@@ -175,6 +175,9 @@ def company_page():
             """,
             unsafe_allow_html=True
         )
+        
+        # Add spacing
+        st.markdown("<br>", unsafe_allow_html=True)
     
         # Interactive summary points
         with st.expander("📜 History"):
