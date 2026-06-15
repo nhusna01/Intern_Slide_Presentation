@@ -20,32 +20,32 @@ def company_page():
         "Kaneka Malaysia": {
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
-            "address": "Lot 123, Industrial Zone, Selangor, Malaysia",
+            "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Innovative Fibers": {
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
-            "address": "Penang Industrial Park, Malaysia",
+            "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Eperan": {
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
-            "address": "Johor Industrial Zone, Malaysia",
+            "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka MS Malaysia": {
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
-            "address": "Johor Industrial Zone, Malaysia",
+            "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Apical Malaysia": {
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
-            "address": "Johor Industrial Zone, Malaysia",
+            "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Paste Polymers Malaysia": {
             "establishment": "September 1, 1949 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
-            "address": "Johor Industrial Zone, Malaysia",
+            "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
     }
 
@@ -181,7 +181,7 @@ def company_page():
     
         # Interactive summary points
         with st.expander("📜 History"):
-            st.write("- Established in 1949 after separation from Kanegafuchi Spinning Company")
+            st.write("- Established in 1st September 1949")
             st.write("- Originated with vinyl chloride production (Kanevinyl)")
     
         with st.expander("👤 Founder"):
@@ -193,7 +193,7 @@ def company_page():
             st.write("- **Tokyo Head Office:** Akasaka, Minato‑ku, Tokyo")
     
         with st.expander("🌍 Global Presence"):
-            st.write("- Subsidiaries in US, Europe, Malaysia, Singapore, Vietnam, Indonesia, Thailand, Korea, China")
+            st.write("- Subsidiaries in USA, Europe, Malaysia, Singapore, Australia, Vietnam, Indonesia, Thailand, Korea, China")
     
         # Interactive metrics
         st.markdown("---")
@@ -234,8 +234,8 @@ def company_page():
                 <strong>Innovation • Environmental • Sustainability</strong><br><br>
                 With people and technology growing together into creative fusion,
                 we will break fresh ground for the future and tie in to explore
-                new values. We are also committed to challenge the environmental
-                issues of our planet and contribute to upgrading the quality of life.
+                New Values. We are also committed to challenge the environmental
+                issues of our planet and contribute to upgrade the quality of life.
             </div>
             """,
             unsafe_allow_html=True
@@ -285,21 +285,21 @@ def company_page():
         st.header("📜 Company History")
 
         history = pd.DataFrame({
-            "Year": [
-                1990,
-                2000,
-                2005,
-                2010,
-                2015,
-                2020,
+            "Date": [
+                "August 1995",
+                "July 1996",
+                "January 1999",
+                "September 2010",
+                "February 2012",
+                "May 2015",
             ],
-            "Milestone": [
-                "Kaneka Malaysia Established",
-                "Kaneka Eperan Expansion",
-                "Kaneka Innovative Fibers Development",
-                "Kaneka MS Malaysia Growth",
-                "Kaneka Paste Polymers Expansion",
-                "Kaneka Apical Malaysia Development",
+            "Companies": [
+                "Kaneka (Malaysia) Sdn. Bhd.",
+                "Kaneka Eperan Sdn. Bhd.",
+                "Kaneka Paste Polymers Sdn. Bhd.",
+                "Kaneka Innovative Fibers Sdn. Bhd.",        
+                "Kaneka Apical Malaysia Sdn. Bhd.",
+                "Kaneka MS Malaysia Sdn. Bhd.",
             ]
         })
         st.table(history)
