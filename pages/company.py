@@ -188,12 +188,12 @@ def company_page():
             st.write("- Founded by Kanegafuchi Spinning Company spin‑off")
             st.write("- Initial capital: 200 million yen")
     
-        with st.expander("📍 Headquarters (Ibu Pejabat)"):
+        with st.expander("📍 Headquarters"):
             st.write("- **Osaka Head Office:** Nakanoshima Festival Tower, Kita‑ku, Osaka")
             st.write("- **Tokyo Head Office:** Akasaka, Minato‑ku, Tokyo")
     
         with st.expander("🌍 Global Presence"):
-            st.write("- Subsidiaries in US, Europe, Malaysia, Singapore, Indonesia, Thailand, Korea, China")
+            st.write("- Subsidiaries in US, Europe, Malaysia, Singapore, Vietnam, Indonesia, Thailand, Korea, China")
     
         # Interactive metrics
         st.markdown("---")
