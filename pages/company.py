@@ -299,8 +299,8 @@ def company_page():
                 "Kaneka Apical Malaysia Development",
             ]
         })
+    st.table(history)
 
-        st.table(history)
 
     elif page == "Products":
 
