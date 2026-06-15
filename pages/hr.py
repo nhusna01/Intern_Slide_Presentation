@@ -95,10 +95,6 @@ def render_flowchart(org_chart):
     return dot
 
 
-if __name__ == "__main__":
-    hr_page()
-
-
     st.markdown("---")
 
     # Interactive expanders with metrics
@@ -120,3 +116,7 @@ if __name__ == "__main__":
         st.subheader("🏢 General Affairs")
         st.write("Workplace facilities, employee welfare, and administrative support.")
         st.slider("Employee Satisfaction Index", 0, 100, 85)
+
+if __name__ == "__main__":
+    hr_page()
+
