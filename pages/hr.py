@@ -10,7 +10,7 @@ org_chart = {
         "HR Business Partner": "Yuki Mimura",
         "Learning & Development Dept. Head": "Norkamariah Othman",
         "Team": [
-            "Norizan Ishak (Senior Executive)",
+            "Norizan Ishak (Senior Executive I)",
             "Mohd Anuar Mohd Ariffin (Executive)",
             "Nurul Atiqah Mahmud (Executive)"
         ]
@@ -19,17 +19,17 @@ org_chart = {
         "HR Business Partner": "Zuraidah Ismail",
         "Talent Acquisition & IR Dept. Head": "Rosmawati Abd Rashid",
         "Team": [
-            "Mohd Shukri Anuar (Section Head)",
-            "Khairani Kamal (Senior Executive)",
-            "Nur Hidayah Sanusi (Officer)"
+            "Mohd Shukri Anuar (Senior Executive II)",
+            "Khairani Kamal (Senior Executive I)",
+            "Nur Hidayah Sanusi (Senior Officer)"
         ],
         "Reward Management Dept. Head": "Zafidah Ismail",
         "General Affairs Section": [
-            "Khairani Kamal (Senior Executive)",
+            "Khairani Kamal (Senior Executive I)",
             "Umar Yasriza (Executive)"
         ],
         "Compensation & Benefits Section": [
-            "Fatasha Anis Muhamad Yusof (Senior Executive)",
+            "Fatasha Anis Muhamad Yusof (Senior Executive I)",
             "Hazira Hafsa Razlian (Executive)"
         ]
     }
@@ -74,7 +74,7 @@ def render_graph(org_chart):
     # Top hierarchy
     dot += f'HR [label="{org_chart["Managing Director"]}\\nManaging Director", color=lightblue];'
     dot += f'KM [label="{org_chart["KM Corporate Service"]}\\nKM Corporate Service", color=lightyellow];'
-    dot += f'Rosmawati [label="{org_chart["HR Division Head"]}\\nHR Division Head", color=lightgreen];'
+    dot += f'Rosmawati Haron [label="{org_chart["HR Division Head"]}\\nHR Division Head", color=lightgreen];'
     dot += f'Vacant [label="{org_chart["HR Assistant Division Head"]}\\nHR Assistant Division Head", color=lightgray];'
     dot += "HR -> KM -> Rosmawati Haron -> Vacant;"
 
