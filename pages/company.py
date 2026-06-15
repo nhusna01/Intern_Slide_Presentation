@@ -286,12 +286,12 @@ def company_page():
 
         history = pd.DataFrame({
             "Date": [
-                "August 1995",
-                "July 1996",
-                "January 1999",
-                "September 2010",
-                "February 2012",
-                "May 2015",
+                "August, 1995",
+                "July, 1996",
+                "January, 1999",
+                "September, 2010",
+                "February, 2012",
+                "May, 2015",
             ],
             "Companies": [
                 "Kaneka (Malaysia) Sdn. Bhd.",
