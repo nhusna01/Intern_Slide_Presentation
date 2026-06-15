@@ -59,7 +59,7 @@ def hr_page():
     )
 
     # Show updated JSON structure
-    st.subheader("📊 Current Structure (Editable JSON)")
+    st.subheader("📊 Current Structure")
     st.json(org_chart)
 
     # Render Graphviz chart
@@ -76,7 +76,7 @@ def render_graph(org_chart):
     dot += f'KM [label="{org_chart["KM Corporate Service"]}\\nKM Corporate Service", color=lightyellow];'
     dot += f'Rosmawati [label="{org_chart["HR Division Head"]}\\nHR Division Head", color=lightgreen];'
     dot += f'Vacant [label="{org_chart["HR Assistant Division Head"]}\\nHR Assistant Division Head", color=lightgray];'
-    dot += "HR -> KM -> Rosmawati -> Vacant;"
+    dot += "HR -> KM -> Rosmawati Haron -> Vacant;"
 
     # Centre of Excellence
     dot += f'Yuki [label="{org_chart["Centre of Excellence"]["HR Business Partner"]}\\nHR Business Partner", color=lightcyan];'
@@ -105,7 +105,6 @@ def render_graph(org_chart):
 # Run page
 if __name__ == "__main__":
     hr_page()
-
 
 
     st.markdown("---")
