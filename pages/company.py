@@ -274,7 +274,7 @@ def company_page():
         })
     
         # Display map with all company locations
-    st.map(location_data)
+        st.map(location_data)
 
 
     elif page == "History":
@@ -299,7 +299,7 @@ def company_page():
                 "Kaneka Apical Malaysia Development",
             ]
         })
-    st.table(history)
+        st.table(history)
 
 
     elif page == "Products":
