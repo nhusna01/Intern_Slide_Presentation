@@ -1,6 +1,5 @@
 import streamlit as st
-
-# Step 1: Define HR org chart in JSON/dict
+# HR Org Chart Data
 org_chart = {
     "Managing Director": "Hiroyuki Nishimoto",
     "KM Corporate Service": "Kei Tomita",
@@ -10,7 +9,7 @@ org_chart = {
         "HR Business Partner": "Yuki Mimura",
         "Learning & Development Dept. Head": "Norkamariah Othman",
         "Team": [
-            "Norizan Ishak (Senior Executive I)",
+            "Norizan Ishak (Senior Executive)",
             "Mohd Anuar Mohd Ariffin (Executive)",
             "Nurul Atiqah Mahmud (Executive)"
         ]
@@ -19,80 +18,74 @@ org_chart = {
         "HR Business Partner": "Zuraidah Ismail",
         "Talent Acquisition & IR Dept. Head": "Rosmawati Abd Rashid",
         "Team": [
-            "Mohd Shukri Anuar (Senior Executive II)",
-            "Khairani Kamal (Senior Executive I)",
-            "Nur Hidayah Sanusi (Senior Officer)"
+            "Mohd Shukri Anuar (Section Head)",
+            "Khairani Kamal (Senior Executive)",
+            "Nur Hidayah Sanusi (Officer)"
         ],
         "Reward Management Dept. Head": "Zafidah Ismail",
         "General Affairs Section": [
-            "Khairani Kamal (Senior Executive I)",
+            "Khairani Kamal (Senior Executive)",
             "Umar Yasriza (Executive)"
         ],
         "Compensation & Benefits Section": [
-            "Fatasha Anis Muhamad Yusof (Senior Executive I)",
+            "Fatasha Anis Muhamad Yusof (Senior Executive)",
             "Hazira Hafsa Razlian (Executive)"
         ]
     }
 }
 
-# Step 2: Editable inputs
 def hr_page():
     st.title("📖 Chapter 3")
-    st.header("👥 Editable HR Organizational Chart")
+    st.header("👥 HR Organizational Flowchart")
 
-    # Editable fields for key roles
-    org_chart["HR Division Head"] = st.text_input(
-        "Update HR Division Head:", org_chart["HR Division Head"]
-    )
-    org_chart["HR Assistant Division Head"] = st.text_input(
-        "Update HR Assistant Division Head:", org_chart["HR Assistant Division Head"]
-    )
+    # Editable fields
+    org_chart["HR Division Head"] = st.text_input("Update HR Division Head:", org_chart["HR Division Head"])
+    org_chart["HR Assistant Division Head"] = st.text_input("Update HR Assistant Division Head:", org_chart["HR Assistant Division Head"])
 
-    org_chart["Centre of Excellence"]["HR Business Partner"] = st.text_input(
-        "Update Centre of Excellence HR Business Partner:",
-        org_chart["Centre of Excellence"]["HR Business Partner"]
-    )
-
-    org_chart["Operational Excellence"]["HR Business Partner"] = st.text_input(
-        "Update Operational Excellence HR Business Partner:",
-        org_chart["Operational Excellence"]["HR Business Partner"]
-    )
-
-    # Show updated JSON structure
+    # Show JSON
     st.subheader("📊 Current Structure")
     st.json(org_chart)
 
-    # Render Graphviz chart
-    st.subheader("📈 Visual Org Chart")
-    st.graphviz_chart(render_graph(org_chart))
+    # Flowchart visualization
+    st.subheader("📈 Flowchart View")
+    st.graphviz_chart(render_flowchart(org_chart))
 
 
-# Step 3: Function to render Graphviz chart dynamically
-def render_graph(org_chart):
-    dot = "digraph HR { node [shape=box, style=filled, fontname='Helvetica'];"
+def render_flowchart(org_chart):
+    dot = """
+    digraph HR {
+        rankdir=TB;
+        node [shape=box, style=filled, fontname="Helvetica"];
 
-    # Top hierarchy
-    dot += f'HR [label="{org_chart["Managing Director"]}\\nManaging Director", color=lightblue];'
-    dot += f'KM [label="{org_chart["KM Corporate Service"]}\\nKM Corporate Service", color=lightyellow];'
-    dot += f'Rosmawati Haron [label="{org_chart["HR Division Head"]}\\nHR Division Head", color=lightgreen];'
-    dot += f'Vacant [label="{org_chart["HR Assistant Division Head"]}\\nHR Assistant Division Head", color=lightgray];'
-    dot += "HR -> KM -> Rosmawati Haron -> Vacant;"
+        HR [label="%s\\nManaging Director", color=lightblue];
+        KM [label="%s\\nKM Corporate Service", color=lightyellow];
+        Rosmawati [label="%s\\nHR Division Head", color=lightgreen];
+        Vacant [label="%s\\nHR Assistant Division Head", color=lightgray];
+
+        HR -> KM -> Rosmawati -> Vacant;
+    """ % (
+        org_chart["Managing Director"],
+        org_chart["KM Corporate Service"],
+        org_chart["HR Division Head"],
+        org_chart["HR Assistant Division Head"],
+    )
 
     # Centre of Excellence
-    dot += f'Yuki [label="{org_chart["Centre of Excellence"]["HR Business Partner"]}\\nHR Business Partner", color=lightcyan];'
-    dot += f'Norkamariah [label="{org_chart["Centre of Excellence"]["Learning & Development Dept. Head"]}\\nL&D Dept. Head"];'
+    dot += 'Yuki [label="%s\\nHR Business Partner", color=lightcyan];' % org_chart["Centre of Excellence"]["HR Business Partner"]
+    dot += 'Norkamariah [label="%s\\nL&D Dept. Head"];' % org_chart["Centre of Excellence"]["Learning & Development Dept. Head"]
     dot += "Vacant -> Yuki -> Norkamariah;"
     for member in org_chart["Centre of Excellence"]["Team"]:
         dot += f'"{member}" [color=white]; Norkamariah -> "{member}";'
 
     # Operational Excellence
-    dot += f'Zuraidah [label="{org_chart["Operational Excellence"]["HR Business Partner"]}\\nHR Business Partner", color=lightpink];'
-    dot += f'RosmawatiR [label="{org_chart["Operational Excellence"]["Talent Acquisition & IR Dept. Head"]}\\nTA & IR Dept. Head"];'
+    dot += 'Zuraidah [label="%s\\nHR Business Partner", color=lightpink];' % org_chart["Operational Excellence"]["HR Business Partner"]
+    dot += 'RosmawatiR [label="%s\\nTA & IR Dept. Head"];' % org_chart["Operational Excellence"]["Talent Acquisition & IR Dept. Head"]
     dot += "Vacant -> Zuraidah -> RosmawatiR;"
     for member in org_chart["Operational Excellence"]["Team"]:
         dot += f'"{member}" [color=white]; RosmawatiR -> "{member}";'
 
-    dot += f'Zafidah [label="{org_chart["Operational Excellence"]["Reward Management Dept. Head"]}\\nReward Management Dept. Head"];'
+    # Reward Management
+    dot += 'Zafidah [label="%s\\nReward Management Dept. Head"];' % org_chart["Operational Excellence"]["Reward Management Dept. Head"]
     dot += "Zuraidah -> Zafidah;"
     for section in ["General Affairs Section", "Compensation & Benefits Section"]:
         for member in org_chart["Operational Excellence"][section]:
@@ -102,7 +95,6 @@ def render_graph(org_chart):
     return dot
 
 
-# Run page
 if __name__ == "__main__":
     hr_page()
 
