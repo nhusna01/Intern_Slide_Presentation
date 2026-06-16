@@ -138,6 +138,85 @@ def render_flowchart(org_chart):
         st.write("Focuses on employee training, skill enhancement, and career growth.")
         st.metric("Active Programs", 12, "+3 this quarter")
 
+    with st.expander("📚 Learning & Development", expanded=True):
+
+    tab1, tab2, tab3 = st.tabs([
+        "🎓 Internship",
+        "🏫 Training",
+        "📝 BLA"
+    ])
+
+    # ================= Internship =================
+    with tab1:
+        st.subheader("Internship Process Flow")
+
+        st.image(
+            "images/internship_flow.png",
+            caption="Internship Process Flow",
+            use_container_width=True
+        )
+
+        st.divider()
+
+        st.subheader("Activities Performed")
+
+        st.markdown("**Orientation & Documentation**")
+        st.video("videos/internship/orientation.mp4")
+
+        st.markdown("**Intern Interview Session**")
+        st.video("videos/internship/interview.mp4")
+
+        st.markdown("**Intern Evaluation & Closing**")
+        st.video("videos/internship/evaluation.mp4")
+
+
+    # ================= Training =================
+    with tab2:
+        st.subheader("Training Process Flow")
+
+        st.image(
+            "images/training_flow.png",
+            caption="Training Process Flow",
+            use_container_width=True
+        )
+
+        st.divider()
+
+        st.subheader("Activities Performed")
+
+        st.markdown("**Training Registration**")
+        st.video("videos/training/registration.mp4")
+
+        st.markdown("**Training Coordination**")
+        st.video("videos/training/coordination.mp4")
+
+        st.markdown("**Training Execution**")
+        st.video("videos/training/execution.mp4")
+
+
+    # ================= BLA =================
+    with tab3:
+        st.subheader("Baseline Assessment (BLA) Process Flow")
+
+        st.image(
+            "images/bla_flow.png",
+            caption="BLA Process Flow",
+            use_container_width=True
+        )
+
+        st.divider()
+
+        st.subheader("Activities Performed")
+
+        st.markdown("**Assessment Preparation**")
+        st.video("videos/bla/preparation.mp4")
+
+        st.markdown("**Conducting BLA Session**")
+        st.video("videos/bla/session.mp4")
+
+        st.markdown("**Result Compilation & Analysis**")
+        st.video("videos/bla/reporting.mp4")
+
     with st.expander("🎯 Talent Acquisition & Industrial Relation"):
         st.write("Handles recruitment, onboarding, and maintaining healthy employee relations.")
         st.metric("New Hires", 25, "+5 this month")
