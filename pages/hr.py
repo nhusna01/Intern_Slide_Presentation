@@ -134,12 +134,9 @@ def render_flowchart(org_chart):
     st.markdown("---")
 
     # Interactive expanders with metrics
-    with st.expander("📚 Learning & Development"):
+    with st.expander("📚 Learning & Development", expanded=True):        
         st.write("Focuses on employee training, skill enhancement, and career growth.")
-        st.metric("Active Programs", 12, "+3 this quarter")
-
-    with st.expander("📚 Learning & Development", expanded=True):
-
+        
     tab1, tab2, tab3 = st.tabs([
         "🎓 Internship",
         "🏫 Training",
