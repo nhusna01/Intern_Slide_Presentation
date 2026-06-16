@@ -56,8 +56,7 @@ def hr_page():
         st.write(
             "Focuses on employee training, skill enhancement, and career growth."
         )
-        st.metric("Active Programs", 12, "+3 this quarter")
-
+        
     with st.expander("🎯 Talent Acquisition & Industrial Relation"):
         st.write(
             "Handles recruitment, onboarding, and maintaining healthy employee relations."
