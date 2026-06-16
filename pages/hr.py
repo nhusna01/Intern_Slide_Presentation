@@ -49,6 +49,42 @@ def hr_page():
     # Flowchart visualization
     st.subheader("📈 Flowchart View")
     st.graphviz_chart(render_flowchart(org_chart))
+    
+    st.markdown("---")
+
+    with st.expander("📚 Learning & Development"):
+        st.write(
+            "Focuses on employee training, skill enhancement, and career growth."
+        )
+        st.metric("Active Programs", 12, "+3 this quarter")
+
+    with st.expander("🎯 Talent Acquisition & Industrial Relation"):
+        st.write(
+            "Handles recruitment, onboarding, and maintaining healthy employee relations."
+        )
+        st.metric("New Hires", 25, "+5 this month")
+
+    with st.expander("💎 Reward Management"):
+        st.write(
+            "Ensures fair compensation and manages employee benefits."
+        )
+
+        st.subheader("💰 Compensation & Benefits")
+        st.write(
+            "Salary structure, allowances, incentives, and employee perks."
+        )
+        st.progress(0.7)
+
+        st.subheader("🏢 General Affairs")
+        st.write(
+            "Workplace facilities, employee welfare, and administrative support."
+        )
+        st.slider(
+            "Employee Satisfaction Index",
+            0,
+            100,
+            85
+        )
 
 
 def render_flowchart(org_chart):
