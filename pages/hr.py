@@ -106,10 +106,10 @@ def hr_page():
                         st.session_state.step=3
             
                 with c6:
-                    st.markdown("<h1 style='text-align:center;'>⬇️</h1>",unsafe_allow_html=True)
+                    st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c7:
-                    if st.button("④\n👩‍💼\nHR Proposal",use_container_width=True):
+                    if st.button("④\n👩‍💼\nApproval",use_container_width=True):
                         st.session_state.step=4
             
                 # ---------- Row 2 ----------
@@ -125,21 +125,21 @@ def hr_page():
                     st.markdown("<h1 style='text-align:center;'>⬅️</h1>",unsafe_allow_html=True)
             
                 with c3:
-                    if st.button("⑤\n✅\nApproval",use_container_width=True):
+                    if st.button("⑤\n✅\nDocuments Preparation",use_container_width=True):
                         st.session_state.step=5
             
                 with c4:
                     st.markdown("<h1 style='text-align:center;'>⬇️</h1>",unsafe_allow_html=True)
             
                 with c5:
-                    if st.button("⑦\n📄\nDocuments",use_container_width=True):
+                    if st.button("⑦\n📄\nReport Duty & Briefing",use_container_width=True):
                         st.session_state.step=7
             
                 with c6:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c7:
-                    if st.button("⑧\n🎓\nBriefing",use_container_width=True):
+                    if st.button("⑧\n🎓\nHandover",use_container_width=True):
                         st.session_state.step=8
             
                 # ---------- Row 3 ----------
@@ -148,14 +148,14 @@ def hr_page():
                 c1,c2,c3,c4,c5 = st.columns(5)
             
                 with c1:
-                    if st.button("⑨\n🤝\nHandover",use_container_width=True):
+                    if st.button("⑨\n🤝\nAppreciation",use_container_width=True):
                         st.session_state.step=9
             
                 with c2:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c3:
-                    if st.button("⑩\n🎁\nGift",use_container_width=True):
+                    if st.button("⑩\n🎁\nEvaluation",use_container_width=True):
                         st.session_state.step=10
             
                 with c4:
@@ -171,14 +171,15 @@ def hr_page():
                 details={
                     1:"Students submit internship applications through email or the company website.",
                     2:"HR segregates applications according to department requirements.",
-                    3:"Departments submit internship placement requests through e-Mendix.",
+                    3:"There two options whether any HOD/Departments submit internship placement
+                    requests through e-Mendix, or HR proposes suitable candidates to the requesting department.",
                     4:"HR proposes suitable candidates to the requesting department.",
                     5:"The Head of Department reviews and approves the internship request.",
-                    6:"Successful candidates receive confirmation from HR.",
-                    7:"HR prepares the duty invitation letter and supporting documents.",
-                    8:"Interns attend briefing sessions with MIS, HR, and Safety.",
-                    9:"The intern is handed over to the assigned department.",
-                    10:"The intern receives the welcome gift package.",
+                    6:"Successful candidates receive confirmation via call from HR.",
+                    7:"HR prepares the duty offer letter and supporting documents via email.",
+                    8:"Interns attend briefing sessions with MIS, HR, and Safety departments.",
+                    9:"The intern is handed over to the assigned department/plant.",
+                    10:"The intern receives the certificate of completion and appreciation souvenir.",
                     11:"The department evaluates the intern before completing the internship."
                 }
             
