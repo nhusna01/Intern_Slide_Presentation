@@ -80,163 +80,142 @@ def hr_page():
 
         # ================= Internship =================
         with tab1:
-
-            st.subheader("Internship Process Flow")
+            def internship_flow():
+        
+                st.markdown("## 🎓 Internship Process Flow")
             
-            steps = [
-                "📢 Opening",
-                "📝 Application",
-                "🔍 Screening",
-                "📅 Interview",
-                "📊 Evaluation",
-                "✅ Offer",
-                "🎓 Onboarding"
-            ]
+                # ---------- Row 1 ----------
+                c1,c2,c3,c4,c5,c6,c7 = st.columns(7)
             
-            selected = st.radio(
-                "Select Recruitment Stage",
-                steps,
-                horizontal=True
-            )
+                with c1:
+                    if st.button("①\n📧\nApplication",use_container_width=True):
+                        st.session_state.step=1
             
-            workflow = {
-                "📢 Opening": {
-                    "title": "Internship Opening",
-                    "desc": """
-            The Human Resource Department publishes internship vacancies through:
+                with c2:
+                    st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
-            • Company Website
-            • University Career Centre
-            • LinkedIn
-            • JobStreet
-            • Email Collaboration
-            """,
-                    "status": "Completed",
-                    "progress": 0.14
-                },
+                with c3:
+                    if st.button("②\n🔍\nScreening",use_container_width=True):
+                        st.session_state.step=2
             
-                "📝 Application": {
-                    "title": "Student Application",
-                    "desc": """
-            Students submit:
+                with c4:
+                    st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
-            • Resume/CV
-            • Academic Transcript
-            • Cover Letter
-            • Internship Letter from University
-            """,
-                    "status": "120 Applications Received",
-                    "progress": 0.28
-                },
+                with c5:
+                    if st.button("③\n📝\nPlacement",use_container_width=True):
+                        st.session_state.step=3
             
-                "🔍 Screening": {
-                    "title": "Resume Screening",
-                    "desc": """
-            HR reviews applications based on:
+                with c6:
+                    st.markdown("<h1 style='text-align:center;'>⬇️</h1>",unsafe_allow_html=True)
             
-            • Academic Qualification
-            • Skills
-            • Relevant Experience
-            • Availability
-            """,
-                    "status": "35 Candidates Shortlisted",
-                    "progress": 0.42
-                },
+                with c7:
+                    if st.button("④\n👩‍💼\nHR Proposal",use_container_width=True):
+                        st.session_state.step=4
             
-                "📅 Interview": {
-                    "title": "Interview Session",
-                    "desc": """
-            Shortlisted candidates attend interviews.
+                # ---------- Row 2 ----------
+                st.write("")
             
-            Interviewers evaluate:
+                c1,c2,c3,c4,c5,c6,c7 = st.columns(7)
             
-            • Communication
-            • Technical Knowledge
-            • Personality
-            • Motivation
-            """,
-                    "status": "Interview Ongoing",
-                    "progress": 0.57
-                },
+                with c1:
+                    if st.button("⑥\n🎉\nConfirmation",use_container_width=True):
+                        st.session_state.step=6
             
-                "📊 Evaluation": {
-                    "title": "Candidate Evaluation",
-                    "desc": """
-            HR discusses interview feedback with department managers.
+                with c2:
+                    st.markdown("<h1 style='text-align:center;'>⬅️</h1>",unsafe_allow_html=True)
             
-            Final candidates are selected.
-            """,
-                    "status": "Pending Approval",
-                    "progress": 0.71
-                },
+                with c3:
+                    if st.button("⑤\n✅\nApproval",use_container_width=True):
+                        st.session_state.step=5
             
-                "✅ Offer": {
-                    "title": "Offer Letter",
-                    "desc": """
-            Successful candidates receive:
+                with c4:
+                    st.markdown("<h1 style='text-align:center;'>⬇️</h1>",unsafe_allow_html=True)
             
-            • Offer Letter
-            • Reporting Date
-            • Required Documents
-            """,
-                    "status": "Offer Sent",
-                    "progress": 0.86
-                },
+                with c5:
+                    if st.button("⑦\n📄\nDocuments",use_container_width=True):
+                        st.session_state.step=7
             
-                "🎓 Onboarding": {
-                    "title": "Intern Onboarding",
-                    "desc": """
-            Interns complete:
+                with c6:
+                    st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
-            • Registration
-            • Orientation
-            • Department Assignment
-            • Training
-            """,
-                    "status": "Completed",
-                    "progress": 1.0
+                with c7:
+                    if st.button("⑧\n🎓\nBriefing",use_container_width=True):
+                        st.session_state.step=8
+            
+                # ---------- Row 3 ----------
+                st.write("")
+            
+                c1,c2,c3,c4,c5 = st.columns(5)
+            
+                with c1:
+                    if st.button("⑨\n🤝\nHandover",use_container_width=True):
+                        st.session_state.step=9
+            
+                with c2:
+                    st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
+            
+                with c3:
+                    if st.button("⑩\n🎁\nGift",use_container_width=True):
+                        st.session_state.step=10
+            
+                with c4:
+                    st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
+            
+                with c5:
+                    if st.button("⑪\n📊\nEvaluation",use_container_width=True):
+                        st.session_state.step=11
+            
+                if "step" not in st.session_state:
+                    st.session_state.step=1
+            
+                details={
+                    1:"Students submit internship applications through email or the company website.",
+                    2:"HR segregates applications according to department requirements.",
+                    3:"Departments submit internship placement requests through e-Mendix.",
+                    4:"HR proposes suitable candidates to the requesting department.",
+                    5:"The Head of Department reviews and approves the internship request.",
+                    6:"Successful candidates receive confirmation from HR.",
+                    7:"HR prepares the duty invitation letter and supporting documents.",
+                    8:"Interns attend briefing sessions with MIS, HR, and Safety.",
+                    9:"The intern is handed over to the assigned department.",
+                    10:"The intern receives the welcome gift package.",
+                    11:"The department evaluates the intern before completing the internship."
                 }
-            }
             
-            info = workflow[selected]
+                st.divider()
             
-            st.divider()
+                st.markdown(f"## 📍 Step {st.session_state.step}")
             
-            col1, col2 = st.columns([2,1])
+                st.info(details[st.session_state.step])
             
-            with col1:
+                st.progress(st.session_state.step/11)
             
-                st.markdown(f"### {info['title']}")
-                st.info(info["desc"])
+                if st.session_state.step in [6,8,9,10]:
+                    st.success("⭐ These were the internship activities that I was directly involved in.")
+                    
+                    st.divider()
+                    st.subheader("Activities Performed During Internship")
+
+                    st.markdown("**Orientation & Documentation**")
+                    st.video("videos/internship/orientation.mp4")
+                
+                    st.markdown("**Intern Interview Session**")
+                    st.video("videos/internship/interview.mp4")
             
-            with col2:
-            
-                st.metric("Status", info["status"])
-                st.progress(info["progress"])
-
-            st.divider()
-
-            st.subheader("Activities Performed During Internship")
-
-            st.markdown("**Orientation & Documentation**")
-            st.video("videos/internship/orientation.mp4")
-
-            st.markdown("**Intern Interview Session**")
-            st.video("videos/internship/interview.mp4")
-
-            st.markdown("**Intern Evaluation & Closing**")
-            st.video("videos/internship/evaluation.mp4")
-
-        # ================= Training =================
-        with tab2:
-
-            st.subheader("Training Process Flow")
-
-            st.image(
-                "images/training_flow.png",
-                caption="Training Process Flow",
-                use_container_width=True
-            )
+                    st.markdown("**Intern Evaluation & Closing**")
+                    st.video("videos/internship/evaluation.mp4")
+                      
+        
+                # ================= Training =================
+                with tab2:
+        
+                    st.subheader("Training Process Flow")
+        
+                    st.image(
+                        "images/training_flow.png",
+                        caption="Training Process Flow",
+                        use_container_width=True
+                    )
 
             st.divider()
 
@@ -262,18 +241,7 @@ def hr_page():
                 use_container_width=True
             )
 
-            st.divider()
-
-            st.subheader("Activities Performed")
-
-            st.markdown("**Assessment Preparation**")
-            st.video("videos/bla/preparation.mp4")
-
-            st.markdown("**Conducting BLA Session**")
-            st.video("videos/bla/session.mp4")
-
-            st.markdown("**Result Compilation & Analysis**")
-            st.video("videos/bla/reporting.mp4")
+          
 
     # =====================================================
     # Talent Acquisition
