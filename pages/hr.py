@@ -201,16 +201,16 @@ def hr_page():
                       
             internship_flow()
         
-                # ================= Training =================
-                with tab2:
-        
-                    st.subheader("Training Process Flow")
-        
-                    st.image(
-                        "images/training_flow.png",
-                        caption="Training Process Flow",
-                        use_container_width=True
-                    )
+        # ================= Training =================
+        with tab2:
+            
+            st.subheader("Training Process Flow")
+            
+            st.image(
+                "images/training_flow.png",
+                caption="Training Process Flow",
+                use_container_width=True
+            )
 
             st.divider()
 
@@ -223,7 +223,7 @@ def hr_page():
             st.video("videos/training/coordination.mp4")
 
             st.markdown("**Training Execution**")
-            st.video("videos/training/execution.mp4")
+            st.video("videos/training/execution.mp4")            
 
         # ================= BLA =================
         with tab3:
