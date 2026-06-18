@@ -197,7 +197,7 @@ def hr_page():
                     
                     st.subheader("Activities Performed During Internship")
                     
-                    st.video("videos/internship/Internship_flow.mp4")
+                    st.video("images/Internship_flow.mp4")
                       
         
                 # ================= Training =================
