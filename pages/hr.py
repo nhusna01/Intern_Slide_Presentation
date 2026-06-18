@@ -199,7 +199,7 @@ def hr_page():
                     
                     st.video("images/Internship_flow.mp4")
                       
-        internship_flow()
+            internship_flow()
         
                 # ================= Training =================
                 with tab2:
