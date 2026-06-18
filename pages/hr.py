@@ -197,7 +197,7 @@ def hr_page():
                     st.subheader("Activities Performed During Internship")
 
                     st.markdown("**Orientation & Documentation**")
-                    st.video("videos/internship/orientation.mp4")
+                    st.video("videos/internship/Internship_flow.mp4")
                 
                     st.markdown("**Intern Interview Session**")
                     st.video("videos/internship/interview.mp4")
