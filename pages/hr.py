@@ -194,16 +194,10 @@ def hr_page():
                     st.success("⭐ These were the internship activities that I was directly involved in.")
                     
                     st.divider()
+                    
                     st.subheader("Activities Performed During Internship")
-
-                    st.markdown("**Orientation & Documentation**")
+                    
                     st.video("videos/internship/Internship_flow.mp4")
-                
-                    st.markdown("**Intern Interview Session**")
-                    st.video("videos/internship/interview.mp4")
-            
-                    st.markdown("**Intern Evaluation & Closing**")
-                    st.video("videos/internship/evaluation.mp4")
                       
         
                 # ================= Training =================
