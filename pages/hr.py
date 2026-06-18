@@ -82,16 +82,141 @@ def hr_page():
         with tab1:
 
             st.subheader("Internship Process Flow")
-
-            st.image(
-                "images/internship_flow.png",
-                caption="Internship Process Flow",
-                use_container_width=True
+            
+            steps = [
+                "📢 Opening",
+                "📝 Application",
+                "🔍 Screening",
+                "📅 Interview",
+                "📊 Evaluation",
+                "✅ Offer",
+                "🎓 Onboarding"
+            ]
+            
+            selected = st.radio(
+                "Select Recruitment Stage",
+                steps,
+                horizontal=True
             )
+            
+            workflow = {
+                "📢 Opening": {
+                    "title": "Internship Opening",
+                    "desc": """
+            The Human Resource Department publishes internship vacancies through:
+            
+            • Company Website
+            • University Career Centre
+            • LinkedIn
+            • JobStreet
+            • Email Collaboration
+            """,
+                    "status": "Completed",
+                    "progress": 0.14
+                },
+            
+                "📝 Application": {
+                    "title": "Student Application",
+                    "desc": """
+            Students submit:
+            
+            • Resume/CV
+            • Academic Transcript
+            • Cover Letter
+            • Internship Letter from University
+            """,
+                    "status": "120 Applications Received",
+                    "progress": 0.28
+                },
+            
+                "🔍 Screening": {
+                    "title": "Resume Screening",
+                    "desc": """
+            HR reviews applications based on:
+            
+            • Academic Qualification
+            • Skills
+            • Relevant Experience
+            • Availability
+            """,
+                    "status": "35 Candidates Shortlisted",
+                    "progress": 0.42
+                },
+            
+                "📅 Interview": {
+                    "title": "Interview Session",
+                    "desc": """
+            Shortlisted candidates attend interviews.
+            
+            Interviewers evaluate:
+            
+            • Communication
+            • Technical Knowledge
+            • Personality
+            • Motivation
+            """,
+                    "status": "Interview Ongoing",
+                    "progress": 0.57
+                },
+            
+                "📊 Evaluation": {
+                    "title": "Candidate Evaluation",
+                    "desc": """
+            HR discusses interview feedback with department managers.
+            
+            Final candidates are selected.
+            """,
+                    "status": "Pending Approval",
+                    "progress": 0.71
+                },
+            
+                "✅ Offer": {
+                    "title": "Offer Letter",
+                    "desc": """
+            Successful candidates receive:
+            
+            • Offer Letter
+            • Reporting Date
+            • Required Documents
+            """,
+                    "status": "Offer Sent",
+                    "progress": 0.86
+                },
+            
+                "🎓 Onboarding": {
+                    "title": "Intern Onboarding",
+                    "desc": """
+            Interns complete:
+            
+            • Registration
+            • Orientation
+            • Department Assignment
+            • Training
+            """,
+                    "status": "Completed",
+                    "progress": 1.0
+                }
+            }
+            
+            info = workflow[selected]
+            
+            st.divider()
+            
+            col1, col2 = st.columns([2,1])
+            
+            with col1:
+            
+                st.markdown(f"### {info['title']}")
+                st.info(info["desc"])
+            
+            with col2:
+            
+                st.metric("Status", info["status"])
+                st.progress(info["progress"])
 
             st.divider()
 
-            st.subheader("Activities Performed")
+            st.subheader("Activities Performed During Internship")
 
             st.markdown("**Orientation & Documentation**")
             st.video("videos/internship/orientation.mp4")
