@@ -329,6 +329,33 @@ def intro_page():
     # 🌟 Hobbies & Fun Facts
     # ==============================
     st.subheader("🌟 Hobbies & Fun Facts")
+
+    st.markdown(
+    """
+    <style>
+        .img-container {
+            width: 180px;
+            height: 180px;
+            margin: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .img-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* keeps clarity and consistency */
+            }
+            .img-container:hover {
+                transform: scale(1.05);
+                box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
     
     st.markdown(
         """
