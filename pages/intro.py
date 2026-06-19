@@ -258,16 +258,11 @@ def intro_page():
 
     st.write(
         """
-        Hi, my name is Husna! I am currently a Year 4 student at
-        Universiti Malaysia Kelantan (UMK), pursuing a Bachelor of
-        Information Technology with Honours.
-
-        During my internship at Kaneka Malaysia, I support HR and IT
-        initiatives including eForm creation, SPL module development,
-        training-related tasks, and administrative work.
-
-        I enjoy learning new technologies, exploring innovative tools,
-        and continuously improving both my technical and professional skills.
+        During my internship at Kaneka Malaysia, I contribute to HR and IT projects such as eForm creation,
+        SPL module development, training support, simple data analysis, and administrative tasks. I am 
+        passionate about learning new technologies, exploring innovative tools, and continuously enhancing 
+        both my technical and professional skills.
+        
         """
     )
 
@@ -290,43 +285,66 @@ def intro_page():
         st.progress(level)
 
     # ==============================
-    # 💡 Interests
+    # 🌟 Hobbies & Fun Facts
     # ==============================
-    st.subheader("💡 My Interests")
-
-    st.markdown(
-        """
-        - 📚 Learning e-learning tools such as iSpring and NotebookLM
-        - ✉️ Improving professional communication and email writing
-        - 📊 Exploring data analytics fundamentals and Draw.io
-        - 🎨 Designing interactive presentations using Canva, Streamlit, and Figma
-        """
+    st.subheader("🌟 Hobbies & Fun Facts")
+    
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(
+        ["🏃 Running", "🎶 Music", "🎮 Gaming", "📸 Photography", "✈️ Traveling"]
     )
-
-    # ==============================
-    # 🎯 Fun Facts
-    # ==============================
-    with st.expander("💡 Click to Know Me Better"):
-        st.write("🌱 I enjoy learning new technologies and digital tools.")
-        st.write("🎨 I love designing engaging presentations.")
-        st.write("📊 I am interested in HR technology and data analytics.")
-        st.write("🚀 I believe continuous learning leads to growth.")
-
-    # ==============================
-    # 👋 Interaction Button
-    # ==============================
-    if st.button("👋 Say Hi"):
-        st.toast("Thank you for viewing my internship presentation!")
-        st.balloons()
+    
+    with tab1:
+        st.image("images/movie.png", width=150)
+    
+    with tab2:
+        st.image("images/music.png", width=150)
+    
+    with tab3:
+        st.image("images/gaming.png", width=150)
+    
+    with tab4:
+        st.image("images/badminton.png", width=150)
+    
+    with tab5:
+        st.image("images/hiking.png", width=150)
 
     # ==============================
     # 📞 Contact
     # ==============================
-    st.subheader("📞 Contact Me")
+   st.subheader("📞 Contact Me")
 
-    st.markdown('<div class="contact-box">', unsafe_allow_html=True)
-
-    st.write("📱 Phone: 011-12957400")
-    st.write("📧 Email: nhusna.napi@gmail.com")
-
-    st.markdown("</div>", unsafe_allow_html=True)
+   st.markdown(
+       """
+       <style>
+           .contact-box {
+               background: linear-gradient(135deg, #1f1c2c, #928dab);
+               color: white;
+               padding: 20px;
+               border-radius: 12px;
+               box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+               text-align: center;
+               font-family: 'Segoe UI', sans-serif;
+           }
+           .contact-item {
+               font-size: 18px;
+               margin: 12px 0;
+           }
+           .contact-item span {
+               margin-right: 8px;
+               color: #ffd700;
+           }
+           .contact-box:hover {
+               transform: scale(1.02);
+               transition: 0.3s ease-in-out;
+               box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+           }
+       </style
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">>
+       <div class="contact-box">
+           <div class="contact-item"><i class="fas fa-phone"></i> 011-12957400</div>
+           <div class="contact-item"><i class="fas fa-envelope"></i> nhusna.napi@gmail.com</div>
+       </div>
+       """,
+       unsafe_allow_html=True
+   )
+        
