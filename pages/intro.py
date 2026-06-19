@@ -357,18 +357,34 @@ def intro_page():
     )
 
     
-    st.markdown(
-        """
-        <div style="display:flex; justify-content:center; flex-wrap:wrap;">
-            <div class="img-container"><img src="images/movie.jpg"></div>
-            <div class="img-container"><img src="images/music.jpg"></div>
-            <div class="img-container"><img src="images/gaming.jpg"></div>
-            <div class="img-container"><img src="images/badminton.jpg"></div>
-            <div class="img-container"><img src="images/hiking.jpg"></div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    # Use columns to align images like a gallery
+    col1, col2, col3, col4, col5 = st.columns(5)
+    
+    with col1:
+        st.markdown('<div class="img-container">', unsafe_allow_html=True)
+        st.image("images/movie.jpg", use_column_width=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown('<div class="img-container">', unsafe_allow_html=True)
+        st.image("images/music.jpg", use_column_width=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown('<div class="img-container">', unsafe_allow_html=True)
+        st.image("images/gaming.jpg", use_column_width=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with col4:
+        st.markdown('<div class="img-container">', unsafe_allow_html=True)
+        st.image("images/badminton.jpg", use_column_width=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with col5:
+        st.markdown('<div class="img-container">', unsafe_allow_html=True)
+        st.image("images/hiking.jpg", use_column_width=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+
     
     st.markdown(
     "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
