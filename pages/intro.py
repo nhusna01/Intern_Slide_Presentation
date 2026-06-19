@@ -403,7 +403,7 @@ def intro_page():
        """
        <style>
            .contact-box {
-               background: linear-gradient(135deg, #1f1c2c, #89CFF0);
+               background: linear-gradient(90deg, #023e8a, #0096c7);
                color: white;
                padding: 20px;
                border-radius: 12px;
