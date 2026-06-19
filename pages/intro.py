@@ -15,7 +15,7 @@ def intro_page():
                 rgba(255,255,255,0.05)
             );
             backdrop-filter: blur(12px);
-            padding: 30px;
+            padding: 40px;
             border-radius: 25px;
             border: 2px solid rgba(255,215,0,0.5);
             box-shadow: 0 8px 30px rgba(0,0,0,0.2);
@@ -78,7 +78,7 @@ def intro_page():
     st.markdown("""
     <div class="profile-card">
         <h2 style="font-size:40px; font-weight:bold; color:#003366; margin:0;">
-            Self-Introduction 🙋‍♀️
+            SELF-INTRODUCTION 🙋‍♀️
         </h2>
     </div>
     """, unsafe_allow_html=True)
@@ -120,6 +120,11 @@ def intro_page():
     )
 
     st.markdown("</div>", unsafe_allow_html=True)
+
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
 
     # ==============================
     # 🌟 Quick Facts
@@ -249,7 +254,12 @@ def intro_page():
             </div>
         </div>
         """, unsafe_allow_html=True)
-    
+
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
+
         
     # ==============================
     # 🌸 About Me
@@ -265,7 +275,14 @@ def intro_page():
         
         """
     )
+    
 
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
+
+    
     # ==============================
     # 🛠️ Skills
     # ==============================
@@ -284,6 +301,11 @@ def intro_page():
         st.write(f"**{skill}**")
         st.progress(level)
 
+
+    # Add vertical spacing
+    st.markdown("<div style='margin:30px;'></div>", unsafe_allow_html=True)
+
+
     # Soft Skills
     soft_skills = {
         "Communication": 85,
@@ -299,6 +321,13 @@ def intro_page():
         st.write(f"**{skill}**")
         st.progress(level)
 
+    
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
+
+    
     # ==============================
     # 🌟 Hobbies & Fun Facts
     # ==============================
@@ -309,19 +338,27 @@ def intro_page():
     )
     
     with tab1:
-        st.image("images/movie.png", width=150)
+        st.image("images/movie.jpg", width=150)
     
     with tab2:
-        st.image("images/music.png", width=150)
+        st.image("images/music.jpg", width=150)
     
     with tab3:
-        st.image("images/gaming.png", width=150)
+        st.image("images/gaming.jpg", width=150)
     
     with tab4:
-        st.image("images/badminton.png", width=150)
+        st.image("images/badminton.jpg", width=150)
     
     with tab5:
-        st.image("images/hiking.png", width=150)
+        st.image("images/hiking.jpg", width=150)
+
+
+    
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
+
 
     # ==============================
     # 📞 Contact
