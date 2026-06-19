@@ -77,7 +77,7 @@ def intro_page():
     # Profile Card
     st.markdown("""
     <div class="profile-card">
-        <h2 style="font-size:40px; font-weight:bold; color:#003366; margin:0;">
+        <h2 style="font-size:40px; font-weight:bold; font-family: 'Segoe UI', sans-serif; color:#003366; margin:0;">
             SELF-INTRODUCTION 🙋‍♀️
         </h2>
     </div>
@@ -330,26 +330,18 @@ def intro_page():
     # ==============================
     st.subheader("🌟 Hobbies & Fun Facts")
     
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(
-        ["🏃 Running", "🎶 Music", "🎮 Gaming", "📸 Photography", "✈️ Traveling"]
+    st.markdown(
+        """
+        <div style="display:flex; justify-content:center; flex-wrap:wrap;">
+            <div class="img-container"><img src="images/movie.jpg"></div>
+            <div class="img-container"><img src="images/music.jpg"></div>
+            <div class="img-container"><img src="images/gaming.jpg"></div>
+            <div class="img-container"><img src="images/badminton.jpg"></div>
+            <div class="img-container"><img src="images/hiking.jpg"></div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
-    
-    with tab1:
-        st.image("images/movie.jpg", width=150)
-    
-    with tab2:
-        st.image("images/music.jpg", width=150)
-    
-    with tab3:
-        st.image("images/gaming.jpg", width=150)
-    
-    with tab4:
-        st.image("images/badminton.jpg", width=150)
-    
-    with tab5:
-        st.image("images/hiking.jpg", width=150)
-
-
     
     st.markdown(
     "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
@@ -393,7 +385,6 @@ def intro_page():
            <div class="contact-item"><i class="fas fa-phone"></i> 011-12957400</div>
            <div class="contact-item"><i class="fas fa-envelope"></i> nhusna.napi@gmail.com</div>
        </div>
-       <hr style='border:0; height:3px; background: linear-gradient(135deg, #1f1c2c, #89CFF0);'>
        """,
        unsafe_allow_html=True
     )
