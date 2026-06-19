@@ -121,10 +121,7 @@ def intro_page():
 
     st.markdown("</div>", unsafe_allow_html=True)
 
-    st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
-    )
+   
 
     # ==============================
     # 🌟 Quick Facts
@@ -369,7 +366,7 @@ def intro_page():
        """
        <style>
            .contact-box {
-               background: linear-gradient(135deg, #1f1c2c, #928dab);
+               background: linear-gradient(135deg, #1f1c2c, #89CFF0);
                color: white;
                padding: 20px;
                border-radius: 12px;
@@ -396,6 +393,7 @@ def intro_page():
            <div class="contact-item"><i class="fas fa-phone"></i> 011-12957400</div>
            <div class="contact-item"><i class="fas fa-envelope"></i> nhusna.napi@gmail.com</div>
        </div>
+       <hr style='border:0; height:3px; background: linear-gradient(135deg, #1f1c2c, #89CFF0);'>
        """,
        unsafe_allow_html=True
     )
