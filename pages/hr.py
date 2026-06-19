@@ -171,16 +171,16 @@ def hr_page():
                 details={
                     1:"Students submit internship applications through email or the company website.",
                     2:"HR segregates applications according to department requirements.",
-                    3:"There two options whether any HOD/Departments submit internship placement
+                    3:"There are two options: either any HOD/Departments submit internship placement
                     requests through e-Mendix, or HR proposes suitable candidates to the requesting department.",
-                    4:"HR proposes suitable candidates to the requesting department.",
-                    5:"The Head of Department reviews and approves the internship request.",
-                    6:"Successful candidates receive confirmation via call from HR.",
-                    7:"HR prepares the duty offer letter and supporting documents via email.",
-                    8:"Interns attend briefing sessions with MIS, HR, and Safety departments.",
-                    9:"The intern is handed over to the assigned department/plant.",
-                    10:"The intern receives the certificate of completion and appreciation souvenir.",
-                    11:"The department evaluates the intern before completing the internship."
+                    4:"The Head of Department(HOD) reviews and approves the internship request.",
+                    5:"Successful candidates receive confirmation via a call from HR.",
+                    6:"HR prepares the Offer Letter(OL), Placement Letter(PL), and Reply Letter(RL) via email.",
+                    7:"Interns attend briefing sessions with MIS, HR, and Safety departments.",
+                    8:"The intern is handed over to the assigned department/plant.",
+                    9:"Interns undergo internships at Kaneka.",
+                    10:"The intern receives a certificate of completion and an appreciation souvenir from Kaneka.",
+                    11:"The department evaluates the intern before completing the internship."         
                 }
             
                 st.divider()
