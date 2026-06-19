@@ -5,7 +5,7 @@ import pandas as pd
 # PAGE CONFIGURATION
 # ==============================
 st.set_page_config(
-    page_title="Kaneka Malaysia",
+    page_title="About KANEKA",
     page_icon="🏢",
     layout="wide"
 )
@@ -52,13 +52,11 @@ def company_page():
     # ==============================
     # HEADER
     # ==============================
-    st.title("🏢 Kaneka Malaysia")
+    st.title("🏢 About KANEKA")
     st.caption("Innovation • Sustainability • Human Well-being")
 
-    st.header("🏢 Kaneka Corporate Portal")
-
     try:
-        st.image("images/Kaneka_logo.png", width=200)
+        st.image("images/Kaneka_logo.png", width=350)
     except:
         st.warning("Kaneka logo not found.")
 
