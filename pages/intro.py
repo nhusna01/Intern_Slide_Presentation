@@ -330,17 +330,19 @@ def intro_page():
     # ==============================
     st.subheader("🌟 Hobbies & Fun Facts")
 
+    # CSS styling
     st.markdown(
-    """
-    <style>
-        .img-container {
-            width: 180px;
-            height: 180px;
-            margin: 15px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        """
+        <style>
+            .img-container {
+                width: 180px;
+                height: 180px;
+                margin: 15px;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                display: inline-block;
             }
             .img-container img {
                 width: 100%;
@@ -355,9 +357,8 @@ def intro_page():
         """,
         unsafe_allow_html=True
     )
-
     
-    # Use columns to align images like a gallery
+    # Use columns to align images side by side
     col1, col2, col3, col4, col5 = st.columns(5)
     
     with col1:
@@ -384,6 +385,7 @@ def intro_page():
         st.markdown('<div class="img-container">', unsafe_allow_html=True)
         st.image("images/hiking.jpg", use_column_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
+
 
     
     st.markdown(
