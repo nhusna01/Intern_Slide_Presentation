@@ -171,8 +171,7 @@ def hr_page():
                 details={
                     1:"Students submit internship applications through email or the company website.",
                     2:"HR segregates applications according to department requirements.",
-                    3:"There are two options: either any HOD/Departments submit internship placement
-                    requests through e-Mendix, or HR proposes suitable candidates to the requesting department.",
+                    3:"There are two options: either any HOD/Departments submit internship placement requests through e-Mendix, or HR proposes suitable candidates to the requesting department.",
                     4:"The Head of Department(HOD) reviews and approves the internship request.",
                     5:"Successful candidates receive confirmation via a call from HR.",
                     6:"HR prepares the Offer Letter(OL), Placement Letter(PL), and Reply Letter(RL) via email.",
