@@ -271,7 +271,7 @@ def intro_page():
     # ==============================
     st.subheader("🛠️ My Skills")
 
-    skills = {
+    technical_skills = {
         "Python": 70,
         "Streamlit": 80,
         "GitHub": 70,
@@ -280,7 +280,22 @@ def intro_page():
         "Power BI": 50,
     }
 
-    for skill, level in skills.items():
+    for skill, level in technical_skills.items():
+        st.write(f"**{skill}**")
+        st.progress(level)
+
+    # Soft Skills
+    soft_skills = {
+        "Communication": 85,
+        "Teamwork": 90,
+        "Problem-Solving": 75,
+        "Adaptability": 85,
+        "Time Management": 80,
+        "Creativity": 90,
+    }
+    
+    st.markdown("### 🤝 Soft Skills")
+    for skill, level in soft_skills.items():
         st.write(f"**{skill}**")
         st.progress(level)
 
@@ -311,9 +326,9 @@ def intro_page():
     # ==============================
     # 📞 Contact
     # ==============================
-   st.subheader("📞 Contact Me")
+    st.subheader("📞 Contact Me")
 
-   st.markdown(
+    st.markdown(
        """
        <style>
            .contact-box {
@@ -346,5 +361,5 @@ def intro_page():
        </div>
        """,
        unsafe_allow_html=True
-   )
+    )
         
