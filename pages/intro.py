@@ -334,22 +334,16 @@ def intro_page():
     st.markdown(
         """
         <style>
-            .img-container {
-                width: 180px;
-                height: 180px;
+            .stImage > img {
+                width: 180px;          /* fixed width */
+                height: 180px;         /* fixed height */
                 margin: 15px;
                 border-radius: 12px;
-                overflow: hidden;
+                object-fit: cover;     /* crop to fit box */
                 box-shadow: 0 4px 12px rgba(0,0,0,0.25);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
-                display: inline-block;
             }
-            .img-container img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; /* keeps clarity and consistency */
-            }
-            .img-container:hover {
+            .stImage > img:hover {
                 transform: scale(1.05);
                 box-shadow: 0 6px 18px rgba(0,0,0,0.35);
             }
@@ -362,29 +356,16 @@ def intro_page():
     col1, col2, col3, col4, col5 = st.columns(5)
     
     with col1:
-        st.markdown('<div class="img-container">', unsafe_allow_html=True)
-        st.image("images/movie.jpg", use_column_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
+        st.image("images/movie.jpg")
     with col2:
-        st.markdown('<div class="img-container">', unsafe_allow_html=True)
-        st.image("images/music.jpg", use_column_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
+        st.image("images/music.jpg")
     with col3:
-        st.markdown('<div class="img-container">', unsafe_allow_html=True)
-        st.image("images/gaming.jpg", use_column_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
+        st.image("images/gaming.jpg")
     with col4:
-        st.markdown('<div class="img-container">', unsafe_allow_html=True)
-        st.image("images/badminton.jpg", use_column_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
+        st.image("images/badminton.jpg")
     with col5:
-        st.markdown('<div class="img-container">', unsafe_allow_html=True)
-        st.image("images/hiking.jpg", use_column_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.image("images/hiking.jpg")
+
 
 
     
@@ -425,7 +406,7 @@ def intro_page():
                box-shadow: 0 6px 18px rgba(0,0,0,0.35);
            }
        </style
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
        <div class="contact-box">
            <div class="contact-item"><i class="fas fa-phone"></i> 011-12957400</div>
            <div class="contact-item"><i class="fas fa-envelope"></i> nhusna.napi@gmail.com</div>
