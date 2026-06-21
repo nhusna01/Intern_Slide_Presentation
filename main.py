@@ -257,14 +257,13 @@ if st.session_state.page == "Home":
             unsafe_allow_html=True
         )
 
-        # ✅ Start Presentation button with its own container
+        # Start Presentation button 
         st.markdown(
             """
             <div id="start-btn-container" style="
                 display: flex;
-                justify-content: flex-end;   /* 👈 pushes container to the right */
+                justify-content: center;   /* 👈 pushes container to the right */
                 margin-top: 1rem;
-                margin-right: 1000px;          /* 👈 adjust how far right it goes */
             ">
             """,
             unsafe_allow_html=True
@@ -282,13 +281,6 @@ if st.session_state.page == "Home":
         st.markdown("<h3 style='text-align:center;'>Kaneka Malaysia – HR Internship</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align:center;'>Prepared by Nurul Husna, UMK – IT Student</p>", unsafe_allow_html=True)
 
-        # Technical Skills
-        st.subheader("📊 My Technical Skills")
-        skills = {"Python": 70, "Streamlit": 80, "GitHub": 70, "Figma": 70, "Data Analytics": 80}
-        for skill, level in skills.items():
-            st.write(f"**{skill}**")
-            st.progress(level)
-
         # Internship Learning Journey
         st.subheader("📈 Internship Learning Journey")
         data = pd.DataFrame({
@@ -297,11 +289,6 @@ if st.session_state.page == "Home":
             "Skills Improved": np.random.randint(1, 5, 6)
         })
         st.line_chart(data.set_index("Week"))
-
-        # Quick Poll
-        st.subheader("🔍 Quick Poll")
-        choice = st.radio("Which skill should I improve next?", ["Python", "Streamlit", "Power BI", "GitHub"])
-        st.write(f"Thanks! You voted for **{choice}** 💡")
 
     page_container(home_content, bg_color="#e6f7ff")
 
