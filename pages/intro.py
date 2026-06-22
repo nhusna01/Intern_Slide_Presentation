@@ -380,7 +380,7 @@ def intro_page():
 
     
     with col1:
-        st.image("images/movie.jpg")
+        st.image("images/movie2.png")
     with col2:
         st.image("images/music1.png")
     with col3:
