@@ -378,6 +378,7 @@ def intro_page():
     
     # Use columns to align images side by side
     col1, col2, col3, col4, col5 = st.columns(5)
+
     
     with col1:
         st.image("images/movie.jpg")
