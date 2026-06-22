@@ -1,12 +1,14 @@
 import streamlit as st
 import pandas as pd
+from streamlit_lottie import st_lottie
+import requests
 
 # ==============================
 # PAGE CONFIGURATION
 # ==============================
 st.set_page_config(
     page_title="About KANEKA",
-    page_icon="🏢",
+    page_icon="",
     layout="wide"
 )
 
@@ -195,6 +197,7 @@ def company_page():
     
         # Interactive metrics
         st.markdown("---")
+        st.metric("Employees Worldwide", 10000, "+500 this year")
         st.metric("Global Subsidiaries", 10, "+2 in recent years")
         st.progress(0.8)  # Example sustainability progress bar
         st.slider("Employee Engagement Index", 0, 100, 85)
@@ -238,6 +241,16 @@ def company_page():
             """,
             unsafe_allow_html=True
         )
+        
+        # 🎬 Add Lottie animation here    
+        def load_lottieurl(url: str):
+            r = requests.get(url)
+            if r.status_code != 200:
+                return None
+            return r.json()
+    
+        lottie_animation = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json")
+        st_lottie(lottie_animation, height=250, key="innovation")
 
 
     elif page == "Location":
@@ -275,7 +288,8 @@ def company_page():
         })
     
         # Display map with all company locations
-        st.map(location_data)
+        st.map(location_data, zoom=12, use_container_width=True)
+       
 
 
     elif page == "History":
