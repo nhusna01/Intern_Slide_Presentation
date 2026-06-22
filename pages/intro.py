@@ -78,7 +78,7 @@ def intro_page():
     # Profile Card
     st.markdown("""
     <div class="profile-card">
-        <h2 style="font-size:40px; font-weight:bold; font-family: 'Segoe UI', sans-serif; color:#003366; margin:0;">
+        <h2 style="font-size:80px; font-weight:bold; font-family: 'Segoe UI', sans-serif; color:#003366; margin:0;">
             SELF-INTRODUCTION 🙋‍♀️
         </h2>
     </div>
