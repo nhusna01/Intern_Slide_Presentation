@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from streamlit_lottie import st_lottie
 import requests
+import matplotlib.pyplot as plt
 
 # ==============================
 # PAGE CONFIGURATION
@@ -366,18 +367,42 @@ def company_page():
 
         st.header("📦 Products")
 
-        products = [
-            "Medical Devices",
-            "Functional Polymers",
-            "Food Products",
-            "Expandable Polyolefin Foam",
-            "Biodegradable Materials",
-            "Innovative Fibers",
-        ]
+        products = {
+        "Medical Devices": "Innovative healthcare solutions improving patient outcomes.",
+        "Functional Polymers": "Advanced materials for adhesives, coatings, and sealants.",
+        "Food Products": "Nutritional supplements and functional foods.",
+        "Expandable Polyolefin Foam": "Lightweight foam for automotive and packaging.",
+        "Biodegradable Materials": "Eco-friendly alternatives reducing environmental impact.",
+        "Innovative Fibers": "High-performance fibers for fashion and industry."
+        }
+    
+        # 🎯 Interactive expanders for each product
+        st.subheader("🔍 Explore Products")
+        for name, desc in products.items():
+            with st.expander(f"{name}"):
+                st.write(f"✨ {desc}")
 
-        for product in products:
-            st.write(f"• {product}")
-
+        # Graph
+        product_data = {
+            "Medical Devices": 25,
+            "Functional Polymers": 20,
+            "Food Products": 15,
+            "Expandable Foam": 10,
+            "Biodegradable Materials": 20,
+            "Innovative Fibers": 10
+        }
+    
+        fig, ax = plt.subplots()
+        ax.pie(product_data.values(), labels=product_data.keys(), autopct='%1.1f%%')
+        ax.set_title("Kaneka Product Portfolio")
+        st.subheader("📈 Product Mix")
+        st.pyplot(fig)
+    
+        # 🖱️ Interactive selection
+        st.subheader("🎯 Select a Product")
+        choice = st.selectbox("Choose a product to learn more:", list(products.keys()))
+        st.success(f"You selected **{choice}**: {products[choice]}")
+    
         st.info("More product details will be added soon.")
 
 
