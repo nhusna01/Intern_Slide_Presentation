@@ -78,7 +78,7 @@ def intro_page():
     # Profile Card
     st.markdown("""
     <div class="profile-card">
-        <h2 style="font-size:100px; font-weight:bold; font-family: 'Poppins', sans-serif; color:#003366; margin:0;">
+        <h2 style="font-size:60px; font-weight:bold; font-family: 'Poppins', sans-serif; color:#003366; margin:0;">
             SELF-INTRODUCTION 🙋‍♀️
         </h2>
     </div>
@@ -108,7 +108,7 @@ def intro_page():
     # ✅ Use st.image for local files
     col = st.columns([1,2,1])[1]   # center column trick
     with col:
-        st.image("app/static/myself_icon.jpg", width=220)
+        st.image("images/myself_icon.jpg", width=220)
         
 
     
