@@ -3,7 +3,6 @@ import pandas as pd
 from streamlit_lottie import st_lottie
 import requests
 import matplotlib.pyplot as plt
-import plotly.express as px
 import plotly.graph_objects as go
 
 
@@ -29,6 +28,15 @@ st.markdown(
 # Use custom-styled title
 st.markdown('<div class="big-title">About KANEKA</div>', unsafe_allow_html=True)
 
+ 
+st.caption("Innovation • Sustainability • Human Well-being")
+
+try:
+    st.image("images/Kaneka_logo.png", width=350)
+except:
+    st.warning("Kaneka logo not found.")
+
+st.divider()
 
 def company_page():
 
@@ -68,18 +76,6 @@ def company_page():
         },
     }
 
-    # ==============================
-    # HEADER
-    # ==============================
-    st.title("🏢 About KANEKA")
-    st.caption("Innovation • Sustainability • Human Well-being")
-
-    try:
-        st.image("images/Kaneka_logo.png", width=350)
-    except:
-        st.warning("Kaneka logo not found.")
-
-    st.divider()
 
     # ==============================
     # SEARCH SECTION
@@ -323,7 +319,7 @@ def company_page():
                 "2015-05-01",
             ],
             "Companies": [
-                "Kaneka (Malaysia) Sdn. Bhd.",
+                "Kaneka (Malaysia)<br>Sdn. Bhd.",
                 "Kaneka Eperan Sdn. Bhd.",
                 "Kaneka Paste Polymers Sdn. Bhd.",
                 "Kaneka Innovative Fibers Sdn. Bhd.",
@@ -334,6 +330,7 @@ def company_page():
         
         history["Date"] = pd.to_datetime(history["Date"])
         history["Established"] = history["Date"].dt.strftime("%B %Y")
+        history["Label"] = history["Date"].dt.strftime("%b\n%Y")
         
         # ----------------------------
         # Interactive Table
@@ -358,79 +355,60 @@ def company_page():
             x=history["Date"],
             y=[1] * len(history),
             mode="lines",
-            line=dict(width=4, color="#1f77b4"),
+            line=dict(width=4, color="#023e8a"),
             hoverinfo="skip",
             showlegend=False
         ))
         
-        # Alternate label positions
-        label_y = [1.18 if i % 2 == 0 else 0.82 for i in range(len(history))]
-        
-        # Connector lines
-        for x, y in zip(history["Date"], label_y):
-            fig.add_shape(
-                type="line",
-                x0=x,
-                x1=x,
-                y0=1,
-                y1=y,
-                line=dict(color="gray", width=1)
-            )
-        
-        # Milestone markers
+        # Milestones
         fig.add_trace(go.Scatter(
             x=history["Date"],
             y=[1] * len(history),
-            mode="markers",
+            mode="markers+text",
+            text=history["Label"],
+            textposition="bottom center",
             marker=dict(
-                size=15,
-                color="#1f77b4",
+                size=18,
+                color="#023e8a",
                 line=dict(color="white", width=2)
             ),
             customdata=history[["Companies", "Established"]],
-            hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[1]}<extra></extra>",
+            hovertemplate=
+            "<b>%{customdata[0]}</b><br>"
+            "Established: %{customdata[1]}"
+            "<extra></extra>",
             showlegend=False
         ))
-        
-        # Labels
-        for x, y, company, month in zip(
-            history["Date"],
-            label_y,
-            history["Companies"],
-            history["Established"]
-        ):
-            fig.add_annotation(
-                x=x,
-                y=y,
-                text=f"<b>{company}</b><br><span style='font-size:11px'>{month}</span>",
-                showarrow=False,
-                align="center",
-                bgcolor="rgba(255,255,255,0.9)"
-            )
-        
+    
         fig.update_layout(
             title="Kaneka Malaysia Company History",
-            height=500,
+            height=350,
             plot_bgcolor="white",
             paper_bgcolor="white",
-            margin=dict(l=30, r=30, t=60, b=30),
+            margin=dict(l=30, r=30, t=60, b=40)
         )
-        
+    
         fig.update_xaxes(
+            title="",
             tickformat="%Y",
             showgrid=False,
             showline=True,
-            linecolor="gray",
-            title=""
+            linecolor="lightgray",
+            ticks="outside",
+            range=[
+                history["Date"].min() - pd.DateOffset(months=12),
+                history["Date"].max() + pd.DateOffset(months=12)
+            ]
         )
-        
+    
         fig.update_yaxes(
             visible=False,
-            range=[0.65, 1.35]
+            range=[0.95, 1.05]
         )
-        
+    
         st.plotly_chart(fig, use_container_width=True)
 
+    
     elif page == "Products":
 
         st.header("📦 Products")
