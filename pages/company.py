@@ -3,15 +3,7 @@ import pandas as pd
 from streamlit_lottie import st_lottie
 import requests
 import matplotlib.pyplot as plt
-
-# ==============================
-# PAGE CONFIGURATION
-# ==============================
-st.set_page_config(
-    page_title="About KANEKA",
-    page_icon="",
-    layout="wide"
-)
+import plotly.express as px
 
 # ==============================
 # CUSTOM TITLE STYLING
@@ -23,7 +15,7 @@ st.markdown(
         font-size: 48px; /* Increase size */
         font-family: 'Poppins', sans-serif; /* Apply Poppins font */
         font-weight: bold;
-        text-align: center;
+        text-align: flex-start ;
         color: #023e8a; /* Optional: Kaneka blue tone */
         margin-bottom: 20px;
     }
@@ -33,7 +25,7 @@ st.markdown(
 )
 
 # Use custom-styled title
-st.markdown('<div class="big-title">🏢 About KANEKA</div>', unsafe_allow_html=True)
+st.markdown('<div class="big-title">About KANEKA</div>', unsafe_allow_html=True)
 
 
 def company_page():
@@ -342,7 +334,7 @@ def company_page():
         st.dataframe(history, use_container_width=True)
     
         # 📈 Timeline Chart using Plotly
-        import plotly.express as px
+        
         fig = px.timeline(
             history,
             x_start="Date",
