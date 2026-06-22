@@ -262,8 +262,10 @@ if st.session_state.page == "Home":
             """
             <div id="start-btn-container" style="
                 display: flex;
-                justify-content: center;   /* 👈 pushes container to the right */
+                justify-content: center;
+                align-items:center;
                 margin-top: 1rem;
+                width: 100%;
             ">
             """,
             unsafe_allow_html=True
