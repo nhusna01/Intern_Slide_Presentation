@@ -388,7 +388,7 @@ def intro_page():
     with col4:
         st.image("images/badminton.jpg")
     with col5:
-        st.image("images/hiking1.jpg")
+        st.image("images/hiking1.png")
 
 
 
