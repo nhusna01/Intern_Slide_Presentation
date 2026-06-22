@@ -382,13 +382,13 @@ def intro_page():
     with col1:
         st.image("images/movie.jpg")
     with col2:
-        st.image("images/music.jpg")
+        st.image("images/music1.png")
     with col3:
         st.image("images/gaming.jpg")
     with col4:
         st.image("images/badminton.jpg")
     with col5:
-        st.image("images/hiking1.png")
+        st.image("images/hiking2.png")
 
 
 
