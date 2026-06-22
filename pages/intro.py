@@ -356,7 +356,7 @@ def intro_page():
     st.markdown(
         """
         <style>
-            .stImage > img {
+            .stImage img {
                 width: 180px;          /* fixed width */
                 height: 180px;         /* fixed height */
                 margin: 15px;
