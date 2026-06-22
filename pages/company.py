@@ -4,6 +4,8 @@ from streamlit_lottie import st_lottie
 import requests
 import matplotlib.pyplot as plt
 import plotly.express as px
+import plotly.graph_objects as go
+
 
 # ==============================
 # CUSTOM TITLE STYLING
@@ -313,47 +315,121 @@ def company_page():
 
         history = pd.DataFrame({
             "Date": [
-                "August, 1995",
-                "July, 1996",
-                "January, 1999",
-                "September, 2010",
-                "February, 2012",
-                "May, 2015",
+                "1995-08-01",
+                "1996-07-01",
+                "1999-01-01",
+                "2010-09-01",
+                "2012-02-01",
+                "2015-05-01",
             ],
             "Companies": [
                 "Kaneka (Malaysia) Sdn. Bhd.",
                 "Kaneka Eperan Sdn. Bhd.",
                 "Kaneka Paste Polymers Sdn. Bhd.",
-                "Kaneka Innovative Fibers Sdn. Bhd.",        
+                "Kaneka Innovative Fibers Sdn. Bhd.",
                 "Kaneka Apical Malaysia Sdn. Bhd.",
-                "Kaneka MS Malaysia Sdn. Bhd.",
+                "Kaneka MS Malaysia Sdn. Bhd."
             ]
         })
-        # 🔄 Interactive DataFrame
-        st.subheader("📊 Interactive Table")
-        st.dataframe(history, use_container_width=True)
-    
-        # 📈 Timeline Chart using Plotly
         
-        fig = px.timeline(
-            history,
-            x_start="Date",
-            x_end="Date",
-            y="Companies",
-            title="Kaneka Malaysia Company History"
+        history["Date"] = pd.to_datetime(history["Date"])
+        history["Established"] = history["Date"].dt.strftime("%B %Y")
+        
+        # ----------------------------
+        # Interactive Table
+        # ----------------------------
+        st.subheader("📊 Company List")
+        
+        st.dataframe(
+            history[["Established", "Companies"]],
+            use_container_width=True,
+            hide_index=True
         )
-        fig.update_yaxes(autorange="reversed")  # keeps order neat
-        st.subheader("📅 Timeline Visualization")
+        
+        # ----------------------------
+        # Timeline
+        # ----------------------------
+        st.subheader("📅 Company Timeline")
+        
+        fig = go.Figure()
+        
+        # Timeline line
+        fig.add_trace(go.Scatter(
+            x=history["Date"],
+            y=[1] * len(history),
+            mode="lines",
+            line=dict(width=4, color="#1f77b4"),
+            hoverinfo="skip",
+            showlegend=False
+        ))
+        
+        # Alternate label positions
+        label_y = [1.18 if i % 2 == 0 else 0.82 for i in range(len(history))]
+        
+        # Connector lines
+        for x, y in zip(history["Date"], label_y):
+            fig.add_shape(
+                type="line",
+                x0=x,
+                x1=x,
+                y0=1,
+                y1=y,
+                line=dict(color="gray", width=1)
+            )
+        
+        # Milestone markers
+        fig.add_trace(go.Scatter(
+            x=history["Date"],
+            y=[1] * len(history),
+            mode="markers",
+            marker=dict(
+                size=15,
+                color="#1f77b4",
+                line=dict(color="white", width=2)
+            ),
+            customdata=history[["Companies", "Established"]],
+            hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[1]}<extra></extra>",
+            showlegend=False
+        ))
+        
+        # Labels
+        for x, y, company, month in zip(
+            history["Date"],
+            label_y,
+            history["Companies"],
+            history["Established"]
+        ):
+            fig.add_annotation(
+                x=x,
+                y=y,
+                text=f"<b>{company}</b><br><span style='font-size:11px'>{month}</span>",
+                showarrow=False,
+                align="center",
+                bgcolor="rgba(255,255,255,0.9)"
+            )
+        
+        fig.update_layout(
+            title="Kaneka Malaysia Company History",
+            height=500,
+            plot_bgcolor="white",
+            paper_bgcolor="white",
+            margin=dict(l=30, r=30, t=60, b=30),
+        )
+        
+        fig.update_xaxes(
+            tickformat="%Y",
+            showgrid=False,
+            showline=True,
+            linecolor="gray",
+            title=""
+        )
+        
+        fig.update_yaxes(
+            visible=False,
+            range=[0.65, 1.35]
+        )
+        
         st.plotly_chart(fig, use_container_width=True)
-    
-        # 🎯 Expanders for each milestone
-        st.subheader("📜 Detailed Milestones")
-        for i, row in history.iterrows():
-            with st.expander(f"{row['Date']} – {row['Companies']}"):
-                st.write(f"🏭 **Company:** {row['Companies']}")
-                st.write(f"📅 **Established:** {row['Date']}")
-                st.write("✨ Additional notes or achievements can be added here.")
-
 
     elif page == "Products":
 
