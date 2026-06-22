@@ -336,7 +336,30 @@ def company_page():
                 "Kaneka MS Malaysia Sdn. Bhd.",
             ]
         })
-        st.table(history)
+        # 🔄 Interactive DataFrame
+        st.subheader("📊 Interactive Table")
+        st.dataframe(history, use_container_width=True)
+    
+        # 📈 Timeline Chart using Plotly
+        import plotly.express as px
+        fig = px.timeline(
+            history,
+            x_start="Date",
+            x_end="Date",
+            y="Companies",
+            title="Kaneka Malaysia Company History"
+        )
+        fig.update_yaxes(autorange="reversed")  # keeps order neat
+        st.subheader("📅 Timeline Visualization")
+        st.plotly_chart(fig, use_container_width=True)
+    
+        # 🎯 Expanders for each milestone
+        st.subheader("📜 Detailed Milestones")
+        for i, row in history.iterrows():
+            with st.expander(f"{row['Date']} – {row['Companies']}"):
+                st.write(f"🏭 **Company:** {row['Companies']}")
+                st.write(f"📅 **Established:** {row['Date']}")
+                st.write("✨ Additional notes or achievements can be added here.")
 
 
     elif page == "Products":
