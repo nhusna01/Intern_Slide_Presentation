@@ -190,15 +190,27 @@ def hr_page():
             
                 st.progress(st.session_state.step/11)
             
-                if st.session_state.step in [6,8,9,10]:
-                    st.success("⭐ These were the internship activities that I was directly involved in.")
-                    
+            
+                if st.session_state.step == 7:
+                    st.success("⭐⭐ These were the internship activities that I was directly involved in. ⭐⭐")
+                    st.subheader("Activities Performed During Internship")
+                    st.video("videos/briefing_session.mp4")
+                
+                elif st.session_state.step == 8:
+                    st.success("⭐⭐ These were the internship activities that I was directly involved in. ⭐⭐")
+                    st.subheader("Activities Performed During Internship")
+                    st.video("videos/handover_process.mp4")
+                
+                elif st.session_state.step == 10:
+                    st.success("⭐⭐ These were the internship activities that I was directly involved in. ⭐⭐")
+                    st.subheader("Activities Performed During Internship")
+                    st.video("videos/appreciation_event.mp4")
+                
+                else:
+                    st.info("📌 These processes were part of the internship workflow, but I was not directly involved 📌.")
                     st.divider()
                     
-                    st.subheader("Activities Performed During Internship")
-                    
-                    st.video("images/Internship_flow.mp4")
-                      
+                                      
             internship_flow()
         
         # ================= Training =================
