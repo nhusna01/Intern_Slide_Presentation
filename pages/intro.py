@@ -78,24 +78,40 @@ def intro_page():
     # Profile Card
     st.markdown("""
     <div class="profile-card">
-        <h2 style="font-size:80px; font-weight:bold; font-family: 'Segoe UI', sans-serif; color:#003366; margin:0;">
+        <h2 style="font-size:100px; font-weight:bold; font-family: 'Poppins', sans-serif; color:#003366; margin:0;">
             SELF-INTRODUCTION 🙋‍♀️
         </h2>
     </div>
     """, unsafe_allow_html=True)
 
+    # 🌟 Profile Image
+    st.markdown(
+        """
+        <style>
+            .profile-pic {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            .profile-pic img {
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;        /* 👈 makes it circular */
+                border: 5px solid gold;    /* 👈 gold border */
+                object-fit: cover;         /* 👈 keeps aspect ratio */
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     
-    st.markdown("""
-    <div style="text-align:center;">
-        <img src="app/static/myself_icon.jpg"
-             width="220"
-             style="
-                border-radius:50%;
-                border:5px solid gold;
-             ">
-    </div>
-    """, unsafe_allow_html=True)
+    # ✅ Use st.image for local files
+    col = st.columns([1,2,1])[1]   # center column trick
+    with col:
+        st.image("app/static/myself_icon.jpg", width=220)
+        
 
+    
     st.markdown(
         """
         <h1 style="color:#003366; text-align:center;">
