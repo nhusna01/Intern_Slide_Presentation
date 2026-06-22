@@ -171,7 +171,7 @@ def company_page():
     # ==============================
     # NAVIGATION CONTENT
     # ==============================
-    section = st.session_state.page
+    section = st.session_state.section
 
     if section == "Kaneka Group":
         st.header("🏢 Kaneka Group")
