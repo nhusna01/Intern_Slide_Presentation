@@ -365,7 +365,7 @@ def intro_page():
                 box-shadow: 0 4px 12px rgba(0,0,0,0.25);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
-            .stImage > img:hover {
+            .stImage img:hover {
                 transform: scale(1.05);
                 box-shadow: 0 6px 18px rgba(0,0,0,0.35);
                 cursor: pointer;
