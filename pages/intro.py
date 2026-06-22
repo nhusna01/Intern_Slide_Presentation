@@ -279,6 +279,28 @@ def intro_page():
     unsafe_allow_html=True
     )
 
+
+    
+    # Internship Learning Journey
+    st.subheader("📈 Internship Learning Journey")
+    
+    # ✅ Generate 26 weeks of data
+    data = pd.DataFrame({
+        "Week": list(range(1, 27)),   # 👈 now covers 1 to 26
+        "Tasks Completed": np.random.randint(2, 10, 26),
+        "Skills Improved": np.random.randint(1, 5, 26)
+    })
+    
+    # ✅ Use Week as index so chart aligns correctly
+    st.line_chart(data.set_index("Week"))
+    
+
+    st.markdown(
+        "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+        unsafe_allow_html=True
+        )
+
+
     
     # ==============================
     # 🛠️ Skills
@@ -346,6 +368,7 @@ def intro_page():
             .stImage > img:hover {
                 transform: scale(1.05);
                 box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+                cursor: pointer;
             }
         </style>
         """,
