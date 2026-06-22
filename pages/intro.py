@@ -286,9 +286,9 @@ def intro_page():
     
     # ✅ Generate 26 weeks of data
     data = pd.DataFrame({
-        "Week": list(range(1, 27)),   # 👈 now covers 1 to 26
-        "Tasks Completed": np.random.randint(2, 10, 26),
-        "Skills Improved": np.random.randint(1, 5, 26)
+        "Week": list(range(1, 27)), 
+        "Tasks Completed": np.random.randint(2, 10, size=26),
+        "Skills Improved": np.random.randint(1, 5, size=26)
     })
     
     # ✅ Use Week as index so chart aligns correctly
