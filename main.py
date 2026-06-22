@@ -222,12 +222,12 @@ if st.session_state.page == "Home":
     video_html = """
     <video autoplay muted loop style="
         position: fixed;
-        top: 50;
+        top: 80;
         left: 50;
         width: 100%;
         height: 100vh;
         z-index: -1;
-        object-fit: cover;
+        object-fit: contain;
         background-color: black;
     ">
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
