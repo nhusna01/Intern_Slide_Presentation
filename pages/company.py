@@ -13,10 +13,10 @@ st.markdown(
     """
     <style>
     .big-title {
-        font-size: 48px; /* Increase size */
+        font-size: 60px; /* Increase size */
         font-family: 'Poppins', sans-serif; /* Apply Poppins font */
         font-weight: bold;
-        text-align: flex-start ;
+        text-align: left;
         color: #023e8a; /* Optional: Kaneka blue tone */
         margin-bottom: 20px;
     }
@@ -188,7 +188,7 @@ def company_page():
             """,
             unsafe_allow_html=True
         )
-        
+
         # Add spacing
         st.markdown("<br>", unsafe_allow_html=True)
     
