@@ -141,39 +141,39 @@ def company_page():
     # ==============================
     # NAVIGATION
     # ==============================
-    if "page" not in st.session_state:
-        st.session_state.page = "Kaneka Group"
+    if "section" not in st.session_state:
+        st.session_state.section = "Kaneka Group"
 
     col1, col2, col3, col4, col5 = st.columns(5)
 
     with col1:
         if st.button("🏢 Kaneka Group", use_container_width=True):
-            st.session_state.page = "Kaneka Group"
+            st.session_state.section = "Kaneka Group"
 
     with col2:
         if st.button("🧭 Philosophy", use_container_width=True):
-            st.session_state.page = "Corporate Philosophy"
+            st.session_state.section = "Corporate Philosophy"
 
     with col3:
         if st.button("📍 Location", use_container_width=True):
-            st.session_state.page = "Location"
+            st.session_state.section = "Location"
 
     with col4:
         if st.button("📜 History", use_container_width=True):
-            st.session_state.page = "History"
+            st.session_state.section = "History"
 
     with col5:
         if st.button("📦 Products", use_container_width=True):
-            st.session_state.page = "Products"
+            st.session_state.section = "Products"
 
     st.divider()
 
     # ==============================
     # NAVIGATION CONTENT
     # ==============================
-    page = st.session_state.page
+    section = st.session_state.page
 
-    if page == "Kaneka Group":
+    if section == "Kaneka Group":
         st.header("🏢 Kaneka Group")
     
         # Hero block
@@ -216,7 +216,7 @@ def company_page():
         st.slider("Employee Engagement Index", 0, 100, 85)
 
 
-    elif page == "Corporate Philosophy":
+    elif section == "Corporate Philosophy":
         st.header("🧭 Corporate Philosophy")
     
         st.markdown(
@@ -266,7 +266,7 @@ def company_page():
         st_lottie(lottie_animation, height=250, key="innovation")
 
 
-    elif page == "Location":
+    elif section == "Location":
         st.header("📍 Kaneka Malaysia Locations")
     
         # Coordinates for Kaneka Malaysia sites
@@ -305,7 +305,7 @@ def company_page():
        
 
 
-    elif page == "History":
+    elif section == "History":
 
         st.header("📜 Company History")
 
@@ -409,7 +409,7 @@ def company_page():
         st.plotly_chart(fig, use_container_width=True)
 
     
-    elif page == "Products":
+    elif section == "Products":
 
         st.header("📦 Products")
 
