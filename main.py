@@ -222,18 +222,18 @@ if st.session_state.page == "Home":
     video_html = """
     <video autoplay muted loop style="
         position: fixed;
-        top: 50;
-        left: 50;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100vh;
         z-index: -1;
-        object-fit: contain;
+        object-fit: cover;
         background-color: black;
     ">
         <source src="https://nhusna01.github.io/Intern_Slide_Presentation/images/intro_vid.mp4" type="video/mp4">
     </video>
     """
-    components.html(video_html, height=550)
+    components.html(video_html, height=0)
 
     # Overlay content
     def home_content():
