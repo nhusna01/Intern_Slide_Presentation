@@ -283,15 +283,6 @@ if st.session_state.page == "Home":
         st.markdown("<h3 style='text-align:center;'>Kaneka Malaysia – HR Internship</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align:center;'>Prepared by Nurul Husna, UMK – IT Student</p>", unsafe_allow_html=True)
 
-        # Internship Learning Journey
-        st.subheader("📈 Internship Learning Journey")
-        data = pd.DataFrame({
-            "Week": list(range(1, 7)),
-            "Tasks Completed": np.random.randint(2, 10, 6),
-            "Skills Improved": np.random.randint(1, 5, 6)
-        })
-        st.line_chart(data.set_index("Week"))
-
     page_container(home_content, bg_color="#e6f7ff")
 
 
