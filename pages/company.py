@@ -12,6 +12,28 @@ st.set_page_config(
     layout="wide"
 )
 
+# ==============================
+# CUSTOM TITLE STYLING
+# ==============================
+st.markdown(
+    """
+    <style>
+    .big-title {
+        font-size: 48px; /* Increase size */
+        font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+        font-weight: bold;
+        text-align: center;
+        color: #023e8a; /* Optional: Kaneka blue tone */
+        margin-bottom: 20px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Use custom-styled title
+st.markdown('<div class="big-title">🏢 About KANEKA</div>', unsafe_allow_html=True)
+
 
 def company_page():
 
