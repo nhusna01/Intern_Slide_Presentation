@@ -109,12 +109,6 @@ def intro_page():
         """,
         unsafe_allow_html=True
     )
-    
-    # ✅ Use st.image for local files
-    col = st.columns([1,2,1])[1]   # center column trick
-    with col:
-        st.image("images/myself_icon.jpg", width=220)
-        
 
     
     st.markdown(
