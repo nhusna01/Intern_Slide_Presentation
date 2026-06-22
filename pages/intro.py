@@ -78,12 +78,13 @@ def intro_page():
     # Profile Card
     st.markdown("""
     <div class="profile-card">
-        <h2 style="font-size:60px; font-weight:bold; font-family: 'Poppins', sans-serif; color:#003366; margin:0;">
-            SELF-INTRODUCTION 🙋‍♀️
+        <h2 style="font-size:60px; font-weight:bold; font-family: 'Great Vibes', cursive; color:#003366; margin:0;">
+            SELF-INTRODUCTION 
         </h2>
     </div>
     """, unsafe_allow_html=True)
 
+    
     # 🌟 Profile Image
     st.markdown(
         """
@@ -91,6 +92,7 @@ def intro_page():
             .profile-pic {
                 display: flex;
                 justify-content: center;
+                align items: center;
                 margin-top: 20px;
             }
             .profile-pic img {
@@ -101,6 +103,9 @@ def intro_page():
                 object-fit: cover;         /* 👈 keeps aspect ratio */
             }
         </style>
+        <div class="profile-pic">
+             <img src="https://nhusna01.github.io/Intern_Slide_Presentation/images/myself_icon.jpg">
+        </div>
         """,
         unsafe_allow_html=True
     )
