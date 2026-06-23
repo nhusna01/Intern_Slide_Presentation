@@ -247,6 +247,18 @@ def company_page():
                 from {text-shadow: 0 0 5px #fff, 0 0 10px #00b4d8;}
                 to {text-shadow: 0 0 20px #fff, 0 0 30px #0077b6;}
             }
+
+            .interpretation {
+                font-size: 16px;
+                line-height: 1.6;
+                text-align: left;
+                padding: 15px;
+                margin-top: 15px;
+                border-left: 4px solid #023e8a;
+                background: #f9f9f9;
+                color: #333;
+                border-radius: 6px;
+            }    
             </style>
     
             <div class="philosophy">
@@ -255,6 +267,20 @@ def company_page():
                 we will break fresh ground for the future and tie in to explore
                 New Values. We are also committed to challenge the environmental
                 issues of our planet and contribute to upgrade the quality of life.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+        # Interpretation block
+        st.markdown(
+            """
+            <div class="interpretation">
+            <strong>My Interpretation:</strong><br>
+            This philosophy highlights Kaneka’s commitment not only to innovation 
+            but also to responsibility. To me, it means that technology should 
+            always serve people and the planet, ensuring sustainability while 
+            improving quality of life. It’s a reminder that progress must balance 
+            creativity with care for the environment.
             </div>
             """,
             unsafe_allow_html=True
