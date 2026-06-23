@@ -463,16 +463,16 @@ def company_page():
              "link": "https://www.kaneka.com.my/product/polyimide-film"},
             {"name": "PVC Paste Resins", "image": "images/pvc_paste_resins.png",
              "desc": "Resins for flooring, wall coverings, and synthetic leather.",
-             "link": "https://www.kaneka.com.my/product/pvc-paste-resins"},
+             "link": "https://www.kaneka.com.my/product/pvc-paste-resin"},
             {"name": "Expandable Foam", "image": "images/expandable_foam.png",
              "desc": "Lightweight foam material for automotive and packaging.",
              "link": "https://www.kaneka.com.my/product/expandable-foam"},
-            {"name": "Graphite Sheet", "image": "images/graphite_sheet.png",
-             "desc": "Thermal management material for electronics.",
-             "link": "https://www.kaneka.com.my/product/graphite-sheet"},
+            {"name": "Synthetic Fibers", "image": "images/synthetic_fibers.png",
+             "desc": "Heat-resistant synthetic hair fiber for wigs and extensions.",
+             "link": "https://www.kanekalon.com/en/"},
             {"name": "MS Polymer", "image": "images/ms_polymer.png",
              "desc": "Base material for adhesives and sealants.",
-             "link": "https://www.kaneka.com.my/product/ms-polymer"}
+             "link": "https://www.kaneka.com.my/product/ms-polymer/"}
         ]
 
         # Display products in a grid
