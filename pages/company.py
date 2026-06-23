@@ -271,20 +271,22 @@ def company_page():
             """,
             unsafe_allow_html=True
         )
-        # Interpretation block
-        st.markdown(
-            """
-            <div class="interpretation">
-            <strong>My Interpretation:</strong><br>
-            This philosophy highlights Kaneka’s commitment not only to innovation 
-            but also to responsibility. To me, it means that technology should 
-            always serve people and the planet, ensuring sustainability while 
-            improving quality of life. It’s a reminder that progress must balance 
-            creativity with care for the environment.
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+
+        # Toggle button Interpretation block
+        if st.button("💡 Show My Interpretation"):
+            st.markdown(
+                """
+                <div class="interpretation">
+                <strong>My Interpretation:</strong><br>
+                This philosophy highlights Kaneka’s commitment not only to innovation 
+                but also to responsibility. To me, it means that technology should 
+                always serve people and the planet, ensuring sustainability while 
+                improving quality of life. It’s a reminder that progress must balance 
+                creativity with care for the environment.
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         
         # 🎬 Add Lottie animation here    
         def load_lottieurl(url: str):
