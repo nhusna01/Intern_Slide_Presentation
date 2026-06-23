@@ -418,49 +418,80 @@ def company_page():
 
         st.header("📦 Kaneka Malaysia Products Showcase")
 
-        products = [
-            {
-                "name": "Modifiers",
-                "image": "images/modifiers.png",  # replace with actual Kaneka image
-                "desc": "Impact modifiers used in plastics for toughness."
-            },
-            {
-                "name": "Polyimide Film",
-                "image": "images/polyimide_film.png",
-                "desc": "High-performance film for aerospace and electronics."
-            },
-            {
-                "name": "PVC Paste Resins",
-                "image": "images/pvc_paste_resins.png",
-                "desc": "Resins for flooring, wall coverings, and synthetic leather."
-            },
-            {
-                "name": "Expandable Foam",
-                "image": "images/expandable_foam.png",
-                "desc": "Lightweight foam material for automotive and packaging."
-            },
-            {
-                "name": "Graphite Sheet",
-                "image": "images/graphite_sheet.png",
-                "desc": "Thermal management material for electronics."
-            },
-            {
-                "name": "MS Polymer",
-                "image": "images/ms_polymer.png",
-                "desc": "Base material for adhesives and sealants."
+        st.markdown(
+            """
+            <style>
+            .product-card {
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 10px;
+                margin-bottom: 20px;
+                transition: all 0.3s ease-in-out;
+                background-color: #fff;
             }
-        ]
-    
-        # Slider navigation
-        product_index = st.slider("Slide through products", 0, len(products)-1, 0)
-    
-        selected = products[product_index]
-        st.image(selected["image"], caption=selected["name"], use_column_width=True)
-        st.subheader(selected["name"])
-        st.info(f"✨ {selected['desc']}")
-    
-        st.success("Discover more about this product on Kaneka’s official site!")
+            .product-card:hover {
+                transform: scale(1.02);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+            .product-expander .streamlit-expanderHeader {
+                font-weight: bold;
+                font-size: 16px;
+                color: #023e8a;
+            }
+            .product-expander .streamlit-expanderContent {
+                background: #f9f9f9;
+                border-left: 4px solid #0096c7;
+                padding: 10px;
+                border-radius: 6px;
+                animation: fadeIn 0.5s ease-in-out;
+            }
+            @keyframes fadeIn {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
 
+        products = [
+            {"name": "Modifiers", "image": "images/modifiers.png",
+             "desc": "Impact modifiers used in plastics for toughness and durability.",
+             "link": "https://www.kaneka.com.my/product/modifier"},
+            {"name": "Polyimide Film", "image": "images/polyimide_film.png",
+             "desc": "High-performance film for aerospace and electronics.",
+             "link": "https://www.kaneka.com.my/product/polyimide-film"},
+            {"name": "PVC Paste Resins", "image": "images/pvc_paste_resins.png",
+             "desc": "Resins for flooring, wall coverings, and synthetic leather.",
+             "link": "https://www.kaneka.com.my/product/pvc-paste-resins"},
+            {"name": "Expandable Foam", "image": "images/expandable_foam.png",
+             "desc": "Lightweight foam material for automotive and packaging.",
+             "link": "https://www.kaneka.com.my/product/expandable-foam"},
+            {"name": "Graphite Sheet", "image": "images/graphite_sheet.png",
+             "desc": "Thermal management material for electronics.",
+             "link": "https://www.kaneka.com.my/product/graphite-sheet"},
+            {"name": "MS Polymer", "image": "images/ms_polymer.png",
+             "desc": "Base material for adhesives and sealants.",
+             "link": "https://www.kaneka.com.my/product/ms-polymer"}
+        ]
+
+        # Display products in a grid
+        for row_start in range(0, len(products), 3):
+            cols = st.columns(3)
+            for i, col in enumerate(cols):
+                if row_start + i < len(products):
+                    product = products[row_start + i]
+                    with col:
+                        st.markdown('<div class="product-card">', unsafe_allow_html=True)
+                        st.image(product["image"], caption=product["name"], use_column_width=True)
+                        with st.expander(f"📖 Learn more about {product['name']}"):
+                            st.write(product["desc"])
+                            st.markdown(
+                                f"<a href='{product['link']}' target='_blank' style='color:#0096c7; font-weight:bold;'>🔗 Read More</a>",
+                                unsafe_allow_html=True
+                            )
+                        st.markdown('</div>', unsafe_allow_html=True)
+        
 
 # Run page
 company_page()
