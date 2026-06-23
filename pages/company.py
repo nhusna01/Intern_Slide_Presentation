@@ -18,7 +18,14 @@ st.markdown(
         font-weight: bold;
         text-align: left;
         color: #023e8a; /* Optional: Kaneka blue tone */
-        margin-bottom: 20px;
+        margin-bottom: 6px;
+    }
+    .subtitle-caption {
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        color: #444; /* softer corporate gray */
+        margin-bottom: 20px; /* space before logo/next section */
     }
     </style>
     """,
@@ -27,10 +34,8 @@ st.markdown(
 
 # Use custom-styled title
 st.markdown('<div class="big-title">About KANEKA</div>', unsafe_allow_html=True)
-
+st.markdown('<div class="subtitle-caption">Innovation • Sustainability • Human Well-being</div>', unsafe_allow_html=True)
  
-st.caption("Innovation • Sustainability • Human Well-being")
-
 try:
     st.image("images/Kaneka_logo.png", width=350)
 except:
@@ -413,43 +418,62 @@ def company_page():
 
         st.header("📦 Products")
 
-        products = {
-        "Medical Devices": "Innovative healthcare solutions improving patient outcomes.",
-        "Functional Polymers": "Advanced materials for adhesives, coatings, and sealants.",
-        "Food Products": "Nutritional supplements and functional foods.",
-        "Expandable Polyolefin Foam": "Lightweight foam for automotive and packaging.",
-        "Biodegradable Materials": "Eco-friendly alternatives reducing environmental impact.",
-        "Innovative Fibers": "High-performance fibers for fashion and industry."
-        }
-    
-        # 🎯 Interactive expanders for each product
-        st.subheader("🔍 Explore Products")
-        for name, desc in products.items():
-            with st.expander(f"{name}"):
-                st.write(f"✨ {desc}")
+        elif section == "Products":
+    st.header("📦 Kaneka Malaysia Products Showcase")
 
-        # Graph
-        product_data = {
-            "Medical Devices": 25,
-            "Functional Polymers": 20,
-            "Food Products": 15,
-            "Expandable Foam": 10,
-            "Biodegradable Materials": 20,
-            "Innovative Fibers": 10
+    products = [
+        {
+            "name": "Modifiers",
+            "image": "images/modifiers.png",  # replace with actual Kaneka image
+            "desc": "Impact modifiers used in plastics for toughness."
+        },
+        {
+            "name": "Polyimide Film",
+            "image": "images/polyimide_film.png",
+            "desc": "High-performance film for aerospace and electronics."
+        },
+        {
+            "name": "PVC Paste Resins",
+            "image": "images/pvc_paste_resins.png",
+            "desc": "Resins for flooring, wall coverings, and synthetic leather."
+        },
+        {
+            "name": "Expandable Foam",
+            "image": "images/expandable_foam.png",
+            "desc": "Lightweight foam material for automotive and packaging."
+        },
+        {
+            "name": "Graphite Sheet",
+            "image": "images/graphite_sheet.png",
+            "desc": "Thermal management material for electronics."
+        },
+        {
+            "name": "MS Polymer",
+            "image": "images/ms_polymer.png",
+            "desc": "Base material for adhesives and sealants."
         }
-    
-        fig, ax = plt.subplots()
-        ax.pie(product_data.values(), labels=product_data.keys(), autopct='%1.1f%%')
-        ax.set_title("Kaneka Product Portfolio")
-        st.subheader("📈 Product Mix")
-        st.pyplot(fig)
-    
-        # 🖱️ Interactive selection
-        st.subheader("🎯 Select a Product")
-        choice = st.selectbox("Choose a product to learn more:", list(products.keys()))
-        st.success(f"You selected **{choice}**: {products[choice]}")
-    
-        st.info("More product details will be added soon.")
+    ]
+
+    # Slider navigation
+    product_index = st.slider("Slide through products", 0, len(products)-1, 0)
+
+    selected = products[product_index]
+    st.image(selected["image"], caption=selected["name"], use_column_width=True)
+    st.subheader(selected["name"])
+    st.info(f"✨ {selected['desc']}")
+
+    st.success("Discover more about this product on Kaneka’s official site!")
+
+        
+        # Slider navigation
+        product_index = st.slider("Slide through products", 0, len(products)-1, 0)
+        
+        selected = products[product_index]
+        st.image(selected["image"], caption=selected["name"], use_column_width=True)
+        st.subheader(selected["name"])
+        st.info(f"✨ {selected['desc']}")
+        
+        st.success("Discover more about this product on Kaneka’s official site!")
 
 
 # Run page
