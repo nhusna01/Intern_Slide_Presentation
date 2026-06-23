@@ -416,63 +416,49 @@ def company_page():
     
     elif section == "Products":
 
-        st.header("📦 Products")
+        st.header("📦 Kaneka Malaysia Products Showcase")
 
-        elif section == "Products":
-    st.header("📦 Kaneka Malaysia Products Showcase")
-
-    products = [
-        {
-            "name": "Modifiers",
-            "image": "images/modifiers.png",  # replace with actual Kaneka image
-            "desc": "Impact modifiers used in plastics for toughness."
-        },
-        {
-            "name": "Polyimide Film",
-            "image": "images/polyimide_film.png",
-            "desc": "High-performance film for aerospace and electronics."
-        },
-        {
-            "name": "PVC Paste Resins",
-            "image": "images/pvc_paste_resins.png",
-            "desc": "Resins for flooring, wall coverings, and synthetic leather."
-        },
-        {
-            "name": "Expandable Foam",
-            "image": "images/expandable_foam.png",
-            "desc": "Lightweight foam material for automotive and packaging."
-        },
-        {
-            "name": "Graphite Sheet",
-            "image": "images/graphite_sheet.png",
-            "desc": "Thermal management material for electronics."
-        },
-        {
-            "name": "MS Polymer",
-            "image": "images/ms_polymer.png",
-            "desc": "Base material for adhesives and sealants."
-        }
-    ]
-
-    # Slider navigation
-    product_index = st.slider("Slide through products", 0, len(products)-1, 0)
-
-    selected = products[product_index]
-    st.image(selected["image"], caption=selected["name"], use_column_width=True)
-    st.subheader(selected["name"])
-    st.info(f"✨ {selected['desc']}")
-
-    st.success("Discover more about this product on Kaneka’s official site!")
-
-        
+        products = [
+            {
+                "name": "Modifiers",
+                "image": "images/modifiers.png",  # replace with actual Kaneka image
+                "desc": "Impact modifiers used in plastics for toughness."
+            },
+            {
+                "name": "Polyimide Film",
+                "image": "images/polyimide_film.png",
+                "desc": "High-performance film for aerospace and electronics."
+            },
+            {
+                "name": "PVC Paste Resins",
+                "image": "images/pvc_paste_resins.png",
+                "desc": "Resins for flooring, wall coverings, and synthetic leather."
+            },
+            {
+                "name": "Expandable Foam",
+                "image": "images/expandable_foam.png",
+                "desc": "Lightweight foam material for automotive and packaging."
+            },
+            {
+                "name": "Graphite Sheet",
+                "image": "images/graphite_sheet.png",
+                "desc": "Thermal management material for electronics."
+            },
+            {
+                "name": "MS Polymer",
+                "image": "images/ms_polymer.png",
+                "desc": "Base material for adhesives and sealants."
+            }
+        ]
+    
         # Slider navigation
         product_index = st.slider("Slide through products", 0, len(products)-1, 0)
-        
+    
         selected = products[product_index]
         st.image(selected["image"], caption=selected["name"], use_column_width=True)
         st.subheader(selected["name"])
         st.info(f"✨ {selected['desc']}")
-        
+    
         st.success("Discover more about this product on Kaneka’s official site!")
 
 
