@@ -458,7 +458,7 @@ def company_page():
             {"name": "Modifiers", "image": "images/modifiers.png",
              "desc": "Impact modifiers used in plastics for toughness and durability.",
              "link": "https://www.kaneka.com.my/product/modifier"},
-            {"name": "Polyimide Film", "image": "images/polyimide_film.png",
+            {"name": "Polyimide Film", "image": "images/polyimide_film1.png",
              "desc": "High-performance film for aerospace and electronics.",
              "link": "https://www.kaneka.com.my/product/polyimide-film"},
             {"name": "PVC Paste Resins", "image": "images/pvc_paste_resins.png",
@@ -470,7 +470,7 @@ def company_page():
             {"name": "Synthetic Fibers", "image": "images/synthetic_fibers.png",
              "desc": "Heat-resistant synthetic hair fiber for wigs and extensions.",
              "link": "https://www.kanekalon.com/en/"},
-            {"name": "MS Polymer", "image": "images/ms_polymer.png",
+            {"name": "MS Polymer", "image": "images/ms_polymer1.png",
              "desc": "Base material for adhesives and sealants.",
              "link": "https://www.kaneka.com.my/product/ms-polymer/"}
         ]
