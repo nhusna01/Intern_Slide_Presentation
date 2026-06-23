@@ -455,7 +455,7 @@ def company_page():
         )
 
         products = [
-            {"name": "Modifiers", "image": "images/modifiers.png",
+            {"name": "Modifiers", "image": "images/modifiers1.png",
              "desc": "Impact modifiers used in plastics for toughness and durability.",
              "link": "https://www.kaneka.com.my/product/modifier"},
             {"name": "Polyimide Film", "image": "images/polyimide_film1.png",
