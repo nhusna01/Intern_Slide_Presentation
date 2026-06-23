@@ -32,13 +32,13 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Use custom-styled title
+# Title + caption
 st.markdown('<div class="big-title">About KANEKA</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle-caption">Innovation • Sustainability • Human Well-being</div>', unsafe_allow_html=True)
  
 try:
     st.image("images/Kaneka_logo.png", width=350)
-except:
+except FileNotFoundError:
     st.warning("Kaneka logo not found.")
 
 st.divider()
@@ -484,8 +484,11 @@ def company_page():
                     with col:
                         st.markdown('<div class="product-card">', unsafe_allow_html=True)
                         st.image(product["image"], caption=product["name"], use_column_width=True)
-                        with st.expander(f"📖 Learn more about {product['name']}"):
-                            st.write(product["desc"])
+                        with st.expander(f"📖 **Learn more** about {product['name']}"):
+                            st.markdown(
+                                f"<div class='product-expander'>{product['desc']}</div>",
+                                unsafe_allow_html=True
+                            )
                             st.markdown(
                                 f"<a href='{product['link']}' target='_blank' style='color:#0096c7; font-weight:bold;'>🔗 Read More</a>",
                                 unsafe_allow_html=True
