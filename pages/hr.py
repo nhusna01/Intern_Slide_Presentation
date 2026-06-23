@@ -1,68 +1,11 @@
 import streamlit as st
 
 # ==========================
-# HR Org Chart Data
-# ==========================
-org_chart = {
-    "Managing Director": "Hiroyuki Nishimoto",
-    "KM Corporate Service": "Kei Tomita",
-    "HR Division Head": "Rosmawati Haron",
-    "HR Assistant Division Head": "Vacant",
-    "Centre of Excellence": {
-        "HR Business Partner": "Yuki Mimura",
-        "Learning & Development Dept. Head": "Norkamariah Othman",
-        "Team": [
-            "Norizan Ishak (Senior Executive)",
-            "Mohd Anuar Mohd Ariffin (Executive)",
-            "Nurul Atiqah Mahmud (Executive)"
-        ]
-    },
-    "Operational Excellence": {
-        "HR Business Partner": "Zuraidah Ismail",
-        "Talent Acquisition & IR Dept. Head": "Rosmawati Abd Rashid",
-        "Team": [
-            "Mohd Shukri Anuar (Section Head)",
-            "Khairani Kamal (Senior Executive)",
-            "Nur Hidayah Sanusi (Officer)"
-        ],
-        "Reward Management Dept. Head": "Zafidah Ismail",
-        "General Affairs Section": [
-            "Khairani Kamal (Senior Executive)",
-            "Umar Yasriza (Executive)"
-        ],
-        "Compensation & Benefits Section": [
-            "Fatasha Anis Muhamad Yusof (Senior Executive)",
-            "Hazira Hafsa Razlian (Executive)"
-        ]
-    }
-}
-
-
-# ==========================
 # Main Page
 # ==========================
 def hr_page():
-    st.title("📖 Chapter 3")
-    st.header("👥 HR Organizational Flowchart")
-
-    org_chart["HR Division Head"] = st.text_input(
-        "Update HR Division Head:",
-        org_chart["HR Division Head"]
-    )
-
-    org_chart["HR Assistant Division Head"] = st.text_input(
-        "Update HR Assistant Division Head:",
-        org_chart["HR Assistant Division Head"]
-    )
-
-    st.subheader("📊 Current Structure")
-    st.json(org_chart)
-
-    st.subheader("📈 Flowchart View")
-    st.graphviz_chart(render_flowchart(org_chart))
-
-    st.markdown("---")
-
+    st.title("HR Organizational Flowchart")
+    
     # =====================================================
     # Learning & Development
     # =====================================================
@@ -132,7 +75,7 @@ def hr_page():
                     st.markdown("<h1 style='text-align:center;'>⬇️</h1>",unsafe_allow_html=True)
             
                 with c5:
-                    if st.button("⑦\n📄\nReport Duty & Briefing",use_container_width=True):
+                    if st.button("⑦\n📄\nReport Duty",use_container_width=True):
                         st.session_state.step=7
             
                 with c6:
@@ -148,14 +91,14 @@ def hr_page():
                 c1,c2,c3,c4,c5 = st.columns(5)
             
                 with c1:
-                    if st.button("⑨\n🤝\nAppreciation",use_container_width=True):
+                    if st.button("⑨\n🤝\nInternship",use_container_width=True):
                         st.session_state.step=9
             
                 with c2:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c3:
-                    if st.button("⑩\n🎁\nEvaluation",use_container_width=True):
+                    if st.button("⑩\n🎁\nAppreciation",use_container_width=True):
                         st.session_state.step=10
             
                 with c4:
