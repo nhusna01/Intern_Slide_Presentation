@@ -26,6 +26,35 @@ def hr_page():
             def internship_flow():
         
                 st.markdown("## 🎓 Internship Process Flow")
+
+                # --- Custom CSS for consistent, attractive buttons ---
+                st.markdown("""
+                    <style>
+                    div.stButton > button {
+                        background-color: #0096c7;
+                        color: white;
+                        border-radius: 10px;
+                        padding: 12px;
+                        font-weight: bold;
+                        border: none;
+                        transition: 0.3s;
+                        width: 100%;          /* full width inside column */
+                        height: 80px;         /* fixed height for consistency */
+                        font-size: 16px;      /* consistent font size */
+                        text-align: center;   /* center text */
+                        line-height: 1.4;     /* spacing for multi-line labels */
+                    }
+                    div.stButton > button:hover {
+                        background-color: #023e8a;
+                        color: #f1f1f1;
+                        transform: scale(1.05);
+                    }
+                    div.stButton > button:active {
+                        background-color: #0077b6;
+                        transform: scale(0.98);
+                    }
+                    </style>
+                """, unsafe_allow_html=True)
             
                 # ---------- Row 1 ----------
                 c1,c2,c3,c4,c5,c6,c7,c8 = st.columns(8)
@@ -71,7 +100,7 @@ def hr_page():
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c3:
-                    if st.button("⑥\n✅\nDocuments Preparation",use_container_width=True):
+                    if st.button("⑥\n✅\nDocuments",use_container_width=True):
                         st.session_state.step=6
             
                 with c4:
