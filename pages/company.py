@@ -272,11 +272,50 @@ def company_page():
             unsafe_allow_html=True
         )
 
-        # Toggle button Interpretation block
-        if st.button("💡 Show My Interpretation"):
+        
+        # Centered Toggle Button
+        # Initialize session state
+        if "show_interpretation" not in st.session_state:
+            st.session_state.show_interpretation = False
+        
+        # Center the button using CSS
+        st.markdown(
+            """
+            <style>
+            .centered-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+        
+        # Place button inside centered div
+        col1, col2, col3 = st.columns([1,2,1])  # middle column wider
+        with col2:
+            if st.button(
+                "💡 Toggle My Interpretation",
+                key="toggle_button"
+            ):
+                st.session_state.show_interpretation = not st.session_state.show_interpretation
+        
+        # Show/hide interpretation block
+        if st.session_state.show_interpretation:
             st.markdown(
                 """
-                <div class="interpretation">
+                <div class="interpretation" style="
+                    font-size:16px;
+                    line-height:1.6;
+                    text-align:left;
+                    padding:15px;
+                    margin-top:15px;
+                    border-left:4px solid #023e8a;
+                    background:#f9f9f9;
+                    color:#333;
+                    border-radius:6px;">
                 <strong>My Interpretation:</strong><br>
                 This philosophy highlights Kaneka’s commitment not only to innovation 
                 but also to responsibility. To me, it means that technology should 
@@ -287,6 +326,7 @@ def company_page():
                 """,
                 unsafe_allow_html=True
             )
+
         
         # 🎬 Add Lottie animation here    
         def load_lottieurl(url: str):
@@ -513,10 +553,7 @@ def company_page():
                         st.markdown('<div class="product-card">', unsafe_allow_html=True)
                         st.image(product["image"], caption=product["name"], use_column_width=True)
                         with st.expander(f"📖 **Learn more** about {product['name']}"):
-                            st.markdown(
-                                f"<div class='product-expander'>{product['desc']}</div>",
-                                unsafe_allow_html=True
-                            )
+                            st.write(product["desc"])
                             st.markdown(
                                 f"<a href='{product['link']}' target='_blank' style='color:#0096c7; font-weight:bold;'>🔗 Read More</a>",
                                 unsafe_allow_html=True
