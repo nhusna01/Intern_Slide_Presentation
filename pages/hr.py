@@ -28,7 +28,7 @@ def hr_page():
                 st.markdown("## 🎓 Internship Process Flow")
             
                 # ---------- Row 1 ----------
-                c1,c2,c3,c4,c5,c6,c7 = st.columns(7)
+                c1,c2,c3,c4,c5,c6,c7,c8 = st.columns(8)
             
                 with c1:
                     if st.button("①\n📧\nApplication",use_container_width=True):
@@ -54,6 +54,9 @@ def hr_page():
                 with c7:
                     if st.button("④\n👩‍💼\nApproval",use_container_width=True):
                         st.session_state.step=4
+
+                with c8:
+                    st.markdown("<h1 style='text-align:center;'>➡️</h1>", unsafe_allow_html=True)
             
                 # ---------- Row 2 ----------
                 st.write("")
@@ -61,18 +64,18 @@ def hr_page():
                 c1,c2,c3,c4,c5,c6,c7 = st.columns(7)
             
                 with c1:
-                    if st.button("⑥\n🎉\nConfirmation",use_container_width=True):
-                        st.session_state.step=6
-            
-                with c2:
-                    st.markdown("<h1 style='text-align:center;'>⬅️</h1>",unsafe_allow_html=True)
-            
-                with c3:
-                    if st.button("⑤\n✅\nDocuments Preparation",use_container_width=True):
+                    if st.button("⑤\n🎉\nConfirmation",use_container_width=True):
                         st.session_state.step=5
             
+                with c2:
+                    st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
+            
+                with c3:
+                    if st.button("⑥\n✅\nDocuments Preparation",use_container_width=True):
+                        st.session_state.step=6
+            
                 with c4:
-                    st.markdown("<h1 style='text-align:center;'>⬇️</h1>",unsafe_allow_html=True)
+                    st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c5:
                     if st.button("⑦\n📄\nReport Duty",use_container_width=True):
