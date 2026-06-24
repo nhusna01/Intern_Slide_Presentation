@@ -1,8 +1,34 @@
 import streamlit as st
 
 def myself_page():
-    st.title("📖 Chapter 4 – Myself")
-    st.caption("✨ Flip through my internship journey like a digital book ✨")
+    # Stylized title
+    st.markdown("""
+        <style>
+        .chapter-title {
+            font-family: 'Georgia', serif;
+            font-size: 40px;
+            color: #2c3e50;
+            text-align: center;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+        }
+        .chapter-caption {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<div class='chapter-title'>📖 Chapter 4 – Myself</div>", unsafe_allow_html=True)
+    st.markdown("<div class='chapter-caption'>✨ Flip through my internship journey like a digital book ✨</div>", unsafe_allow_html=True)
+
+    st.divider()
 
     # Add CSS styling for book-like pages
     st.markdown("""
