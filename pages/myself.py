@@ -22,9 +22,12 @@ def myself_page():
         </style>
     """, unsafe_allow_html=True)
 
-    # Page 1 – Challenges
-    with st.expander("📖 Page 1 – Challenges & Ways to Overcome"):
-        st.markdown("<div class='book-page'>", unsafe_allow_html=True)
+    # Slider navigation
+    page = st.slider("📖 Flip a page", 1, 6, 1)
+
+    # Page content
+    if page == 1:
+        st.markdown("<div class='book-page'><h3>💡 Challenges & Ways to Overcome</h3>", unsafe_allow_html=True)
         st.table({
             "Challenge": ["Time Management", "Technical Skills Gap", "Communication Barriers"],
             "Solution": [
@@ -35,9 +38,8 @@ def myself_page():
         })
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # Page 2 – HR Relation
-    with st.expander("📖 Page 2 – HR Division & IT/Data Science Relation"):
-        st.markdown("<div class='book-page'>", unsafe_allow_html=True)
+    elif page == 2:
+        st.markdown("<div class='book-page'><h3>🤝 HR Division & IT/Data Science Relation</h3>", unsafe_allow_html=True)
         st.table({
             "HR Process": ["Data Handling", "Analytics", "Automation"],
             "Relation to My Course": [
@@ -48,9 +50,8 @@ def myself_page():
         })
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # Page 3 – Goals
-    with st.expander("📖 Page 3 – Goals & Objectives"):
-        st.markdown("<div class='book-page'>", unsafe_allow_html=True)
+    elif page == 3:
+        st.markdown("<div class='book-page'><h3>🎯 Goals & Objectives</h3>", unsafe_allow_html=True)
         st.table({
             "Objective": [
                 "Gain HR exposure",
@@ -67,9 +68,8 @@ def myself_page():
         })
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # Page 4 – Expectations vs Gains
-    with st.expander("📖 Page 4 – Expectations vs Reality"):
-        st.markdown("<div class='book-page'>", unsafe_allow_html=True)
+    elif page == 4:
+        st.markdown("<div class='book-page'><h3>📊 Expectations vs Reality</h3>", unsafe_allow_html=True)
         st.table({
             "Expectation": [
                 "Assist only with admin tasks",
@@ -82,9 +82,8 @@ def myself_page():
         })
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # Page 5 – Future Plan
-    with st.expander("📖 Page 5 – Future Plan"):
-        st.markdown("<div class='book-page'>", unsafe_allow_html=True)
+    elif page == 5:
+        st.markdown("<div class='book-page'><h3>🚀 Future Plan</h3>", unsafe_allow_html=True)
         st.table({
             "Plan": [
                 "Improve Power BI, Streamlit, GitHub skills",
@@ -101,9 +100,8 @@ def myself_page():
         })
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # Page 6 – Memories
-    with st.expander("📖 Page 6 – Internship Memories"):
-        st.markdown("<div class='book-page'>", unsafe_allow_html=True)
+    elif page == 6:
+        st.markdown("<div class='book-page'><h3>🎥 Internship Memories</h3>", unsafe_allow_html=True)
         st.video("videos/internship_memories.mp4")
         st.success("🎬 This video captures my favorite moments during the internship journey.")
         st.markdown("</div>", unsafe_allow_html=True)
