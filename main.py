@@ -6,8 +6,8 @@ import numpy as np
 from pages.intro import intro_page
 from pages.company import company_page
 from pages.hr import hr_page
-from pages.myself import myself_page
 from pages.additional import additional_page
+from pages.myself import myself_page
 
 st.set_page_config(
     page_title="Internship Presentation",
@@ -296,7 +296,7 @@ elif st.session_state.page == "Chapter 3":
     hr_page()
 
 elif st.session_state.page == "Chapter 4":
-    myself_page()
+    additional_page()
 
 elif st.session_state.page == "Chapter 5":
-    additional_page()
+    myself_page()
