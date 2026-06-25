@@ -33,7 +33,7 @@ def myself_page():
         </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("<div class='chapter-title'>📖 Chapter 4 – Myself</div>", unsafe_allow_html=True)
+    st.markdown("<div class='chapter-title'>📖 Chapter 5 – Myself</div>", unsafe_allow_html=True)
     st.markdown("<div class='chapter-caption'>✨ Flip through my internship journey like a digital book ✨</div>", unsafe_allow_html=True)
 
     st.divider()
