@@ -39,10 +39,11 @@ def hr_page():
                         border: none;
                         transition: 0.3s;
                         width: 100%;          /* full width inside column */
-                        height: 80px;         /* fixed height for consistency */
+                        height: 100px;         /* fixed height for consistency */
                         font-size: 16px;      /* consistent font size */
                         text-align: center;   /* center text */
-                        line-height: 1.4;     /* spacing for multi-line labels */
+                        line-height: 1.2;     /* spacing for multi-line labels */
+                        overflow: hidden;
                     }
                     div.stButton > button:hover {
                         background-color: #023e8a;
@@ -60,28 +61,28 @@ def hr_page():
                 c1,c2,c3,c4,c5,c6,c7,c8 = st.columns(8)
             
                 with c1:
-                    if st.button("①\n📧\nApplication",use_container_width=True):
+                    if st.button("①\n📧\nApplication", disabled=True, use_container_width=True):
                         st.session_state.step=1
             
                 with c2:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c3:
-                    if st.button("②\n🔍\nScreening",use_container_width=True):
+                    if st.button("②\n🔍\nScreening", disabled=True, use_container_width=True):
                         st.session_state.step=2
             
                 with c4:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c5:
-                    if st.button("③\n📝\nPlacement",use_container_width=True):
+                    if st.button("③\n📝\nPlacement", disabled=True, use_container_width=True):
                         st.session_state.step=3
             
                 with c6:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c7:
-                    if st.button("④\n👩‍💼\nApproval",use_container_width=True):
+                    if st.button("④\n👩‍💼\nApproval", disabled=True, use_container_width=True):
                         st.session_state.step=4
 
                 with c8:
@@ -93,28 +94,28 @@ def hr_page():
                 c1,c2,c3,c4,c5,c6,c7 = st.columns(7)
             
                 with c1:
-                    if st.button("⑤\n🎉\nConfirmation",use_container_width=True):
+                    if st.button("⑤\n🎉\nConfirmation", disabled=True, use_container_width=True):
                         st.session_state.step=5
             
                 with c2:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c3:
-                    if st.button("⑥\n✅\nDocuments",use_container_width=True):
+                    if st.button("⑥\n✅\nDocuments", disabled=True, use_container_width=True):
                         st.session_state.step=6
             
                 with c4:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c5:
-                    if st.button("⑦\n📄\nReport Duty",use_container_width=True):
+                    if st.button("⑦\n📄\nReport Duty", disabled=True, use_container_width=True):
                         st.session_state.step=7
             
                 with c6:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c7:
-                    if st.button("⑧\n🎓\nHandover",use_container_width=True):
+                    if st.button("⑧\n🎓\nHandover", disabled=True, use_container_width=True):
                         st.session_state.step=8
             
                 # ---------- Row 3 ----------
@@ -123,21 +124,21 @@ def hr_page():
                 c1,c2,c3,c4,c5 = st.columns(5)
             
                 with c1:
-                    if st.button("⑨\n🤝\nInternship",use_container_width=True):
+                    if st.button("⑨\n🤝\nInternship", disabled=True, use_container_width=True):
                         st.session_state.step=9
             
                 with c2:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c3:
-                    if st.button("⑩\n🎁\nAppreciation",use_container_width=True):
+                    if st.button("⑩\n🎁\nAppreciation", disabled=True, use_container_width=True):
                         st.session_state.step=10
             
                 with c4:
                     st.markdown("<h1 style='text-align:center;'>➡️</h1>",unsafe_allow_html=True)
             
                 with c5:
-                    if st.button("⑪\n📊\nEvaluation",use_container_width=True):
+                    if st.button("⑪\n📊\nEvaluation", disabled=True, use_container_width=True):
                         st.session_state.step=11
             
                 if "step" not in st.session_state:
