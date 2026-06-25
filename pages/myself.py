@@ -132,6 +132,28 @@ def myself_page():
                 "Apply for HR/IT hybrid roles"
             ]
         })
+
+        st.markdown("### 🌟 Visualizing My Future")
+        
+        # Load animations (replace with actual Lottie URLs)
+        umrah_anim = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_kaaba.json")
+        masters_anim = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_graduation.json")
+        career_anim = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_career_growth.json")
+
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            st_lottie(umrah_anim, height=200, key="umrah")
+            st.caption("Umrah with Parents")
+
+        with col2:
+            st_lottie(masters_anim, height=200, key="masters")
+            st.caption("Continue Master’s Studies")
+
+        with col3:
+            st_lottie(career_anim, height=200, key="career")
+            st.caption("Stable Career Path")
+
         st.markdown("</div>", unsafe_allow_html=True)
 
     elif page == 6:
