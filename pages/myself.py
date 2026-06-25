@@ -136,10 +136,9 @@ def myself_page():
         st.markdown("### 🌟 Visualizing My Future")
         
         # Load animations (replace with actual Lottie URLs)
-        umrah_anim = load_lottieurl("https://lottie.host/1e7a7f3a-umrah-kaaba.json")
-        masters_anim = load_lottieurl("https://lottie.host/2b9c8f4a-graduation-cap.json")
-        career_anim = load_lottieurl("https://lottie.host/3c5d7e2b-career-growth.json")
-
+        umrah_anim = load_lottieurl("https://lottie.host/7a8f3d4b-kaaba.json")
+        masters_anim = load_lottieurl("https://lottie.host/9b2c1d5e-graduation.json")
+        career_anim = load_lottieurl("https://lottie.host/4c6e2f7a-career.json")
 
         col1, col2, col3 = st.columns(3)
 
