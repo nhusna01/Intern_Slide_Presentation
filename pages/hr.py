@@ -227,4 +227,3 @@ def hr_page():
         st.write("Workplace facilities, employee welfare, and administrative support.")
         st.slider("Employee Satisfaction Index", 0, 100, 85)
 
-```
