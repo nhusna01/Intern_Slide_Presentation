@@ -1,3 +1,5 @@
+import streamlit as st
+
 def hr_page():
     st.title("HR Organizational Flowchart")
     
