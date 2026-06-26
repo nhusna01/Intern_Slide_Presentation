@@ -227,5 +227,5 @@ def hr_page():
         st.write("Workplace facilities, employee welfare, and administrative support.")
         st.slider("Employee Satisfaction Index", 0, 100, 85)
 
-run(hr_page):
+hr_page()
 
