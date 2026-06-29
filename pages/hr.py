@@ -23,17 +23,27 @@ def learning_development():
             st.session_state.internship_step = 1
 
         details = {
-            1:"Students submit internship applications.",
-            2:"HR segregates applications.",
-            3:"Departments request placement.",
-            4:"Head of Department approval.",
-            5:"Successful candidates receive confirmation.",
-            6:"HR prepares internship documents.",
-            7:"Briefing session.",
-            8:"Handover to department.",
-            9:"Internship period.",
-            10:"Certificate & appreciation.",
-            11:"Department evaluation."
+            1: "Students submit their internship applications through email or the official Kaneka Malaysia website, together with the required documents such as their resume, cover letter, and university internship letter.",
+        
+            2: "The HR department reviews and categorizes all applications based on the requested department, internship period, academic background, and current departmental vacancies.",
+        
+            3: "The relevant department submits an internship placement request through the e-Mendix system, or HR recommends suitable candidates based on the department's requirements.",
+        
+            4: "The Head of Department (HOD) evaluates the proposed candidate's qualifications and approves the internship request before the recruitment process continues.",
+        
+            5: "Successful applicants are contacted by the HR Person-in-Charge (PIC) via phone call or email to confirm their acceptance, internship schedule, and reporting details.",
+        
+            6: "HR prepares all necessary internship documents, including the Offer Letter, Placement Letter, Reply Letter, and any additional administrative documents required before reporting.",
+        
+            7: "On the first day, interns attend orientation and briefing sessions conducted by the HR Department, MIS Team, and Safety Department to introduce company policies, workplace rules, and safety procedures.",
+        
+            8: "After completing the orientation, interns are officially handed over to their assigned department or production plant, where they are introduced to their supervisors and daily responsibilities.",
+        
+            9: "Interns carry out their internship by completing assigned projects, participating in departmental activities, learning company processes, and gaining practical working experience under the supervision of their mentors.",
+        
+            10: "Upon successful completion of the internship, HR prepares and presents an Internship Certificate together with a token of appreciation as recognition of the intern's contribution.",
+        
+            11: "Before the internship ends, the department supervisor completes an evaluation form to assess the intern's overall performance, technical skills, communication, teamwork, discipline, and professionalism."
         }
 
         cols = st.columns(11)
