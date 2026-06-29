@@ -444,7 +444,7 @@ def intro_page():
                transition: 0.3s ease-in-out;
                box-shadow: 0 6px 18px rgba(0,0,0,0.35);
            }
-       </style
+       </style>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
        <div class="contact-box">
            <div class="contact-item"><i class="fas fa-phone"></i> 011-12957400</div>
