@@ -201,7 +201,7 @@ def tair_management():
         [
             "Recruitment",
             "Discipline",
-            "Additional"
+            "Additional Tasks"
         ]
     )
 
@@ -276,16 +276,16 @@ def hr_page():
             use_container_width=True
         ):
 
-            st.session_state.selected_dept = "Reward"
+            st.session_state.selected_dept = "RM"
 
     with col3:
 
         if st.button(
-            "🎯 TAIR",
+            "🎯  Talent Acquisition & Industrial Relation",
             use_container_width=True
         ):
 
-            st.session_state.selected_dept = "TAIR"
+            st.session_state.selected_dept = "TA&IR"
 
     st.divider()
 
@@ -298,7 +298,7 @@ def hr_page():
 
             learning_development()
 
-    elif st.session_state.selected_dept == "Reward":
+    elif st.session_state.selected_dept == "RM":
 
         with st.expander(
             "💎 Reward Management",
@@ -307,7 +307,7 @@ def hr_page():
 
             reward_management()
 
-    elif st.session_state.selected_dept == "TAIR":
+    elif st.session_state.selected_dept == "TA&IR":
 
         with st.expander(
             "🎯 Talent Acquisition & Industrial Relation",
