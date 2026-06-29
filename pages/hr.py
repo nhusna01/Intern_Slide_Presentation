@@ -1,7 +1,42 @@
 import streamlit as st
 
-def hr_page():
-    st.title("HR Organizational Flowchart")
+    # ================= HR Page =================
+    def hr_page():
+        st.title("HR Organizational Flowchart")
+    
+        # Cover Page
+        st.image("images/hr_org_chart.png", caption="HR Organizational Chart", use_container_width=True)
+        st.write("Select a department to explore:")
+    
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            if st.button("📚 Learning & Development"):
+                st.session_state.selected_dept = "L&D"
+        with col2:
+            if st.button("💎 Reward Management"):
+                st.session_state.selected_dept = "Reward"
+        with col3:
+            if st.button("🎯 TAIR"):
+                st.session_state.selected_dept = "TAIR"
+    
+        # Show selected department details
+        if "selected_dept" in st.session_state:
+            if st.session_state.selected_dept == "L&D":
+                with st.expander("📚 Learning & Development", expanded=True):
+                    st.write("Focuses on employee training, skill enhancement, and career growth.")
+                    tab1, tab2, tab3 = st.tabs(["🎓 Internship", "🏫 Training", "📝 BLA"])
+                    with tab1: internship_flow()
+                    with tab2: training_flow()
+                    with tab3: bla_flow()
+    
+            elif st.session_state.selected_dept == "Reward":
+                with st.expander("💎 Reward Management", expanded=True):
+                    reward_management()
+    
+            elif st.session_state.selected_dept == "TAIR":
+                with st.expander("🎯 Talent Acquisition & Industrial Relation", expanded=True):
+                    tair_management()
+
 
     # =====================================================
     # Learning & Development
@@ -142,42 +177,6 @@ def hr_page():
             st.markdown("- **Policy Updates** → Assisting in drafting and updating HR policies.")
             st.markdown("- **Surveys & Feedback** → Conducting employee satisfaction surveys and reporting results.")
 
-    # ================= HR Page =================
-    def hr_page():
-        st.title("HR Organizational Flowchart")
-    
-        # Cover Page
-        st.image("images/hr_org_chart.png", caption="HR Organizational Chart", use_container_width=True)
-        st.write("Select a department to explore:")
-    
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            if st.button("📚 Learning & Development"):
-                st.session_state.selected_dept = "L&D"
-        with col2:
-            if st.button("💎 Reward Management"):
-                st.session_state.selected_dept = "Reward"
-        with col3:
-            if st.button("🎯 TAIR"):
-                st.session_state.selected_dept = "TAIR"
-    
-        # Show selected department details
-        if "selected_dept" in st.session_state:
-            if st.session_state.selected_dept == "L&D":
-                with st.expander("📚 Learning & Development", expanded=True):
-                    st.write("Focuses on employee training, skill enhancement, and career growth.")
-                    tab1, tab2, tab3 = st.tabs(["🎓 Internship", "🏫 Training", "📝 BLA"])
-                    with tab1: internship_flow()
-                    with tab2: training_flow()
-                    with tab3: bla_flow()
-    
-            elif st.session_state.selected_dept == "Reward":
-                with st.expander("💎 Reward Management", expanded=True):
-                    reward_management()
-    
-            elif st.session_state.selected_dept == "TAIR":
-                with st.expander("🎯 Talent Acquisition & Industrial Relation", expanded=True):
-                    tair_management()
 
 # Call the page function
 hr_page()
