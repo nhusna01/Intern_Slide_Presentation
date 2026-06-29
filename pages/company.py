@@ -560,6 +560,3 @@ def company_page():
                             )
                         st.markdown('</div>', unsafe_allow_html=True)
         
-
-# Run page
-company_page()
