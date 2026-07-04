@@ -4,12 +4,6 @@ def additional_page():
     st.title("📖 Chapter 4")
     st.write("Additional page content goes here.")
 
-import streamlit as st
-
-def additional_page():
-    st.title("📖 Chapter 4")
-    st.write("Additional page content goes here.")
-
 def esg_page():
     st.title("🌍 What is ESG?")
 
@@ -107,10 +101,3 @@ def esg_page():
 
     st.info("✅ ESG helps investors, regulators, and the public assess long-term sustainability and ethical impact.")
 
-# --- Navigation ---
-page = st.sidebar.selectbox("Choose a page", ["Chapter 4", "ESG"])
-
-if page == "Chapter 4":
-    additional_page()
-elif page == "ESG":
-    esg_page()
