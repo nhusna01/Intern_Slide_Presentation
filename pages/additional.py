@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 def additional_page():
     st.title("📖 Chapter 4")
@@ -6,98 +7,79 @@ def additional_page():
 
 def esg_page():
     st.title("🌍 What is ESG?")
+    st.write("Explore the three pillars of ESG interactively:")
 
-    st.markdown("""
-    <style>
-    .esg-container {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-        margin-top: 40px;
-    }
-    .letter {
-        font-size: 90px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: transform 0.3s ease, color 0.3s ease;
-        animation: bounce 2s infinite;
-    }
-    .letter:hover {
-        transform: scale(1.3);
-        color: #2E8B57;
-    }
-    @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-15px); }
-    }
-    .card {
-        display: none;
-        margin-top: 30px;
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #f0f8ff;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        text-align: left;
-        font-size: 18px;
-    }
-    .card h3 {
-        margin-top: 0;
-        color: #2E8B57;
-    }
-    .reset-btn {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #2E8B57;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    .reset-btn:hover {
-        background-color: #246b45;
-    }
-    </style>
+    # Interactive buttons
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        if st.button("🌱 Environmental"):
+            st.session_state["choice"] = "E"
+    with col2:
+        if st.button("🤝 Social"):
+            st.session_state["choice"] = "S"
+    with col3:
+        if st.button("⚖️ Governance"):
+            st.session_state["choice"] = "G"
 
-    <div class="esg-container">
-        <div class="letter" onclick="showCard('E')">E</div>
-        <div class="letter" onclick="showCard('S')">S</div>
-        <div class="letter" onclick="showCard('G')">G</div>
-    </div>
+    # Show content dynamically
+    if "choice" in st.session_state:
+        choice = st.session_state["choice"]
 
-    <div id="card-E" class="card">
-        <h3>🌱 Environmental</h3>
-        <p>Focuses on how a company impacts the planet. Examples include carbon emissions, energy efficiency, waste management, and sustainable practices.</p>
-    </div>
+        if choice == "E":
+            st.success("🌱 Environmental")
+            st.write("Focuses on how a company impacts the planet.")
+            st.progress(70)
 
-    <div id="card-S" class="card">
-        <h3>🤝 Social</h3>
-        <p>Examines how a company treats people — employees, customers, and communities. This includes diversity, labor practices, human rights, and community engagement.</p>
-    </div>
+        elif choice == "S":
+            st.info("🤝 Social")
+            st.write("Examines how a company treats people — employees, customers, and communities.")
+            st.progress(50)
 
-    <div id="card-G" class="card">
-        <h3>⚖️ Governance</h3>
-        <p>Refers to leadership, ethics, and accountability. It covers board structure, transparency, anti-corruption policies, and compliance.</p>
-    </div>
+        elif choice == "G":
+            st.warning("⚖️ Governance")
+            st.write("Refers to leadership, ethics, and accountability.")
+            st.progress(80)
 
-    <button class="reset-btn" onclick="resetCards()">Reset</button>
+    # Expanders
+    with st.expander("📊 Why ESG matters"):
+        st.write("ESG helps investors, regulators, and the public assess long-term sustainability and ethical impact.")
 
-    <script>
-    function showCard(letter) {
-        // Hide all cards first
-        document.getElementById("card-E").style.display = "none";
-        document.getElementById("card-S").style.display = "none";
-        document.getElementById("card-G").style.display = "none";
-        // Show the selected card
-        document.getElementById("card-" + letter).style.display = "block";
-    }
-    function resetCards() {
-        document.getElementById("card-E").style.display = "none";
-        document.getElementById("card-S").style.display = "none";
-        document.getElementById("card-G").style.display = "none";
-    }
-    </script>
-    """, unsafe_allow_html=True)
+    with st.expander("💡 Fun fact"):
+        st.write("Companies with strong ESG practices often outperform peers in resilience and reputation.")
 
-    st.info("✅ ESG helps investors, regulators, and the public assess long-term sustainability and ethical impact.")
+    # Quiz
+    st.subheader("📝 Quick Quiz")
+    answer = st.radio(
+        "Which ESG pillar focuses on leadership and ethics?",
+        ["Environmental", "Social", "Governance"]
+    )
+    if answer == "Governance":
+        st.success("✅ Correct! Governance is about leadership, ethics, and accountability.")
+    else:
+        st.error("❌ Not quite. Try again!")
 
+    # Slider for personal preference
+    st.subheader("📈 Your ESG Priority")
+    priority = st.slider("Which pillar matters most to you?", 1, 3, 2,
+                         format_func=lambda x: ["🌱 Environmental", "🤝 Social", "⚖️ Governance"][x-1])
+    st.write("You selected:", ["🌱 Environmental", "🤝 Social", "⚖️ Governance"][priority-1])
+
+    # --- Interactive Dashboard ---
+    st.subheader("📊 ESG Dashboard")
+
+    # Example scores (could be dynamic later)
+    data = pd.DataFrame({
+        "Pillar": ["Environmental", "Social", "Governance"],
+        "Score": [70, 50, 80]
+    })
+
+    # Bar chart
+    st.bar_chart(data.set_index("Pillar"))
+
+    # Pie chart
+    st.write("Relative importance of ESG pillars:")
+    st.pyplot(data.plot.pie(y="Score", labels=data["Pillar"], autopct="%1.1f%%").figure)
+
+# Example usage
+if __name__ == "__main__":
+    esg_page()
