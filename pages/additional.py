@@ -10,6 +10,11 @@ def additional_page():
         "Environmental, Social, and Governance (ESG) is a framework used to evaluate "
         "a company's sustainability, ethical practices, and long-term performance."
     )
+
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
     
     st.subheader("🌍 ESG at Kaneka Malaysia")
     
@@ -47,8 +52,10 @@ def additional_page():
     - Risk management, internal audits, and ethical leadership
     """)
     
-    st.divider()
-
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
 
     st.write("Explore the three pillars of ESG interactively:")
 
@@ -94,12 +101,11 @@ def additional_page():
             "long-term sustainability and ethical impact."
         )
 
-    with st.expander("💡 Fun Fact"):
-        st.write(
-            "Companies with strong ESG practices often outperform peers "
-            "in resilience and reputation."
-        )
-
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    ) 
+    
     # Quiz
     st.subheader("📝 Quick Quiz")
 
@@ -109,9 +115,9 @@ def additional_page():
     )
 
     if answer == "Governance":
-        st.success("✅ Correct!")
+        st.success("✅ Correct! Good Job.")
     else:
-        st.error("❌ Try again!")
+        st.error("❌ Try again! Don't give up.")
 
     # ESG Priority
     st.subheader("📈 Your ESG Priority")
@@ -127,6 +133,11 @@ def additional_page():
 
     st.write("You selected:", priority)
 
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
+    
     # Dashboard
     st.subheader("📊 ESG Dashboard")
 
