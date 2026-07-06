@@ -29,32 +29,100 @@ def additional_page():
     unsafe_allow_html=True
     )
     
-    # ---------------- SDGs ----------------
+    # ===========================
+    # SDGs
+    # ===========================
     st.subheader("🎯 SDGs Focused by Kaneka Malaysia")
 
-    # Custom card function
-    def sdg_card(title, sdg, color, emoji):
-        st.markdown(
-            f"""
-            <div style="background-color:{color};padding:15px;border-radius:10px;text-align:center;color:white;font-weight:bold;">
-                <span style="font-size:30px;">{emoji}</span><br>
-                {title}<br>
-                <span style="font-size:20px;">{sdg}</span>
-            </div>
-            """, unsafe_allow_html=True
-        )
-    
-    col1, col2, col3, col4 = st.columns(4)
-    with col1: sdg_card("Health", "SDG 3", "#4CAF50", "⚕️")
-    with col2: sdg_card("Education", "SDG 4", "#2196F3", "📚")
-    with col3: sdg_card("Clean Energy", "SDG 7", "#FFEB3B", "🔋")
-    with col4: sdg_card("Economic Growth", "SDG 8", "#F44336", "💼")
-    
-    col5, col6, col7, col8 = st.columns(4)
-    with col5: sdg_card("Innovation", "SDG 9", "#9C27B0", "💡")
-    with col6: sdg_card("Responsible Consumption", "SDG 12", "#795548", "♻️")
-    with col7: sdg_card("Climate Action", "SDG 13", "#2E7D32", "🌍")
-    with col8: sdg_card("Life Below Water", "SDG 14", "#03A9F4", "🌊")
+    st.markdown("""
+    <div style="display:grid;
+                grid-template-columns:repeat(2,1fr);
+                gap:12px;">
+
+        <div style="background:#4C9F38;color:white;padding:12px;border-radius:10px;">
+            <b>🩺 SDG 3</b><br>
+            Good Health & Well-being
+        </div>
+
+        <div style="background:#C5192D;color:white;padding:12px;border-radius:10px;">
+            <b>🎓 SDG 4</b><br>
+            Quality Education
+        </div>
+
+        <div style="background:#FCC30B;color:black;padding:12px;border-radius:10px;">
+            <b>⚡ SDG 7</b><br>
+            Affordable & Clean Energy
+        </div>
+
+        <div style="background:#A21942;color:white;padding:12px;border-radius:10px;">
+            <b>💼 SDG 8</b><br>
+            Decent Work & Economic Growth
+        </div>
+
+        <div style="background:#FD6925;color:white;padding:12px;border-radius:10px;">
+            <b>🏭 SDG 9</b><br>
+            Industry, Innovation & Infrastructure
+        </div>
+
+        <div style="background:#BF8B2E;color:white;padding:12px;border-radius:10px;">
+            <b>♻️ SDG 12</b><br>
+            Responsible Consumption & Production
+        </div>
+
+        <div style="background:#3F7E44;color:white;padding:12px;border-radius:10px;">
+            <b>🌍 SDG 13</b><br>
+            Climate Action
+        </div>
+
+        <div style="background:#0A97D9;color:white;padding:12px;border-radius:10px;">
+            <b>🌊 SDG 14</b><br>
+            Life Below Water
+        </div>
+
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown(
+        "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+        unsafe_allow_html=True
+    )
+
+    # ===========================
+    # ESG Initiatives
+    # ===========================
+    st.subheader("📌 Key ESG Initiatives")
+
+    tab1, tab2, tab3 = st.tabs(
+        ["🌱 Environmental", "🤝 Social", "⚖️ Governance"]
+    )
+
+    with tab1:
+        st.success("Environmental")
+        st.write("Kaneka Malaysia's environmental initiatives include:")
+        st.checkbox("70% greenhouse gas (GHG) reduction target by 2030", value=True, disabled=True)
+        st.checkbox("Net Zero Carbon target by 2050", value=True, disabled=True)
+        st.checkbox("Renewable energy and energy efficiency", value=True, disabled=True)
+        st.checkbox("Recycling (3R) programmes", value=True, disabled=True)
+        st.checkbox("River conservation and pollution control", value=True, disabled=True)
+
+    with tab2:
+        st.info("Social")
+        st.write("Kaneka Malaysia's social initiatives include:")
+        st.checkbox("Workplace health and safety programmes", value=True, disabled=True)
+        st.checkbox("ESG awareness campaigns", value=True, disabled=True)
+        st.checkbox("Diversity and inclusion initiatives", value=True, disabled=True)
+        st.checkbox("University collaborations and internships", value=True, disabled=True)
+        st.checkbox("Community outreach programmes", value=True, disabled=True)
+
+    with tab3:
+        st.warning("Governance")
+        st.write("Kaneka Malaysia's governance initiatives include:")
+        st.checkbox("Anti-Bribery & Anti-Corruption (ABAC)", value=True, disabled=True)
+        st.checkbox("Financial transparency", value=True, disabled=True)
+        st.checkbox("Regulatory compliance", value=True, disabled=True)
+        st.checkbox("Risk management", value=True, disabled=True)
+        st.checkbox("Internal audits and ethical leadership", value=True, disabled=True)
+
 
     st.markdown(
     "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
