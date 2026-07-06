@@ -31,36 +31,65 @@ def additional_page():
     
     # ---------------- SDGs ----------------
     st.subheader("🎯 SDGs Focused by Kaneka Malaysia")
+
+    # Custom card function
+    def sdg_card(title, sdg, color, emoji):
+        st.markdown(
+            f"""
+            <div style="background-color:{color};padding:15px;border-radius:10px;text-align:center;color:white;font-weight:bold;">
+                <span style="font-size:30px;">{emoji}</span><br>
+                {title}<br>
+                <span style="font-size:20px;">{sdg}</span>
+            </div>
+            """, unsafe_allow_html=True
+        )
     
     col1, col2, col3, col4 = st.columns(4)
-    
-    col1.metric("Health", "SDG 3")
-    col2.metric("Education", "SDG 4")
-    col3.metric("Clean Energy", "SDG 7")
-    col4.metric("Economic Growth", "SDG 8")
+    with col1: sdg_card("Health", "SDG 3", "#4CAF50", "⚕️")
+    with col2: sdg_card("Education", "SDG 4", "#2196F3", "📚")
+    with col3: sdg_card("Clean Energy", "SDG 7", "#FFEB3B", "🔋")
+    with col4: sdg_card("Economic Growth", "SDG 8", "#F44336", "💼")
     
     col5, col6, col7, col8 = st.columns(4)
-    
-    col5.metric("Innovation", "SDG 9")
-    col6.metric("Responsible Consumption", "SDG 12")
-    col7.metric("Climate Action", "SDG 13")
-    col8.metric("Life Below Water", "SDG 14")
-    
+    with col5: sdg_card("Innovation", "SDG 9", "#9C27B0", "💡")
+    with col6: sdg_card("Responsible Consumption", "SDG 12", "#795548", "♻️")
+    with col7: sdg_card("Climate Action", "SDG 13", "#2E7D32", "🌍")
+    with col8: sdg_card("Life Below Water", "SDG 14", "#03A9F4", "🌊")
+
     st.markdown(
     "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
     unsafe_allow_html=True
     )
     
     # ---------------- ESG Tabs ----------------
+    # Inject custom CSS
+    st.markdown("""
+        <style>
+        /* Environmental - Green */
+        div[data-testid="stCheckbox"] label[data-testid="stMarkdownContainer"] {
+            color: #2e7d32; /* Dark Green */
+            font-weight: 600;
+        }
+        /* Social - Blue */
+        div[data-testid="stCheckbox"]:nth-child(n+7):nth-child(-n+12) label[data-testid="stMarkdownContainer"] {
+            color: #1565c0; /* Blue */
+            font-weight: 600;
+        }
+        /* Governance - Orange */
+        div[data-testid="stCheckbox"]:nth-child(n+13) label[data-testid="stMarkdownContainer"] {
+            color: #ef6c00; /* Orange */
+            font-weight: 600;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+    
     tab1, tab2, tab3 = st.tabs(
         ["🌱 Environmental", "🤝 Social", "⚖️ Governance"]
     )
     
     with tab1:
         st.success("Environmental Initiatives")
-    
         st.write("Kaneka Malaysia focuses on:")
-    
         st.checkbox("70% GHG reduction target by 2030", value=True, disabled=True)
         st.checkbox("Net Zero Carbon by 2050", value=True, disabled=True)
         st.checkbox("Renewable Energy", value=True, disabled=True)
@@ -70,9 +99,7 @@ def additional_page():
     
     with tab2:
         st.info("Social Initiatives")
-    
         st.write("Kaneka Malaysia promotes:")
-    
         st.checkbox("Health & Safety Programmes", value=True, disabled=True)
         st.checkbox("ESG Awareness Campaigns", value=True, disabled=True)
         st.checkbox("Diversity & Inclusion", value=True, disabled=True)
@@ -82,9 +109,7 @@ def additional_page():
     
     with tab3:
         st.warning("Governance Initiatives")
-    
         st.write("Kaneka Malaysia strengthens governance through:")
-    
         st.checkbox("Anti-Bribery & Anti-Corruption (ABAC)", value=True, disabled=True)
         st.checkbox("Financial Transparency", value=True, disabled=True)
         st.checkbox("Regulatory Compliance", value=True, disabled=True)
