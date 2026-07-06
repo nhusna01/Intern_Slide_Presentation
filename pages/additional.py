@@ -33,54 +33,95 @@ def additional_page():
     # SDGs
     # ===========================
     st.subheader("🎯 SDGs Focused by Kaneka Malaysia")
-
+    
+    # Inject CSS for SDG cards + tooltips
     st.markdown("""
-    <div style="display:grid;
-                grid-template-columns:repeat(2,1fr);
-                gap:12px;">
-
-        <div style="background:#4C9F38;color:white;padding:12px;border-radius:10px;">
-            <b>🩺 SDG 3</b><br>
-            Good Health & Well-being
-        </div>
-
-        <div style="background:#C5192D;color:white;padding:12px;border-radius:10px;">
-            <b>🎓 SDG 4</b><br>
-            Quality Education
-        </div>
-
-        <div style="background:#FCC30B;color:black;padding:12px;border-radius:10px;">
-            <b>⚡ SDG 7</b><br>
-            Affordable & Clean Energy
-        </div>
-
-        <div style="background:#A21942;color:white;padding:12px;border-radius:10px;">
-            <b>💼 SDG 8</b><br>
-            Decent Work & Economic Growth
-        </div>
-
-        <div style="background:#FD6925;color:white;padding:12px;border-radius:10px;">
-            <b>🏭 SDG 9</b><br>
-            Industry, Innovation & Infrastructure
-        </div>
-
-        <div style="background:#BF8B2E;color:white;padding:12px;border-radius:10px;">
-            <b>♻️ SDG 12</b><br>
-            Responsible Consumption & Production
-        </div>
-
-        <div style="background:#3F7E44;color:white;padding:12px;border-radius:10px;">
-            <b>🌍 SDG 13</b><br>
-            Climate Action
-        </div>
-
-        <div style="background:#0A97D9;color:white;padding:12px;border-radius:10px;">
-            <b>🌊 SDG 14</b><br>
-            Life Below Water
-        </div>
-
-    </div>
+    <style>
+    .sdg-card {
+        background: linear-gradient(135deg, #003366, #3366CC);
+        color: white;
+        padding: 25px 20px;
+        border-radius: 20px;
+        text-align: center;
+        border: 2px solid #FFD700;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        height: 150px;
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .sdg-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+    
+    /* Tooltip styling */
+    .tooltip {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .tooltiptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        border-radius: 8px;
+        padding: 8px;
+        position: absolute;
+        top: -5px;
+        right: 25px;
+        z-index: 1;
+        font-size: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    </style>
     """, unsafe_allow_html=True)
+    
+    # Function for SDG card
+    def sdg_card(sdg, description, color):
+        st.markdown(f"""
+        <div style="background:{color};
+                    color:white;
+                    padding:25px 20px;
+                    border-radius:20px;
+                    text-align:center;
+                    border:2px solid #FFD700;
+                    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+                    transition:all 0.3s ease;
+                    height:150px;
+                    position:relative;
+                    font-size:18px;
+                    font-weight:bold;">
+            {sdg}
+            <div class="tooltip">❓
+                <span class="tooltiptext">{description}</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    # Layout
+    col1, col2, col3, col4 = st.columns(4)
+    with col1: sdg_card("SDG 3", "Health", "#4C9F38")
+    with col2: sdg_card("SDG 4", "Education", "#C5192D")
+    with col3: sdg_card("SDG 7", "Clean Energy", "#FCC30B")
+    with col4: sdg_card("SDG 8", "Economic Growth", "#A21942")
+    
+    col5, col6, col7, col8 = st.columns(4)
+    with col5: sdg_card("SDG 9", "Innovation", "#FD6925")
+    with col6: sdg_card("SDG 12", "Responsible Consumption", "#BF8B2E")
+    with col7: sdg_card("SDG 13", "Climate Action", "#3F7E44")
+    with col8: sdg_card("SDG 14", "Life Below Water", "#0A97D9")
 
     st.markdown(
         "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
@@ -88,48 +129,8 @@ def additional_page():
     )
 
     # ===========================
-    # ESG Initiatives
+    # ESG Initiatives Tabs
     # ===========================
-    st.subheader("📌 Key ESG Initiatives")
-
-    tab1, tab2, tab3 = st.tabs(
-        ["🌱 Environmental", "🤝 Social", "⚖️ Governance"]
-    )
-
-    with tab1:
-        st.success("Environmental")
-        st.write("Kaneka Malaysia's environmental initiatives include:")
-        st.checkbox("70% greenhouse gas (GHG) reduction target by 2030", value=True, disabled=True)
-        st.checkbox("Net Zero Carbon target by 2050", value=True, disabled=True)
-        st.checkbox("Renewable energy and energy efficiency", value=True, disabled=True)
-        st.checkbox("Recycling (3R) programmes", value=True, disabled=True)
-        st.checkbox("River conservation and pollution control", value=True, disabled=True)
-
-    with tab2:
-        st.info("Social")
-        st.write("Kaneka Malaysia's social initiatives include:")
-        st.checkbox("Workplace health and safety programmes", value=True, disabled=True)
-        st.checkbox("ESG awareness campaigns", value=True, disabled=True)
-        st.checkbox("Diversity and inclusion initiatives", value=True, disabled=True)
-        st.checkbox("University collaborations and internships", value=True, disabled=True)
-        st.checkbox("Community outreach programmes", value=True, disabled=True)
-
-    with tab3:
-        st.warning("Governance")
-        st.write("Kaneka Malaysia's governance initiatives include:")
-        st.checkbox("Anti-Bribery & Anti-Corruption (ABAC)", value=True, disabled=True)
-        st.checkbox("Financial transparency", value=True, disabled=True)
-        st.checkbox("Regulatory compliance", value=True, disabled=True)
-        st.checkbox("Risk management", value=True, disabled=True)
-        st.checkbox("Internal audits and ethical leadership", value=True, disabled=True)
-
-
-    st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
-    )
-    
-    # ---------------- ESG Tabs ----------------
     # Inject custom CSS
     st.markdown("""
         <style>
