@@ -5,45 +5,43 @@ import requests
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 
-
-# ==============================
-# CUSTOM TITLE STYLING
-# ==============================
-st.markdown(
-    """
-    <style>
-    .big-title {
-        font-size: 60px; /* Increase size */
-        font-family: 'Poppins', sans-serif; /* Apply Poppins font */
-        font-weight: bold;
-        text-align: left;
-        color: #023e8a; /* Optional: Kaneka blue tone */
-        margin-bottom: 6px;
-    }
-    .subtitle-caption {
-        font-size: 18px;
-        font-family: 'Poppins', sans-serif;
-        text-align: left;
-        color: #444; /* softer corporate gray */
-        margin-bottom: 20px; /* space before logo/next section */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Title + caption
-st.markdown('<div class="big-title">About KANEKA</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle-caption">Innovation • Sustainability • Human Well-being</div>', unsafe_allow_html=True)
- 
-try:
-    st.image("images/Kaneka_logo.png", width=350)
-except FileNotFoundError:
-    st.warning("Kaneka logo not found.")
-
-st.divider()
-
 def company_page():
+    # ==============================
+    # Company Page Logo
+    # ==============================
+    st.markdown(
+        """
+        <style>
+        .big-title {
+            font-size: 60px; /* Increase size */
+            font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+            font-weight: bold;
+            text-align: left;
+            color: #023e8a; /* Optional: Kaneka blue tone */
+            margin-bottom: 6px;
+        }
+        .subtitle-caption {
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+            color: #444; /* softer corporate gray */
+            margin-bottom: 20px; /* space before logo/next section */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    # Title + caption
+    st.markdown('<div class="big-title">About KANEKA</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle-caption">Innovation • Sustainability • Human Well-being</div>', unsafe_allow_html=True)
+     
+    try:
+        st.image("images/Kaneka_logo.png", width=350)
+    except FileNotFoundError:
+        st.warning("Kaneka logo not found.")
+    
+    st.divider()
 
     # ==============================
     # COMPANY DATA
