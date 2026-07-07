@@ -3,7 +3,42 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def additional_page():
-    st.title("📖 Chapter 4")
+    # Stylized title
+    st.markdown("""
+        <style>
+        .chapter-title {
+            font-family: 'Georgia', serif;
+            font-size: 50px;
+            color: #2c3e50;
+            text-align: center;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .chapter-caption {
+            font-family: 'Courier New', monospace;
+            font-size: 28px;
+            color: #555;
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown(
+        "<div class='chapter-title'>📖 Chapter 4 – ESG</div>",
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        "<div class='chapter-caption'>🌍 Building a sustainable future through Environmental, Social, and Governance (ESG) 🌍</div>",
+        unsafe_allow_html=True
+    )
+
     st.header("🌍 What is ESG?")
 
     st.write(
