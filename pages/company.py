@@ -200,21 +200,21 @@ def company_page():
             st.write("- Established in 1st September 1949")
             st.write("- Originated with vinyl chloride production (Kanevinyl)")
     
-        with st.expander("👤 Founder"):
-            st.write("- Founded by Kanegafuchi Spinning Company spin‑off")
-            st.write("- Initial capital: 200 million yen")
+        with st.expander("👤 Management"):
+            st.write("- Current President of Kaneka Kazuhiko Fujii")
+            st.write("- Paid capital: 33,046 million yen")
     
         with st.expander("📍 Headquarters"):
-            st.write("- **Osaka Head Office:** Nakanoshima Festival Tower, Kita‑ku, Osaka")
+            st.write("- **Osaka Head Office:** Nakanoshima, Kita‑ku, Osaka")
             st.write("- **Tokyo Head Office:** Akasaka, Minato‑ku, Tokyo")
     
         with st.expander("🌍 Global Presence"):
-            st.write("- Subsidiaries in USA, Europe, Malaysia, Singapore, Australia, Vietnam, Indonesia, Thailand, Korea, China")
+            st.write("- Subsidiaries in Middle East, Europe, Africa, The Americas, Asia")
     
         # Interactive metrics
         st.markdown("---")
-        st.metric("Employees Worldwide", 10000, "+500 this year")
-        st.metric("Global Subsidiaries", 10, "+2 in recent years")
+        st.metric("Employees Worldwide", 11762, "+500 this year")
+        st.metric("Global Subsidiaries", 21, "+2 in recent years")
         st.progress(0.8)  # Example sustainability progress bar
         st.slider("Employee Engagement Index", 0, 100, 85)
 
