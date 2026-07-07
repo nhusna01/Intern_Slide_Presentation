@@ -94,6 +94,7 @@ def additional_page():
         <div style="background:{color};
                     color:white;
                     padding:25px 20px;
+                    margin-bottom: 20px;
                     border-radius:20px;
                     text-align:center;
                     border:2px solid #FFD700;
@@ -112,14 +113,14 @@ def additional_page():
         
     # Layout
     col1, col2, col3, col4 = st.columns(4)
-    with col1: sdg_card("SDG 3", "Health", "#4C9F38")
-    with col2: sdg_card("SDG 4", "Education", "#C5192D")
-    with col3: sdg_card("SDG 7", "Clean Energy", "#FCC30B")
-    with col4: sdg_card("SDG 8", "Economic Growth", "#A21942")
+    with col1: sdg_card("SDG 3", "Good Health & Well-being ", "#4C9F38")
+    with col2: sdg_card("SDG 4", "Quality Education", "#C5192D")
+    with col3: sdg_card("SDG 7", "Affordable & Clean Energy", "#FCC30B")
+    with col4: sdg_card("SDG 8", "Decent Work & Economic Growth", "#A21942")
     
     col5, col6, col7, col8 = st.columns(4)
-    with col5: sdg_card("SDG 9", "Innovation", "#FD6925")
-    with col6: sdg_card("SDG 12", "Responsible Consumption", "#BF8B2E")
+    with col5: sdg_card("SDG 9", "Industry, Innovation, & Infrastructure", "#FD6925")
+    with col6: sdg_card("SDG 12", "Responsible Consumption & Production", "#BF8B2E")
     with col7: sdg_card("SDG 13", "Climate Action", "#3F7E44")
     with col8: sdg_card("SDG 14", "Life Below Water", "#0A97D9")
 
@@ -153,11 +154,11 @@ def additional_page():
     """, unsafe_allow_html=True)
     
     tab1, tab2, tab3 = st.tabs(
-        ["🌱 Environmental", "🤝 Social", "⚖️ Governance"]
+        ["🌱 Environmental", "👥 Social", "⚖️ Governance"]
     )
     
     with tab1:
-        st.success("Environmental Initiatives")
+        st.success("Environmental Initiatives - Focuses on how a company impacts the planet.")
         st.write("Kaneka Malaysia focuses on:")
         st.checkbox("70% GHG reduction target by 2030", value=True, disabled=True)
         st.checkbox("Net Zero Carbon by 2050", value=True, disabled=True)
@@ -167,7 +168,7 @@ def additional_page():
         st.checkbox("River Conservation Programmes", value=True, disabled=True)
     
     with tab2:
-        st.info("Social Initiatives")
+        st.info("Social Initiatives - Examines how a company treats employees, customers, and communities.")
         st.write("Kaneka Malaysia promotes:")
         st.checkbox("Health & Safety Programmes", value=True, disabled=True)
         st.checkbox("ESG Awareness Campaigns", value=True, disabled=True)
@@ -177,7 +178,7 @@ def additional_page():
         st.checkbox("Community Outreach", value=True, disabled=True)
     
     with tab3:
-        st.warning("Governance Initiatives")
+        st.warning("Governance Initiatives - Refers to leadership, ethics, and accountability.")
         st.write("Kaneka Malaysia strengthens governance through:")
         st.checkbox("Anti-Bribery & Anti-Corruption (ABAC)", value=True, disabled=True)
         st.checkbox("Financial Transparency", value=True, disabled=True)
@@ -190,63 +191,12 @@ def additional_page():
     "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
     unsafe_allow_html=True
     )
-    
-    # ---------------- Learn More ----------------
-    with st.expander("📖 Why are these SDGs important?"):
-        st.write("""
-    These eight SDGs were selected because Kaneka Malaysia believes they are the
-    areas where the company can make the greatest contribution to sustainable
-    development through environmental protection, employee wellbeing,
-    innovation, and ethical governance.
-    """)
-    
-    st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
-    )
 
-    st.write("Explore the three pillars of ESG interactively:")
-
-    # Initialize session state
-    if "choice" not in st.session_state:
-        st.session_state.choice = None
-
-    # Interactive buttons
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        if st.button("🌱 Environmental"):
-            st.session_state.choice = "E"
-
-    with col2:
-        if st.button("🤝 Social"):
-            st.session_state.choice = "S"
-
-    with col3:
-        if st.button("⚖️ Governance"):
-            st.session_state.choice = "G"
-
-    # Display selected pillar
-    if st.session_state.choice == "E":
-        st.success("🌱 Environmental")
-        st.write("Focuses on how a company impacts the planet.")
-        st.progress(70)
-
-    elif st.session_state.choice == "S":
-        st.info("🤝 Social")
-        st.write("Examines how a company treats employees, customers, and communities.")
-        st.progress(50)
-
-    elif st.session_state.choice == "G":
-        st.warning("⚖️ Governance")
-        st.write("Refers to leadership, ethics, and accountability.")
-        st.progress(80)
 
     # Expanders
     with st.expander("📊 Why ESG Matters"):
         st.write(
-            "ESG helps investors, regulators, and the public assess "
-            "long-term sustainability and ethical impact."
+            "ESG matters because it helps organizations build trust, reduce risks, and achieve long-term sustainable growth through responsible environmental, social, and governance practices."
         )
 
     st.markdown(
