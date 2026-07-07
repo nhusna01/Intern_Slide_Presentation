@@ -323,12 +323,12 @@ def intro_page():
     st.subheader("🛠️ My Skills")
 
     technical_skills = {
-        "Python": 70,
-        "Streamlit": 80,
-        "GitHub": 70,
-        "Figma": 70,
-        "Data Analytics": 80,
-        "Power BI": 50,
+        "Python Programming": 75,
+        "Data Preparation": 90,
+        "Data Analytics": 90,
+        "Data Visualization": 95,
+        "Machine Learning": 85,
+        "Data Mining": 90,
     }
 
     for skill, level in technical_skills.items():
@@ -346,7 +346,7 @@ def intro_page():
         "Teamwork": 90,
         "Problem-Solving": 75,
         "Adaptability": 85,
-        "Time Management": 80,
+        "Time Management": 85,
         "Creativity": 90,
     }
     
@@ -356,9 +356,31 @@ def intro_page():
         st.progress(level)
 
     
+    # Add vertical spacing
+    st.markdown("<div style='margin:30px;'></div>", unsafe_allow_html=True)
+
+    
+    # ==============================
+    # 🛠️ Tools & Technologies
+    # ==============================
+    tools = {
+        "GitHub": 85,
+        "Streamlit": 90,
+        "Figma": 80,
+        "Canva": 95,
+        "Google Colab": 95,
+        "VS Code": 75,
+    }
+    
+    st.markdown("### 🛠️ Tools & Technologies")
+    
+    for tool, level in tools.items():
+        st.write(f"**{tool}**")
+        st.progress(level)
+    
     st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
+        "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+        unsafe_allow_html=True
     )
 
     
