@@ -58,7 +58,11 @@ def additional_page():
         "i-ESG Framework, and the Kaneka Corporation ESG Charter."
     )
 
-    st.divider()
+    
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
     
     # ===========================
     # SDGs
@@ -155,7 +159,10 @@ def additional_page():
     with col7: sdg_card("SDG 13", "Climate Action", "#3F7E44")
     with col8: sdg_card("SDG 14", "Life Below Water", "#0A97D9")
 
-    st.divider()
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
 
     # ===========================
     # ESG Initiatives Tabs
@@ -222,7 +229,10 @@ def additional_page():
             "ESG matters because it helps organizations build trust, reduce risks, and achieve long-term sustainable growth through responsible environmental, social, and governance practices."
         )
 
-    st.divider()
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
     
     # Quiz
     st.subheader("📝 Quick Quiz")
@@ -237,7 +247,10 @@ def additional_page():
     else:
         st.error("❌ Try again! Don't give up.")
 
-    st.divider()
+    st.markdown(
+    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
+    unsafe_allow_html=True
+    )
     
     # Dashboard
     st.subheader("📊 ESG Dashboard")
