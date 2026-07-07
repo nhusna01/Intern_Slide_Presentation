@@ -320,7 +320,7 @@ def intro_page():
     # ==============================
     # 🛠️ Skills
     # ==============================
-    st.subheader("🛠️ My Skills")
+    st.subheader("💻 Technical Skills")
 
     technical_skills = {
         "Python Programming": 75,
