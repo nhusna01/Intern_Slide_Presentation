@@ -79,7 +79,7 @@ def additional_page():
         transition: all 0.3s ease;
         height: 150px;
         position: relative;
-        font-size: 18px;
+        font-size: 30px;
         font-weight: bold;
     }
     
