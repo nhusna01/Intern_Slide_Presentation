@@ -79,19 +79,19 @@ def learning_development():
 
             st.success("Activities I was involved in")
 
-            st.video("videos/internship1.mp4")
+            st.video("images/internship1.mp4")
 
         elif step == 8:
 
             st.success("Activities I was involved in")
 
-            st.video("videos/handover_process.mp4")
+            st.video("images/internship2.mp4")
 
         elif step == 10:
 
             st.success("Activities I was involved in")
 
-            st.video("videos/internship3.mp4")
+            st.video("images/internship3.mp4")
 
         else:
 
