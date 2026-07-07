@@ -78,7 +78,7 @@ def additional_page():
         top: -5px;
         right: 25px;
         z-index: 1;
-        font-size: 12px;
+        font-size: 24px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     
