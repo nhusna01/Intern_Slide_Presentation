@@ -16,7 +16,7 @@ def intro_page():
                 rgba(255,255,255,0.05)
             );
             backdrop-filter: blur(12px);
-            padding: 30px;
+            padding: 40px;
             border-radius: 25px;
             border: 2px solid rgba(255,215,0,0.5);
             box-shadow: 0 8px 30px rgba(0,0,0,0.2);
