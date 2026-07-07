@@ -39,6 +39,8 @@ def additional_page():
         unsafe_allow_html=True
     )
 
+    st.divider()
+
     st.header("🌍 What is ESG?")
 
     st.write(
@@ -46,10 +48,7 @@ def additional_page():
         "a company's sustainability, ethical practices, and long-term performance."
     )
     
-    st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
-    )
+    st.divider()
     
     st.subheader("🏢 ESG at Kaneka Malaysia")
     
@@ -59,10 +58,7 @@ def additional_page():
         "i-ESG Framework, and the Kaneka Corporation ESG Charter."
     )
 
-    st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
-    )
+    st.divider()
     
     # ===========================
     # SDGs
@@ -159,10 +155,7 @@ def additional_page():
     with col7: sdg_card("SDG 13", "Climate Action", "#3F7E44")
     with col8: sdg_card("SDG 14", "Life Below Water", "#0A97D9")
 
-    st.markdown(
-        "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-        unsafe_allow_html=True
-    )
+    st.divider()
 
     # ===========================
     # ESG Initiatives Tabs
@@ -222,11 +215,7 @@ def additional_page():
         st.checkbox("Internal Audits", value=True, disabled=True)
         st.checkbox("Ethical Leadership", value=True, disabled=True)
     
-    st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
-    )
-
+    st.divider()
 
     # Expanders
     with st.expander("📊 Why ESG Matters"):
@@ -234,10 +223,7 @@ def additional_page():
             "ESG matters because it helps organizations build trust, reduce risks, and achieve long-term sustainable growth through responsible environmental, social, and governance practices."
         )
 
-    st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
-    ) 
+    st.divider()
     
     # Quiz
     st.subheader("📝 Quick Quiz")
@@ -252,10 +238,7 @@ def additional_page():
     else:
         st.error("❌ Try again! Don't give up.")
 
-    st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
-    )
+    st.divider()
     
     # Dashboard
     st.subheader("📊 ESG Dashboard")
