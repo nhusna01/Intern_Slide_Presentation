@@ -16,7 +16,7 @@ def additional_page():
 
         .chapter-caption {
             font-family: 'Courier New', monospace;
-            font-size: 24px;
+            font-size: 20px;
             color: #555;
             text-align: center;
             animation: fadeIn 3s ease-in-out;
@@ -215,7 +215,6 @@ def additional_page():
         st.checkbox("Internal Audits", value=True, disabled=True)
         st.checkbox("Ethical Leadership", value=True, disabled=True)
     
-    st.divider()
 
     # Expanders
     with st.expander("📊 Why ESG Matters"):
