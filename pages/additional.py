@@ -8,7 +8,7 @@ def additional_page():
         <style>
         .chapter-title {
             font-family: 'Georgia', serif;
-            font-size: 50px;
+            font-size: 60px;
             color: #2c3e50;
             text-align: center;
             text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
@@ -16,7 +16,7 @@ def additional_page():
 
         .chapter-caption {
             font-family: 'Courier New', monospace;
-            font-size: 28px;
+            font-size: 24px;
             color: #555;
             text-align: center;
             animation: fadeIn 3s ease-in-out;
