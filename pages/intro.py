@@ -244,12 +244,12 @@ def intro_page():
         st.markdown("""
         <div class="fact-card">
             <div class="tooltip">❓
-                <span class="tooltiptext">HR Industry Supervisor</span>
+                <span class="tooltiptext">HR Field Supervisor</span>
             </div>
             <div class="fact-icon">👩‍💼</div>
             <div class="fact-title">Supervisor</div>
             <div class="fact-value">
-                Pn. Norkamariah Othman
+                Pn. Zuraidah Ismail
             </div>
         </div>
         """, unsafe_allow_html=True)
