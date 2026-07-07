@@ -14,14 +14,14 @@ def myself_page():
         <style>
         .chapter-title {
             font-family: 'Georgia', serif;
-            font-size: 40px;
+            font-size: 50px;
             color: #2c3e50;
             text-align: center;
             text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
         }
         .chapter-caption {
             font-family: 'Courier New', monospace;
-            font-size: 18px;
+            font-size: 28px;
             color: #555;
             text-align: center;
             animation: fadeIn 3s ease-in-out;
