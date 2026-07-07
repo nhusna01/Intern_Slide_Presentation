@@ -347,11 +347,10 @@ def tair_management():
         "Talent Acquisition & Industrial Relations"
     )
 
-    tab1, tab2, tab3 = st.tabs(
+    tab1, tab2 = st.tabs(
         [
             "Recruitment",
             "Discipline",
-            "Additional Tasks"
         ]
     )
 
@@ -368,24 +367,71 @@ def tair_management():
 """)
 
     with tab2:
-
-        st.markdown("""
-- Disciplinary Cases
-
-- Grievance
-
-- Employee Relations
-""")
-
-    with tab3:
-
-        st.markdown("""
-- Employee Engagement
-
-- Policy Update
-
-- Survey
-""")
+    
+        st.subheader("⚖️ Discipline Management")
+    
+        # Display Employee Conduct & Resolution Guide
+        st.image(
+            "images/discipline1.png",
+            caption="Employee Conduct and Resolution Guide",
+            use_container_width=True
+        )
+    
+        st.divider()
+    
+        # Disciplinary & Misconduct Management
+        with st.expander("⚖️ Disciplinary & Misconduct Management", expanded=True):
+    
+            st.markdown("""
+    **Definition**
+    
+    Misconduct refers to any act or behavior that violates the company's Terms and Conditions of Employment or Company Rules.
+    
+    **Misconduct Categories**
+    
+    🔹 **Level 1 – Minor Misconduct**
+    - Minor violations of company rules.
+    - Example: Late attendance.
+    
+    🔹 **Level 2 – Serious Misconduct**
+    - Repeated or more serious violations.
+    - Example: Habitual late attendance.
+    
+    🔹 **Level 3 – Major Misconduct**
+    - Severe misconduct that may lead to disciplinary action.
+    - Example: Unauthorized use or falsification of a signature.
+    """)
+    
+        # Grievance Procedure
+        with st.expander("🤝 Grievance Procedure", expanded=True):
+    
+            st.markdown("""
+    The grievance procedure provides employees with a fair and systematic way to resolve workplace issues.
+    
+    **Step 1 – Immediate Superior**
+    - Discuss the issue with your immediate superior within **3 working days**.
+    
+    **Step 2 – Division / Production Head**
+    - If unresolved, escalate the issue within **5 working days**.
+    
+    **Step 3 – Human Resources**
+    - Submit a formal appeal to HR within **7 working days** if the issue remains unresolved.
+    """)
+    
+        # Employee Engagement & Support
+        with st.expander("📢 Employee Engagement & Support", expanded=True):
+    
+            st.markdown("""
+    **Support Channels**
+    - 📞 Kaneka Care
+    - 📧 HR Helpdesk
+    - 🛡️ Whistleblower Hotline
+    
+    **Employee Engagement**
+    - HR Policy Briefings
+    - Business Code of Conduct Sessions
+    - Employee Awareness & Communication Programs
+    """)
 
 
 # ==========================================================
