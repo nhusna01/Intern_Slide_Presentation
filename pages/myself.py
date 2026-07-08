@@ -79,7 +79,7 @@ def myself_page():
             "Relation to My Course": [
                 "Ensuring data integrity like in data science",
                 "Dashboards mirror analytical skills",
-                "SPL modules connect with workflow automation"
+                "SPL modules connect with learning module development"
             ]
         })
         st.markdown("</div>", unsafe_allow_html=True)
@@ -88,16 +88,16 @@ def myself_page():
         st.markdown("<div class='book-page'><h3>🎯 Goals & Objectives</h3>", unsafe_allow_html=True)
         st.table({
             "Objective": [
-                "Gain HR exposure",
+                "Gain HR exposure and real working environment",
                 "Apply IT/Data Science knowledge",
                 "Improve communication & teamwork",
                 "Contribute to HR projects"
             ],
             "Outcome": [
-                "Hands-on HR workflow experience",
-                "Used Streamlit & Power BI in HR",
+                "Hands-on HR workflow experience and able to adapt in industry environment",
+                "Used Streamlit & Data Analytics in HR",
                 "Better email writing & collaboration",
-                "Supported SPL module development"
+                "Supported SPL module development and L&D process flow"
             ]
         })
         st.markdown("</div>", unsafe_allow_html=True)
@@ -110,8 +110,8 @@ def myself_page():
                 "Limited IT exposure"
             ],
             "Reality": [
-                "Involved in HR system development & HR modules",
-                "Applied data visualization & Streamlit in HR "
+                "Involved in HR system development & HR policy / modules",
+                "Applied data visualization, data analytics, python pogramming & Streamlit in HR "
             ]
         })
         st.markdown("</div>", unsafe_allow_html=True)
@@ -120,15 +120,17 @@ def myself_page():
         st.markdown("<div class='book-page'><h3>🚀 Future Plan</h3>", unsafe_allow_html=True)
         st.table({
             "Plan": [
-                "Improve Power BI, Streamlit, GitHub skills",
-                "Specialize in HR analytics",
-                "Balance growth with running events",
+                "Sponsor my parents to go to umrah/hajj",
+                "Improve technical skill, Streamlit, GitHub skills",
+                "Pursue master in the future",
+                "Balance career growth",
                 "Pursue data-driven HR/IT career"
             ],
             "Next Step": [
+                "Plan my financial and save moneys",
                 "Practice with real datasets",
-                "Explore HR analytics case studies",
-                "Join more 5km races",
+                "Gain knowledge and practical skill",
+                "Plan and follow my career path systematically",
                 "Apply for HR/IT hybrid roles"
             ]
         })
