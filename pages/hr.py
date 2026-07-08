@@ -162,7 +162,7 @@ def learning_development():
     
             st.success("Activities I was involved in")
     
-            st.video("videos/training1.mp4")
+            st.video("images/training1.mp4")
     
         else:
     
