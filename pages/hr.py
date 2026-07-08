@@ -301,7 +301,7 @@ def reward_management():
             # Two images side by side
             col1, col2 = st.columns(2)
             with col1:
-                st.image("images/payroll1.png", caption="Payroll Overview", use_container_width=True)
+                st.image("images/payroll1.jpg", caption="Payroll Overview", use_container_width=True)
             with col2:
                 st.image("images/payroll2.png", caption="Payroll Activities", use_container_width=True)
     
@@ -419,9 +419,9 @@ def reward_management():
             # Two images side by side
             col1, col2 = st.columns(2)
             with col1:
-                st.image("images/events1.png", caption="Annual Company Event", use_container_width=True)
+                st.image("images/events1.jpg", caption="Annual Company Event", use_container_width=True)
             with col2:
-                st.image("images/events2.png", caption="Team Building Activities", use_container_width=True)
+                st.image("images/events2.jpg", caption="Team Building Activities", use_container_width=True)
     
             st.markdown("""
             **Overview**
@@ -627,7 +627,7 @@ def tair_management():
         # Example: Only Stage 4 contains your activity
         if step == 4:
             st.success("Activities I was involved in")
-            st.video("videos/iv.mp4")
+            st.video("images/iv.mp4")
         else:
             st.info("This process was not directly handled by me.")
 
