@@ -290,13 +290,12 @@ def reward_management():
 
         st.write(
             """
-            • Salary
+            • Statutory Contribution & Deduction
 
-            • Allowances
+            • Medical Management
 
-            • Employee Benefits
+            • Payroll
 
-            • Incentives
             """
         )
 
@@ -327,15 +326,96 @@ def reward_management():
 
     with tab3:
 
-        st.subheader("Additional Tasks")
-
-        st.markdown("""
-- Event Coordination
-
-- Wellness Program
-
-- Recognition Activities
-""")
+        st.subheader("🌟 Additional Tasks & Activities")
+    
+        st.write(
+            "Besides my daily responsibilities in the Reward Management department, "
+            "I also participated in several company events and activities."
+        )
+    
+        # ------------------------------------------------------
+        # Jamuan Raya
+        # ------------------------------------------------------
+        with st.expander("🎉 Jamuan Raya 2026 (Admin 2 Committee)", expanded=True):
+    
+            col1, col2 = st.columns(2)
+    
+            with col1:
+                st.image(
+                    "images/raya1.jpg",
+                    caption="Event Preparation",
+                    use_container_width=True
+                )
+    
+            with col2:
+                st.image(
+                    "images/raya2.jpg",
+                    caption="Hari Raya Celebration",
+                    use_container_width=True
+                )
+    
+            st.markdown("""
+    **Role**
+    - Assisted the **Admin 2 Committee** in organizing the Hari Raya celebration.
+    - Supported event preparation and logistics.
+    - Helped ensure the event ran smoothly.
+    """)
+    
+        # ------------------------------------------------------
+        # Karakuri Competition
+        # ------------------------------------------------------
+        with st.expander("🏆 Karakuri Competition", expanded=True):
+    
+            col1, col2 = st.columns(2)
+    
+            with col1:
+                st.image(
+                    "images/karakuri1.jpg",
+                    caption="Competition Project",
+                    use_container_width=True
+                )
+    
+            with col2:
+                st.image(
+                    "images/karakuri2.jpg",
+                    caption="Award Ceremony",
+                    use_container_width=True
+                )
+    
+            st.markdown("""
+    **Achievement**
+    - Participated in the **Karakuri Competition**.
+    - Worked together with the team throughout the competition.
+    - 🥈 **Won Second Place.**
+    """)
+    
+        # ------------------------------------------------------
+        # Kaneka Run Ekiden
+        # ------------------------------------------------------
+        with st.expander("🏃 Kaneka Run Ekiden", expanded=True):
+    
+            col1, col2 = st.columns(2)
+    
+            with col1:
+                st.image(
+                    "images/ekiden1.jpg",
+                    caption="Race Day",
+                    use_container_width=True
+                )
+    
+            with col2:
+                st.image(
+                    "images/ekiden2.jpg",
+                    caption="Team Photo",
+                    use_container_width=True
+                )
+    
+            st.markdown("""
+    **Achievement**
+    - Participated in the **Kaneka Run Ekiden**.
+    - Represented the HR Department.
+    - 🥉 **Won Third Place.**
+    """)
 
 
 # ==========================================================
