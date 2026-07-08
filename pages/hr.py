@@ -342,14 +342,14 @@ def reward_management():
     
             with col1:
                 st.image(
-                    "images/raya1.jpg",
+                    "images/raya1.jfif",
                     caption="Event Preparation",
                     use_container_width=True
                 )
     
             with col2:
                 st.image(
-                    "images/raya2.jpg",
+                    "images/raya2.jfif",
                     caption="Hari Raya Celebration",
                     use_container_width=True
                 )
@@ -370,14 +370,14 @@ def reward_management():
     
             with col1:
                 st.image(
-                    "images/karakuri1.jpg",
+                    "images/karakuri1.jfif",
                     caption="Competition Project",
                     use_container_width=True
                 )
     
             with col2:
                 st.image(
-                    "images/karakuri2.jpg",
+                    "images/karakuri2.jfif",
                     caption="Award Ceremony",
                     use_container_width=True
                 )
@@ -398,14 +398,14 @@ def reward_management():
     
             with col1:
                 st.image(
-                    "images/ekiden1.jpg",
+                    "images/ekiden1.jfif",
                     caption="Race Day",
                     use_container_width=True
                 )
     
             with col2:
                 st.image(
-                    "images/ekiden2.jpg",
+                    "images/ekiden2.jfif",
                     caption="Team Photo",
                     use_container_width=True
                 )
