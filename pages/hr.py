@@ -266,7 +266,6 @@ def learning_development():
         - Publishing the module for employees' self-paced learning.
         """)
     
-        st.video("videos/bla_spl_development.mp4")
 
 
 # ==========================================================
@@ -342,14 +341,14 @@ def reward_management():
     
             with col1:
                 st.image(
-                    "images/raya1.jfif",
+                    "images/raya1.png",
                     caption="Event Preparation",
                     use_container_width=True
                 )
     
             with col2:
                 st.image(
-                    "images/raya2.jfif",
+                    "images/raya2.png",
                     caption="Hari Raya Celebration",
                     use_container_width=True
                 )
@@ -370,14 +369,14 @@ def reward_management():
     
             with col1:
                 st.image(
-                    "images/karakuri1.jfif",
+                    "images/karakuri1.png",
                     caption="Competition Project",
                     use_container_width=True
                 )
     
             with col2:
                 st.image(
-                    "images/karakuri2.jfif",
+                    "images/karakuri2.png",
                     caption="Award Ceremony",
                     use_container_width=True
                 )
@@ -398,14 +397,14 @@ def reward_management():
     
             with col1:
                 st.image(
-                    "images/ekiden1.jfif",
+                    "images/ekiden1.png",
                     caption="Race Day",
                     use_container_width=True
                 )
     
             with col2:
                 st.image(
-                    "images/ekiden2.jfif",
+                    "images/ekiden2.png",
                     caption="Team Photo",
                     use_container_width=True
                 )
