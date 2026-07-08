@@ -433,17 +433,70 @@ def tair_management():
         ]
     )
 
-    with tab1:
+    # ------------------------------------------------------
+    # Recruitment
+    # ------------------------------------------------------
+    with tab3:
+    
+        st.subheader("Recruitment Process Flow")
+    
+        # Display Recruitment Flowchart
+        st.image(
+            "images/iv.png",
+            caption="Recruitment Process Flow",
+            use_container_width=True
+        )
+    
+        st.divider()
+    
+        if "recruitment_step" not in st.session_state:
+            st.session_state.recruitment_step = 1
+    
+        details = {
+            1: "Formal Manpower Request: Requestor submits an electronic Manpower Request form (e-MPR) via the Mendix system.",
+            
+            2: "Resume Bank Distribution: Talent Acquisition PIC shares the compiled resume bank with the designated hiring panel for review.",
+            
+            3: "Interview Coordination: TA PIC manages the logistics of the Interview session, including aligning the panel’s schedule and booking the necessary meeting rooms.",
+            
+            4: "The Interview Session: Managed by the TA PIC, the Interview takes place on the appointed day (this is a critical milestone in the process).",
+            
+            5: "Pre-Employment Medical Checkup: The successful candidate is required to complete a medical examination before the process can proceed.",
+            
+            6: "The Official Offer: Once accepted, the TA PIC officially informs the candidate and provides them with a formal offer letter.",
+            
+            7: "Reporting Dates & Feedback: The TA PIC emails the reporting duty date to the successful candidate, while simultaneously sending feedback or status updates to unsuccessful applicants.",
+            
+            8: "Onboarding & Training: The process concludes as the new staff member joins the team and undergoes On-the-Job (OJT) training."
+        }
+    
+        cols = st.columns(8)
+    
+        for i in range(1, 9):
+    
+            with cols[i-1]:
+    
+                if st.button(f"{i}", key=f"recruitment_step{i}"):
+    
+                    st.session_state.recruitment_step = i
+    
+        st.divider()
+    
+        step = st.session_state.recruitment_step
+    
+        st.subheader(f"Stage {step}")
+    
+        st.info(details[step])
+    
+        st.progress(step / 8)
+    
+        # Example: Only Stage 4 contains your activity
+        if step == 4:
+            st.success("Activities I was involved in")
+            st.video("videos/iv.mp4")
+        else:
+            st.info("This process was not directly handled by me.")
 
-        st.markdown("""
-- Job Posting
-
-- Resume Screening
-
-- Interview Arrangement
-
-- Onboarding
-""")
 
     with tab2:
     
