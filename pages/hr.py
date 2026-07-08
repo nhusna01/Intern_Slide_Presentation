@@ -283,45 +283,179 @@ def reward_management():
         ]
     )
 
+    
+    # ------------------------------------------------------
+    # Compensation & Benefits
+    # ------------------------------------------------------
     with tab1:
+    
+        st.subheader("💼 Compensation & Benefits")
+    
+        st.divider()
+    
+        # -------------------------------
+        # Payroll Section
+        # -------------------------------
+        with st.expander("💰 Payroll", expanded=True):
+    
+            # Two images side by side
+            col1, col2 = st.columns(2)
+            with col1:
+                st.image("images/payroll1.png", caption="Payroll Overview", use_container_width=True)
+            with col2:
+                st.image("images/payroll2.png", caption="Payroll Activities", use_container_width=True)
+    
+            st.markdown("""
+            **Wage Period**
+            - Any month from 21st day of previous month to 20th day of the month.
+    
+            **Payment of Wages**
+            - 27th every month.
+    
+            **Overtime Definition**
+            - Work exceeding 8 hours.
+            - After completed 30 minutes, considered OT.
+    
+            **My Involvement**
+            - Assist calculate the extra OT.
+            - Assist check eligibility for Housing Loan Interest Subsidy (employees exceeding 240 months).
+            - Assist change work schedule in Oracle system for shift employees (iMODA plant).
+            """)
+    
+        # -------------------------------
+        # Medical Management Section
+        # -------------------------------
+        with st.expander("🏥 Medical Management", expanded=True):
+    
+            # Two images side by side
+            col1, col2 = st.columns(2)
+            with col1:
+                st.image("images/medical1.png", caption="Medical Benefits", use_container_width=True)
+            with col2:
+                st.image("images/medical2.png", caption="Insurance & Entitlement", use_container_width=True)
+    
+            st.markdown("""
+            **Medical Benefits**
+            - Inpatient
+            - Outpatient
+            - Dental
+            - Optical
+    
+            **Insurance (GTL)**
+            - Group Term Life.
+    
+            **Medical Entitlement for Dependent Hospitalization**
+            - Specialist Visit.
+    
+            **My Involvement**
+            - Processing monthly medical invoice received from TPA (Third Party Administration).
+            - Assist verifying invoice amount, stamp VOP, segregate according to company.
+            """)
+    
+        # -------------------------------
+        # Statutory Contribution & Other Deductions Section
+        # -------------------------------
+        with st.expander("📑 Statutory Contribution & Other Deductions", expanded=True):
+    
+            # Two images side by side
+            col1, col2 = st.columns(2)
+            with col1:
+                st.image("images/contribution1.png", caption="Statutory Contributions", use_container_width=True)
+            with col2:
+                st.image("images/contribution2.png", caption="Other Deductions", use_container_width=True)
+    
+            st.markdown("""
+            **Statutory Contribution**
+            - Mandatory deductions required by law.
+            - Examples: EPF, SOCSO & EIS, Income Tax.
+    
+            **Other Deductions**
+            - Voluntary deductions by agreement.
+            - Examples: Zakat, Motor Vehicle Loan (MVL), Tabung Haji, ASNB, Union Membership Fee.
+    
+            **My Involvement**
+            - Stamp date received, segregate according to organization (LHDN, Tabung Haji, Zakat).
+            - Fill in employee details for SOCSO (‘Borang 34’ for accident case).
+            """)
 
-        st.subheader("Compensation & Benefits")
 
-        st.write(
-            """
-            • Statutory Contribution & Deduction
-
-            • Medical Management
-
-            • Payroll
-
-            """
-        )
-
-        st.progress(0.7)
-
+    # ------------------------------------------------------
+    # General Affairs
+    # ------------------------------------------------------
     with tab2:
+    
+        st.subheader("🏢 General Affairs")
+    
+        st.divider()
+    
+        # -------------------------------
+        # Employee Welfare Section
+        # -------------------------------
+        with st.expander("🤝 Employee Welfare", expanded=True):
+    
+            # Two images side by side
+            col1, col2 = st.columns(2)
+            with col1:
+                st.image("images/welfare1.png", caption="Employee Welfare Programs", use_container_width=True)
+            with col2:
+                st.image("images/welfare2.png", caption="Support & Assistance", use_container_width=True)
+    
+            st.markdown("""
+            **Overview**
+            - Welfare initiatives to support employees’ well-being.
+            - Includes health, safety, and financial assistance programs.
+    
+            **Examples**
+            - Subsidies and allowances.
+            - Employee support services.
+            - Attend Kaneka Health Talk regarding the Sleep Apnea, and Mental Health, Stress, & Well-being.
+            """)
+    
+        # -------------------------------
+        # Company Events Section
+        # -------------------------------
+        with st.expander("🎉 Company Events", expanded=True):
+    
+            # Two images side by side
+            col1, col2 = st.columns(2)
+            with col1:
+                st.image("images/events1.png", caption="Annual Company Event", use_container_width=True)
+            with col2:
+                st.image("images/events2.png", caption="Team Building Activities", use_container_width=True)
+    
+            st.markdown("""
+            **Overview**
+            - Organized events to strengthen employee engagement and teamwork.
+    
+            **Examples**
+            - Attend Kaneka Annual Dinner appreciation and festive (Hari Raya) celebrations.
+            - Attend HR Team building sessions to build team bonding.
+            - Kaneka Run Ekiden, calculate the amount of payment for Ekiden.
+            """)
+    
+        # -------------------------------
+        # Company Facilities Section
+        # -------------------------------
+        with st.expander("🏭 Company Facilities", expanded=True):
+    
+            # Two images side by side
+            col1, col2 = st.columns(2)
+            with col1:
+                st.image("images/facilities1.png", caption="Office Facilities", use_container_width=True)
+            with col2:
+                st.image("images/facilities2.png", caption="Plant Facilities", use_container_width=True)
+    
+            st.markdown("""
+            **Overview**
+            - Facilities provided to ensure a safe and productive work environment.
+    
+            **Examples**
+            - Office amenities and meeting rooms.
+            - Plant facilities for shift employees.
+            - Recreational and common areas.
+            """)
 
-        st.subheader("General Affairs")
-
-        st.write(
-            """
-            • Employee Welfare
-
-            • Company Events
-
-            • Office Facilities
-
-            • Administration
-            """
-        )
-
-        st.slider(
-            "Employee Satisfaction",
-            0,
-            100,
-            85
-        )
+       
 
     with tab3:
 
@@ -436,7 +570,7 @@ def tair_management():
     # ------------------------------------------------------
     # Recruitment
     # ------------------------------------------------------
-    with tab3:
+    with tab1:
     
         st.subheader("Recruitment Process Flow")
     
