@@ -33,7 +33,7 @@ def myself_page():
         </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("<div class='chapter-title'>📖 Chapter 5 – Myself</div>", unsafe_allow_html=True)
+    st.markdown("<div class='chapter-title'>📖 Chapter 5 – Challenges</div>", unsafe_allow_html=True)
     st.markdown("<div class='chapter-caption'>✨ Flip through my internship journey like a digital book ✨</div>", unsafe_allow_html=True)
 
     st.divider()
@@ -110,8 +110,8 @@ def myself_page():
                 "Limited IT exposure"
             ],
             "Reality": [
-                "Involved in HR system development & training modules",
-                "Applied data visualization & Streamlit in HR processes"
+                "Involved in HR system development & HR modules",
+                "Applied data visualization & Streamlit in HR "
             ]
         })
         st.markdown("</div>", unsafe_allow_html=True)
@@ -132,27 +132,6 @@ def myself_page():
                 "Apply for HR/IT hybrid roles"
             ]
         })
-
-        st.markdown("### 🌟 Visualizing My Future")
-        
-        # Load animations (replace with actual Lottie URLs)
-        umrah_anim = load_lottieurl("https://lottie.host/7a8f3d4b-kaaba.json")
-        masters_anim = load_lottieurl("https://lottie.host/9b2c1d5e-graduation.json")
-        career_anim = load_lottieurl("https://lottie.host/4c6e2f7a-career.json")
-
-        col1, col2, col3 = st.columns(3)
-
-        with col1:
-            st_lottie(umrah_anim, height=200, key="umrah")
-            st.caption("Umrah with Parents")
-
-        with col2:
-            st_lottie(masters_anim, height=200, key="masters")
-            st.caption("Continue Master’s Studies")
-
-        with col3:
-            st_lottie(career_anim, height=200, key="career")
-            st.caption("Stable Career Path")
 
         st.markdown("</div>", unsafe_allow_html=True)
 
