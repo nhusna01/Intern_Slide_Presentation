@@ -378,177 +378,460 @@ def reward_management():
             - Fill in employee details for SOCSO (‘Borang 34’ for accident case).
             """)
 
-
     # ------------------------------------------------------
     # General Affairs
     # ------------------------------------------------------
     with tab2:
     
-        st.subheader("🏢 General Affairs")
+        # ------------------------------------------------------
+        # Custom CSS
+        # ------------------------------------------------------
+        st.markdown("""
+        <style>
+        .ga-title{
+            font-size:32px;
+            font-weight:700;
+            color:#0C54A0;
+            margin-bottom:10px;
+        }
+    
+        .ga-subtitle{
+            font-size:25px;
+            font-weight:600;
+            color:#0C54A0;
+            margin-top:15px;
+            margin-bottom:10px;
+        }
+    
+        .ga-text{
+            font-size:19px;
+            line-height:1.8;
+        }
+    
+        .ga-text ul{
+            font-size:19px;
+            line-height:1.8;
+        }
+    
+        .ga-text strong{
+            font-size:20px;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+    
+    
+        st.markdown(
+            '<div class="ga-title">🏢 General Affairs</div>',
+            unsafe_allow_html=True
+        )
     
         st.divider()
     
-        # -------------------------------
-        # Employee Welfare Section
-        # -------------------------------
+    
+        # ------------------------------------------------------
+        # Employee Welfare
+        # ------------------------------------------------------
         with st.expander("🤝 Employee Welfare", expanded=True):
     
-            # Two images side by side
             col1, col2 = st.columns(2)
+    
             with col1:
-                st.image("images/welfare1.png", caption="Employee Welfare Programs", use_container_width=True)
+                st.image(
+                    "images/welfare1.png",
+                    caption="Employee Welfare Programs",
+                    use_container_width=True
+                )
+    
             with col2:
-                st.image("images/welfare2.png", caption="Support & Assistance", use_container_width=True)
+                st.image(
+                    "images/welfare2.png",
+                    caption="Employee Health & Well-being",
+                    use_container_width=True
+                )
     
             st.markdown("""
+            <div class="ga-text">
+    
             **Overview**
-            - Welfare initiatives to support employees’ well-being.
-            - Includes health, safety, and financial assistance programs.
+            - Initiatives focused on supporting employees' health, safety, and well-being.
     
-            **Examples**
-            - Subsidies and allowances.
-            - Employee support services.
-            - Attend Kaneka Health Talk regarding the Sleep Apnea, and Mental Health, Stress, & Well-being.
-            """)
+            **Activities**
+            - Attended Kaneka Health Talk on **Sleep Apnea**.
+            - Attended Kaneka Health Talk on **Mental Health, Stress & Well-being**.
+            - Gained awareness of workplace health and wellness initiatives.
     
-        # -------------------------------
-        # Company Events Section
-        # -------------------------------
+            </div>
+            """, unsafe_allow_html=True)
+    
+    
+        # ------------------------------------------------------
+        # Company Events
+        # ------------------------------------------------------
         with st.expander("🎉 Company Events", expanded=True):
     
-            # Two images side by side
             col1, col2 = st.columns(2)
+    
             with col1:
-                st.image("images/events1.jpg", caption="Annual Company Event", use_container_width=True)
+                st.image(
+                    "images/events1.jpg",
+                    caption="Annual Company Event",
+                    use_container_width=True
+                )
+    
             with col2:
-                st.image("images/events2.jpg", caption="Team Building Activities", use_container_width=True)
+                st.image(
+                    "images/events2.jpg",
+                    caption="Team Building Activities",
+                    use_container_width=True
+                )
     
             st.markdown("""
+            <div class="ga-text">
+    
             **Overview**
-            - Organized events to strengthen employee engagement and teamwork.
+            - Participated in company activities to strengthen employee engagement and teamwork.
     
-            **Examples**
-            - Attend Kaneka Annual Dinner appreciation and festive (Hari Raya) celebrations.
-            - Attend HR Team building sessions to build team bonding.
-            - Kaneka Run Ekiden, calculate the amount of payment for Ekiden.
-            """)
+            **Activities**
+            - Attended Kaneka Annual Dinner and festive celebrations.
+            - Participated in HR team-building activities.
+            - Assisted in calculating participation fees for Kaneka Run Ekiden.
     
-        # -------------------------------
-        # Company Facilities Section
-        # -------------------------------
-        with st.expander("🏭 Company Facilities", expanded=True):
+            </div>
+            """, unsafe_allow_html=True)
     
-            # Two images side by side
-            col1, col2 = st.columns(2)
-            with col1:
-                st.image("images/facilities1.png", caption="Office Facilities", use_container_width=True)
-            with col2:
-                st.image("images/facilities2.png", caption="Plant Facilities", use_container_width=True)
     
-            st.markdown("""
-            **Overview**
-            - Facilities provided to ensure a safe and productive work environment.
-    
-            **Examples**
-            - Office amenities and meeting rooms.
-            - Plant facilities for shift employees.
-            - Recreational and common areas.
-            """)
-
-       
-
-    with tab3:
-
-        st.subheader("🌟 Additional Tasks & Activities")
-    
-        st.write(
-            "Besides my daily responsibilities in the Reward Management department, "
-            "I also participated in several company events and activities."
-        )
     
         # ------------------------------------------------------
-        # Jamuan Raya
+        # Administrative & Operational Support
         # ------------------------------------------------------
-        with st.expander("🎉 Jamuan Raya 2026 (Admin 2 Committee)", expanded=True):
+        with st.expander("🏢 Administrative & Operational Support", expanded=True):
+    
+    
+            # ------------------------------------------------------
+            # Timeslip Organization
+            # ------------------------------------------------------
+            st.markdown(
+                '<div class="ga-subtitle">⏰ Timeslip Organization</div>',
+                unsafe_allow_html=True
+            )
+    
     
             col1, col2 = st.columns(2)
     
             with col1:
                 st.image(
+                    "images/timeslip1.png",
+                    caption="Timeslip Sorting Process",
+                    use_container_width=True
+                )
+    
+            with col2:
+                st.image(
+                    "images/timeslip2.png",
+                    caption="Organized Timeslips by Month",
+                    use_container_width=True
+                )
+    
+    
+            st.markdown("""
+            <div class="ga-text">
+    
+            **Responsibilities**
+            - Assisted in sorting timeslips according to the respective months.
+            - Organized timeslips in a systematic manner.
+    
+            </div>
+            """, unsafe_allow_html=True)
+    
+    
+    
+            st.divider()
+    
+    
+    
+            # ------------------------------------------------------
+            # Cafeteria Signage Improvement
+            # ------------------------------------------------------
+            st.markdown(
+                '<div class="ga-subtitle">🧹 Cafeteria Signage Improvement</div>',
+                unsafe_allow_html=True
+            )
+    
+    
+            col1, col2 = st.columns(2)
+    
+            with col1:
+                display_image(
+                    "images/welfare1.jpg",
+                    "Cafeteria Signage Clean-up (Before)"
+                )
+    
+            with col2:
+                display_image(
+                    "images/welfare2.jpg",
+                    "Cafeteria Signage Clean-up (After)"
+                )
+    
+    
+            st.markdown("""
+            <div class="ga-text">
+    
+            **Responsibilities**
+            - Assisted in improving cafeteria organization by removing outdated signage.
+            - Supported workplace housekeeping activities to maintain a clean and organized environment.
+    
+            </div>
+            """, unsafe_allow_html=True)
+    
+    
+    
+            st.divider()
+    
+    
+    
+            # ------------------------------------------------------
+            # Hari Raya Celebration Support
+            # ------------------------------------------------------
+            st.markdown(
+                '<div class="ga-subtitle">🎉 Hari Raya Celebration Support</div>',
+                unsafe_allow_html=True
+            )
+    
+    
+            col3, col4, col5 = st.columns(3)
+    
+    
+            with col3:
+                display_image(
                     "images/raya1.png",
-                    caption="Event Preparation",
-                    use_container_width=True
+                    "Beverage Preparation"
                 )
     
-            with col2:
-                st.image(
+    
+            with col4:
+                display_image(
                     "images/raya2.png",
-                    caption="Hari Raya Celebration",
-                    use_container_width=True
+                    "Food Arrangement"
                 )
+    
+    
+            with col5:
+                display_image(
+                    "images/raya3.png",
+                    "Post-Event Clean-up"
+                )
+    
     
             st.markdown("""
-    **Role**
-    - Assisted the **Admin 2 Committee** in organizing the Hari Raya celebration.
-    - Supported event preparation and logistics.
-    - Helped ensure the event ran smoothly.
+            <div class="ga-text">
+    
+            **Responsibilities**
+            - Assisted in arranging food according to the designated signage.
+            - Assisted in preparing beverages for the celebration.
+            - Supported the packing and distribution of the remaining food to employees.
+            - Assisted in post-event clean-up activities and restored the venue after the event.
+    
+            </div>
+            """, unsafe_allow_html=True)
+    
+    
+    
+            st.success("""
+    ### Competencies Developed
+    - Teamwork and Collaboration
+    - Event Coordination
+    - Administrative Support
+    - Workplace Organization
+    - Responsibility and Attention to Detail
     """)
-    
-        # ------------------------------------------------------
-        # Karakuri Competition
-        # ------------------------------------------------------
-        with st.expander("🏆 Karakuri Competition", expanded=True):
-    
-            col1, col2 = st.columns(2)
-    
-            with col1:
-                st.image(
-                    "images/karakuri1.png",
-                    caption="Competition Project",
-                    use_container_width=True
-                )
-    
-            with col2:
-                st.image(
-                    "images/karakuri2.png",
-                    caption="Award Ceremony",
-                    use_container_width=True
-                )
-    
-            st.markdown("""
-    **Achievement**
-    - Participated in the **Karakuri Competition**.
-    - Worked together with the team throughout the competition.
-    - 🥈 **Won Second Place.**
-    """)
-    
-        # ------------------------------------------------------
-        # Kaneka Run Ekiden
-        # ------------------------------------------------------
-        with st.expander("🏃 Kaneka Run Ekiden", expanded=True):
-    
-            col1, col2 = st.columns(2)
-    
-            with col1:
-                st.image(
-                    "images/ekiden1.png",
-                    caption="Race Day",
-                    use_container_width=True
-                )
-    
-            with col2:
-                st.image(
-                    "images/ekiden2.png",
-                    caption="Team Photo",
-                    use_container_width=True
-                )
-    
-            st.markdown("""
-    **Achievement**
-    - Participated in the **Kaneka Run Ekiden**.
-    - Represented the HR Department.
-    - 🥉 **Won Third Place.**
-    """)
+
+
+
+# ------------------------------------------------------
+# Additional Tasks
+# ------------------------------------------------------
+       
+with tab3:
+
+    # ------------------------------------------------------
+    # Custom CSS
+    # ------------------------------------------------------
+    st.markdown("""
+    <style>
+    .additional-title{
+        font-size:32px;
+        font-weight:700;
+        color:#0C54A0;
+        margin-bottom:10px;
+    }
+
+    .additional-text{
+        font-size:19px;
+        line-height:1.8;
+    }
+
+    .additional-text ul{
+        font-size:19px;
+        line-height:1.8;
+        margin-top:8px;
+    }
+
+    .additional-text strong{
+        font-size:20px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown(
+        '<div class="additional-title">🌟 Additional Tasks & Activities</div>',
+        unsafe_allow_html=True
+    )
+
+    st.markdown("""
+    <div class="additional-text">
+    Besides my daily responsibilities in the Reward Management department,
+    I also participated in several company events and activities.
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ------------------------------------------------------
+    # Jamuan Raya
+    # ------------------------------------------------------
+    with st.expander("🎉 Jamuan Raya 2026 (Admin 2 Committee)", expanded=True):
+
+        col1, col2, col3, col4 = st.columns(4)
+
+        with col1:
+            st.image(
+                "images/raya11.png",
+                caption="Hari Raya Celebration - Admin 2",
+                use_container_width=True
+            )
+
+        with col2:
+            st.image(
+                "images/raya22.png",
+                caption="Hari Raya Celebration - Admin 1",
+                use_container_width=True
+            )
+
+        with col3:
+            st.image(
+                "images/raya33.png",
+                caption="Hari Raya Celebration - Maintenance",
+                use_container_width=True
+            )
+
+        with col4:
+            st.image(
+                "images/raya44.png",
+                caption="Hari Raya Celebration - Engineering",
+                use_container_width=True
+            )
+
+        st.markdown("""
+        <div class="additional-text">
+
+        **Activities**
+        - Attended Hari Raya celebrations organized by various departments and production plants.
+        - Assisted the **Admin 2 Committee** in organizing the Hari Raya celebration.
+        - Supported event preparation.
+
+        </div>
+        """, unsafe_allow_html=True)
+
+    # ------------------------------------------------------
+    # Karakuri Competition
+    # ------------------------------------------------------
+    with st.expander("🏆 Karakuri Competition", expanded=True):
+
+        col1, col2, col3, col4 = st.columns(4)
+
+        with col1:
+            st.image(
+                "images/karakuri2.png",
+                caption="Competition Project",
+                use_container_width=True
+            )
+
+        with col2:
+            st.image(
+                "images/karakuri1.png",
+                caption="Project Presentation & Demonstration",
+                use_container_width=True
+            )
+
+        with col3:
+            st.image(
+                "images/karakuri3.jpg",
+                caption="Award Ceremony",
+                use_container_width=True
+            )
+
+        with col4:
+            st.image(
+                "images/karakuri4.jpg",
+                caption="Group Photo Session",
+                use_container_width=True
+            )
+
+        st.markdown("""
+        <div class="additional-text">
+
+        **Achievement**
+        - Assisted in assembling the PVC pipe trolley based on the approved design.
+        - Presented the problem statement and explained the trolley design and its purpose.
+        - Collaborated with team members throughout the competition.
+        - 🥈 **Won Second Place.**
+
+        </div>
+        """, unsafe_allow_html=True)
+
+    # ------------------------------------------------------
+    # Kaneka Run Ekiden
+    # ------------------------------------------------------
+    with st.expander("🏃 Kaneka Run Ekiden", expanded=True):
+
+        col1, col2, col3, col4 = st.columns(4)
+
+        with col1:
+            st.image(
+                "images/ekiden1.png",
+                caption="Warm-up Session",
+                use_container_width=True
+            )
+
+        with col2:
+            st.image(
+                "images/ekiden2.png",
+                caption="Race Participation",
+                use_container_width=True
+            )
+
+        with col3:
+            st.image(
+                "images/ekiden3.png",
+                caption="Award Ceremony",
+                use_container_width=True
+            )
+
+        with col4:
+            st.image(
+                "images/ekiden4.png",
+                caption="Photo Session with Interns",
+                use_container_width=True
+            )
+
+        st.markdown("""
+        <div class="additional-text">
+
+        **Achievement**
+        - Participated in the **Kaneka Run Ekiden**.
+        - Represented the HR Department.
+        - 🥉 **Won Third Place.**
+
+        </div>
+        """, unsafe_allow_html=True)
 
 
 # ==========================================================
@@ -566,6 +849,7 @@ def tair_management():
             "Discipline",
         ]
     )
+
 
     # ------------------------------------------------------
     # Recruitment
@@ -588,30 +872,20 @@ def tair_management():
     
         details = {
             1: "Formal Manpower Request: Requestor submits an electronic Manpower Request form (e-MPR) via the Mendix system.",
-            
             2: "Resume Bank Distribution: Talent Acquisition PIC shares the compiled resume bank with the designated hiring panel for review.",
-            
             3: "Interview Coordination: TA PIC manages the logistics of the Interview session, including aligning the panel’s schedule and booking the necessary meeting rooms.",
-            
             4: "The Interview Session: Managed by the TA PIC, the Interview takes place on the appointed day (this is a critical milestone in the process).",
-            
             5: "Pre-Employment Medical Checkup: The successful candidate is required to complete a medical examination before the process can proceed.",
-            
             6: "The Official Offer: Once accepted, the TA PIC officially informs the candidate and provides them with a formal offer letter.",
-            
             7: "Reporting Dates & Feedback: The TA PIC emails the reporting duty date to the successful candidate, while simultaneously sending feedback or status updates to unsuccessful applicants.",
-            
             8: "Onboarding & Training: The process concludes as the new staff member joins the team and undergoes On-the-Job (OJT) training."
         }
     
         cols = st.columns(8)
     
         for i in range(1, 9):
-    
             with cols[i-1]:
-    
                 if st.button(f"{i}", key=f"recruitment_step{i}"):
-    
                     st.session_state.recruitment_step = i
     
         st.divider()
@@ -620,7 +894,12 @@ def tair_management():
     
         st.subheader(f"Stage {step}")
     
-        st.info(details[step])
+        # Display details with larger font
+        st.markdown(f"""
+        <div style="font-size:16px;">
+        {details[step]}
+        </div>
+        """, unsafe_allow_html=True)
     
         st.progress(step / 8)
     
@@ -632,72 +911,98 @@ def tair_management():
             st.info("This process was not directly handled by me.")
 
 
+    # ------------------------------------------------------
+    # Disciplinary & Misconduct 
+    # ------------------------------------------------------
     with tab2:
-    
-        st.subheader("⚖️ Discipline Management")
-    
-        # Display Employee Conduct & Resolution Guide
-        st.image(
-            "images/discipline1.png",
-            caption="Employee Conduct and Resolution Guide",
-            use_container_width=True
-        )
-    
-        st.divider()
-    
-        # Disciplinary & Misconduct Management
-        with st.expander("⚖️ Disciplinary & Misconduct Management", expanded=True):
-    
-            st.markdown("""
-    **Definition**
-    
-    Misconduct refers to any act or behavior that violates the company's Terms and Conditions of Employment or Company Rules.
-    
-    **Misconduct Categories**
-    
-    🔹 **Level 1 – Minor Misconduct**
-    - Minor violations of company rules.
-    - Example: Late attendance.
-    
-    🔹 **Level 2 – Serious Misconduct**
-    - Repeated or more serious violations.
-    - Example: Habitual late attendance.
-    
-    🔹 **Level 3 – Major Misconduct**
-    - Severe misconduct that may lead to disciplinary action.
-    - Example: Unauthorized use or falsification of a signature.
-    """)
-    
-        # Grievance Procedure
-        with st.expander("🤝 Grievance Procedure", expanded=True):
-    
-            st.markdown("""
-    The grievance procedure provides employees with a fair and systematic way to resolve workplace issues.
-    
-    **Step 1 – Immediate Superior**
-    - Discuss the issue with your immediate superior within **3 working days**.
-    
-    **Step 2 – Division / Production Head**
-    - If unresolved, escalate the issue within **5 working days**.
-    
-    **Step 3 – Human Resources**
-    - Submit a formal appeal to HR within **7 working days** if the issue remains unresolved.
-    """)
-    
-        # Employee Engagement & Support
-        with st.expander("📢 Employee Engagement & Support", expanded=True):
-    
-            st.markdown("""
-    **Support Channels**
-    - 📞 Kaneka Care
-    - 📧 HR Helpdesk
-    - 🛡️ Whistleblower Hotline
-    
-    **Employee Engagement**
-    - HR Policy Briefings
-    - Business Code of Conduct Sessions
-    - Employee Awareness & Communication Programs
-    """)
+            st.subheader("⚖️ Discipline Management")
+        
+            # Display Employee Conduct & Resolution Guide
+            st.image(
+                "images/discipline1.png",
+                caption="Employee Conduct and Resolution Guide",
+                use_container_width=True
+            )
+        
+            st.divider()
+        
+            # Disciplinary & Misconduct Management
+            with st.expander("⚖️ Disciplinary & Misconduct Management", expanded=True):
+                st.markdown("""
+                <div style="font-size:16px;">
+                <b>Definition</b><br><br>
+                Misconduct refers to any act or behavior that violates the company's Terms and Conditions of Employment or Company Rules.<br><br>
+        
+                <b>Misconduct Categories</b><br><br>
+                🔹 <b>Category 1 – Minor Misconduct</b><br>
+                - Minor violations of company rules.<br>
+                - Example: Late attendance.<br><br>
+        
+                🔹 <b>Category 2 – Serious Misconduct</b><br>
+                - Repeated or more serious violations.<br>
+                - Example: Habitual late attendance.<br><br>
+        
+                🔹 <b>Category 3 – Major Misconduct</b><br>
+                - Severe misconduct that may lead to disciplinary action.<br>
+                - Example: Unauthorized use or falsification of a signature.<br>
+                </div>
+                """, unsafe_allow_html=True)
+        
+            # Grievance Procedure
+            with st.expander("🤝 Grievance Procedure", expanded=True):
+                st.markdown("""
+                <div style="font-size:16px;">
+                The grievance procedure provides employees with a fair and systematic way to resolve workplace issues.<br><br>
+        
+                <b>Step 1 – Immediate Superior</b><br>
+                - Discuss the issue with your immediate superior within <b>3 working days</b>.<br><br>
+        
+                <b>Step 2 – Division / Production Head</b><br>
+                - If unresolved, escalate the issue within <b>5 working days</b>.<br><br>
+        
+                <b>Step 3 – Human Resources</b><br>
+                - Submit a formal appeal to HR within <b>7 working days</b> if the issue remains unresolved.<br>
+                </div>
+                """, unsafe_allow_html=True)
+        
+            # Employee Engagement & Support
+            with st.expander("📢 Employee Engagement & Support", expanded=True):
+                st.markdown("""
+                <div style="font-size:16px;">
+                <b>Support Channels</b><br>
+                - 📞 Kaneka Care<br>
+                - 📧 HR Helpdesk<br>
+                - 🛡️ Whistleblower Hotline<br><br>
+        
+                <b>Employee Engagement</b><br>
+                - HR Policy Briefings<br>
+                - Business Code of Conduct Sessions<br>
+                - Employee Awareness & Communication Programs<br>
+                </div>
+                """, unsafe_allow_html=True)
+        
+        
+            # Activities Involved
+            with st.expander("📝 Activities I Involved In", expanded=True):
+                st.markdown("""
+                <div style="font-size:16px;">
+                Here are the activities I participated in under Discipline Management:<br><br>
+            
+                - Coordinated seating arrangements and prepared documents during domestic inquiry.<br>
+                - Converted the Employee Engagement Survey into Google Form using the provided template to ease distribution.<br>
+                - Participated in briefing sessions on the employee engagement survey.<br>
+                - Attended briefing at the Modifier Plant covering:<br>
+                  • Disciplinary procedures<br>
+                  • Grievance handling<br>
+                  • Harassment awareness<br>
+                  • Business Code of Conduct<br><br>
+            
+                These activities provided me with valuable exposure to HR operations, grievance resolution, and workplace ethics.<br>
+                </div>
+                """, unsafe_allow_html=True)
+            
+                # Display related video instead of images
+                st.video("videos/discipline_activities.mp4")
 
 
 # ==========================================================
