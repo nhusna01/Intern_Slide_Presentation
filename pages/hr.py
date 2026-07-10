@@ -893,7 +893,7 @@ def tair_management():
     
         # Display details with larger font
         st.markdown(f"""
-        <div style="font-size:16px;">
+        <div style="font-size:24px;">
         {details[step]}
         </div>
         """, unsafe_allow_html=True)
@@ -926,7 +926,7 @@ def tair_management():
             # Disciplinary & Misconduct Management
             with st.expander("⚖️ Disciplinary & Misconduct Management", expanded=True):
                 st.markdown("""
-                <div style="font-size:16px;">
+                <div style="font-size:24px;">
                 <b>Definition</b><br><br>
                 Misconduct refers to any act or behavior that violates the company's Terms and Conditions of Employment or Company Rules.<br><br>
         
@@ -948,7 +948,7 @@ def tair_management():
             # Grievance Procedure
             with st.expander("🤝 Grievance Procedure", expanded=True):
                 st.markdown("""
-                <div style="font-size:16px;">
+                <div style="font-size:24px;">
                 The grievance procedure provides employees with a fair and systematic way to resolve workplace issues.<br><br>
         
                 <b>Step 1 – Immediate Superior</b><br>
@@ -965,7 +965,7 @@ def tair_management():
             # Employee Engagement & Support
             with st.expander("📢 Employee Engagement & Support", expanded=True):
                 st.markdown("""
-                <div style="font-size:16px;">
+                <div style="font-size:24px;">
                 <b>Support Channels</b><br>
                 - 📞 Kaneka Care<br>
                 - 📧 HR Helpdesk<br>
@@ -982,7 +982,7 @@ def tair_management():
             # Activities Involved
             with st.expander("📝 Activities I Involved In", expanded=True):
                 st.markdown("""
-                <div style="font-size:16px;">
+                <div style="font-size:24px;">
                 Here are the activities I participated in under Discipline Management:<br><br>
             
                 - Coordinated seating arrangements and prepared documents during domestic inquiry.<br>
@@ -999,7 +999,7 @@ def tair_management():
                 """, unsafe_allow_html=True)
             
                 # Display related video instead of images
-                st.video("videos/discipline_activities.mp4")
+                st.video("images/discipline.mp4")
 
 
 # ==========================================================
@@ -1007,21 +1007,27 @@ def tair_management():
 # ==========================================================
 def hr_page():
 
-    st.title("HR Organizational Flowchart")
+    st.markdown("""
+    <style>
+        .block-container {
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            max-width: 100%;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
-    st.markdown(
-        """
-        <style>
-            .block-container {
-                padding-top: 1rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
-                max-width: 100%;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown("""
+    <h1 style="
+        text-align:center;
+        font-size:70px;
+        color:#0C54A0;
+        font-weight:900;
+        margin-bottom:20px;">
+        HR Organizational Flowchart
+    </h1>
+    """, unsafe_allow_html=True)
     
     st.image(
         "images/hr_org_chart.png",
