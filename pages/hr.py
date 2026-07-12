@@ -429,9 +429,9 @@ def reward_management():
     
     
         # ------------------------------------------------------
-        # Employee Welfare
+        # Employee Benefits
         # ------------------------------------------------------
-        with st.expander("🤝 Employee Welfare", expanded=True):
+        with st.expander("🤝 Employee Benefits", expanded=True):
     
             col1, col2 = st.columns(2)
     
@@ -456,18 +456,19 @@ def reward_management():
             - Initiatives focused on supporting employees' health, safety, and well-being.
     
             **Activities**
+            
             - Attended Kaneka Health Talk on **Sleep Apnea**.
             - Attended Kaneka Health Talk on **Mental Health, Stress & Well-being**.
-            - Gained awareness of workplace health and wellness initiatives.
+            - Gained awareness of workplace health and wellness initiatives. These two Kaneka Health Talk under Corporate Wellness Programme.
     
             </div>
             """, unsafe_allow_html=True)
     
     
         # ------------------------------------------------------
-        # Company Events
+        # Event Management
         # ------------------------------------------------------
-        with st.expander("🎉 Company Events", expanded=True):
+        with st.expander("🎉 Event Management", expanded=True):
     
             col1, col2 = st.columns(2)
     
@@ -492,9 +493,11 @@ def reward_management():
             - Participated in company activities to strengthen employee engagement and teamwork.
     
             **Activities**
-            - Attended Kaneka Annual Dinner and festive celebrations.
-            - Participated in HR team-building activities.
+            - Attended Kaneka Annual Dinner appreciation and festive (Hari Raya) celebrations.
+            - Participated in HR Mingle & Munch event at Swiss Garden Beach Resort.
+            - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort. 
             - Assisted in calculating participation fees for Kaneka Run Ekiden.
+            - A
     
             </div>
             """, unsafe_allow_html=True)
