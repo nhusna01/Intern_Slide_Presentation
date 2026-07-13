@@ -250,7 +250,15 @@ if st.session_state.page == "Home":
                 z-index: 1;
                 background: rgba(0,51,102,0.7);
             ">
-                <img src="images/Kaneka.jpg" width="120">
+            """,
+            unsafe_allow_html=True
+        )
+        
+        # Use Streamlit's st.image for reliability
+        st.image("images/Kaneka.jpg", width=120)
+        
+        st.markdown(
+            """
                 <h1 style="font-size:55px; font-weight:bold;">✨ Welcome to My Internship Journey ✨</h1>
                 <p style="color:#FFD700; font-size:30px; font-weight:bold; margin-top:10px;">
                     Navigate using the sidebar to explore the highlights!
@@ -259,6 +267,7 @@ if st.session_state.page == "Home":
             """,
             unsafe_allow_html=True
         )
+
     
         # Full-page centered Start Presentation button
         st.markdown(
