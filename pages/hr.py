@@ -502,7 +502,7 @@ def reward_management():
 
         with col3:
             st.image(
-                "images/events3.jpg",
+                "images/events3.png",
                 caption="HR Mingle & Munch",
                 use_container_width=True
             )
