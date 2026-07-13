@@ -278,16 +278,27 @@ def intro_page():
     # 🌸 About Me
     # ==============================
     st.subheader("🌸 About Me")
-
-    st.write(
+    
+    st.markdown(
         """
-        During my internship at Kaneka Malaysia, I contribute to HR and IT projects such as eForm creation,
-        SPL module development, training support, simple data analysis, and administrative tasks. I am 
-        passionate about learning new technologies, exploring innovative tools, and continuously enhancing 
-        both my technical and professional skills.
-        
-        """
+        <style>
+            .about-text {
+                font-size: 32px;       /* Bigger font size */
+                line-height: 1.8;
+                font-weight: 600;
+                color: #2c3e50;
+                text-align: justify;
+            }
+        </style>
+        <div class="about-text">
+            I am the eldest of four siblings and currently 24 years old.  
+            I love desserts 🍰 and enjoy adventurous activities like hiking and sports 
+            that keep me active and energized.
+        </div>
+        """,
+        unsafe_allow_html=True
     )
+
     
 
     st.markdown(
@@ -295,11 +306,10 @@ def intro_page():
     unsafe_allow_html=True
     )
 
+   
     # ==============================
-    # 🛠️ Skills
+    # 💻 Technical Skills
     # ==============================
-    st.subheader("💻 Technical Skills")
-
     technical_skills = {
         "Python Programming": 75,
         "Data Preparation": 90,
@@ -308,9 +318,22 @@ def intro_page():
         "Machine Learning": 85,
         "Data Mining": 90,
     }
-
+    
+    # Define skill levels based on percentage
+    def skill_level(percent):
+        if percent < 60:
+            return "Beginner"
+        elif percent < 80:
+            return "Intermediate"
+        elif percent < 90:
+            return "Advanced"
+        else:
+            return "Expert"
+    
+    st.subheader("💻 Technical Skills")
+    
     for skill, level in technical_skills.items():
-        st.write(f"**{skill}**")
+        st.write(f"**{skill}** – {level}% ({skill_level(level)})")
         st.progress(level)
 
 
@@ -318,7 +341,9 @@ def intro_page():
     st.markdown("<div style='margin:30px;'></div>", unsafe_allow_html=True)
 
 
-    # Soft Skills
+    # ==============================
+    # 🤝 Soft Skills
+    # ==============================
     soft_skills = {
         "Communication": 85,
         "Teamwork": 90,
@@ -328,10 +353,23 @@ def intro_page():
         "Creativity": 90,
     }
     
+    # Define skill levels based on percentage
+    def skill_level(percent):
+        if percent < 60:
+            return "Beginner"
+        elif percent < 80:
+            return "Intermediate"
+        elif percent < 90:
+            return "Advanced"
+        else:
+            return "Expert"
+    
     st.markdown("### 🤝 Soft Skills")
+    
     for skill, level in soft_skills.items():
-        st.write(f"**{skill}**")
+        st.write(f"**{skill}** – {level}% ({skill_level(level)})")
         st.progress(level)
+    
 
     
     # Add vertical spacing
