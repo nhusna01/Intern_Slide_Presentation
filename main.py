@@ -252,7 +252,7 @@ if st.session_state.page == "Home":
             ">
                 <h1 style="font-size:65px; font-weight:bold;">✨ Welcome to My Internship Journey ✨</h1>
                 <p style="color:#FFD700; font-size:34px; font-weight:bold; margin-top:15px;">
-                    Navigate using the sidebar to explore the highlights!
+                    Navigate using the sidebar to explore the contents!
                 </p>
             </div>
             """,
@@ -260,14 +260,14 @@ if st.session_state.page == "Home":
         )
 
     
-        # Full-page centered Start Presentation button
+        # Start Presentation button
         st.markdown(
             """
             <div style="
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 80vh;
+                margin-top: 2rem;   /* smaller spacing */
                 width: 100%;
             ">
             """,
@@ -279,6 +279,7 @@ if st.session_state.page == "Home":
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
         
         st.markdown("</div>", unsafe_allow_html=True)
+
     
         # Title & Intro Section
         st.markdown(
