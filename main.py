@@ -149,7 +149,7 @@ st.sidebar.markdown(
     "<div style='margin-top:-5px; margin-bottom:-50px;'>",
     unsafe_allow_html=True
 )
-st.sidebar.image("images/kaneka.png", width=200)
+st.sidebar.image("images/UMK_logo2.png", width=200)
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 # Sidebar title
