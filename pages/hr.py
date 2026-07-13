@@ -440,15 +440,15 @@ def reward_management():
     
         with col1:
             st.image(
-                "images/welfare1.png",
-                caption="Employee Wellness Activities",
+                "images/welfare1.jpg",
+                caption="Health & Well-being Programme",
                 use_container_width=True
             )
     
         with col2:
             st.image(
-                "images/welfare2.png",
-                caption="Health & Well-being Programme",
+                "images/welfare2.jpg",
+                caption="Retirement Programme",
                 use_container_width=True
             )
 
