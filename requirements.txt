@@ -4,3 +4,4 @@ pandas
 streamlit-lottie
 matplotlib
 plotly
+streamlit-aggrid
