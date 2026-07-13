@@ -35,7 +35,7 @@ def intro_page():
             padding: 8px 16px;
             border-radius: 20px;
             margin: 5px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -249,8 +249,7 @@ def intro_page():
             <div class="fact-icon">👩‍💼</div>
             <div class="fact-title">Supervisor</div>
             <div class="fact-value" style="text-align:left; font-size:22px;">
-                • Pn. Zuraidah Ismail<br>
-                • Pn. Norkamariah Othman
+                Pn. Zuraidah Ismail & Pn. Norkamariah Othman
             </div>
         </div>
         """, unsafe_allow_html=True)
