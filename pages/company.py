@@ -4,6 +4,7 @@ from streamlit_lottie import st_lottie
 import requests
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
+from st_aggrid import AgGrid, GridOptionsBuilder
 
 def company_page():
     # ==============================
@@ -201,7 +202,7 @@ def company_page():
             st.write("- Originated with vinyl chloride production (Kanevinyl)")
     
         with st.expander("👤 Management"):
-            st.write("- Current President of Kaneka Kazuhiko Fujii")
+            st.write("- Current President of Kaneka, Kazuhiko Fujii")
             st.write("- Paid capital: 33,046 million yen")
     
         with st.expander("📍 Headquarters"):
@@ -211,13 +212,7 @@ def company_page():
         with st.expander("🌍 Global Presence"):
             st.write("- Subsidiaries in Middle East, Europe, Africa, The Americas, Asia")
     
-        # Interactive metrics
-        st.markdown("---")
-        st.metric("Employees Worldwide", 11762, "+500 this year")
-        st.metric("Global Subsidiaries", 21, "+2 in recent years")
-        st.progress(0.8)  # Example sustainability progress bar
-        st.slider("Employee Engagement Index", 0, 100, 85)
-
+      
 
     elif section == "Corporate Philosophy":
         st.header("🧭 Corporate Philosophy")
@@ -226,7 +221,7 @@ def company_page():
             """
             <style>
             .philosophy {
-                font-size: 18px;
+                font-size: 24px;
                 line-height: 1.6;
                 text-align: center;
                 padding: 20px;
@@ -247,7 +242,7 @@ def company_page():
             }
 
             .interpretation {
-                font-size: 16px;
+                font-size: 24px;
                 line-height: 1.6;
                 text-align: left;
                 padding: 15px;
@@ -295,7 +290,7 @@ def company_page():
         col1, col2, col3 = st.columns([1,2,1])  # middle column wider
         with col2:
             if st.button(
-                "💡 Toggle My Interpretation",
+                "💡 My Interpretation",
                 key="toggle_button"
             ):
                 st.session_state.show_interpretation = not st.session_state.show_interpretation
@@ -305,7 +300,7 @@ def company_page():
             st.markdown(
                 """
                 <div class="interpretation" style="
-                    font-size:16px;
+                    font-size:20px;
                     line-height:1.6;
                     text-align:left;
                     padding:15px;
@@ -374,12 +369,11 @@ def company_page():
         # Display map with all company locations
         st.map(location_data, zoom=12, use_container_width=True)
        
-
-
+    
     elif section == "History":
-
+    
         st.header("📜 Company History")
-
+    
         history = pd.DataFrame({
             "Date": [
                 "1995-08-01",
@@ -398,39 +392,40 @@ def company_page():
                 "Kaneka MS Malaysia Sdn. Bhd."
             ]
         })
-        
+    
         history["Date"] = pd.to_datetime(history["Date"])
         history["Established"] = history["Date"].dt.strftime("%B %Y")
         history["Label"] = history["Date"].dt.strftime("%b\n%Y")
-        
+    
         # ----------------------------
-        # Interactive Table
+        # Interactive Table with AgGrid
         # ----------------------------
         st.subheader("📊 Company List")
-        
-        st.dataframe(
-            history[["Established", "Companies"]],
-            use_container_width=True,
-            hide_index=True
-        )
-        
+    
+        gb = GridOptionsBuilder.from_dataframe(history[["Established", "Companies"]])
+        gb.configure_pagination(paginationAutoPageSize=True)  # Add pagination
+        gb.configure_side_bar()  # Add sidebar filters
+        gb.configure_default_column(groupable=True, value=True, enableRowGroup=True)
+        gridOptions = gb.build()
+    
+        AgGrid(history[["Established", "Companies"]], gridOptions=gridOptions, height=300)
+    
         # ----------------------------
         # Timeline
         # ----------------------------
         st.subheader("📅 Company Timeline")
-        
+    
         fig = go.Figure()
-        
+    
         # Timeline line
         fig.add_trace(go.Scatter(
             x=history["Date"],
             y=[1] * len(history),
             mode="lines",
             line=dict(width=4, color="#023e8a"),
-            hoverinfo="skip",
-            showlegend=False
+            name="Timeline"
         ))
-        
+    
         # Milestones
         fig.add_trace(go.Scatter(
             x=history["Date"],
@@ -440,29 +435,28 @@ def company_page():
             textposition="bottom center",
             marker=dict(
                 size=18,
-                color="#023e8a",
-                line=dict(color="white", width=2)
+                color="gold",
+                symbol="diamond",
+                line=dict(color="black", width=2)
             ),
             customdata=history[["Companies", "Established"]],
-            hovertemplate=
-            "<b>%{customdata[0]}</b><br>"
-            "Established: %{customdata[1]}"
-            "<extra></extra>",
-            showlegend=False
+            hovertemplate="<b>%{customdata[0]}</b><br>Established: %{customdata[1]}<extra></extra>",
+            name="Companies"
         ))
     
         fig.update_layout(
             title="Kaneka Malaysia Company History",
-            height=350,
+            height=400,
             plot_bgcolor="white",
             paper_bgcolor="white",
-            margin=dict(l=30, r=30, t=60, b=40)
+            margin=dict(l=30, r=30, t=60, b=40),
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
         )
     
         fig.update_xaxes(
-            title="",
+            title="Year",
             tickformat="%Y",
-            showgrid=False,
+            showgrid=True,
             showline=True,
             linecolor="lightgray",
             ticks="outside",
@@ -473,7 +467,8 @@ def company_page():
         )
     
         fig.update_yaxes(
-            visible=False,
+            title="Company Established",
+            visible=True,
             range=[0.95, 1.05]
         )
     
