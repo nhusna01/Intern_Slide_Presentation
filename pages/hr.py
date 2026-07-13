@@ -399,14 +399,14 @@ def reward_management():
     
         with col1:
             st.image(
-                "images/timeslip1.png",
+                "images/timeslip1.jpg",
                 caption="Timeslip Sorting Process",
                 use_container_width=True
             )
     
         with col2:
             st.image(
-                "images/timeslip2.png",
+                "images/timeslip2.jpg",
                 caption="Organized Timeslips by Month",
                 use_container_width=True
             )
@@ -436,7 +436,7 @@ def reward_management():
             unsafe_allow_html=True
         )
     
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
     
         with col1:
             st.image(
@@ -451,6 +451,13 @@ def reward_management():
                 caption="Health & Well-being Programme",
                 use_container_width=True
             )
+
+        with col3:
+            st.image(
+                "images/welfare3.png",
+                caption="Overall Wellness Program Participation Record",
+                use_container_width=True
+            )
     
         st.markdown("""
         <div class="ga-text">
@@ -461,6 +468,7 @@ def reward_management():
         **Activities**
         - Attended Kaneka Health Talk on **Sleep Apnea**.
         - Attended Kaneka Health Talk on **Mental Health, Stress & Well-being**.
+        - Assist in identify the list of employees that paricipated in the both **Sleep Apnea** & **Mental Health, Stress & Well-being** health programme.
         - Gained awareness of workplace health and wellness initiatives through the **Corporate Wellness Programme**.
     
         </div>
@@ -500,7 +508,6 @@ def reward_management():
     
         **Activities**
         - Attended Kaneka Annual Dinner appreciation event.
-        - Participated in Hari Raya festive celebration.
         - Participated in HR Mingle & Munch at Swiss Garden Beach Resort.
         - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort.
         - Assisted in calculating participation fees for the Kaneka Run Ekiden.
