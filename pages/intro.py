@@ -35,7 +35,7 @@ def intro_page():
             padding: 8px 16px;
             border-radius: 20px;
             margin: 5px;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: bold;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -113,12 +113,12 @@ def intro_page():
     
     st.markdown(
         """
-        <h1 style="color:#003366; font-size: 35px; text-align:center;">
+        <h1 style="color:#003366; font-size: 45px; text-align:center;">
             Nurul Husna Binti Mohd Napi
         </h1>
 
         <div style="text-align:center;">
-            <div class="typing" style="color:#3366CC; font-size:22px;">
+            <div class="typing" style="color:#3366CC; font-size:24px;">
                 Here's a quick introduction to who I am.💖
             </div>
         </div>
@@ -182,7 +182,7 @@ def intro_page():
     }
     
     .fact-title {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: bold;
         color: #FFD700;
         margin-bottom: 12px;
@@ -248,9 +248,9 @@ def intro_page():
             </div>
             <div class="fact-icon">👩‍💼</div>
             <div class="fact-title">Supervisor</div>
-            <div class="fact-value">
-                Pn. Zuraidah Ismail<br>
-                Pn. Norkamariah Othman
+            <div class="fact-value" style="text-align:left; font-size:22px;">
+                • Pn. Zuraidah Ismail<br>
+                • Pn. Norkamariah Othman
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -316,9 +316,8 @@ def intro_page():
             }
         </style>
         <div class="about-text">
-            I am the eldest of four siblings and currently 24 years old. <br>
-            I love desserts 🍰 and enjoy adventurous activities like <br>
-            hiking and sports that keep me active and energized. <br>
+            I am the eldest of four siblings and currently 24 years old. I love desserts 🍰 and <br>
+            enjoy adventurous activities like hiking and sports that keep me active and energized. <br>
         </div>
         """,
         unsafe_allow_html=True
@@ -383,7 +382,6 @@ def intro_page():
         "Data Mining": 90,
     }
     
-    st.subheader("💻 Technical Skills")
     for skill, level in technical_skills.items():
         st.markdown(
             f"<div class='skill-text'>{skill} – {level}% ({skill_level(level)})</div>",
@@ -415,7 +413,6 @@ def intro_page():
         "Creativity": 90,
     }
     
-    st.subheader("🤝 Soft Skills")
     for skill, level in soft_skills.items():
         st.markdown(
             f"<div class='skill-text'>{skill} – {level}% ({skill_level(level)})</div>",
@@ -447,9 +444,7 @@ def intro_page():
         "Google Colab": 95,
         "VS Code": 75,
     }
-    
-    st.subheader("🛠️ Tools & Technologies")
-    
+        
     for tool, level in tools.items():
         st.markdown(
             f"<div class='skill-text'>{tool} – {level}% ({skill_level(level)})</div>",
