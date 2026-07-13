@@ -182,14 +182,14 @@ def intro_page():
     }
     
     .fact-title {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         color: #FFD700;
         margin-bottom: 12px;
     }
     
     .fact-value {
-        font-size: 12px;
+        font-size: 18px;
         font-weight: bold;
     }
     
@@ -214,7 +214,7 @@ def intro_page():
         top: -5px;
         right: 25px;
         z-index: 1;
-        font-size: 12px;
+        font-size: 24px;
     }
     
     .tooltip:hover .tooltiptext {
@@ -250,6 +250,7 @@ def intro_page():
             <div class="fact-title">Supervisor</div>
             <div class="fact-value">
                 Pn. Zuraidah Ismail
+                Pn. Norkamariah Othman
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -258,12 +259,12 @@ def intro_page():
         st.markdown("""
         <div class="fact-card">
             <div class="tooltip">❓
-                <span class="tooltiptext">3/2/2026 - 21/7/2026</span>
+                <span class="tooltiptext">26 Weeks</span>
             </div>
             <div class="fact-icon">📅</div>
-            <div class="fact-title">Internship Journey</div>
+            <div class="fact-title">Internship Duration</div>
             <div class="fact-value">
-                26 Weeks
+                3/2/2026 - 21/7/2026
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -289,13 +290,6 @@ def intro_page():
         unsafe_allow_html=True
     )
     
-    # Example usage
-    st.subheader("🌸 About Me")
-    st.subheader("💻 Technical Skills")
-    st.subheader("🤝 Soft Skills")
-    st.subheader("🛠️ Tools & Technologies")
-    st.subheader("🌟 Hobbies & Fun Facts")
-    st.subheader("📞 Contact Me")
 
     # ==============================
     # 🌸 About Me
@@ -306,7 +300,7 @@ def intro_page():
         """
         <style>
             .about-text {
-                font-size: 22px;       /* Bigger font size */
+                font-size: 24px;       /* Bigger font size */
                 line-height: 1.8;
                 font-weight: 600;
                 color: #2c3e50;
@@ -361,7 +355,7 @@ def intro_page():
             return "Expert"
     
     # ==============================
-    # 💻 Technical Skills (FIRST)
+    # 💻 Technical Skills 
     # ==============================
     technical_skills = {
         "Python Programming": 75,
@@ -379,9 +373,12 @@ def intro_page():
             unsafe_allow_html=True
         )
         st.progress(level)
+
+    
+    st.markdown("<div class='section-space'></div>", unsafe_allow_html=True)
     
     # ==============================
-    # 🤝 Soft Skills (SECOND)
+    # 🤝 Soft Skills 
     # ==============================
     soft_skills = {
         "Communication": 85,
@@ -399,9 +396,12 @@ def intro_page():
             unsafe_allow_html=True
         )
         st.progress(level)
+
+    
+    st.markdown("<div class='section-space'></div>", unsafe_allow_html=True)
     
     # ==============================
-    # 🛠️ Tools & Technologies (LAST)
+    # 🛠️ Tools & Technologies 
     # ==============================
     tools = {
         "GitHub": 85,
@@ -452,7 +452,7 @@ def intro_page():
             }
             .hobby-text {
                 text-align: center;
-                font-size: 22px;
+                font-size: 23px;
                 font-weight: bold;
                 margin-top: 8px;
                 color: #003366;
@@ -516,7 +516,7 @@ def intro_page():
                font-family: 'Segoe UI', sans-serif;
            }
            .contact-item {
-               font-size: 22px;   /* Increased font size */
+               font-size: 24px;   /* Increased font size */
                margin: 14px 0;
            }
            .contact-item span {
