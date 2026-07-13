@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 
 def additional_page():
     # Stylized title
@@ -246,33 +245,6 @@ def additional_page():
         st.success("✅ Correct! Good Job.")
     else:
         st.error("❌ Try again! Don't give up.")
-
-    st.markdown(
-    "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-    unsafe_allow_html=True
-    )
-    
-    # Dashboard
-    st.subheader("📊 ESG Dashboard")
-
-    data = pd.DataFrame({
-        "Pillar": ["Environmental", "Social", "Governance"],
-        "Score": [70, 50, 80]
-    })
-
-    st.bar_chart(data.set_index("Pillar"))
-
-    fig, ax = plt.subplots(figsize=(5, 5))
-    ax.pie(
-        data["Score"],
-        labels=data["Pillar"],
-        autopct="%1.1f%%",
-        startangle=90
-    )
-    ax.axis("equal")
-
-    st.pyplot(fig)
-
 
 if __name__ == "__main__":
     additional_page()
