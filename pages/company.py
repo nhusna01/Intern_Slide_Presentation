@@ -184,35 +184,60 @@ def company_page():
         st.markdown(
             """
             <div style="background: linear-gradient(90deg, #023e8a, #0096c7);
-                        padding: 20px; border-radius: 10px; color: white; text-align: center;">
-                <h2>Kaneka Corporation</h2>
-                <p>Founded in 1949 • Headquarters in Osaka & Tokyo</p>
-                <p>Innovative technologies • Healthcare • Food • Sustainability</p>
+                        padding: 40px; border-radius: 15px; color: white; text-align: center;">
+                <h2 style="font-size: 50px; margin-bottom: 15px;">Kaneka Corporation</h2>
+                <p style="font-size: 24px; margin: 8px 0;">Founded in 1949 • Headquarters in Osaka & Tokyo</p>
+                <p style="font-size: 24px; margin: 8px 0;">Innovative technologies • Healthcare • Food • Sustainability</p>
             </div>
             """,
             unsafe_allow_html=True
         )
 
+
         # Add spacing
         st.markdown("<br>", unsafe_allow_html=True)
     
-        # Interactive summary points
+        # Custom CSS for expander headers
+        st.markdown(
+            """
+            <style>
+                /* Target expander headers */
+                div.streamlit-expanderHeader {
+                    font-size: 24px;        /* Larger font size */
+                    font-weight: 700;       /* Bold */
+                    color: #023e8a;         /* Dark blue text */
+                    background: linear-gradient(90deg, #89CFF0, #7EC8E3); /* Gradient background */
+                    padding: 10px;
+                    border-radius: 8px;
+                }
+                /* Optional: style the expander body */
+                div.streamlit-expanderContent {
+                    background-color: #f8f9fa;
+                    padding: 12px;
+                    border-radius: 8px;
+                }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+        
+        # Example expanders with styled headers
         with st.expander("📜 History"):
-            st.write("- Established in 1st September 1949")
-            st.write("- Originated with vinyl chloride production (Kanevinyl)")
-    
+            st.markdown("<div class='expander-text'>- Established in 1st September 1949</div>", unsafe_allow_html=True)
+            st.markdown("<div class='expander-text'>- Originated with vinyl chloride production (Kanevinyl)</div>", unsafe_allow_html=True)
+        
         with st.expander("👤 Management"):
-            st.write("- Current President of Kaneka, Kazuhiko Fujii")
-            st.write("- Paid capital: 33,046 million yen")
-    
+            st.markdown("<div class='expander-text'>- Current President: Kazuhiko Fujii</div>", unsafe_allow_html=True)
+            st.markdown("<div class='expander-text'>- Core business segments: Chemicals, Foods, Healthcare, Sustainability</div>", unsafe_allow_html=True)
+        
         with st.expander("📍 Headquarters"):
-            st.write("- **Osaka Head Office:** Nakanoshima, Kita‑ku, Osaka")
-            st.write("- **Tokyo Head Office:** Akasaka, Minato‑ku, Tokyo")
-    
+            st.markdown("<div class='expander-text'>- <b>Osaka Head Office:</b> Nakanoshima, Kita‑ku, Osaka</div>", unsafe_allow_html=True)
+            st.markdown("<div class='expander-text'>- <b>Tokyo Head Office:</b> Akasaka, Minato‑ku, Tokyo</div>", unsafe_allow_html=True)
+        
         with st.expander("🌍 Global Presence"):
-            st.write("- Subsidiaries in Middle East, Europe, Africa, The Americas, Asia")
-    
-      
+            st.markdown("<div class='expander-text'>- Subsidiaries across Asia, Europe, Africa, the Americas, and the Middle East</div>", unsafe_allow_html=True)
+        
+            
 
     elif section == "Corporate Philosophy":
         st.header("🧭 Corporate Philosophy")
