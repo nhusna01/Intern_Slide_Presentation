@@ -381,7 +381,7 @@ def reward_management():
     # ------------------------------------------------------
     # General Affairs
     # ------------------------------------------------------
-
+    
     # ------------------------------------------------------
     # Employee Benefits
     # ------------------------------------------------------
@@ -441,14 +441,14 @@ def reward_management():
         with col1:
             st.image(
                 "images/welfare1.png",
-                caption="Employee Welfare Programs",
+                caption="Employee Wellness Activities",
                 use_container_width=True
             )
     
         with col2:
             st.image(
                 "images/welfare2.png",
-                caption="Employee Health & Well-being",
+                caption="Health & Well-being Programme",
                 use_container_width=True
             )
     
@@ -481,14 +481,14 @@ def reward_management():
         with col1:
             st.image(
                 "images/events1.jpg",
-                caption="Annual Company Event",
+                caption="Company Activities",
                 use_container_width=True
             )
     
         with col2:
             st.image(
                 "images/events2.jpg",
-                caption="Team Building Activities",
+                caption="Employee Engagement",
                 use_container_width=True
             )
     
@@ -507,108 +507,102 @@ def reward_management():
     
         </div>
         """, unsafe_allow_html=True)
-        
     
-            st.divider()
+        st.divider()
     
+        # ------------------------------------------------------
+        # Cafeteria Signage Improvement
+        # ------------------------------------------------------
+        st.markdown(
+            '<div class="ga-subtitle">🧹 Cafeteria Signage Improvement</div>',
+            unsafe_allow_html=True
+        )
     
+        col1, col2 = st.columns(2)
     
-            # ------------------------------------------------------
-            # Cafeteria Signage Improvement
-            # ------------------------------------------------------
-            st.markdown(
-                '<div class="ga-subtitle">🧹 Cafeteria Signage Improvement</div>',
-                unsafe_allow_html=True
+        with col1:
+            display_image(
+                "images/welfare1.jpg",
+                "Before Signage Clean-up"
             )
     
-    
-            col1, col2 = st.columns(2)
-    
-            with col1:
-                display_image(
-                    "images/welfare1.jpg",
-                    "Cafeteria Signage Clean-up (Before)"
-                )
-    
-            with col2:
-                display_image(
-                    "images/welfare2.jpg",
-                    "Cafeteria Signage Clean-up (After)"
-                )
-    
-    
-            st.markdown("""
-            <div class="ga-text">
-    
-            **Responsibilities**
-            - Assisted in improving cafeteria organization by removing outdated signage.
-            - Supported workplace housekeeping activities to maintain a clean and organized environment.
-    
-            </div>
-            """, unsafe_allow_html=True)
-    
-    
-    
-            st.divider()
-    
-    
-    
-            # ------------------------------------------------------
-            # Hari Raya Celebration Support
-            # ------------------------------------------------------
-            st.markdown(
-                '<div class="ga-subtitle">🎉 Hari Raya Celebration Support</div>',
-                unsafe_allow_html=True
+        with col2:
+            display_image(
+                "images/welfare2.jpg",
+                "After Signage Clean-up"
             )
     
+        st.markdown("""
+        <div class="ga-text">
     
-            col3, col4, col5 = st.columns(3)
+        **Overview**
+        - Assisted in improving the cafeteria environment by organizing and removing outdated signage.
+    
+        **Responsibilities**
+        - Removed outdated cafeteria signage.
+        - Improved workplace organization and cleanliness.
+        - Supported housekeeping initiatives to maintain a clean and organized cafeteria environment.
+    
+        </div>
+        """, unsafe_allow_html=True)
+    
+        st.divider()
+    
+        # ------------------------------------------------------
+        # Hari Raya Celebration Support
+        # ------------------------------------------------------
+        st.markdown(
+            '<div class="ga-subtitle">🌙 Hari Raya Celebration Support</div>',
+            unsafe_allow_html=True
+        )
+    
+        col1, col2, col3 = st.columns(3)
+    
+        with col1:
+            display_image(
+                "images/raya1.png",
+                "Beverage Preparation"
+            )
+    
+        with col2:
+            display_image(
+                "images/raya2.png",
+                "Food Arrangement"
+            )
+    
+        with col3:
+            display_image(
+                "images/raya3.png",
+                "Post-Event Clean-up"
+            )
+    
+        st.markdown("""
+        <div class="ga-text">
+    
+        **Overview**
+        - Assisted the HR & General Affairs team in organizing the Hari Raya celebration for employees.
+    
+        **Responsibilities**
+        - Prepared beverages for the celebration.
+        - Arranged food according to the designated layout.
+        - Assisted in packing and distributing the remaining food to employees.
+        - Supported post-event clean-up and restored the venue after the celebration.
+    
+        </div>
+        """, unsafe_allow_html=True)
     
     
-            with col3:
-                display_image(
-                    "images/raya1.png",
-                    "Beverage Preparation"
-                )
-    
-    
-            with col4:
-                display_image(
-                    "images/raya2.png",
-                    "Food Arrangement"
-                )
-    
-    
-            with col5:
-                display_image(
-                    "images/raya3.png",
-                    "Post-Event Clean-up"
-                )
-    
-    
-            st.markdown("""
-            <div class="ga-text">
-    
-            **Responsibilities**
-            - Assisted in arranging food according to the designated signage.
-            - Assisted in preparing beverages for the celebration.
-            - Supported the packing and distribution of the remaining food to employees.
-            - Assisted in post-event clean-up activities and restored the venue after the event.
-    
-            </div>
-            """, unsafe_allow_html=True)
-    
-    
-    
-            st.success("""
-    ### Competencies Developed
-    - Teamwork and Collaboration
-    - Event Coordination
-    - Administrative Support
-    - Workplace Organization
-    - Responsibility and Attention to Detail
+    # ------------------------------------------------------
+    # Competencies Developed
+    # ------------------------------------------------------
+    st.success("""
+    ### 🌟 Competencies Developed
+    - 🤝 Teamwork and Collaboration
+    - 🎉 Event Coordination
+    - 📂 Administrative Support
+    - 🏢 Workplace Organization
+    - ✅ Responsibility and Attention to Detail
     """)
-
 
     # ------------------------------------------------------
     # Additional Tasks
