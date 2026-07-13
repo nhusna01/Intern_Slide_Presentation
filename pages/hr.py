@@ -484,21 +484,29 @@ def reward_management():
             unsafe_allow_html=True
         )
     
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
     
         with col1:
             st.image(
                 "images/events1.jpg",
-                caption="Company Activities",
+                caption="Kaneka Run Ekiden Preparation 1",
                 use_container_width=True
             )
     
         with col2:
             st.image(
                 "images/events2.jpg",
-                caption="Employee Engagement",
+                caption="Kaneka Run Ekiden Preparation 2",
                 use_container_width=True
             )
+
+        with col3:
+            st.image(
+                "images/events3.jpg",
+                caption="HR Mingle & Munch",
+                use_container_width=True
+            )
+
     
         st.markdown("""
         <div class="ga-text">
@@ -507,53 +515,18 @@ def reward_management():
         - Participated in company activities that strengthened employee engagement, collaboration, and teamwork.
     
         **Activities**
-        - Attended Kaneka Annual Dinner appreciation event.
         - Participated in HR Mingle & Munch at Swiss Garden Beach Resort.
-        - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort.
-        - Assisted in calculating participation fees for the Kaneka Run Ekiden.
-    
-        </div>
-        """, unsafe_allow_html=True)
-    
-        st.divider()
-    
-        # ------------------------------------------------------
-        # Cafeteria Signage Improvement
-        # ------------------------------------------------------
-        st.markdown(
-            '<div class="ga-subtitle">🧹 Cafeteria Signage Improvement</div>',
-            unsafe_allow_html=True
-        )
-    
-        col1, col2 = st.columns(2)
-    
-        with col1:
-            display_image(
-                "images/welfare1.jpg",
-                "Before Signage Clean-up"
-            )
-    
-        with col2:
-            display_image(
-                "images/welfare2.jpg",
-                "After Signage Clean-up"
-            )
-    
-        st.markdown("""
-        <div class="ga-text">
-    
-        **Overview**
+        - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort and assist in preparing the token for KAD2025 committee.
         - Assisted in improving the cafeteria environment by organizing and removing outdated signage.
-    
-        **Responsibilities**
-        - Removed outdated cafeteria signage.
-        - Improved workplace organization and cleanliness.
-        - Supported housekeeping initiatives to maintain a clean and organized cafeteria environment.
+        - Assisted in calculating participation fees for the Kaneka Run Ekiden.
+        - Assist in preparing the token number for the winners.
+        - Assist in sorting the Kaneka Tshirt according to the respective departments/plants.
     
         </div>
         """, unsafe_allow_html=True)
     
         st.divider()
+
     
         # ------------------------------------------------------
         # Hari Raya Celebration Support
