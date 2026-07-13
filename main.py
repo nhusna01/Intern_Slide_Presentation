@@ -250,17 +250,8 @@ if st.session_state.page == "Home":
                 z-index: 1;
                 background: rgba(0,51,102,0.7);
             ">
-            """,
-            unsafe_allow_html=True
-        )
-        
-        # Use Streamlit's st.image for reliability
-        st.image("images/Kaneka.jpg", width=120)
-        
-        st.markdown(
-            """
-                <h1 style="font-size:55px; font-weight:bold;">✨ Welcome to My Internship Journey ✨</h1>
-                <p style="color:#FFD700; font-size:30px; font-weight:bold; margin-top:10px;">
+                <h1 style="font-size:65px; font-weight:bold;">✨ Welcome to My Internship Journey ✨</h1>
+                <p style="color:#FFD700; font-size:34px; font-weight:bold; margin-top:15px;">
                     Navigate using the sidebar to explore the highlights!
                 </p>
             </div>
@@ -296,13 +287,13 @@ if st.session_state.page == "Home":
                 text-align: center;
                 margin-top: 2rem;
             ">
-                <h1 style="font-size:55px; font-weight:bold; color:#003366;">
+                <h1 style="font-size:65px; font-weight:bold; color:#003366;">
                     💻 Internship Journey
                 </h1>
-                <h2 style="font-size:38px; font-weight:600; color:#006699; margin-top:10px;">
+                <h2 style="font-size:45px; font-weight:600; color:#006699; margin-top:15px;">
                     Kaneka Malaysia – HR Internship Experience
                 </h2>
-                <p style="font-size:24px; font-weight:bold; color:#444444; margin-top:15px;">
+                <p style="font-size:28px; font-weight:bold; color:#444444; margin-top:20px;">
                     Presented by Nurul Husna | UMK – IT Undergraduate
                 </p>
             </div>
