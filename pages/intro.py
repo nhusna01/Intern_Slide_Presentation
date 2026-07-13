@@ -35,7 +35,7 @@ def intro_page():
             padding: 8px 16px;
             border-radius: 20px;
             margin: 5px;
-            font-size: 14px;
+            font-size: 22px;
             font-weight: bold;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -78,7 +78,7 @@ def intro_page():
     # Profile Card
     st.markdown("""
     <div class="profile-card">
-        <h2 style="font-size:65px; font-weight:bold; font-family: 'Great Vibes', cursive; color:#003366; margin:0;">
+        <h2 style="font-size:70px; font-weight:bold; font-family: 'Great Vibes', cursive; color:#003366; margin:0;">
              SELF-INTRODUCTION 
         </h2>
     </div>
@@ -113,12 +113,12 @@ def intro_page():
     
     st.markdown(
         """
-        <h1 style="color:#003366; text-align:center;">
+        <h1 style="color:#003366; font-size: 35px; text-align:center;">
             Nurul Husna Binti Mohd Napi
         </h1>
 
         <div style="text-align:center;">
-            <div class="typing" style="color:#3366CC; font-size:18px;">
+            <div class="typing" style="color:#3366CC; font-size:22px;">
                 Here's a quick introduction to who I am.💖
             </div>
         </div>
@@ -182,14 +182,14 @@ def intro_page():
     }
     
     .fact-title {
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
         color: #FFD700;
         margin-bottom: 12px;
     }
     
     .fact-value {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: bold;
     }
     
@@ -249,11 +249,12 @@ def intro_page():
             <div class="fact-icon">👩‍💼</div>
             <div class="fact-title">Supervisor</div>
             <div class="fact-value">
-                Pn. Zuraidah Ismail
+                Pn. Zuraidah Ismail<br>
                 Pn. Norkamariah Othman
             </div>
         </div>
         """, unsafe_allow_html=True)
+
     
     with col3:
         st.markdown("""
@@ -281,7 +282,7 @@ def intro_page():
         """
         <style>
             .stMarkdown h3, .stSubheader {
-                font-size: 26px !important;   /* Force subheader size */
+                font-size: 35px !important;   /* Force subheader size */
                 font-weight: 700;             /* Make it bold */
                 color: #2c3e50;               /* Optional: darker text color */
             }
@@ -294,7 +295,14 @@ def intro_page():
     # ==============================
     # 🌸 About Me
     # ==============================
-    st.subheader("🌸 About Me")
+    st.markdown(
+        """
+        <h3 style='font-size:35px; font-weight:700; color:#2c3e50;'>
+            🌸 About Me
+        </h3>
+        """,
+        unsafe_allow_html=True
+    )
     
     st.markdown(
         """
@@ -308,9 +316,9 @@ def intro_page():
             }
         </style>
         <div class="about-text">
-            I am the eldest of four siblings and currently 24 years old.  
-            I love desserts 🍰 and enjoy adventurous activities like hiking and sports 
-            that keep me active and energized.
+            I am the eldest of four siblings and currently 24 years old. <br>
+            I love desserts 🍰 and enjoy adventurous activities like <br>
+            hiking and sports that keep me active and energized. <br>
         </div>
         """,
         unsafe_allow_html=True
@@ -357,6 +365,15 @@ def intro_page():
     # ==============================
     # 💻 Technical Skills 
     # ==============================
+    st.markdown(
+        """
+        <h3 style='font-size:35px; font-weight:700; color:#2c3e50;'>
+            💻 Technical Skills
+        </h3>
+        """,
+        unsafe_allow_html=True
+    )
+    
     technical_skills = {
         "Python Programming": 75,
         "Data Preparation": 90,
@@ -380,6 +397,15 @@ def intro_page():
     # ==============================
     # 🤝 Soft Skills 
     # ==============================
+    st.markdown(
+        """
+        <h3 style='font-size:35px; font-weight:700; color:#2c3e50;'>
+            🤝 Soft Skills
+        </h3>
+        """,
+        unsafe_allow_html=True
+    )
+    
     soft_skills = {
         "Communication": 85,
         "Teamwork": 90,
@@ -403,6 +429,16 @@ def intro_page():
     # ==============================
     # 🛠️ Tools & Technologies 
     # ==============================
+    st.markdown(
+        """
+        <h3 style='font-size:35px; font-weight:700; color:#2c3e50;'>
+            🛠️ Tools & Technologies
+        </h3>
+        """,
+        unsafe_allow_html=True
+    )
+
+    
     tools = {
         "GitHub": 85,
         "Streamlit": 90,
@@ -413,6 +449,7 @@ def intro_page():
     }
     
     st.subheader("🛠️ Tools & Technologies")
+    
     for tool, level in tools.items():
         st.markdown(
             f"<div class='skill-text'>{tool} – {level}% ({skill_level(level)})</div>",
@@ -430,7 +467,14 @@ def intro_page():
     # ==============================
     # 🌟 Hobbies & Fun Facts
     # ==============================
-    st.subheader("🌟 Hobbies & Fun Facts")
+    st.markdown(
+        """
+        <h3 style='font-size:35px; font-weight:700; color:#2c3e50;'>
+            🌟 Hobbies & Fun Facts
+        </h3>
+        """,
+        unsafe_allow_html=True
+    )
     
     # CSS styling
     st.markdown(
@@ -501,7 +545,14 @@ def intro_page():
     # ==============================
     # 📞 Contact
     # ==============================
-    st.subheader("📞 Contact Me")
+    st.markdown(
+        """
+        <h3 style='font-size:35px; font-weight:700; color:#2c3e50;'>
+            📞 Contact
+        </h3>
+        """,
+        unsafe_allow_html=True
+    )
     
     st.markdown(
        """
@@ -531,8 +582,8 @@ def intro_page():
        </style>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
        <div class="contact-box">
-           <div class="contact-item"><i class="fas fa-phone"></i> <b>011-12957400</b></div>
-           <div class="contact-item"><i class="fas fa-envelope"></i> <b>nhusna.napi@gmail.com</b></div>
+           <div class="contact-item"><i class="fas fa-phone"></i> <a href="tel:01112957400" style="color:white; text-decoration:none;"><b>011-12957400</b></a></div>
+           <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:nhusna.napi@gmail.com" style="color:white; text-decoration:none;"><b>nhusna.napi@gmail.com</b></a></div>
            <div class="contact-item"><i class="fas fa-laptop-code"></i> For IT support inquiries (e.g., data analysis)</div>
        </div>
        """,
