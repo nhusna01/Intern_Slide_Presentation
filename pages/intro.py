@@ -295,28 +295,6 @@ def intro_page():
     unsafe_allow_html=True
     )
 
-
-    
-    # Internship Learning Journey
-    st.subheader("📈 Internship Learning Journey")
-    
-    # ✅ Generate 26 weeks of data
-    data = pd.DataFrame({
-        "Week": list(range(1, 27)), 
-        "Tasks Completed": np.random.randint(2, 10, size=26),
-        "Skills Improved": np.random.randint(1, 5, size=26)
-    })
-    
-    # ✅ Use Week as index so chart aligns correctly
-    st.line_chart(data.set_index("Week"))
-    
-
-    st.markdown(
-        "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
-        unsafe_allow_html=True
-        )
-
-
     # ==============================
     # 🛠️ Skills
     # ==============================
@@ -372,11 +350,23 @@ def intro_page():
         "VS Code": 75,
     }
     
+    # Define skill levels based on percentage
+    def skill_level(percent):
+        if percent < 60:
+            return "Beginner"
+        elif percent < 80:
+            return "Intermediate"
+        elif percent < 90:
+            return "Advanced"
+        else:
+            return "Expert"
+    
     st.markdown("### 🛠️ Tools & Technologies")
     
     for tool, level in tools.items():
-        st.write(f"**{tool}**")
+        st.write(f"**{tool}** – {level}% ({skill_level(level)})")
         st.progress(level)
+
     
     st.markdown(
         "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
@@ -388,17 +378,17 @@ def intro_page():
     # 🌟 Hobbies & Fun Facts
     # ==============================
     st.subheader("🌟 Hobbies & Fun Facts")
-
+    
     # CSS styling
     st.markdown(
         """
         <style>
             .stImage img {
-                width: 180px;          /* fixed width */
-                height: 180px;         /* fixed height */
+                width: 180px;
+                height: 180px;
                 margin: 15px;
                 border-radius: 12px;
-                object-fit: cover;     /* crop to fit box */
+                object-fit: cover;
                 box-shadow: 0 4px 12px rgba(0,0,0,0.25);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
@@ -407,6 +397,18 @@ def intro_page():
                 box-shadow: 0 6px 18px rgba(0,0,0,0.35);
                 cursor: pointer;
             }
+            .hobby-text {
+                text-align: center;
+                font-size: 22px;
+                font-weight: bold;
+                margin-top: 8px;
+                color: #003366;
+                transition: color 0.3s ease, text-shadow 0.3s ease;
+            }
+            .hobby-text:hover {
+                color: #ffd700;
+                text-shadow: 0 0 8px #ffd700;
+            }
         </style>
         """,
         unsafe_allow_html=True
@@ -414,21 +416,28 @@ def intro_page():
     
     # Use columns to align images side by side
     col1, col2, col3, col4, col5 = st.columns(5)
-
     
     with col1:
         st.image("images/movie2.png")
+        st.markdown("<div class='hobby-text'>🎬 Enjoy watching thrillers & action movies, especially zombie survival stories</div>", unsafe_allow_html=True)
+    
     with col2:
         st.image("images/music1.png")
+        st.markdown("<div class='hobby-text'>🎵 Chill out with Justin Bieber tracks while doing assignments</div>", unsafe_allow_html=True)
+    
     with col3:
         st.image("images/gaming.jpg")
+        st.markdown("<div class='hobby-text'>🎮 Play Roblox with my siblings whenever we get some free time</div>", unsafe_allow_html=True)
+    
     with col4:
         st.image("images/badminton.jpg")
+        st.markdown("<div class='hobby-text'>🏸 Weekend badminton matches with friends to relax and have fun</div>", unsafe_allow_html=True)
+    
     with col5:
         st.image("images/hiking2.png")
-
-
-
+        st.markdown("<div class='hobby-text'>🥾 Hiking around Bukit Keluang & Kemaman to enjoy the fresh air and nature</div>", unsafe_allow_html=True)
+    
+   
     
     st.markdown(
     "<hr style='border:0; height:3px; background: linear-gradient(to right, #89CFF0, #7EC8E3);'>",
@@ -440,22 +449,22 @@ def intro_page():
     # 📞 Contact
     # ==============================
     st.subheader("📞 Contact Me")
-
+    
     st.markdown(
        """
        <style>
            .contact-box {
                background: linear-gradient(90deg, #023e8a, #0096c7);
                color: white;
-               padding: 20px;
+               padding: 25px;
                border-radius: 12px;
                box-shadow: 0 4px 12px rgba(0,0,0,0.25);
                text-align: center;
                font-family: 'Segoe UI', sans-serif;
            }
            .contact-item {
-               font-size: 18px;
-               margin: 12px 0;
+               font-size: 22px;   /* Increased font size */
+               margin: 14px 0;
            }
            .contact-item span {
                margin-right: 8px;
@@ -469,10 +478,11 @@ def intro_page():
        </style>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
        <div class="contact-box">
-           <div class="contact-item"><i class="fas fa-phone"></i> 011-12957400</div>
-           <div class="contact-item"><i class="fas fa-envelope"></i> nhusna.napi@gmail.com</div>
+           <div class="contact-item"><i class="fas fa-phone"></i> <b>011-12957400</b></div>
+           <div class="contact-item"><i class="fas fa-envelope"></i> <b>nhusna.napi@gmail.com</b></div>
+           <div class="contact-item"><i class="fas fa-laptop-code"></i> For IT support inquiries (e.g., data analysis)</div>
        </div>
        """,
        unsafe_allow_html=True
     )
-        
+
