@@ -273,7 +273,30 @@ def intro_page():
     unsafe_allow_html=True
     )
 
-        
+    # ==============================
+    # 🌸 Global Subheader Styling
+    # ==============================
+    st.markdown(
+        """
+        <style>
+            .stMarkdown h3, .stSubheader {
+                font-size: 26px !important;   /* Force subheader size */
+                font-weight: 700;             /* Make it bold */
+                color: #2c3e50;               /* Optional: darker text color */
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    # Example usage
+    st.subheader("🌸 About Me")
+    st.subheader("💻 Technical Skills")
+    st.subheader("🤝 Soft Skills")
+    st.subheader("🛠️ Tools & Technologies")
+    st.subheader("🌟 Hobbies & Fun Facts")
+    st.subheader("📞 Contact Me")
+
     # ==============================
     # 🌸 About Me
     # ==============================
@@ -283,7 +306,7 @@ def intro_page():
         """
         <style>
             .about-text {
-                font-size: 32px;       /* Bigger font size */
+                font-size: 22px;       /* Bigger font size */
                 line-height: 1.8;
                 font-weight: 600;
                 color: #2c3e50;
@@ -308,7 +331,37 @@ def intro_page():
 
    
     # ==============================
-    # 💻 Technical Skills
+    # 🌟 Global Skill Styling
+    # ==============================
+    st.markdown(
+        """
+        <style>
+            .skill-text {
+                font-size: 22px;       /* Bigger font size for all skills */
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 6px;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    # ==============================
+    # 🔑 Skill Level Function
+    # ==============================
+    def skill_level(percent):
+        if percent < 60:
+            return "Beginner"
+        elif percent < 80:
+            return "Intermediate"
+        elif percent < 90:
+            return "Advanced"
+        else:
+            return "Expert"
+    
+    # ==============================
+    # 💻 Technical Skills (FIRST)
     # ==============================
     technical_skills = {
         "Python Programming": 75,
@@ -319,30 +372,16 @@ def intro_page():
         "Data Mining": 90,
     }
     
-    # Define skill levels based on percentage
-    def skill_level(percent):
-        if percent < 60:
-            return "Beginner"
-        elif percent < 80:
-            return "Intermediate"
-        elif percent < 90:
-            return "Advanced"
-        else:
-            return "Expert"
-    
     st.subheader("💻 Technical Skills")
-    
     for skill, level in technical_skills.items():
-        st.write(f"**{skill}** – {level}% ({skill_level(level)})")
+        st.markdown(
+            f"<div class='skill-text'>{skill} – {level}% ({skill_level(level)})</div>",
+            unsafe_allow_html=True
+        )
         st.progress(level)
-
-
-    # Add vertical spacing
-    st.markdown("<div style='margin:30px;'></div>", unsafe_allow_html=True)
-
-
+    
     # ==============================
-    # 🤝 Soft Skills
+    # 🤝 Soft Skills (SECOND)
     # ==============================
     soft_skills = {
         "Communication": 85,
@@ -353,31 +392,16 @@ def intro_page():
         "Creativity": 90,
     }
     
-    # Define skill levels based on percentage
-    def skill_level(percent):
-        if percent < 60:
-            return "Beginner"
-        elif percent < 80:
-            return "Intermediate"
-        elif percent < 90:
-            return "Advanced"
-        else:
-            return "Expert"
-    
-    st.markdown("### 🤝 Soft Skills")
-    
+    st.subheader("🤝 Soft Skills")
     for skill, level in soft_skills.items():
-        st.write(f"**{skill}** – {level}% ({skill_level(level)})")
+        st.markdown(
+            f"<div class='skill-text'>{skill} – {level}% ({skill_level(level)})</div>",
+            unsafe_allow_html=True
+        )
         st.progress(level)
     
-
-    
-    # Add vertical spacing
-    st.markdown("<div style='margin:30px;'></div>", unsafe_allow_html=True)
-
-    
     # ==============================
-    # 🛠️ Tools & Technologies
+    # 🛠️ Tools & Technologies (LAST)
     # ==============================
     tools = {
         "GitHub": 85,
@@ -388,21 +412,12 @@ def intro_page():
         "VS Code": 75,
     }
     
-    # Define skill levels based on percentage
-    def skill_level(percent):
-        if percent < 60:
-            return "Beginner"
-        elif percent < 80:
-            return "Intermediate"
-        elif percent < 90:
-            return "Advanced"
-        else:
-            return "Expert"
-    
-    st.markdown("### 🛠️ Tools & Technologies")
-    
+    st.subheader("🛠️ Tools & Technologies")
     for tool, level in tools.items():
-        st.write(f"**{tool}** – {level}% ({skill_level(level)})")
+        st.markdown(
+            f"<div class='skill-text'>{tool} – {level}% ({skill_level(level)})</div>",
+            unsafe_allow_html=True
+        )
         st.progress(level)
 
     
