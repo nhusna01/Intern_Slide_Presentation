@@ -149,7 +149,7 @@ st.sidebar.markdown(
     "<div style='margin-top:-5px; margin-bottom:-50px;'>",
     unsafe_allow_html=True
 )
-st.sidebar.image("images/UMK_logo2.png", width=200)
+st.sidebar.image("images/kaneka.png", width=200)
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 # Sidebar title
@@ -185,6 +185,7 @@ with st.sidebar.expander("**📚 Slide Chapter**", expanded=False):
     if st.button("📖 Chapter 5", key="chapter5", use_container_width=True):
         st.session_state.page = "Chapter 5"
         st.rerun()
+
 
 # ==============================
 # 🖼️ Page Rendering Function
@@ -247,24 +248,26 @@ if st.session_state.page == "Home":
                 color: white;
                 position: relative;
                 z-index: 1;
-                background: rgba(0,51,102,0.5);
+                background: rgba(0,51,102,0.7);
             ">
-                <img src="images/Kaneka_logo.png" width="100">
-                <h1>Welcome to My Internship Journey ✨</h1>
-                <p style="color:red; font-weight:bold;">Use the sidebar to explore the Contents!</p>
+                <img src="images/Kaneka.jpg" width="120">
+                <h1 style="font-size:55px; font-weight:bold;">✨ Welcome to My Internship Journey ✨</h1>
+                <p style="color:#FFD700; font-size:30px; font-weight:bold; margin-top:10px;">
+                    Navigate using the sidebar to explore the highlights!
+                </p>
             </div>
             """,
             unsafe_allow_html=True
         )
-
-        # Start Presentation button 
+    
+        # Full-page centered Start Presentation button
         st.markdown(
             """
-            <div id="start-btn-container" style="
+            <div style="
                 display: flex;
                 justify-content: center;
-                align-items:center;
-                margin-top: 1rem;
+                align-items: center;
+                height: 80vh;
                 width: 100%;
             ">
             """,
@@ -276,12 +279,27 @@ if st.session_state.page == "Home":
             st.toast("Welcome Everyone! Let’s dive into my internship journey.")
         
         st.markdown("</div>", unsafe_allow_html=True)
-
-
-        # Title & Intro
-        st.markdown("<h1 style='text-align:center;'>💻 Internship Presentation</h1>", unsafe_allow_html=True)
-        st.markdown("<h3 style='text-align:center;'>Kaneka Malaysia – HR Internship</h3>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align:center;'>Prepared by Nurul Husna, UMK – IT Student</p>", unsafe_allow_html=True)
+    
+        # Title & Intro Section
+        st.markdown(
+            """
+            <div style="
+                text-align: center;
+                margin-top: 2rem;
+            ">
+                <h1 style="font-size:55px; font-weight:bold; color:#003366;">
+                    💻 Internship Journey
+                </h1>
+                <h2 style="font-size:38px; font-weight:600; color:#006699; margin-top:10px;">
+                    Kaneka Malaysia – HR Internship Experience
+                </h2>
+                <p style="font-size:24px; font-weight:bold; color:#444444; margin-top:15px;">
+                    Presented by Nurul Husna | UMK – IT Undergraduate
+                </p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
     page_container(home_content, bg_color="#e6f7ff")
 
