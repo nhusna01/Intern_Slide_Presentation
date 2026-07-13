@@ -381,172 +381,133 @@ def reward_management():
     # ------------------------------------------------------
     # General Affairs
     # ------------------------------------------------------
-    with tab2:
+
+    # ------------------------------------------------------
+    # Employee Benefits
+    # ------------------------------------------------------
+    with st.expander("🤝 Employee Benefits", expanded=True):
     
         # ------------------------------------------------------
-        # Custom CSS
+        # Timeslip Organization
         # ------------------------------------------------------
-        st.markdown("""
-        <style>
-        .ga-title{
-            font-size:32px;
-            font-weight:700;
-            color:#0C54A0;
-            margin-bottom:10px;
-        }
-    
-        .ga-subtitle{
-            font-size:25px;
-            font-weight:600;
-            color:#0C54A0;
-            margin-top:15px;
-            margin-bottom:10px;
-        }
-    
-        .ga-text{
-            font-size:19px;
-            line-height:1.8;
-        }
-    
-        .ga-text ul{
-            font-size:19px;
-            line-height:1.8;
-        }
-    
-        .ga-text strong{
-            font-size:20px;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-    
-    
         st.markdown(
-            '<div class="ga-title">🏢 General Affairs</div>',
+            '<div class="ga-subtitle">⏰ Timeslip Organization</div>',
             unsafe_allow_html=True
         )
     
-        st.divider()
+        col1, col2 = st.columns(2)
     
-    
-        # ------------------------------------------------------
-        # Employee Benefits
-        # ------------------------------------------------------
-        with st.expander("🤝 Employee Benefits", expanded=True):
-    
-            col1, col2 = st.columns(2)
-    
-            with col1:
-                st.image(
-                    "images/welfare1.png",
-                    caption="Employee Welfare Programs",
-                    use_container_width=True
-                )
-    
-            with col2:
-                st.image(
-                    "images/welfare2.png",
-                    caption="Employee Health & Well-being",
-                    use_container_width=True
-                )
-    
-            st.markdown("""
-            <div class="ga-text">
-    
-            **Overview**
-            - Initiatives focused on supporting employees' health, safety, and well-being.
-    
-            **Activities**
-            
-            - Attended Kaneka Health Talk on **Sleep Apnea**.
-            - Attended Kaneka Health Talk on **Mental Health, Stress & Well-being**.
-            - Gained awareness of workplace health and wellness initiatives. These two Kaneka Health Talk under Corporate Wellness Programme.
-    
-            </div>
-            """, unsafe_allow_html=True)
-    
-    
-        # ------------------------------------------------------
-        # Event Management
-        # ------------------------------------------------------
-        with st.expander("🎉 Event Management", expanded=True):
-    
-            col1, col2 = st.columns(2)
-    
-            with col1:
-                st.image(
-                    "images/events1.jpg",
-                    caption="Annual Company Event",
-                    use_container_width=True
-                )
-    
-            with col2:
-                st.image(
-                    "images/events2.jpg",
-                    caption="Team Building Activities",
-                    use_container_width=True
-                )
-    
-            st.markdown("""
-            <div class="ga-text">
-    
-            **Overview**
-            - Participated in company activities to strengthen employee engagement and teamwork.
-    
-            **Activities**
-            - Attended Kaneka Annual Dinner appreciation and festive (Hari Raya) celebrations.
-            - Participated in HR Mingle & Munch event at Swiss Garden Beach Resort.
-            - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort. 
-            - Assisted in calculating participation fees for Kaneka Run Ekiden.
-            - A
-    
-            </div>
-            """, unsafe_allow_html=True)
-    
-    
-    
-        # ------------------------------------------------------
-        # Administrative & Operational Support
-        # ------------------------------------------------------
-        with st.expander("🏢 Administrative & Operational Support", expanded=True):
-    
-    
-            # ------------------------------------------------------
-            # Timeslip Organization
-            # ------------------------------------------------------
-            st.markdown(
-                '<div class="ga-subtitle">⏰ Timeslip Organization</div>',
-                unsafe_allow_html=True
+        with col1:
+            st.image(
+                "images/timeslip1.png",
+                caption="Timeslip Sorting Process",
+                use_container_width=True
             )
     
+        with col2:
+            st.image(
+                "images/timeslip2.png",
+                caption="Organized Timeslips by Month",
+                use_container_width=True
+            )
     
-            col1, col2 = st.columns(2)
+        st.markdown("""
+        <div class="ga-text">
     
-            with col1:
-                st.image(
-                    "images/timeslip1.png",
-                    caption="Timeslip Sorting Process",
-                    use_container_width=True
-                )
+        **Responsibilities**
+        - Assisted in sorting employee timeslips according to the respective months.
+        - Organized timeslip records systematically for easier filing and retrieval.
+        - Ensured timeslips were arranged accurately before filing.
     
-            with col2:
-                st.image(
-                    "images/timeslip2.png",
-                    caption="Organized Timeslips by Month",
-                    use_container_width=True
-                )
-    
-    
-            st.markdown("""
-            <div class="ga-text">
-    
-            **Responsibilities**
-            - Assisted in sorting timeslips according to the respective months.
-            - Organized timeslips in a systematic manner.
-    
-            </div>
-            """, unsafe_allow_html=True)
+        </div>
+        """, unsafe_allow_html=True)
     
     
+    # ------------------------------------------------------
+    # Event Management
+    # ------------------------------------------------------
+    with st.expander("🎉 Event Management", expanded=True):
+    
+        # ------------------------------------------------------
+        # Corporate Wellness Programme
+        # ------------------------------------------------------
+        st.markdown(
+            '<div class="ga-subtitle">💙 Corporate Wellness Programme</div>',
+            unsafe_allow_html=True
+        )
+    
+        col1, col2 = st.columns(2)
+    
+        with col1:
+            st.image(
+                "images/welfare1.png",
+                caption="Employee Welfare Programs",
+                use_container_width=True
+            )
+    
+        with col2:
+            st.image(
+                "images/welfare2.png",
+                caption="Employee Health & Well-being",
+                use_container_width=True
+            )
+    
+        st.markdown("""
+        <div class="ga-text">
+    
+        **Overview**
+        - Participated in corporate wellness initiatives to promote employees' health, safety, and well-being.
+    
+        **Activities**
+        - Attended Kaneka Health Talk on **Sleep Apnea**.
+        - Attended Kaneka Health Talk on **Mental Health, Stress & Well-being**.
+        - Gained awareness of workplace health and wellness initiatives through the **Corporate Wellness Programme**.
+    
+        </div>
+        """, unsafe_allow_html=True)
+    
+        st.divider()
+    
+        # ------------------------------------------------------
+        # Company Events
+        # ------------------------------------------------------
+        st.markdown(
+            '<div class="ga-subtitle">🎊 Company Events</div>',
+            unsafe_allow_html=True
+        )
+    
+        col1, col2 = st.columns(2)
+    
+        with col1:
+            st.image(
+                "images/events1.jpg",
+                caption="Annual Company Event",
+                use_container_width=True
+            )
+    
+        with col2:
+            st.image(
+                "images/events2.jpg",
+                caption="Team Building Activities",
+                use_container_width=True
+            )
+    
+        st.markdown("""
+        <div class="ga-text">
+    
+        **Overview**
+        - Participated in company activities that strengthened employee engagement, collaboration, and teamwork.
+    
+        **Activities**
+        - Attended Kaneka Annual Dinner appreciation event.
+        - Participated in Hari Raya festive celebration.
+        - Participated in HR Mingle & Munch at Swiss Garden Beach Resort.
+        - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort.
+        - Assisted in calculating participation fees for the Kaneka Run Ekiden.
+    
+        </div>
+        """, unsafe_allow_html=True)
+        
     
             st.divider()
     
