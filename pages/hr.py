@@ -469,7 +469,7 @@ with tab2:
         <div class="ga-text">
 
         **Overview**
-        - Participated in corporate wellness initiatives to promote employees' health, safety, and well-being.
+        - Participated in corporate wellness initiatives to promote health, safety, and well-being of employees.
     
         **Activities**
         - Attended Kaneka Health Talk on **Sleep Apnea**.
