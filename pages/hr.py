@@ -430,6 +430,7 @@ def reward_management():
             - Ensured timeslips were arranged accurately before filing.
         
             </div>
+            """, unsafe_allow_html=True)
         
             col1, col2 = st.columns(2)
         
@@ -441,13 +442,11 @@ def reward_management():
                 )
                 
             with col2:
-            st.image(
+                st.image(
                 "images/timeslip2.jpg",
                 caption="Timeslip Sorting Process 2",
                 width=250
             )
-                
-            """, unsafe_allow_html=True)
         
         
         # ------------------------------------------------------
@@ -527,6 +526,7 @@ def reward_management():
             - Assist in sorting the Kaneka Tshirt and bit according to the respective departments/plants.
         
             </div>
+            """, unsafe_allow_html=True)
         
             col1, col2, col3, col4, col5, col6 = st.columns(6)
         
@@ -571,9 +571,6 @@ def reward_management():
                     caption="Cafeteria Clean Signage",
                     width=250
                 )
-    
-        
-            """, unsafe_allow_html=True)
         
             st.divider()
     
@@ -599,6 +596,21 @@ def reward_management():
         # ------------------------------------------------------
         with st.expander("🎉 Jamuan Raya 2026 (Admin 2 Committee)", expanded=True):
     
+             st.markdown("""
+            <div class="additional-text">
+    
+            **Activities**
+            - Attended Hari Raya celebrations organized by various departments and production plants.
+            - Assisted the **Admin 2 Committee** in organizing the Hari Raya celebration.
+            - Supported event preparation including:
+                1- Prepared beverages for the celebration.
+                2- Arranged food according to the designated layout.
+                3- Assisted in packing and distributing the remaining food to employees.
+                4- Supported post-event clean-up and restored the venue after the celebration.
+    
+            </div>
+            """, unsafe_allow_html=True)
+            
             col1, col2, col3, col4 = st.columns(4)
     
             with col1:
@@ -628,27 +640,26 @@ def reward_management():
                     caption="Hari Raya Celebration - Engineering",
                     width=250
                 )
-    
-            st.markdown("""
-            <div class="additional-text">
-    
-            **Activities**
-            - Attended Hari Raya celebrations organized by various departments and production plants.
-            - Assisted the **Admin 2 Committee** in organizing the Hari Raya celebration.
-            - Supported event preparation including:
-                1- Prepared beverages for the celebration.
-                2- Arranged food according to the designated layout.
-                3- Assisted in packing and distributing the remaining food to employees.
-                4- Supported post-event clean-up and restored the venue after the celebration.
-    
-            </div>
-            """, unsafe_allow_html=True)
+
+            st.divider()
     
         # ------------------------------------------------------
         # Karakuri Competition
         # ------------------------------------------------------
         with st.expander("🏆 Karakuri Competition", expanded=True):
     
+            st.markdown("""
+            <div class="additional-text">
+    
+            **Achievement**
+            - Assisted in assembling the PVC pipe trolley based on the approved design.
+            - Presented the problem statement and explained the trolley design and its purpose.
+            - Collaborated with team members throughout the competition.
+            - **Won Second Place.**
+    
+            </div>
+            """, unsafe_allow_html=True)
+            
             col1, col2, col3, col4 = st.columns(4)
     
             with col1:
@@ -678,18 +689,9 @@ def reward_management():
                     caption="Group Photo Session",
                     width=250
                 )
-    
-            st.markdown("""
-            <div class="additional-text">
-    
-            **Achievement**
-            - Assisted in assembling the PVC pipe trolley based on the approved design.
-            - Presented the problem statement and explained the trolley design and its purpose.
-            - Collaborated with team members throughout the competition.
-            - **Won Second Place.**
-    
-            </div>
-            """, unsafe_allow_html=True)
+
+            st.divider()    
+        
     
         # ------------------------------------------------------
         # Kaneka Run Ekiden
