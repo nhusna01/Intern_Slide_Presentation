@@ -306,7 +306,6 @@ def reward_management():
             **Attendance Award**
             - Recognition for employees with consistent attendance
 
-            st.markdown("""
             | Activity                  | Purpose                                       | Impact on HR / Payroll                  |
             |---------------------------|-----------------------------------------------|-----------------------------------------|
             | **Overtime Calculation**  | Ensures fair pay for extra hours worked.      | Prevents disputes, keeps payroll accurate. |
