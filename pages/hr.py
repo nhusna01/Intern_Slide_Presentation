@@ -392,7 +392,7 @@ def reward_management():
             # Two images side by side
             col1, col2, col3 = st.columns(3)
             with col1:
-                st.image("images/contribution1.jpg", caption="Statutory Contributions", use_container_width=True)
+                st.image("images/contribution1.png", caption="Statutory Contributions", use_container_width=True)
             with col2:
                 st.image("images/contribution3.png", caption="Update Resignee Date in Perkeso System", use_container_width=True)
             with col3:
