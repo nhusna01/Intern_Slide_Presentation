@@ -591,7 +591,7 @@ def additional_page():
     st.markdown("""
     <style>
     .additional-title {
-        font-size:32px;
+        font-size:22px;
         font-weight:700;
         color:#0C54A0;
         margin-bottom:10px;
