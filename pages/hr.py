@@ -1004,188 +1004,188 @@ def hr_page():
 # ==========================================================
 def internship_contributions():
 
-st.title("💻 My Internship Contributions")
+    st.title("💻 My Internship Contributions")
+    
+    # -------------------------------
+    # Detailed Explanation
+    # -------------------------------
+    st.markdown("""
+    During my internship at **Kaneka Malaysia**, I was assigned to develop and redesign 
+    several learning and HR process materials. My contributions focused on two main areas:
+    
+    1. **Self-Paced Learning (SPL) Module Development**  
+       - Designed and published interactive modules using iSpring Suite.  
+       - Created both **internal modules** (for HR policies and assessments) and **external modules** (for general employee development).  
+    
+    2. **Flowchart Redesigns**  
+       - Improved clarity and usability of HR-related process flowcharts.  
+       - Enhanced visual communication for Learning & Development, Kaneka Crae, and Performance & Competency Assessment processes.  
+    """)
+    
+    st.divider()
+    
+    # -------------------------------
+    # Internal SPL Modules
+    # -------------------------------
+    st.subheader("📚 Internal SPL Modules")
+    
+    st.markdown("""
+    These modules were designed to support HR policies and employee assessments:
+    - **Baseline Assessment (BLA)**: Evaluate competency gaps and plan development activities.  
+    - **Leave Provision**: Guide employees on leave entitlements and procedures.  
+    """)
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image("images/spl_bla.png", caption="Baseline Assessment (BLA)", use_container_width=False, width=250)
+    with col2:
+        st.image("images/spl_leave.png", caption="Leave Provision", use_container_width=False, width=250)
+    
+    st.success("These internal modules helped employees understand HR policies and competency frameworks more effectively.")
+    
+    st.divider()
+    
+    # -------------------------------
+    # External SPL Modules
+    # -------------------------------
+    st.subheader("🌍 External SPL Modules")
+    
+    st.markdown("""
+    These modules were developed to enhance employees' personal and professional skills:
+    - **Stress Management**: Techniques to manage workplace stress.  
+    - **Ethics At Work**: Promote integrity and ethical behavior.  
+    - **Time Management**: Improve productivity and efficiency.  
+    - **Presentation Skills**: Build confidence in delivering impactful presentations.  
+    """)
+    
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.image("images/spl_stress.png", caption="Stress Management", use_container_width=False, width=200)
+    with col2:
+        st.image("images/spl_ethics.png", caption="Ethics At Work", use_container_width=False, width=200)
+    with col3:
+        st.image("images/spl_time.png", caption="Time Management", use_container_width=False, width=200)
+    with col4:
+        st.image("images/spl_presentation.png", caption="Presentation Skills", use_container_width=False, width=200)
+    
+    st.success("These external modules supported employee growth beyond HR policies, focusing on workplace well-being and skill development.")
+    
+    st.divider()
+    
+    # -------------------------------
+    # Flowchart Redesigns
+    # -------------------------------
+    st.subheader("📊 Flowchart Redesign Contributions")
+    
+    st.markdown("""
+    I redesigned several HR process flowcharts to improve clarity and communication:
+    - **Learning & Development Process Flowchart**  
+    - **Kaneka Crae Flowchart**  
+    - **Performance & Competency Assessment Process Flowchart**  
+    """)
+    
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.image("images/onboarding_flowchart.png", caption="Learning & Development Flowchart", use_container_width=False, width=220)
+    with col2:
+        st.image("images/Kaneka_care_flowchart.png", caption="Kaneka Crae Flowchart", use_container_width=False, width=220)
+    with col3:
+        st.image("images/pc_flowchart.png", caption="Performance & Competency Assessment Flowchart", use_container_width=False, width=220)
+    
+    st.info("These redesigns improved communication, training efficiency, and employee understanding of HR workflows.")
+    
+    
 
-# -------------------------------
-# Detailed Explanation
-# -------------------------------
-st.markdown("""
-During my internship at **Kaneka Malaysia**, I was assigned to develop and redesign 
-several learning and HR process materials. My contributions focused on two main areas:
 
-1. **Self-Paced Learning (SPL) Module Development**  
-   - Designed and published interactive modules using iSpring Suite.  
-   - Created both **internal modules** (for HR policies and assessments) and **external modules** (for general employee development).  
-
-2. **Flowchart Redesigns**  
-   - Improved clarity and usability of HR-related process flowcharts.  
-   - Enhanced visual communication for Learning & Development, Kaneka Crae, and Performance & Competency Assessment processes.  
-""")
-
-st.divider()
-
-# -------------------------------
-# Internal SPL Modules
-# -------------------------------
-st.subheader("📚 Internal SPL Modules")
-
-st.markdown("""
-These modules were designed to support HR policies and employee assessments:
-- **Baseline Assessment (BLA)**: Evaluate competency gaps and plan development activities.  
-- **Leave Provision**: Guide employees on leave entitlements and procedures.  
-""")
-
-col1, col2 = st.columns(2)
-with col1:
-    st.image("images/spl_bla.png", caption="Baseline Assessment (BLA)", use_container_width=False, width=250)
-with col2:
-    st.image("images/spl_leave.png", caption="Leave Provision", use_container_width=False, width=250)
-
-st.success("These internal modules helped employees understand HR policies and competency frameworks more effectively.")
-
-st.divider()
-
-# -------------------------------
-# External SPL Modules
-# -------------------------------
-st.subheader("🌍 External SPL Modules")
-
-st.markdown("""
-These modules were developed to enhance employees' personal and professional skills:
-- **Stress Management**: Techniques to manage workplace stress.  
-- **Ethics At Work**: Promote integrity and ethical behavior.  
-- **Time Management**: Improve productivity and efficiency.  
-- **Presentation Skills**: Build confidence in delivering impactful presentations.  
-""")
-
-col1, col2, col3, col4 = st.columns(4)
-with col1:
-    st.image("images/spl_stress.png", caption="Stress Management", use_container_width=False, width=200)
-with col2:
-    st.image("images/spl_ethics.png", caption="Ethics At Work", use_container_width=False, width=200)
-with col3:
-    st.image("images/spl_time.png", caption="Time Management", use_container_width=False, width=200)
-with col4:
-    st.image("images/spl_presentation.png", caption="Presentation Skills", use_container_width=False, width=200)
-
-st.success("These external modules supported employee growth beyond HR policies, focusing on workplace well-being and skill development.")
-
-st.divider()
-
-# -------------------------------
-# Flowchart Redesigns
-# -------------------------------
-st.subheader("📊 Flowchart Redesign Contributions")
-
-st.markdown("""
-I redesigned several HR process flowcharts to improve clarity and communication:
-- **Learning & Development Process Flowchart**  
-- **Kaneka Crae Flowchart**  
-- **Performance & Competency Assessment Process Flowchart**  
-""")
-
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.image("images/onboarding_flowchart.png", caption="Learning & Development Flowchart", use_container_width=False, width=220)
-with col2:
-    st.image("images/Kaneka_care_flowchart.png", caption="Kaneka Crae Flowchart", use_container_width=False, width=220)
-with col3:
-    st.image("images/pc_flowchart.png", caption="Performance & Competency Assessment Flowchart", use_container_width=False, width=220)
-
-st.info("These redesigns improved communication, training efficiency, and employee understanding of HR workflows.")
-
-
-
-
-st.markdown("""
-<style>
-    .block-container {
-        padding-top: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        max-width: 100%;
-    }
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<h1 style="
-    text-align:center;
-    font-size:70px;
-    color:#0C54A0;
-    font-weight:900;
-    margin-bottom:20px;">
-    HR Organizational Flowchart
-</h1>
-""", unsafe_allow_html=True)
-
-st.image(
-    "images/hr_org_chart.png",
-    use_container_width=True
-)
-
-st.write(
-    "Select a department below."
-)
-
-if "selected_dept" not in st.session_state:
-
-    st.session_state.selected_dept = "L&D"
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-
-    if st.button(
-        "📚 Learning & Development",
+    st.markdown("""
+    <style>
+        .block-container {
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            max-width: 100%;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <h1 style="
+        text-align:center;
+        font-size:70px;
+        color:#0C54A0;
+        font-weight:900;
+        margin-bottom:20px;">
+        HR Organizational Flowchart
+    </h1>
+    """, unsafe_allow_html=True)
+    
+    st.image(
+        "images/hr_org_chart.png",
         use_container_width=True
-    ):
-
+    )
+    
+    st.write(
+        "Select a department below."
+    )
+    
+    if "selected_dept" not in st.session_state:
+    
         st.session_state.selected_dept = "L&D"
-
-with col2:
-
-    if st.button(
-        "💎 Reward Management",
-        use_container_width=True
-    ):
-
-        st.session_state.selected_dept = "RM"
-
-with col3:
-
-    if st.button(
-        "🎯  Talent Acquisition & Industrial Relation",
-        use_container_width=True
-    ):
-
-        st.session_state.selected_dept = "TA&IR"
-
-st.divider()
-
-if st.session_state.selected_dept == "L&D":
-
-    with st.expander(
-        "📚 Learning & Development",
-        expanded=True
-    ):
-
-        learning_development()
-
-elif st.session_state.selected_dept == "RM":
-
-    with st.expander(
-        "💎 Reward Management",
-        expanded=True
-    ):
-
-        reward_management()
-
-elif st.session_state.selected_dept == "TA&IR":
-
-    with st.expander(
-        "🎯 Talent Acquisition & Industrial Relation",
-        expanded=True
-    ):
-
-        tair_management()
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+    
+        if st.button(
+            "📚 Learning & Development",
+            use_container_width=True
+        ):
+    
+            st.session_state.selected_dept = "L&D"
+    
+    with col2:
+    
+        if st.button(
+            "💎 Reward Management",
+            use_container_width=True
+        ):
+    
+            st.session_state.selected_dept = "RM"
+    
+    with col3:
+    
+        if st.button(
+            "🎯  Talent Acquisition & Industrial Relation",
+            use_container_width=True
+        ):
+    
+            st.session_state.selected_dept = "TA&IR"
+    
+    st.divider()
+    
+    if st.session_state.selected_dept == "L&D":
+    
+        with st.expander(
+            "📚 Learning & Development",
+            expanded=True
+        ):
+    
+            learning_development()
+    
+    elif st.session_state.selected_dept == "RM":
+    
+        with st.expander(
+            "💎 Reward Management",
+            expanded=True
+        ):
+    
+            reward_management()
+    
+    elif st.session_state.selected_dept == "TA&IR":
+    
+        with st.expander(
+            "🎯 Talent Acquisition & Industrial Relation",
+            expanded=True
+        ):
+    
+            tair_management()
