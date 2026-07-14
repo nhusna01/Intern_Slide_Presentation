@@ -687,28 +687,28 @@ def additional_page():
             st.image(
                 "images/karakuri2.png",
                 caption="Competition Project",
-                width=250)
+                width=250
             )
 
         with col2:
             st.image(
                 "images/karakuri1.png",
                 caption="Project Presentation & Demonstration",
-                width=250)
+                width=250
             )
 
         with col3:
             st.image(
                 "images/karakuri3.jpg",
                 caption="Award Ceremony",
-                width=250)
+                width=250
             )
 
         with col4:
             st.image(
                 "images/karakuri4.jpg",
                 caption="Group Photo Session",
-                width=250)
+                width=250
             )
 
         st.markdown("""
