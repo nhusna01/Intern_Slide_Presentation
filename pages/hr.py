@@ -837,21 +837,22 @@ def tair_management():
                 <div style="font-size:24px;">
                 <b>Definition</b><br><br>
                 Misconduct refers to any act or behavior that violates the company's Terms and Conditions of Employment or Company Rules.<br><br>
-        
+            
                 <b>Misconduct Categories</b><br><br>
                 🔹 <b>Category 1 – Minor Misconduct</b><br>
                 - Minor violations of company rules.<br>
                 - Example: Late attendance.<br><br>
-        
+            
                 🔹 <b>Category 2 – Serious Misconduct</b><br>
                 - Repeated or more serious violations.<br>
                 - Example: Habitual late attendance.<br><br>
-        
+            
                 🔹 <b>Category 3 – Major Misconduct</b><br>
                 - Severe misconduct that may lead to disciplinary action.<br>
                 - Example: Unauthorized use or falsification of a signature.<br>
                 </div>
                 """, unsafe_allow_html=True)
+
         
             # Grievance Procedure
             with st.expander("🤝 Grievance Procedure", expanded=True):
