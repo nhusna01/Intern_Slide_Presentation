@@ -945,8 +945,7 @@ def tair_management():
 # ==========================================================
 # Chapter 3 – Internship Journey Page
 # ==========================================================
-def hr_page():
-    # Stylized title
+   def hr_page():
     st.markdown("""
         <style>
         .chapter-title {
@@ -975,8 +974,12 @@ def hr_page():
 
     st.divider()
 
-    # Internship Objectives
-    st.title("🎯 Internship Objectives")
+
+    # ======================================================
+    # 🎯 Internship Objectives
+    # ======================================================
+
+    st.header("🎯 Internship Objectives")
 
     st.markdown("""
     Before exploring the HR Division processes, I would like to share my objectives 
@@ -1000,13 +1003,13 @@ def hr_page():
     st.divider()
 
 
-# ==========================================================
-# Internship Contributions
-# ==========================================================
-def internship_contributions():
 
-    st.title("💻 My Internship Contributions")
-    
+    # ======================================================
+    # 💻 Internship Contributions
+    # ======================================================
+
+    st.header("💻 Internship Contributions")
+
     # -------------------------------
     # Detailed Explanation
     # -------------------------------
@@ -1096,70 +1099,67 @@ def internship_contributions():
     st.info("These redesigns improved communication, training efficiency, and employee understanding of HR workflows.")
     
     st.divider()
-    
-    # -------------------------------
-    # HR Organizational Flowchart
-    # -------------------------------
-    st.markdown("""
-    <h1 style="
-        text-align:center;
-        font-size:70px;
-        color:#0C54A0;
-        font-weight:900;
-        margin-bottom:20px;">
-        HR Organizational Flowchart
-    </h1>
-    """, unsafe_allow_html=True)
-    
-    st.image("images/hr_org_chart.png", use_container_width=True)
-    
-    st.write("Select a department below.")
-    
-    if "selected_dept" not in st.session_state:
-        st.session_state.selected_dept = "L&D"
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        if st.button("📚 Learning & Development", use_container_width=True):
-            st.session_state.selected_dept = "L&D"
-    
-    with col2:
-        if st.button("💎 Reward Management", use_container_width=True):
-            st.session_state.selected_dept = "RM"
-    
-    with col3:
-        if st.button("🎯 Talent Acquisition & Industrial Relation", use_container_width=True):
-            st.session_state.selected_dept = "TA&IR"
-    
+
+
+
+
+    # ======================================================
+    # 🏢 HR Division
+    # ======================================================
+
+    st.header("🏢 HR Division")
+
+
+    st.image(
+        "images/hr_org_chart.png",
+        caption="HR Organizational Structure",
+        use_container_width=True
+    )
+
+
+    st.write("Select HR Department")
+
+
+    department = st.radio(
+        "",
+        [
+            "📚 Learning & Development",
+            "💎 Reward Management",
+            "🎯 Talent Acquisition & Industrial Relation"
+        ],
+        horizontal=True
+    )
+
+
     st.divider()
-    
-    if st.session_state.selected_dept == "L&D":
-        with st.expander("📚 Learning & Development", expanded=True):
-            st.write("Details about Learning & Development go here...")
-    
-    elif st.session_state.selected_dept == "RM":
-        with st.expander("💎 Reward Management", expanded=True):
-            st.write("Details about Reward Management go here...")
-    
-    elif st.session_state.selected_dept == "TA&IR":
-        with st.expander("🎯 Talent Acquisition & Industrial Relation", expanded=True):
-            st.write("Details about Talent Acquisition & Industrial Relation go here...")
 
 
-# ==========================================================
-# Main App Navigation
-# ==========================================================
-def main():
-    st.sidebar.title("📖 Chapter 3 Navigation")
-    page = st.sidebar.radio("Go to section:", ["Internship Objectives", "Internship Contributions"])
-    
-    if page == "Internship Objectives":
-        hr_page()
-    elif page == "Internship Contributions":
-        internship_contributions()
+
+    # ======================================================
+    # 📚 Learning & Development
+    # ======================================================
+
+    if department == "📚 Learning & Development":
+
+        learning_development()
 
 
-if __name__ == "__main__":
-    main()
+
+    # ======================================================
+    # 💎 Reward Management
+    # ======================================================
+
+    elif department == "💎 Reward Management":
+
+        reward_management()
+
+
+
+    # ======================================================
+    # 🎯 TA & IR
+    # ======================================================
+
+    elif department == "🎯 Talent Acquisition & Industrial Relation":
+
+        tair_management()
 
