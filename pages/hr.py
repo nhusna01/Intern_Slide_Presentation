@@ -484,14 +484,14 @@ with tab2:
     
         with col1:
             st.image(
-                "images/welfare1.jpg",
+                "images/welfare2.jpg",
                 caption="Kaneka Online Health Talk: Sleep Apnea",
                 width=250
             )
     
         with col2:
             st.image(
-                "images/welfare2.jpg",
+                "images/welfare1.jpg",
                 caption="Kaneka Online Health Talk: Mental Health, Stress & Emotional Well-Being ",
                 width=250
             )
