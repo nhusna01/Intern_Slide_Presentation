@@ -319,7 +319,7 @@ def reward_management():
             **My Involvement**
             - Assist calculate the extra OT.
             - Assist check eligibility for Housing Loan Interest Subsidy (employees exceeding 240 months).
-            - Assist change work schedule in Oracle system for shift employees (iMODA plant).
+            - Assist change work schedule in Excel file for shift employees (iMODA plant).
             """)
     
         # -------------------------------
@@ -375,7 +375,7 @@ def reward_management():
     
             **My Involvement**
             - Stamp date received, segregate according to organization (LHDN, Tabung Haji, Zakat).
-            - Fill in employee details for SOCSO (‘Borang 34’ for accident case).
+            - Assist in fill in the details for the form and do admistractive tasks.
             """)
 
     # ------------------------------------------------------
@@ -394,23 +394,7 @@ def reward_management():
             '<div class="ga-subtitle">⏰ Timeslip Organization</div>',
             unsafe_allow_html=True
         )
-    
-        col1, col2 = st.columns(2)
-    
-        with col1:
-            st.image(
-                "images/timeslip1.jpg",
-                caption="Timeslip Sorting Process",
-                use_container_width=True
-            )
-    
-        with col2:
-            st.image(
-                "images/timeslip2.jpg",
-                caption="Organized Timeslips by Month",
-                use_container_width=True
-            )
-    
+        
         st.markdown("""
         <div class="ga-text">
     
@@ -420,6 +404,15 @@ def reward_management():
         - Ensured timeslips were arranged accurately before filing.
     
         </div>
+    
+        col1 = st.columns(1)
+    
+        with col1:
+            st.image(
+                "images/timeslip1.jpg",
+                caption="Timeslip Sorting Process",
+                use_container_width=True
+            )
         """, unsafe_allow_html=True)
     
     
@@ -435,6 +428,17 @@ def reward_management():
             '<div class="ga-subtitle">💙 Corporate Wellness Programme</div>',
             unsafe_allow_html=True
         )
+
+        **Overview**
+        - Participated in corporate wellness initiatives to promote employees' health, safety, and well-being.
+    
+        **Activities**
+        - Attended Kaneka Health Talk on **Sleep Apnea**.
+        - Attended Kaneka Health Talk on **Mental Health, Stress & Well-being**.
+        - Assist in identify the list of employees that paricipated in the both **Sleep Apnea** & **Mental Health, Stress & Well-being** health programme.
+        - Gained awareness of workplace health and wellness initiatives through the **Corporate Wellness Programme**.
+    
+        </div>
     
         col1, col2, col3 = st.columns(3)
     
@@ -462,16 +466,6 @@ def reward_management():
         st.markdown("""
         <div class="ga-text">
     
-        **Overview**
-        - Participated in corporate wellness initiatives to promote employees' health, safety, and well-being.
-    
-        **Activities**
-        - Attended Kaneka Health Talk on **Sleep Apnea**.
-        - Attended Kaneka Health Talk on **Mental Health, Stress & Well-being**.
-        - Assist in identify the list of employees that paricipated in the both **Sleep Apnea** & **Mental Health, Stress & Well-being** health programme.
-        - Gained awareness of workplace health and wellness initiatives through the **Corporate Wellness Programme**.
-    
-        </div>
         """, unsafe_allow_html=True)
     
         st.divider()
@@ -483,6 +477,22 @@ def reward_management():
             '<div class="ga-subtitle">🎊 Company Events</div>',
             unsafe_allow_html=True
         )
+
+        st.markdown("""
+        <div class="ga-text">
+    
+        **Overview**
+        - Participated in company activities that strengthened employee engagement, collaboration, and teamwork.
+    
+        **Activities**
+        - Participated in HR Mingle & Munch at Swiss Garden Beach Resort.
+        - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort and assist in preparing the token for KAD2025 committee.
+        - Assisted in improving the cafeteria environment by organizing and removing outdated signage.
+        - Assisted in calculating participation fees for the Kaneka Run Ekiden.
+        - Assist in preparing the token number for the winners.
+        - Assist in sorting the Kaneka Tshirt according to the respective departments/plants.
+    
+        </div>
     
         col1, col2, col3 = st.columns(3)
     
@@ -508,21 +518,6 @@ def reward_management():
             )
 
     
-        st.markdown("""
-        <div class="ga-text">
-    
-        **Overview**
-        - Participated in company activities that strengthened employee engagement, collaboration, and teamwork.
-    
-        **Activities**
-        - Participated in HR Mingle & Munch at Swiss Garden Beach Resort.
-        - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort and assist in preparing the token for KAD2025 committee.
-        - Assisted in improving the cafeteria environment by organizing and removing outdated signage.
-        - Assisted in calculating participation fees for the Kaneka Run Ekiden.
-        - Assist in preparing the token number for the winners.
-        - Assist in sorting the Kaneka Tshirt according to the respective departments/plants.
-    
-        </div>
         """, unsafe_allow_html=True)
     
         st.divider()
@@ -535,6 +530,20 @@ def reward_management():
             '<div class="ga-subtitle">🌙 Hari Raya Celebration Support</div>',
             unsafe_allow_html=True
         )
+
+        st.markdown("""
+        <div class="ga-text">
+    
+        **Overview**
+        - Assisted the HR & General Affairs team in organizing the Hari Raya celebration for employees.
+    
+        **Responsibilities**
+        - Prepared beverages for the celebration.
+        - Arranged food according to the designated layout.
+        - Assisted in packing and distributing the remaining food to employees.
+        - Supported post-event clean-up and restored the venue after the celebration.
+    
+        </div>
     
         col1, col2, col3 = st.columns(3)
     
@@ -556,19 +565,7 @@ def reward_management():
                 "Post-Event Clean-up"
             )
     
-        st.markdown("""
-        <div class="ga-text">
     
-        **Overview**
-        - Assisted the HR & General Affairs team in organizing the Hari Raya celebration for employees.
-    
-        **Responsibilities**
-        - Prepared beverages for the celebration.
-        - Arranged food according to the designated layout.
-        - Assisted in packing and distributing the remaining food to employees.
-        - Supported post-event clean-up and restored the venue after the celebration.
-    
-        </div>
         """, unsafe_allow_html=True)
     
     
@@ -1002,193 +999,193 @@ def hr_page():
 
     st.divider()
 
-    # ==========================================================
-    # Internship Contributions
-    # ==========================================================
-    def internship_contributions():
+# ==========================================================
+# Internship Contributions
+# ==========================================================
+def internship_contributions():
 
-    st.title("💻 My Internship Contributions")
+st.title("💻 My Internship Contributions")
 
-    # -------------------------------
-    # Detailed Explanation
-    # -------------------------------
-    st.markdown("""
-    During my internship at **Kaneka Malaysia**, I was assigned to develop and redesign 
-    several learning and HR process materials. My contributions focused on two main areas:
+# -------------------------------
+# Detailed Explanation
+# -------------------------------
+st.markdown("""
+During my internship at **Kaneka Malaysia**, I was assigned to develop and redesign 
+several learning and HR process materials. My contributions focused on two main areas:
 
-    1. **Self-Paced Learning (SPL) Module Development**  
-       - Designed and published interactive modules using iSpring Suite.  
-       - Created both **internal modules** (for HR policies and assessments) and **external modules** (for general employee development).  
+1. **Self-Paced Learning (SPL) Module Development**  
+   - Designed and published interactive modules using iSpring Suite.  
+   - Created both **internal modules** (for HR policies and assessments) and **external modules** (for general employee development).  
 
-    2. **Flowchart Redesigns**  
-       - Improved clarity and usability of HR-related process flowcharts.  
-       - Enhanced visual communication for Learning & Development, Kaneka Crae, and Performance & Competency Assessment processes.  
-    """)
+2. **Flowchart Redesigns**  
+   - Improved clarity and usability of HR-related process flowcharts.  
+   - Enhanced visual communication for Learning & Development, Kaneka Crae, and Performance & Competency Assessment processes.  
+""")
 
-    st.divider()
+st.divider()
 
-    # -------------------------------
-    # Internal SPL Modules
-    # -------------------------------
-    st.subheader("📚 Internal SPL Modules")
+# -------------------------------
+# Internal SPL Modules
+# -------------------------------
+st.subheader("📚 Internal SPL Modules")
 
-    st.markdown("""
-    These modules were designed to support HR policies and employee assessments:
-    - **Baseline Assessment (BLA)**: Evaluate competency gaps and plan development activities.  
-    - **Leave Provision**: Guide employees on leave entitlements and procedures.  
-    """)
+st.markdown("""
+These modules were designed to support HR policies and employee assessments:
+- **Baseline Assessment (BLA)**: Evaluate competency gaps and plan development activities.  
+- **Leave Provision**: Guide employees on leave entitlements and procedures.  
+""")
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.image("images/spl_bla.png", caption="Baseline Assessment (BLA)", use_container_width=False, width=250)
-    with col2:
-        st.image("images/spl_leave.png", caption="Leave Provision", use_container_width=False, width=250)
+col1, col2 = st.columns(2)
+with col1:
+    st.image("images/spl_bla.png", caption="Baseline Assessment (BLA)", use_container_width=False, width=250)
+with col2:
+    st.image("images/spl_leave.png", caption="Leave Provision", use_container_width=False, width=250)
 
-    st.success("These internal modules helped employees understand HR policies and competency frameworks more effectively.")
+st.success("These internal modules helped employees understand HR policies and competency frameworks more effectively.")
 
-    st.divider()
+st.divider()
 
-    # -------------------------------
-    # External SPL Modules
-    # -------------------------------
-    st.subheader("🌍 External SPL Modules")
+# -------------------------------
+# External SPL Modules
+# -------------------------------
+st.subheader("🌍 External SPL Modules")
 
-    st.markdown("""
-    These modules were developed to enhance employees' personal and professional skills:
-    - **Stress Management**: Techniques to manage workplace stress.  
-    - **Ethics At Work**: Promote integrity and ethical behavior.  
-    - **Time Management**: Improve productivity and efficiency.  
-    - **Presentation Skills**: Build confidence in delivering impactful presentations.  
-    """)
+st.markdown("""
+These modules were developed to enhance employees' personal and professional skills:
+- **Stress Management**: Techniques to manage workplace stress.  
+- **Ethics At Work**: Promote integrity and ethical behavior.  
+- **Time Management**: Improve productivity and efficiency.  
+- **Presentation Skills**: Build confidence in delivering impactful presentations.  
+""")
 
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.image("images/spl_stress.png", caption="Stress Management", use_container_width=False, width=200)
-    with col2:
-        st.image("images/spl_ethics.png", caption="Ethics At Work", use_container_width=False, width=200)
-    with col3:
-        st.image("images/spl_time.png", caption="Time Management", use_container_width=False, width=200)
-    with col4:
-        st.image("images/spl_presentation.png", caption="Presentation Skills", use_container_width=False, width=200)
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    st.image("images/spl_stress.png", caption="Stress Management", use_container_width=False, width=200)
+with col2:
+    st.image("images/spl_ethics.png", caption="Ethics At Work", use_container_width=False, width=200)
+with col3:
+    st.image("images/spl_time.png", caption="Time Management", use_container_width=False, width=200)
+with col4:
+    st.image("images/spl_presentation.png", caption="Presentation Skills", use_container_width=False, width=200)
 
-    st.success("These external modules supported employee growth beyond HR policies, focusing on workplace well-being and skill development.")
+st.success("These external modules supported employee growth beyond HR policies, focusing on workplace well-being and skill development.")
 
-    st.divider()
+st.divider()
 
-    # -------------------------------
-    # Flowchart Redesigns
-    # -------------------------------
-    st.subheader("📊 Flowchart Redesign Contributions")
+# -------------------------------
+# Flowchart Redesigns
+# -------------------------------
+st.subheader("📊 Flowchart Redesign Contributions")
 
-    st.markdown("""
-    I redesigned several HR process flowcharts to improve clarity and communication:
-    - **Learning & Development Process Flowchart**  
-    - **Kaneka Crae Flowchart**  
-    - **Performance & Competency Assessment Process Flowchart**  
-    """)
+st.markdown("""
+I redesigned several HR process flowcharts to improve clarity and communication:
+- **Learning & Development Process Flowchart**  
+- **Kaneka Crae Flowchart**  
+- **Performance & Competency Assessment Process Flowchart**  
+""")
 
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.image("images/onboarding_flowchart.png", caption="Learning & Development Flowchart", use_container_width=False, width=220)
-    with col2:
-        st.image("images/Kaneka_care_flowchart.png", caption="Kaneka Crae Flowchart", use_container_width=False, width=220)
-    with col3:
-        st.image("images/pc_flowchart.png", caption="Performance & Competency Assessment Flowchart", use_container_width=False, width=220)
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.image("images/onboarding_flowchart.png", caption="Learning & Development Flowchart", use_container_width=False, width=220)
+with col2:
+    st.image("images/Kaneka_care_flowchart.png", caption="Kaneka Crae Flowchart", use_container_width=False, width=220)
+with col3:
+    st.image("images/pc_flowchart.png", caption="Performance & Competency Assessment Flowchart", use_container_width=False, width=220)
 
-    st.info("These redesigns improved communication, training efficiency, and employee understanding of HR workflows.")
+st.info("These redesigns improved communication, training efficiency, and employee understanding of HR workflows.")
 
 
-    
 
-    st.markdown("""
-    <style>
-        .block-container {
-            padding-top: 1rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            max-width: 100%;
-        }
-    </style>
-    """, unsafe_allow_html=True)
 
-    st.markdown("""
-    <h1 style="
-        text-align:center;
-        font-size:70px;
-        color:#0C54A0;
-        font-weight:900;
-        margin-bottom:20px;">
-        HR Organizational Flowchart
-    </h1>
-    """, unsafe_allow_html=True)
-    
-    st.image(
-        "images/hr_org_chart.png",
+st.markdown("""
+<style>
+    .block-container {
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 100%;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<h1 style="
+    text-align:center;
+    font-size:70px;
+    color:#0C54A0;
+    font-weight:900;
+    margin-bottom:20px;">
+    HR Organizational Flowchart
+</h1>
+""", unsafe_allow_html=True)
+
+st.image(
+    "images/hr_org_chart.png",
+    use_container_width=True
+)
+
+st.write(
+    "Select a department below."
+)
+
+if "selected_dept" not in st.session_state:
+
+    st.session_state.selected_dept = "L&D"
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+
+    if st.button(
+        "📚 Learning & Development",
         use_container_width=True
-    )
-
-    st.write(
-        "Select a department below."
-    )
-
-    if "selected_dept" not in st.session_state:
+    ):
 
         st.session_state.selected_dept = "L&D"
 
-    col1, col2, col3 = st.columns(3)
+with col2:
 
-    with col1:
+    if st.button(
+        "💎 Reward Management",
+        use_container_width=True
+    ):
 
-        if st.button(
-            "📚 Learning & Development",
-            use_container_width=True
-        ):
+        st.session_state.selected_dept = "RM"
 
-            st.session_state.selected_dept = "L&D"
+with col3:
 
-    with col2:
+    if st.button(
+        "🎯  Talent Acquisition & Industrial Relation",
+        use_container_width=True
+    ):
 
-        if st.button(
-            "💎 Reward Management",
-            use_container_width=True
-        ):
+        st.session_state.selected_dept = "TA&IR"
 
-            st.session_state.selected_dept = "RM"
+st.divider()
 
-    with col3:
+if st.session_state.selected_dept == "L&D":
 
-        if st.button(
-            "🎯  Talent Acquisition & Industrial Relation",
-            use_container_width=True
-        ):
+    with st.expander(
+        "📚 Learning & Development",
+        expanded=True
+    ):
 
-            st.session_state.selected_dept = "TA&IR"
+        learning_development()
 
-    st.divider()
+elif st.session_state.selected_dept == "RM":
 
-    if st.session_state.selected_dept == "L&D":
+    with st.expander(
+        "💎 Reward Management",
+        expanded=True
+    ):
 
-        with st.expander(
-            "📚 Learning & Development",
-            expanded=True
-        ):
+        reward_management()
 
-            learning_development()
+elif st.session_state.selected_dept == "TA&IR":
 
-    elif st.session_state.selected_dept == "RM":
+    with st.expander(
+        "🎯 Talent Acquisition & Industrial Relation",
+        expanded=True
+    ):
 
-        with st.expander(
-            "💎 Reward Management",
-            expanded=True
-        ):
-
-            reward_management()
-
-    elif st.session_state.selected_dept == "TA&IR":
-
-        with st.expander(
-            "🎯 Talent Acquisition & Industrial Relation",
-            expanded=True
-        ):
-
-            tair_management()
+        tair_management()
