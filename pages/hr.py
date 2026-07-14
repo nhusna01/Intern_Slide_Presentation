@@ -945,7 +945,7 @@ def tair_management():
 # ==========================================================
 # Chapter 3 – Internship Journey Page
 # ==========================================================
-   def hr_page():
+def hr_page():
     st.markdown("""
         <style>
         .chapter-title {
@@ -968,48 +968,48 @@ def tair_management():
         }
         </style>
     """, unsafe_allow_html=True)
-
+    
     st.markdown("<div class='chapter-title'>📖 Chapter 3 – Internship Journey IN HR Division</div>", unsafe_allow_html=True)
     st.markdown("<div class='chapter-caption'>✨ Flip through my internship journey as HR intern like a digital book ✨</div>", unsafe_allow_html=True)
-
+    
     st.divider()
-
-
+    
+    
     # ======================================================
     # 🎯 Internship Objectives
     # ======================================================
-
+    
     st.header("🎯 Internship Objectives")
-
+    
     st.markdown("""
     Before exploring the HR Division processes, I would like to share my objectives 
     during my internship at **Kaneka Malaysia**.
-
+    
     As an **HR Intern** with an **IT student background**, my objectives were:
-
+    
     - 💻 **Apply IT skills in HR**  
       Support HR systems (Mendix, Oracle) and contribute to digital transformation.
-
+    
     - 🏢 **Understand HR operations**  
       Gain practical exposure to recruitment, training, compensation, and employee relations.
-
+    
     - 🤝 **Improve communication & teamwork**  
       Strengthen collaboration with HR staff, supervisors, and fellow interns.
-
+    
     - 🚀 **Bridge HR and IT knowledge**  
       Explore how IT solutions can enhance HR efficiency, reporting, and employee engagement.
     """)
-
+    
     st.divider()
-
-
-
+    
+    
+    
     # ======================================================
     # 💻 Internship Contributions
     # ======================================================
-
+    
     st.header("💻 Internship Contributions")
-
+    
     # -------------------------------
     # Detailed Explanation
     # -------------------------------
@@ -1099,27 +1099,27 @@ def tair_management():
     st.info("These redesigns improved communication, training efficiency, and employee understanding of HR workflows.")
     
     st.divider()
-
-
-
-
+    
+    
+    
+    
     # ======================================================
     # 🏢 HR Division
     # ======================================================
-
+    
     st.header("🏢 HR Division")
-
-
+    
+    
     st.image(
         "images/hr_org_chart.png",
         caption="HR Organizational Structure",
         use_container_width=True
     )
-
-
+    
+    
     st.write("Select HR Department")
-
-
+    
+    
     department = st.radio(
         "",
         [
@@ -1129,37 +1129,37 @@ def tair_management():
         ],
         horizontal=True
     )
-
-
+    
+    
     st.divider()
-
-
-
+    
+    
+    
     # ======================================================
     # 📚 Learning & Development
     # ======================================================
-
+    
     if department == "📚 Learning & Development":
-
+    
         learning_development()
-
-
-
+    
+    
+    
     # ======================================================
     # 💎 Reward Management
     # ======================================================
-
+    
     elif department == "💎 Reward Management":
-
+    
         reward_management()
-
-
-
+    
+    
+    
     # ======================================================
     # 🎯 TA & IR
     # ======================================================
-
+    
     elif department == "🎯 Talent Acquisition & Industrial Relation":
-
+    
         tair_management()
-
+    
