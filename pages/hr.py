@@ -382,7 +382,7 @@ def reward_management():
             |---------------------------|------------------------------------------------------------|-------------------------------------------------|
             | **Statutory Contribution**| Mandatory by law; ensures compliance with government rules.| HR must deduct EPF, SOCSO, EIS, Income Tax. To protects employees’ retirement, healthcare, and job security. |
             | **Other Deductions**      | Voluntary, based on employee agreement or choice.          | HR processes Zakat, Tabung Haji, ASNB, Union Fees, MVL. To supports employees’ religious, financial, and personal commitments. |
-            """)
+            
     
             **My Involvement**
             - Stamp date received, segregate according to organization (LHDN, Tabung Haji, Zakat).
