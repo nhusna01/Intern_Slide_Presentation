@@ -297,30 +297,39 @@ def reward_management():
         # Payroll Section
         # -------------------------------
         with st.expander("💰 Payroll", expanded=True):
-    
-            # Two images side by side
-            col1, col2 = st.columns(2)
-            with col1:
-                st.image("images/payroll1.jpg", caption="Payroll Overview", use_container_width=True)
-            with col2:
-                st.image("images/payroll2.png", caption="Payroll Activities", use_container_width=True)
-    
             st.markdown("""
-            **Wage Period**
-            - Any month from 21st day of previous month to 20th day of the month.
-    
-            **Payment of Wages**
-            - 27th every month.
     
             **Overtime Definition**
-            - Work exceeding 8 hours.
-            - After completed 30 minutes, considered OT.
-    
+            - Work exceeding **8 hours per day** is considered overtime.
+            - Only after completing **30 minutes of extra work** does it count as OT.
+
+            **Attendance Award**
+            - Recognition for employees with consistent attendance
+
+            st.markdown("""
+            | Activity                  | Why It’s Important                           | Impact on HR / Payroll                  |
+            |---------------------------|-----------------------------------------------|-----------------------------------------|
+            | **Overtime Calculation**  | Ensures fair pay for extra hours worked.      | Prevents disputes, keeps payroll accurate. |
+            | **Shift Schedule Mgmt**   | Keeps rosters correct for shift employees.    | Ensures proper tracking and wage calculation. |
+            | **Attendance Award Check**| Recognizes reliable employees.                | Boosts morale, encourages punctuality.   |
+                
             **My Involvement**
-            - Assist calculate the extra OT.
-            - Assist check eligibility for Housing Loan Interest Subsidy (employees exceeding 240 months).
+            - Assist calculate the overtime for the security guard according to their shift group.
+            - Assist check eligibility for list of employee that take leave for more than 7 days (not received Attendance Award).
             - Assist change work schedule in Excel file for shift employees (iMODA plant).
             """)
+            
+            # Two images side by side
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.image("images/payroll3.jpg", caption="Extra OT calculation", width=250)
+            with col2:
+                st.image("images/payroll2.png", caption="Attendance Award Eligibility", width=250)
+            with col3:
+                st.image("images/payroll1.png", caption="Revise Work Schedule", width=250)
+
+        
+
     
         # -------------------------------
         # Medical Management Section
@@ -328,28 +337,32 @@ def reward_management():
         with st.expander("🏥 Medical Management", expanded=True):
     
             # Two images side by side
-            col1, col2 = st.columns(2)
+            col1, col2, col3 = st.columns(3)
             with col1:
-                st.image("images/medical1.png", caption="Medical Benefits", use_container_width=True)
+                st.image("images/medical1.png", caption="Medical Invoices April", width=250)
             with col2:
-                st.image("images/medical2.png", caption="Insurance & Entitlement", use_container_width=True)
+                st.image("images/medical2.png", caption="Medical Invoices June", width=250)
+            with col3:
+                st.image("images/medical3.png", caption="Medical Report", width=250)
     
             st.markdown("""
             **Medical Benefits**
             - Inpatient
             - Outpatient
             - Dental
-            - Optical
+            - Spectacle
     
-            **Insurance (GTL)**
-            - Group Term Life.
-    
-            **Medical Entitlement for Dependent Hospitalization**
-            - Specialist Visit.
+            **Documents Used in HR**
+            | Document        | Purpose                                | Used By HR For                                      |
+            |-----------------|----------------------------------------|-----------------------------------------------------|
+            | Medical Invoice | Proof of medical expenses              | Claim reimbursement, payment verification, finance records |
+            | Medical Report  | Medical condition information from doctor | Medical leave review, employee support, workplace arrangement |
+        
     
             **My Involvement**
-            - Processing monthly medical invoice received from TPA (Third Party Administration).
+            - Assist in monthly medical invoice received from TPA (Third Party Administration).
             - Assist verifying invoice amount, stamp VOP, segregate according to company.
+            - Standardize the format and compile the IP and OP medical report into each excel sheet.
             """)
     
         # -------------------------------
@@ -358,30 +371,44 @@ def reward_management():
         with st.expander("📑 Statutory Contribution & Other Deductions", expanded=True):
     
             # Two images side by side
-            col1, col2 = st.columns(2)
+            col1, col2, col3 = st.columns(3)
             with col1:
                 st.image("images/contribution1.png", caption="Statutory Contributions", use_container_width=True)
             with col2:
-                st.image("images/contribution2.png", caption="Other Deductions", use_container_width=True)
+                st.image("images/contribution3.png", caption="Update Resignee Date in Perkeso System", use_container_width=True)
+            with col3:
+                st.image("images/contribution2.png", caption="Filing Voluntary Deductions Documents", use_container_width=True)
     
             st.markdown("""
             **Statutory Contribution**
             - Mandatory deductions required by law.
-            - Examples: EPF, SOCSO & EIS, Income Tax.
+            - Examples: EPF, SOCSO, Income Tax, Employment Insurance System (EIS).
     
             **Other Deductions**
             - Voluntary deductions by agreement.
-            - Examples: Zakat, Motor Vehicle Loan (MVL), Tabung Haji, ASNB, Union Membership Fee.
+            - Examples: Zakat, Tabung Haji, Motor Vehicle Loan (MVL).
+
+            st.markdown("""
+            | Category                  | Why It’s Important                                      | Impact on HR / Payroll                          |
+            |---------------------------|----------------------------------------------------------|------------------------------------------------|
+            | **Statutory Contribution**| Mandatory by law; ensures compliance with government rules. | HR must deduct EPF, SOCSO, EIS, Income Tax → protects employees’ retirement, healthcare, and job security. |
+            | **Other Deductions**      | Voluntary, based on employee agreement or choice.          | HR processes Zakat, Tabung Haji, ASNB, Union Fees, MVL → supports employees’ religious, financial, and personal commitments. |
+            """)
     
             **My Involvement**
             - Stamp date received, segregate according to organization (LHDN, Tabung Haji, Zakat).
-            - Assist in fill in the details for the form and do admistractive tasks.
+            - Identify the resignee employee in Excel file, and then update the resignee date in the Perkeso system (Perkeso Assist).
+            - Filing the zakat, tabung haji, and lhdn documents according to the company.
             """)
 
-    # ------------------------------------------------------
-    # General Affairs
-    # ------------------------------------------------------
+# ------------------------------------------------------
+# General Affairs
+# ------------------------------------------------------
+ with tab2:
     
+        st.subheader(" General Affairs")
+    
+        st.divider()
     # ------------------------------------------------------
     # Employee Benefits
     # ------------------------------------------------------
@@ -405,14 +432,22 @@ def reward_management():
     
         </div>
     
-        col1 = st.columns(1)
+        col1, col2 = st.columns(2)
     
         with col1:
             st.image(
                 "images/timeslip1.jpg",
                 caption="Timeslip Sorting Process",
-                use_container_width=True
+                width=250
             )
+            
+        with col2:
+        st.image(
+            "images/timeslip2.jpg",
+            caption="Timeslip Sorting Process",
+            width=250
+        )
+            
         """, unsafe_allow_html=True)
     
     
@@ -485,101 +520,63 @@ def reward_management():
         - Participated in company activities that strengthened employee engagement, collaboration, and teamwork.
     
         **Activities**
-        - Participated in HR Mingle & Munch at Swiss Garden Beach Resort.
+        - Prepare the draft poster of the events 
         - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort and assist in preparing the token for KAD2025 committee.
-        - Assisted in improving the cafeteria environment by organizing and removing outdated signage.
+        - Assisted in improving the cafeteria environment by organizing and removing outdated signage on table top.
         - Assisted in calculating participation fees for the Kaneka Run Ekiden.
         - Assist in preparing the token number for the winners.
-        - Assist in sorting the Kaneka Tshirt according to the respective departments/plants.
+        - Assist in sorting the Kaneka Tshirt and bit according to the respective departments/plants.
     
         </div>
     
-        col1, col2, col3 = st.columns(3)
+        col1, col2, col3, col4, col5, col6 = st.columns(6)
     
         with col1:
             st.image(
                 "images/events1.jpg",
                 caption="Kaneka Run Ekiden Preparation 1",
-                use_container_width=True
+                width=250
             )
     
         with col2:
             st.image(
                 "images/events2.jpg",
-                caption="Kaneka Run Ekiden Preparation 2",
-                use_container_width=True
+                caption="Kaneka Ekiden Preparation 2",
+                width=250
             )
 
         with col3:
             st.image(
                 "images/events3.png",
-                caption="HR Mingle & Munch",
-                use_container_width=True
+                caption="Kaneka Ekiden Tshirt Distribution",
+                width=250
+            )
+
+        with col4:
+            st.image(
+                "images/events1.jpg",
+                caption="Kaneka Health Programme Poster",
+                width=250
+            )
+    
+        with col5:
+            st.image(
+                "images/events2.jpg",
+                caption="KAD2025 Appreciation Token Preparation",
+                width=250
+            )
+
+        with col6:
+            st.image(
+                "images/events3.png",
+                caption="Cafeteria Clean Signage",
+                width=250
             )
 
     
         """, unsafe_allow_html=True)
     
         st.divider()
-
-    
-        # ------------------------------------------------------
-        # Hari Raya Celebration Support
-        # ------------------------------------------------------
-        st.markdown(
-            '<div class="ga-subtitle">🌙 Hari Raya Celebration Support</div>',
-            unsafe_allow_html=True
-        )
-
-        st.markdown("""
-        <div class="ga-text">
-    
-        **Overview**
-        - Assisted the HR & General Affairs team in organizing the Hari Raya celebration for employees.
-    
-        **Responsibilities**
-        - Prepared beverages for the celebration.
-        - Arranged food according to the designated layout.
-        - Assisted in packing and distributing the remaining food to employees.
-        - Supported post-event clean-up and restored the venue after the celebration.
-    
-        </div>
-    
-        col1, col2, col3 = st.columns(3)
-    
-        with col1:
-            display_image(
-                "images/raya1.png",
-                "Beverage Preparation"
-            )
-    
-        with col2:
-            display_image(
-                "images/raya2.png",
-                "Food Arrangement"
-            )
-    
-        with col3:
-            display_image(
-                "images/raya3.png",
-                "Post-Event Clean-up"
-            )
-    
-    
-        """, unsafe_allow_html=True)
-    
-    
-    # ------------------------------------------------------
-    # Competencies Developed
-    # ------------------------------------------------------
-    st.success("""
-    ### 🌟 Competencies Developed
-    - 🤝 Teamwork and Collaboration
-    - 🎉 Event Coordination
-    - 📂 Administrative Support
-    - 🏢 Workplace Organization
-    - ✅ Responsibility and Attention to Detail
-    """)
 
 # ------------------------------------------------------
 # Additional Tasks
@@ -639,28 +636,28 @@ def additional_page():
             st.image(
                 "images/raya11.png",
                 caption="Hari Raya Celebration - Admin 2",
-                use_container_width=True
+                width=250
             )
 
         with col2:
             st.image(
                 "images/raya22.png",
                 caption="Hari Raya Celebration - Admin 1",
-                use_container_width=True
+                width=250
             )
 
         with col3:
             st.image(
                 "images/raya33.png",
                 caption="Hari Raya Celebration - Maintenance",
-                use_container_width=True
+                width=250
             )
 
         with col4:
             st.image(
                 "images/raya44.png",
                 caption="Hari Raya Celebration - Engineering",
-                use_container_width=True
+                width=250
             )
 
         st.markdown("""
@@ -669,7 +666,11 @@ def additional_page():
         **Activities**
         - Attended Hari Raya celebrations organized by various departments and production plants.
         - Assisted the **Admin 2 Committee** in organizing the Hari Raya celebration.
-        - Supported event preparation.
+        - Supported event preparation including:
+            1- Prepared beverages for the celebration.
+            2- Arranged food according to the designated layout.
+            3- Assisted in packing and distributing the remaining food to employees.
+            4- Supported post-event clean-up and restored the venue after the celebration.
 
         </div>
         """, unsafe_allow_html=True)
@@ -826,7 +827,7 @@ def tair_management():
     
         step = st.session_state.recruitment_step
     
-        st.subheader(f"Stage {step}")
+        st.subheader(f"Steps {step}")
     
         # Display details with larger font
         st.markdown(f"""
@@ -837,7 +838,7 @@ def tair_management():
     
         st.progress(step / 8)
     
-        # Example: Only Stage 4 contains your activity
+        # Example: Only Step 4 contains your activity
         if step == 4:
             st.success("Activities I was involved in")
             st.video("images/iv.mp4")
@@ -888,14 +889,15 @@ def tair_management():
                 <div style="font-size:24px;">
                 The grievance procedure provides employees with a fair and systematic way to resolve workplace issues.<br><br>
         
-                <b>Step 1 – Immediate Superior</b><br>
-                - Discuss the issue with your immediate superior within <b>3 working days</b>.<br><br>
+                <b>Step 1 – Raise the issue</b><br>
+                - Identify workplace concern and reports it to your immediate superior or directly to HR.<br>
+                
+                <b>Step 2 – HR Investigate & Discussion</b><br>
+                - HR reviews the grievance, gathers facts, and meets with the employee and relevant parties.<br>
         
-                <b>Step 2 – Division / Production Head</b><br>
-                - If unresolved, escalate the issue within <b>5 working days</b>.<br><br>
-        
-                <b>Step 3 – Human Resources</b><br>
-                - Submit a formal appeal to HR within <b>7 working days</b> if the issue remains unresolved.<br>
+                <b>Step 3 – Decision & Resolution</b><br>
+                - HR reports the outcome in writing, the employees can submit a formal appeal to higher management / grievance<br>
+                  committee if the issue remains unresolved.<br>
                 </div>
                 """, unsafe_allow_html=True)
         
@@ -1007,8 +1009,39 @@ def hr_page():
     # ======================================================
     # 💻 Internship Contributions
     # ======================================================
+    # -------------------------------
+    # Custom CSS (placed at the top)
+    # -------------------------------
+    st.markdown(
+        """
+        <style>
+        .big-font {
+            font-size:30px !important;
+            font-weight: bold;
+        }
+        .medium-font {
+            font-size:22px !important;
+        }
+        .small-font {
+            font-size:16px !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     
-    st.header("💻 Internship Contributions")
+    # -------------------------------
+    # Headers using custom classes
+    # -------------------------------
+    st.markdown('<p class="big-font">💻 Internship Main Contributions</p>', unsafe_allow_html=True)
+    
+    st.markdown('<p class="medium-font">📚 Internal SPL Modules</p>', unsafe_allow_html=True)
+    
+    st.markdown('<p class="medium-font">🌍 External SPL Modules</p>', unsafe_allow_html=True)
+    
+    st.markdown('<p class="medium-font">📊 Flowchart Redesign Contributions</p>', unsafe_allow_html=True)
+
+
     
     # -------------------------------
     # Detailed Explanation
@@ -1031,7 +1064,6 @@ def hr_page():
     # -------------------------------
     # Internal SPL Modules
     # -------------------------------
-    st.subheader("📚 Internal SPL Modules")
     
     st.markdown("""
     These modules were designed to support HR policies and employee assessments:
@@ -1052,7 +1084,6 @@ def hr_page():
     # -------------------------------
     # External SPL Modules
     # -------------------------------
-    st.subheader("🌍 External SPL Modules")
     
     st.markdown("""
     These modules were developed to enhance employees' personal and professional skills:
@@ -1079,7 +1110,6 @@ def hr_page():
     # -------------------------------
     # Flowchart Redesigns
     # -------------------------------
-    st.subheader("📊 Flowchart Redesign Contributions")
     
     st.markdown("""
     I redesigned several HR process flowcharts to improve clarity and communication:
@@ -1101,14 +1131,29 @@ def hr_page():
     st.divider()
     
     
-    
-    
     # ======================================================
     # 🏢 HR Division
     # ======================================================
     
-    st.header("🏢 HR Division")
+    # Custom CSS (define once at the top of your app)
+    st.markdown(
+        """
+        <style>
+        .big-font {
+            font-size:32px !important;
+            font-weight: bold;
+        }
+        .medium-font {
+            font-size:24px !important;
+            font-weight: bold;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     
+    # Use styled markdown instead of st.header
+    st.markdown('<p class="big-font">🏢 HR Division</p>', unsafe_allow_html=True)
     
     st.image(
         "images/hr_org_chart.png",
@@ -1116,9 +1161,7 @@ def hr_page():
         use_container_width=True
     )
     
-    
     st.write("Select HR Department")
-    
     
     department = st.radio(
         "",
@@ -1130,10 +1173,8 @@ def hr_page():
         horizontal=True
     )
     
-    
     st.divider()
-    
-    
+
     
     # ======================================================
     # 📚 Learning & Development
