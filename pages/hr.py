@@ -590,25 +590,25 @@ def additional_page():
     # ------------------------------------------------------
     st.markdown("""
     <style>
-    .additional-title{
+    .additional-title {
         font-size:32px;
         font-weight:700;
         color:#0C54A0;
         margin-bottom:10px;
     }
 
-    .additional-text{
+    .additional-text {
         font-size:19px;
         line-height:1.8;
     }
 
-    .additional-text ul{
+    .additional-text ul {
         font-size:19px;
         line-height:1.8;
         margin-top:8px;
     }
 
-    .additional-text strong{
+    .additional-text strong {
         font-size:20px;
     }
     </style>
