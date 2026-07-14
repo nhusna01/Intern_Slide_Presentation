@@ -993,9 +993,6 @@ def hr_page():
     - 🏢 **Understand HR operations**  
       Gain practical exposure to recruitment, training, compensation, and employee relations.
 
-    - 📚 **Develop learning modules**  
-      Create interactive self-paced training content such as the **Baseline Assessment (BLA) SPL module** using iSpring Suite.
-
     - 🤝 **Improve communication & teamwork**  
       Strengthen collaboration with HR staff, supervisors, and fellow interns.
 
@@ -1094,7 +1091,7 @@ def internship_contributions():
     with col1:
         st.image("images/onboarding_flowchart.png", caption="Learning & Development Flowchart", use_container_width=False, width=220)
     with col2:
-        st.image("images/kaneka_crae_flowchart.png", caption="Kaneka Crae Flowchart", use_container_width=False, width=220)
+        st.image("images/Kaneka_care_flowchart.png", caption="Kaneka Crae Flowchart", use_container_width=False, width=220)
     with col3:
         st.image("images/pc_flowchart.png", caption="Performance & Competency Assessment Flowchart", use_container_width=False, width=220)
 
