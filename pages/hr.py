@@ -589,42 +589,42 @@ def additional_page():
     # Custom CSS
     # ------------------------------------------------------
     st.markdown("""
-    <style>
-    .additional-title{
-        font-size:32px;
-        font-weight:700;
-        color:#0C54A0;
-        margin-bottom:10px;
-    }
-
-    .additional-text{
-        font-size:19px;
-        line-height:1.8;
-    }
-
-    .additional-text ul{
-        font-size:19px;
-        line-height:1.8;
-        margin-top:8px;
-    }
-
-    .additional-text strong{
-        font-size:20px;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    st.markdown(
-        '<div class="additional-title">🌟 Additional Tasks & Activities</div>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown("""
-    <div class="additional-text">
-    Besides my daily responsibilities in the Reward Management department,
-    I also participated in several company events and activities.
-    </div>
-    """, unsafe_allow_html=True)
+        <style>
+        .additional-title{
+            font-size:32px;
+            font-weight:700;
+            color:#0C54A0;
+            margin-bottom:10px;
+        }
+    
+        .additional-text{
+            font-size:19px;
+            line-height:1.8;
+        }
+    
+        .additional-text ul{
+            font-size:19px;
+            line-height:1.8;
+            margin-top:8px;
+        }
+    
+        .additional-text strong{
+            font-size:20px;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+    
+        st.markdown(
+            '<div class="additional-title">🌟 Additional Tasks & Activities</div>',
+            unsafe_allow_html=True
+        )
+    
+        st.markdown("""
+        <div class="additional-text">
+        Besides my daily responsibilities in the Reward Management department,
+        I also participated in several company events and activities.
+        </div>
+        """, unsafe_allow_html=True)
 
     # ------------------------------------------------------
     # Jamuan Raya
