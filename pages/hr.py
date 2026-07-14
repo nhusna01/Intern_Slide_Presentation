@@ -307,7 +307,7 @@ def reward_management():
             - Recognition for employees with consistent attendance
 
             st.markdown("""
-            | Activity                  | Why It’s Important                           | Impact on HR / Payroll                  |
+            | Activity                  | Purpose                                       | Impact on HR / Payroll                  |
             |---------------------------|-----------------------------------------------|-----------------------------------------|
             | **Overtime Calculation**  | Ensures fair pay for extra hours worked.      | Prevents disputes, keeps payroll accurate. |
             | **Shift Schedule Mgmt**   | Keeps rosters correct for shift employees.    | Ensures proper tracking and wage calculation. |
@@ -389,9 +389,9 @@ def reward_management():
             - Examples: Zakat, Tabung Haji, Motor Vehicle Loan (MVL).
 
             st.markdown("""
-            | Category                  | Why It’s Important                                      | Impact on HR / Payroll                          |
-            |---------------------------|----------------------------------------------------------|------------------------------------------------|
-            | **Statutory Contribution**| Mandatory by law; ensures compliance with government rules. | HR must deduct EPF, SOCSO, EIS, Income Tax → protects employees’ retirement, healthcare, and job security. |
+            | Category                  | Purpose                                                    | Impact on HR / Payroll                          |
+            |---------------------------|------------------------------------------------------------|-------------------------------------------------|
+            | **Statutory Contribution**| Mandatory by law; ensures compliance with government rules.| HR must deduct EPF, SOCSO, EIS, Income Tax → protects employees’ retirement, healthcare, and job security. |
             | **Other Deductions**      | Voluntary, based on employee agreement or choice.          | HR processes Zakat, Tabung Haji, ASNB, Union Fees, MVL → supports employees’ religious, financial, and personal commitments. |
             """)
     
