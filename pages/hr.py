@@ -943,7 +943,7 @@ def tair_management():
 
 
 # ==========================================================
-# Main Page
+# Chapter 3 – Internship Journey Page
 # ==========================================================
 def hr_page():
     # Stylized title
@@ -975,7 +975,7 @@ def hr_page():
 
     st.divider()
 
-    # Internship Objectives FIRST
+    # Internship Objectives
     st.title("🎯 Internship Objectives")
 
     st.markdown("""
@@ -998,6 +998,7 @@ def hr_page():
     """)
 
     st.divider()
+
 
 # ==========================================================
 # Internship Contributions
@@ -1037,9 +1038,9 @@ def internship_contributions():
     
     col1, col2 = st.columns(2)
     with col1:
-        st.image("images/spl_bla.png", caption="Baseline Assessment (BLA)", use_container_width=False, width=250)
+        st.image("images/spl_bla.png", caption="Baseline Assessment (BLA)", width=250)
     with col2:
-        st.image("images/spl_leave.png", caption="Leave Provision", use_container_width=False, width=250)
+        st.image("images/spl_leave.png", caption="Leave Provision", width=250)
     
     st.success("These internal modules helped employees understand HR policies and competency frameworks more effectively.")
     
@@ -1052,21 +1053,21 @@ def internship_contributions():
     
     st.markdown("""
     These modules were developed to enhance employees' personal and professional skills:
-    - **Stress Management**: Techniques to manage workplace stress.  
-    - **Ethics At Work**: Promote integrity and ethical behavior.  
-    - **Time Management**: Improve productivity and efficiency.  
-    - **Presentation Skills**: Build confidence in delivering impactful presentations.  
+    - **Stress Management**  
+    - **Ethics At Work**  
+    - **Time Management**  
+    - **Presentation Skills**  
     """)
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.image("images/spl_stress.png", caption="Stress Management", use_container_width=False, width=200)
+        st.image("images/spl_stress.png", caption="Stress Management", width=200)
     with col2:
-        st.image("images/spl_ethics.png", caption="Ethics At Work", use_container_width=False, width=200)
+        st.image("images/spl_ethics.png", caption="Ethics At Work", width=200)
     with col3:
-        st.image("images/spl_time.png", caption="Time Management", use_container_width=False, width=200)
+        st.image("images/spl_time.png", caption="Time Management", width=200)
     with col4:
-        st.image("images/spl_presentation.png", caption="Presentation Skills", use_container_width=False, width=200)
+        st.image("images/spl_presentation.png", caption="Presentation Skills", width=200)
     
     st.success("These external modules supported employee growth beyond HR policies, focusing on workplace well-being and skill development.")
     
@@ -1086,28 +1087,19 @@ def internship_contributions():
     
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("images/onboarding_flowchart.png", caption="Learning & Development Flowchart", use_container_width=False, width=220)
+        st.image("images/onboarding_flowchart.png", caption="Learning & Development Flowchart", width=220)
     with col2:
-        st.image("images/Kaneka_care_flowchart.png", caption="Kaneka Crae Flowchart", use_container_width=False, width=220)
+        st.image("images/Kaneka_care_flowchart.png", caption="Kaneka Crae Flowchart", width=220)
     with col3:
-        st.image("images/pc_flowchart.png", caption="Performance & Competency Assessment Flowchart", use_container_width=False, width=220)
+        st.image("images/pc_flowchart.png", caption="Performance & Competency Assessment Flowchart", width=220)
     
     st.info("These redesigns improved communication, training efficiency, and employee understanding of HR workflows.")
     
+    st.divider()
     
-
-
-    st.markdown("""
-    <style>
-        .block-container {
-            padding-top: 1rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            max-width: 100%;
-        }
-    </style>
-    """, unsafe_allow_html=True)
-    
+    # -------------------------------
+    # HR Organizational Flowchart
+    # -------------------------------
     st.markdown("""
     <h1 style="
         text-align:center;
@@ -1119,73 +1111,55 @@ def internship_contributions():
     </h1>
     """, unsafe_allow_html=True)
     
-    st.image(
-        "images/hr_org_chart.png",
-        use_container_width=True
-    )
+    st.image("images/hr_org_chart.png", use_container_width=True)
     
-    st.write(
-        "Select a department below."
-    )
+    st.write("Select a department below.")
     
     if "selected_dept" not in st.session_state:
-    
         st.session_state.selected_dept = "L&D"
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
-    
-        if st.button(
-            "📚 Learning & Development",
-            use_container_width=True
-        ):
-    
+        if st.button("📚 Learning & Development", use_container_width=True):
             st.session_state.selected_dept = "L&D"
     
     with col2:
-    
-        if st.button(
-            "💎 Reward Management",
-            use_container_width=True
-        ):
-    
+        if st.button("💎 Reward Management", use_container_width=True):
             st.session_state.selected_dept = "RM"
     
     with col3:
-    
-        if st.button(
-            "🎯  Talent Acquisition & Industrial Relation",
-            use_container_width=True
-        ):
-    
+        if st.button("🎯 Talent Acquisition & Industrial Relation", use_container_width=True):
             st.session_state.selected_dept = "TA&IR"
     
     st.divider()
     
     if st.session_state.selected_dept == "L&D":
-    
-        with st.expander(
-            "📚 Learning & Development",
-            expanded=True
-        ):
-    
-            learning_development()
+        with st.expander("📚 Learning & Development", expanded=True):
+            st.write("Details about Learning & Development go here...")
     
     elif st.session_state.selected_dept == "RM":
-    
-        with st.expander(
-            "💎 Reward Management",
-            expanded=True
-        ):
-    
-            reward_management()
+        with st.expander("💎 Reward Management", expanded=True):
+            st.write("Details about Reward Management go here...")
     
     elif st.session_state.selected_dept == "TA&IR":
+        with st.expander("🎯 Talent Acquisition & Industrial Relation", expanded=True):
+            st.write("Details about Talent Acquisition & Industrial Relation go here...")
+
+
+# ==========================================================
+# Main App Navigation
+# ==========================================================
+def main():
+    st.sidebar.title("📖 Chapter 3 Navigation")
+    page = st.sidebar.radio("Go to section:", ["Internship Objectives", "Internship Contributions"])
     
-        with st.expander(
-            "🎯 Talent Acquisition & Industrial Relation",
-            expanded=True
-        ):
-    
-            tair_management()
+    if page == "Internship Objectives":
+        hr_page()
+    elif page == "Internship Contributions":
+        internship_contributions()
+
+
+if __name__ == "__main__":
+    main()
+
