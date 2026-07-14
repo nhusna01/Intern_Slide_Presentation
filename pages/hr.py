@@ -401,372 +401,342 @@ def reward_management():
                                                                  
 
                                                                
-
-# ------------------------------------------------------
-# General Affairs
-# ------------------------------------------------------
-with tab2:
-    
-    st.subheader(" General Affairs")
-
-    st.divider()
     # ------------------------------------------------------
-    # Employee Benefits
+    # General Affairs
     # ------------------------------------------------------
-    with st.expander("🤝 Employee Benefits", expanded=True):
-    
-        # ------------------------------------------------------
-        # Timeslip Organization
-        # ------------------------------------------------------
-        st.markdown(
-            '<div class="ga-subtitle">⏰ Timeslip Organization</div>',
-            unsafe_allow_html=True
-        )
+    with tab2:
         
-        st.markdown("""
-        <div class="ga-text">
+        st.subheader(" General Affairs")
     
-        **Responsibilities**
-        - Assisted in sorting employee timeslips according to the respective months.
-        - Organized timeslip records systematically for easier filing and retrieval.
-        - Ensured timeslips were arranged accurately before filing.
-    
-        </div>
-    
-        col1, col2 = st.columns(2)
-    
-        with col1:
-            st.image(
-                "images/timeslip1.jpg",
-                caption="Timeslip Sorting Process 1",
-                width=250
+        st.divider()
+        # ------------------------------------------------------
+        # Employee Benefits
+        # ------------------------------------------------------
+        with st.expander("🤝 Employee Benefits", expanded=True):
+        
+            # ------------------------------------------------------
+            # Timeslip Organization
+            # ------------------------------------------------------
+            st.markdown(
+                '<div class="ga-subtitle">⏰ Timeslip Organization</div>',
+                unsafe_allow_html=True
             )
             
-        with col2:
-        st.image(
-            "images/timeslip2.jpg",
-            caption="Timeslip Sorting Process 2",
-            width=250
-        )
-            
-        """, unsafe_allow_html=True)
-    
-    
-    # ------------------------------------------------------
-    # Event Management
-    # ------------------------------------------------------
-    with st.expander("🎉 Event Management", expanded=True):
-    
+            st.markdown("""
+            <div class="ga-text">
+        
+            **Responsibilities**
+            - Assisted in sorting employee timeslips according to the respective months.
+            - Organized timeslip records systematically for easier filing and retrieval.
+            - Ensured timeslips were arranged accurately before filing.
+        
+            </div>
+        
+            col1, col2 = st.columns(2)
+        
+            with col1:
+                st.image(
+                    "images/timeslip1.jpg",
+                    caption="Timeslip Sorting Process 1",
+                    width=250
+                )
+                
+            with col2:
+            st.image(
+                "images/timeslip2.jpg",
+                caption="Timeslip Sorting Process 2",
+                width=250
+            )
+                
+            """, unsafe_allow_html=True)
+        
+        
         # ------------------------------------------------------
-        # Corporate Wellness Programme
+        # Event Management
         # ------------------------------------------------------
-        st.markdown(
-            '<div class="ga-subtitle">💙 Corporate Wellness Programme</div>',
-            unsafe_allow_html=True
-        )
-
-        st.markdown("""
-        <div class="ga-text">
-
-        **Overview**
-        - Participated in corporate wellness initiatives to promote health, safety, and well-being of employees.
-    
-        **Activities**
-        - Attended Kaneka Health Talk on **Sleep Apnea**.
-        - Attended Kaneka Health Talk on **Mental Health, Stress & Well-being**.
-        - Assist in identify the list of employees that paricipated in the both **Sleep Apnea** & **Mental Health, Stress & Well-being** health programme.
-        - Gained awareness of workplace health and wellness initiatives through the **Corporate Wellness Programme**.
-    
-        </div>
-        """, unsafe_allow_html=True)
-    
-        col1, col2, col3 = st.columns(3)
-    
-        with col1:
-            st.image(
-                "images/welfare2.jpg",
-                caption="Kaneka Online Health Talk: Sleep Apnea",
-                width=250
+        with st.expander("🎉 Event Management", expanded=True):
+        
+            # ------------------------------------------------------
+            # Corporate Wellness Programme
+            # ------------------------------------------------------
+            st.markdown(
+                '<div class="ga-subtitle">💙 Corporate Wellness Programme</div>',
+                unsafe_allow_html=True
             )
     
-        with col2:
-            st.image(
-                "images/welfare1.jpg",
-                caption="Kaneka Online Health Talk: Mental Health, Stress & Emotional Well-Being ",
-                width=250
+            st.markdown("""
+            <div class="ga-text">
+    
+            **Overview**
+            - Participated in corporate wellness initiatives to promote health, safety, and well-being of employees.
+        
+            **Activities**
+            - Attended Kaneka Health Talk on **Sleep Apnea**.
+            - Attended Kaneka Health Talk on **Mental Health, Stress & Well-being**.
+            - Assist in identify the list of employees that paricipated in the both **Sleep Apnea** & **Mental Health, Stress & Well-being** health programme.
+            - Gained awareness of workplace health and wellness initiatives through the **Corporate Wellness Programme**.
+        
+            </div>
+            """, unsafe_allow_html=True)
+        
+            col1, col2, col3 = st.columns(3)
+        
+            with col1:
+                st.image(
+                    "images/welfare2.jpg",
+                    caption="Kaneka Online Health Talk: Sleep Apnea",
+                    width=250
+                )
+        
+            with col2:
+                st.image(
+                    "images/welfare1.jpg",
+                    caption="Kaneka Online Health Talk: Mental Health, Stress & Emotional Well-Being ",
+                    width=250
+                )
+    
+            with col3:
+                st.image(
+                    "images/welfare3.png",
+                    caption="Overall Wellness Program Participation Record",
+                    width=250
+                )
+    
+        
+            st.divider()
+        
+            # ------------------------------------------------------
+            # Company Events
+            # ------------------------------------------------------
+            st.markdown(
+                '<div class="ga-subtitle">🎊 Company Events</div>',
+                unsafe_allow_html=True
             )
+    
+            st.markdown("""
+            <div class="ga-text">
+        
+            **Overview**
+            - Participated in company activities that strengthened employee engagement, collaboration, and teamwork.
+        
+            **Activities**
+            - Prepare the draft poster of the events 
+            - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort and assist in preparing the token for KAD2025 committee.
+            - Assisted in improving the cafeteria environment by organizing and removing outdated signage on table top.
+            - Assisted in calculating participation fees for the Kaneka Run Ekiden.
+            - Assist in preparing the token number for the winners.
+            - Assist in sorting the Kaneka Tshirt and bit according to the respective departments/plants.
+        
+            </div>
+        
+            col1, col2, col3, col4, col5, col6 = st.columns(6)
+        
+            with col1:
+                st.image(
+                    "images/events1.jpg",
+                    caption="Kaneka Run Ekiden Preparation 1",
+                    width=250
+                )
+        
+            with col2:
+                st.image(
+                    "images/events2.jpg",
+                    caption="Kaneka Ekiden Preparation 2",
+                    width=250
+                )
+    
+            with col3:
+                st.image(
+                    "images/events3.jpg",
+                    caption="Kaneka Ekiden Tshirt Distribution",
+                    width=250
+                )
+    
+            with col4:
+                st.image(
+                    "images/events4.png",
+                    caption="Kaneka Health Programme Poster",
+                    width=250
+                )
+        
+            with col5:
+                st.image(
+                    "images/events5.png",
+                    caption="KAD2025 Appreciation Token Preparation",
+                    width=250
+                )
+    
+            with col6:
+                st.image(
+                    "images/events6.png",
+                    caption="Cafeteria Clean Signage",
+                    width=250
+                )
+    
+        
+            """, unsafe_allow_html=True)
+        
+            st.divider()
+    
 
-        with col3:
-            st.image(
-                "images/welfare3.png",
-                caption="Overall Wellness Program Participation Record",
-                width=250
-            )
-
+    # ------------------------------------------------------
+    # Additional Tasks
+    # ------------------------------------------------------
+    with tab3:
+        
+        st.subheader(" Additional Tasks")
     
         st.divider()
     
+        st.markdown("""
+        <div class="additional-text">
+        Besides my daily responsibilities in the Reward Management department,
+        I also participated in several company events and activities.
+        </div>
+        """, unsafe_allow_html=True)
+    
         # ------------------------------------------------------
-        # Company Events
+        # Jamuan Raya
         # ------------------------------------------------------
-        st.markdown(
-            '<div class="ga-subtitle">🎊 Company Events</div>',
-            unsafe_allow_html=True
-        )
-
-        st.markdown("""
-        <div class="ga-text">
+        with st.expander("🎉 Jamuan Raya 2026 (Admin 2 Committee)", expanded=True):
     
-        **Overview**
-        - Participated in company activities that strengthened employee engagement, collaboration, and teamwork.
+            col1, col2, col3, col4 = st.columns(4)
     
-        **Activities**
-        - Prepare the draft poster of the events 
-        - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort and assist in preparing the token for KAD2025 committee.
-        - Assisted in improving the cafeteria environment by organizing and removing outdated signage on table top.
-        - Assisted in calculating participation fees for the Kaneka Run Ekiden.
-        - Assist in preparing the token number for the winners.
-        - Assist in sorting the Kaneka Tshirt and bit according to the respective departments/plants.
+            with col1:
+                st.image(
+                    "images/raya11.png",
+                    caption="Hari Raya Celebration - Admin 2",
+                    width=250
+                )
     
-        </div>
+            with col2:
+                st.image(
+                    "images/raya22.png",
+                    caption="Hari Raya Celebration - Admin 1",
+                    width=250
+                )
     
-        col1, col2, col3, col4, col5, col6 = st.columns(6)
+            with col3:
+                st.image(
+                    "images/raya33.png",
+                    caption="Hari Raya Celebration - Maintenance",
+                    width=250
+                )
     
-        with col1:
-            st.image(
-                "images/events1.jpg",
-                caption="Kaneka Run Ekiden Preparation 1",
-                width=250
-            )
+            with col4:
+                st.image(
+                    "images/raya44.png",
+                    caption="Hari Raya Celebration - Engineering",
+                    width=250
+                )
     
-        with col2:
-            st.image(
-                "images/events2.jpg",
-                caption="Kaneka Ekiden Preparation 2",
-                width=250
-            )
-
-        with col3:
-            st.image(
-                "images/events3.jpg",
-                caption="Kaneka Ekiden Tshirt Distribution",
-                width=250
-            )
-
-        with col4:
-            st.image(
-                "images/events4.png",
-                caption="Kaneka Health Programme Poster",
-                width=250
-            )
+            st.markdown("""
+            <div class="additional-text">
     
-        with col5:
-            st.image(
-                "images/events5.png",
-                caption="KAD2025 Appreciation Token Preparation",
-                width=250
-            )
-
-        with col6:
-            st.image(
-                "images/events6.png",
-                caption="Cafeteria Clean Signage",
-                width=250
-            )
-
+            **Activities**
+            - Attended Hari Raya celebrations organized by various departments and production plants.
+            - Assisted the **Admin 2 Committee** in organizing the Hari Raya celebration.
+            - Supported event preparation including:
+                1- Prepared beverages for the celebration.
+                2- Arranged food according to the designated layout.
+                3- Assisted in packing and distributing the remaining food to employees.
+                4- Supported post-event clean-up and restored the venue after the celebration.
     
-        """, unsafe_allow_html=True)
+            </div>
+            """, unsafe_allow_html=True)
     
-        st.divider()
-
-
-# ------------------------------------------------------
-# Additional Tasks
-# ------------------------------------------------------
-with tab3:
+        # ------------------------------------------------------
+        # Karakuri Competition
+        # ------------------------------------------------------
+        with st.expander("🏆 Karakuri Competition", expanded=True):
     
-    st.subheader(" Additional Tasks")
-
-    st.divider()
-
-    # ------------------------------------------------------
-    # Custom CSS
-    # ------------------------------------------------------
-    st.markdown("""
-    <style>
-    .additional-title {
-        font-size:22px;
-        font-weight:700;
-        color:#0C54A0;
-        margin-bottom:10px;
-    }
-
-    .additional-text {
-        font-size:19px;
-        line-height:1.8;
-    }
-
-    .additional-text ul {
-        font-size:19px;
-        line-height:1.8;
-        margin-top:8px;
-    }
-
-    .additional-text strong {
-        font-size:20px;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-    <div class="additional-text">
-    Besides my daily responsibilities in the Reward Management department,
-    I also participated in several company events and activities.
-    </div>
-    """, unsafe_allow_html=True)
-
-    # ------------------------------------------------------
-    # Jamuan Raya
-    # ------------------------------------------------------
-    with st.expander("🎉 Jamuan Raya 2026 (Admin 2 Committee)", expanded=True):
-
-        col1, col2, col3, col4 = st.columns(4)
-
-        with col1:
-            st.image(
-                "images/raya11.png",
-                caption="Hari Raya Celebration - Admin 2",
-                width=250
-            )
-
-        with col2:
-            st.image(
-                "images/raya22.png",
-                caption="Hari Raya Celebration - Admin 1",
-                width=250
-            )
-
-        with col3:
-            st.image(
-                "images/raya33.png",
-                caption="Hari Raya Celebration - Maintenance",
-                width=250
-            )
-
-        with col4:
-            st.image(
-                "images/raya44.png",
-                caption="Hari Raya Celebration - Engineering",
-                width=250
-            )
-
-        st.markdown("""
-        <div class="additional-text">
-
-        **Activities**
-        - Attended Hari Raya celebrations organized by various departments and production plants.
-        - Assisted the **Admin 2 Committee** in organizing the Hari Raya celebration.
-        - Supported event preparation including:
-            1- Prepared beverages for the celebration.
-            2- Arranged food according to the designated layout.
-            3- Assisted in packing and distributing the remaining food to employees.
-            4- Supported post-event clean-up and restored the venue after the celebration.
-
-        </div>
-        """, unsafe_allow_html=True)
-
-    # ------------------------------------------------------
-    # Karakuri Competition
-    # ------------------------------------------------------
-    with st.expander("🏆 Karakuri Competition", expanded=True):
-
-        col1, col2, col3, col4 = st.columns(4)
-
-        with col1:
-            st.image(
-                "images/karakuri2.png",
-                caption="Competition Project",
-                width=250
-            )
-
-        with col2:
-            st.image(
-                "images/karakuri1.png",
-                caption="Project Presentation & Demonstration",
-                width=250
-            )
-
-        with col3:
-            st.image(
-                "images/karakuri3.jpg",
-                caption="Award Ceremony",
-                width=250
-            )
-
-        with col4:
-            st.image(
-                "images/karakuri4.jpg",
-                caption="Group Photo Session",
-                width=250
-            )
-
-        st.markdown("""
-        <div class="additional-text">
-
-        **Achievement**
-        - Assisted in assembling the PVC pipe trolley based on the approved design.
-        - Presented the problem statement and explained the trolley design and its purpose.
-        - Collaborated with team members throughout the competition.
-        - 🥈 **Won Second Place.**
-
-        </div>
-        """, unsafe_allow_html=True)
-
-    # ------------------------------------------------------
-    # Kaneka Run Ekiden
-    # ------------------------------------------------------
-    with st.expander("🏃 Kaneka Run Ekiden", expanded=True):
-
-        col1, col2, col3, col4 = st.columns(4)
-
-        with col1:
-            st.image(
-                "images/ekiden1.png",
-                caption="Warm-up Session",
-                width=250)
-            )
-
-        with col2:
-            st.image(
-                "images/ekiden2.png",
-                caption="Race Participation",
-                width=250)
-            )
-
-        with col3:
-            st.image(
-                "images/ekiden3.png",
-                caption="Award Ceremony",
-                width=250)
-            )
-
-        with col4:
-            st.image(
-                "images/ekiden4.png",
-                caption="Photo Session with Interns",
-                width=250)
-            )
-
-        st.markdown("""
-        <div class="additional-text">
-
-        **Achievement**
-        - Participated in the **Kaneka Run Ekiden**.
-        - Represented the HR Department.
-        - 🥉 **Won Third Place.**
-
-        </div>
-        """, unsafe_allow_html=True)
+            col1, col2, col3, col4 = st.columns(4)
+    
+            with col1:
+                st.image(
+                    "images/karakuri2.png",
+                    caption="Competition Project",
+                    width=250
+                )
+    
+            with col2:
+                st.image(
+                    "images/karakuri1.png",
+                    caption="Project Presentation & Demonstration",
+                    width=250
+                )
+    
+            with col3:
+                st.image(
+                    "images/karakuri3.jpg",
+                    caption="Award Ceremony",
+                    width=250
+                )
+    
+            with col4:
+                st.image(
+                    "images/karakuri4.jpg",
+                    caption="Group Photo Session",
+                    width=250
+                )
+    
+            st.markdown("""
+            <div class="additional-text">
+    
+            **Achievement**
+            - Assisted in assembling the PVC pipe trolley based on the approved design.
+            - Presented the problem statement and explained the trolley design and its purpose.
+            - Collaborated with team members throughout the competition.
+            - 🥈 **Won Second Place.**
+    
+            </div>
+            """, unsafe_allow_html=True)
+    
+        # ------------------------------------------------------
+        # Kaneka Run Ekiden
+        # ------------------------------------------------------
+        with st.expander("🏃 Kaneka Run Ekiden", expanded=True):
+    
+            col1, col2, col3, col4 = st.columns(4)
+    
+            with col1:
+                st.image(
+                    "images/ekiden1.png",
+                    caption="Warm-up Session",
+                    width=250)
+                )
+    
+            with col2:
+                st.image(
+                    "images/ekiden2.png",
+                    caption="Race Participation",
+                    width=250)
+                )
+    
+            with col3:
+                st.image(
+                    "images/ekiden3.png",
+                    caption="Award Ceremony",
+                    width=250)
+                )
+    
+            with col4:
+                st.image(
+                    "images/ekiden4.png",
+                    caption="Photo Session with Interns",
+                    width=250)
+                )
+    
+            st.markdown("""
+            <div class="additional-text">
+    
+            **Achievement**
+            - Participated in the **Kaneka Run Ekiden**.
+            - Represented the HR Department.
+            - 🥉 **Won Third Place.**
+    
+            </div>
+            """, unsafe_allow_html=True)
 
 
 # ==========================================================
