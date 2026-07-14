@@ -595,8 +595,7 @@ def reward_management():
         # Jamuan Raya
         # ------------------------------------------------------
         with st.expander("🎉 Jamuan Raya 2026 (Admin 2 Committee)", expanded=True):
-    
-             st.markdown("""
+            st.markdown("""
             <div class="additional-text">
     
             **Activities**
@@ -611,8 +610,7 @@ def reward_management():
             </div>
             """, unsafe_allow_html=True)
             
-            col1, col2, col3, col4 = st.columns(4)
-    
+            col1, col2, col3, col4 = st.columns(4)    
             with col1:
                 st.image(
                     "images/raya11.png",
