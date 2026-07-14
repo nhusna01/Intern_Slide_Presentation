@@ -429,6 +429,9 @@ def reward_management():
             unsafe_allow_html=True
         )
 
+        st.markdown("""
+        <div class="ga-text">
+
         **Overview**
         - Participated in corporate wellness initiatives to promote employees' health, safety, and well-being.
     
@@ -462,9 +465,6 @@ def reward_management():
                 caption="Overall Wellness Program Participation Record",
                 use_container_width=True
             )
-    
-        st.markdown("""
-        <div class="ga-text">
     
         """, unsafe_allow_html=True)
     
