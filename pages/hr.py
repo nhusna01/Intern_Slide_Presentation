@@ -930,7 +930,10 @@ def tair_management():
                   • Disciplinary procedures<br>
                   • Grievance handling<br>
                   • Harassment awareness<br>
-                  • Business Code of Conduct<br><br>
+                  • Business Code of Conduct<br>
+                - Analyzed employee engagement survey data in Microsoft Excel. Calculated the count, total, and percentage for each <br>
+                  response scale (Strongly Disagree, Disagree, Agree, and Strongly Agree). Created pie charts to visualize the response <br>
+                  distribution for each survey section.<br><br>
             
                 These activities provided me with valuable exposure to HR operations, grievance resolution, and workplace ethics.<br>
                 </div>
@@ -944,6 +947,33 @@ def tair_management():
 # Main Page
 # ==========================================================
 def hr_page():
+
+    # Internship Objectives FIRST
+    st.title("🎯 Internship Objectives")
+
+    st.markdown("""
+    Before exploring the HR Division processes, I would like to share my objectives 
+    during my internship at **Kaneka Malaysia**.
+
+    As an **HR Intern** with an **IT student background**, my objectives were:
+
+    - 💻 **Apply IT skills in HR**  
+      Support HR systems (Mendix, Oracle) and contribute to digital transformation.
+
+    - 🏢 **Understand HR operations**  
+      Gain practical exposure to recruitment, training, compensation, and employee relations.
+
+    - 📚 **Develop learning modules**  
+      Create interactive self-paced training content such as the **Baseline Assessment (BLA) SPL module** using iSpring Suite.
+
+    - 🤝 **Improve communication & teamwork**  
+      Strengthen collaboration with HR staff, supervisors, and fellow interns.
+
+    - 🚀 **Bridge HR and IT knowledge**  
+      Explore how IT solutions can enhance HR efficiency, reporting, and employee engagement.
+    """)
+
+    st.divider()
 
     st.markdown("""
     <style>
