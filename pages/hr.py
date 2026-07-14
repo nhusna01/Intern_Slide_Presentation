@@ -856,22 +856,27 @@ def tair_management():
 
         
             # Grievance Procedure
-            with st.expander("🤝 Grievance Procedure", expanded=True):
+            with st.expander("⚖️ Disciplinary & Misconduct Management", expanded=True):
                 st.markdown("""
                 <div style="font-size:24px;">
-                The grievance procedure provides employees with a fair and systematic way to resolve workplace issues.<br><br>
-        
-                <b>Step 1 – Raise the issue</b><br>
-                - Identify workplace concern and reports it to your immediate superior or directly to HR.<br>
+                <b>Definition</b><br><br>
+                Misconduct refers to any act or behavior that violates the company's Terms and Conditions of Employment or Company Rules.<br><br>
                 
-                <b>Step 2 – HR Investigate & Discussion</b><br>
-                - HR reviews the grievance, gathers facts, and meets with the employee and relevant parties.<br>
-        
-                <b>Step 3 – Decision & Resolution</b><br>
-                - HR reports the outcome in writing, the employees can submit a formal appeal to higher management / grievance<br>
-                  committee if the issue remains unresolved.<br>
+                <b>Misconduct Categories</b><br><br>
+                🔹 <b>Category 1 – Minor Misconduct</b><br>
+                - Minor violations of company rules.<br>
+                - Example: Late attendance.<br><br>
+                
+                🔹 <b>Category 2 – Serious Misconduct</b><br>
+                - Repeated or more serious violations.<br>
+                - Example: Habitual late attendance.<br><br>
+                
+                🔹 <b>Category 3 – Major Misconduct</b><br>
+                - Severe misconduct that may lead to disciplinary action.<br>
+                - Example: Unauthorized use or falsification of a signature.<br>
                 </div>
                 """, unsafe_allow_html=True)
+
         
             # Employee Engagement & Support
             with st.expander("📢 Employee Engagement & Support", expanded=True):
