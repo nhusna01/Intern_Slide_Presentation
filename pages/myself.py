@@ -56,82 +56,103 @@ def myself_page():
         </style>
     """, unsafe_allow_html=True)
 
+    st.markdown("""
+        <style>
+        div[data-testid="stSlider"] label{
+            font-size:28px !important;
+            font-weight:bold !important;
+        }
+        
+        div[data-testid="stSlider"] p{
+            font-size:26px !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+    
     # Slider navigation
     page = st.slider("📖 Flip a page", 1, 6, 1)
 
     # Page content
     if page == 1:
         st.markdown("<div class='book-page'><h3>💡 Challenges & Ways to Overcome</h3>", unsafe_allow_html=True)
+    
         st.table({
-            "Challenge": ["Time Management", "Technical Skills Gap", "Communication Barriers"],
-            "Solution": [
-                "Weekly schedules & prioritization",
-                "Self-learning, asking colleagues, practice",
-                "Improved email etiquette, feedback from HR"
+            "Challenge": [
+                "Understanding HR Policies and Procedures",
+                "Learning to Use iSpring Suite for SPL Development",
+                "Communication and Confidence in Sharing Ideas",
+                "Adapting to a New Working Environment"
+            ],
+    
+            "Ways to Overcome": [
+                "Reviewed HR policies and internal documents, sought guidance from supervisors and colleagues, and asked questions whenever clarification was needed.",
+                "Learned independently through online tutorials, hands-on practice, and guidance from colleagues to improve proficiency in developing Self-Paced Learning (SPL) modules.",
+                "Became more proactive by asking questions, participating in discussions, and confidently sharing ideas to improve communication and teamwork.",
+                "Observed workplace practices, accepted constructive feedback, learned from experienced colleagues, and gradually adapted to the organization's work culture."
             ]
         })
+    
         st.markdown("</div>", unsafe_allow_html=True)
 
     elif page == 2:
         st.markdown("<div class='book-page'><h3>🤝 HR Division & IT/Data Science Relation</h3>", unsafe_allow_html=True)
+    
         st.table({
-            "HR Process": ["Data Handling", "Analytics", "Automation"],
-            "Relation to My Course": [
-                "Ensuring data integrity like in data science",
-                "Dashboards mirror analytical skills",
-                "SPL modules connect with learning module development"
+            "Common Practice": [
+                "Data Analysis",
+                "Use of AI Tools",
+                "Process Improvement",
+                "Data-Driven Decision Making"
+            ],
+    
+            "Application in HR & IT": [
+                "Both HR and IT analyze real data to identify trends, solve problems, and support informed decision-making.",
+                "Both HR and IT leverage generative AI tools to improve productivity, generate ideas, prepare documentation, and streamline daily tasks.",
+                "Both HR and IT use process flows and flowcharts to standardize workflows, improve efficiency, and ensure processes are well-organized and easy to manage.",
+                "Both departments rely on data and analytical insights to support planning, evaluate outcomes, and drive continuous improvement."
             ]
         })
+    
         st.markdown("</div>", unsafe_allow_html=True)
 
     elif page == 3:
-        st.markdown("<div class='book-page'><h3>🎯 Goals & Objectives</h3>", unsafe_allow_html=True)
-        st.table({
-            "Objective": [
-                "Gain HR exposure and real working environment",
-                "Apply IT/Data Science knowledge",
-                "Improve communication & teamwork",
-                "Contribute to HR projects"
-            ],
-            "Outcome": [
-                "Hands-on HR workflow experience and able to adapt in industry environment",
-                "Used Streamlit & Data Analytics in HR",
-                "Better email writing & collaboration",
-                "Supported SPL module development and L&D process flow"
-            ]
-        })
-        st.markdown("</div>", unsafe_allow_html=True)
-
-    elif page == 4:
         st.markdown("<div class='book-page'><h3>📊 Expectations vs Reality</h3>", unsafe_allow_html=True)
+    
         st.table({
             "Expectation": [
-                "Assist only with admin tasks",
-                "Limited IT exposure"
+                "Perform mainly administrative tasks",
+                "Limited opportunity to apply technical skills",
+                "Minimal involvement in HR projects",
+                "Observe workplace operations only"
             ],
+    
             "Reality": [
-                "Involved in HR system development & HR policy / modules",
-                "Applied data visualization, data analytics, python pogramming & Streamlit in HR "
+                "Handled administrative responsibilities while contributing to HR initiatives and projects.",
+                "Applied Python, Streamlit, Microsoft Excel, and data analytics in HR-related tasks.",
+                "Participated in SPL development, employee engagement survey analysis, redesigning the OEMS flowchart for the Learning & Development (L&D) team, and HR documentation.",
+                "Gained practical experience by collaborating with different departments within the HR Division and supporting continuous improvement activities."
             ]
         })
+    
         st.markdown("</div>", unsafe_allow_html=True)
 
-    elif page == 5:
+    elif page ==4:
         st.markdown("<div class='book-page'><h3>🚀 Future Plan</h3>", unsafe_allow_html=True)
         st.table({
-            "Plan": [
-                "Sponsor my parents to go to umrah/hajj",
-                "Improve technical skill, Streamlit, GitHub skills",
-                "Pursue master in the future",
-                "Balance career growth",
-                "Pursue data-driven HR/IT career"
+            "Future Goal": [
+                "Sponsor my parents to perform Umrah and Hajj",
+                "Become proficient in Streamlit, GitHub, and data analytics",
+                "Further my studies by pursuing a Master's degree",
+                "Maintain a healthy work–life balance while advancing my career",
+                "Establish a successful career in data-driven HR and IT"
             ],
-            "Next Step": [
-                "Plan my financial and save moneys",
-                "Practice with real datasets",
-                "Gain knowledge and practical skill",
-                "Plan and follow my career path systematically",
-                "Apply for HR/IT hybrid roles"
+            
+            "Action Plan": [
+                "Build a strong financial foundation through consistent saving",
+                "Develop technical expertise by working on real-world projects",
+                "Continue learning through professional development and certifications",
+                "Set clear career milestones and monitor my progress",
+                "Seek opportunities in HR Technology, HR Analytics, or IT-related roles"
             ]
         })
 
