@@ -703,28 +703,28 @@ def reward_management():
                 st.image(
                     "images/ekiden1.png",
                     caption="Warm-up Session",
-                    width=250)
+                    width=250
                 )
     
             with col2:
                 st.image(
                     "images/ekiden2.png",
                     caption="Race Participation",
-                    width=250)
+                    width=250
                 )
     
             with col3:
                 st.image(
                     "images/ekiden3.png",
                     caption="Award Ceremony",
-                    width=250)
+                    width=250
                 )
     
             with col4:
                 st.image(
                     "images/ekiden4.png",
                     caption="Photo Session with Interns",
-                    width=250)
+                    width=250
                 )
     
             st.markdown("""
