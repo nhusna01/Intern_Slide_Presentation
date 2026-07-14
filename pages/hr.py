@@ -325,7 +325,7 @@ def reward_management():
             with col2:
                 st.image("images/payroll2.png", caption="Attendance Award Eligibility", width=250)
             with col3:
-                st.image("images/payroll1.png", caption="Revise Work Schedule", width=250)
+                st.image("images/payroll1.jpg", caption="Revise Work Schedule", width=250)
 
     
         # -------------------------------
@@ -987,15 +987,7 @@ def hr_page():
     # Headers using custom classes
     # -------------------------------
     st.markdown('<p class="big-font">💻 Internship Main Contributions</p>', unsafe_allow_html=True)
-    
-    st.markdown('<p class="medium-font">📚 Internal SPL Modules</p>', unsafe_allow_html=True)
-    
-    st.markdown('<p class="medium-font">🌍 External SPL Modules</p>', unsafe_allow_html=True)
-    
-    st.markdown('<p class="medium-font">📊 Flowchart Redesign Contributions</p>', unsafe_allow_html=True)
-
-
-    
+        
     # -------------------------------
     # Detailed Explanation
     # -------------------------------
@@ -1017,7 +1009,8 @@ def hr_page():
     # -------------------------------
     # Internal SPL Modules
     # -------------------------------
-    
+    st.markdown('<p class="medium-font">📚 Internal SPL Modules</p>', unsafe_allow_html=True)
+
     st.markdown("""
     These modules were designed to support HR policies and employee assessments:
     - **Baseline Assessment (BLA)**: Evaluate competency gaps and plan development activities.  
@@ -1037,7 +1030,8 @@ def hr_page():
     # -------------------------------
     # External SPL Modules
     # -------------------------------
-    
+    st.markdown('<p class="medium-font">🌍 External SPL Modules</p>', unsafe_allow_html=True)
+
     st.markdown("""
     These modules were developed to enhance employees' personal and professional skills:
     - **Stress Management**  
@@ -1063,7 +1057,8 @@ def hr_page():
     # -------------------------------
     # Flowchart Redesigns
     # -------------------------------
-    
+    st.markdown('<p class="medium-font">📊 Flowchart Redesign Contributions</p>', unsafe_allow_html=True)
+
     st.markdown("""
     I redesigned several HR process flowcharts to improve clarity and communication:
     - **Learning & Development Process Flowchart**  
