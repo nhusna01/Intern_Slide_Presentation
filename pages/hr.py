@@ -322,28 +322,17 @@ def reward_management():
             # Two images side by side
             col1, col2, col3 = st.columns(3)
             with col1:
-                st.image("images/payroll3.jpg", caption="Extra OT calculation", width=250)
+                st.image("images/payroll3.jpg", caption="Extra OT (in hour) calculation", width=250)
             with col2:
                 st.image("images/payroll2.png", caption="Attendance Award Eligibility", width=250)
             with col3:
                 st.image("images/payroll1.png", caption="Revise Work Schedule", width=250)
-
-        
 
     
         # -------------------------------
         # Medical Management Section
         # -------------------------------
         with st.expander("🏥 Medical Management", expanded=True):
-    
-            # Two images side by side
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.image("images/medical1.png", caption="Medical Invoices April", width=250)
-            with col2:
-                st.image("images/medical2.png", caption="Medical Invoices June", width=250)
-            with col3:
-                st.image("images/medical3.png", caption="Medical Report", width=250)
     
             st.markdown("""
             **Medical Benefits**
@@ -364,20 +353,21 @@ def reward_management():
             - Assist verifying invoice amount, stamp VOP, segregate according to company.
             - Standardize the format and compile the IP and OP medical report into each excel sheet.
             """)
+
+
+            # Two images side by side
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.image("images/medical1.png", caption="Medical Invoices April", width=250)
+            with col2:
+                st.image("images/medical2.png", caption="Medical Invoices June", width=250)
+            with col3:
+                st.image("images/medical3.png", caption="Medical Report", width=250)
     
         # -------------------------------
         # Statutory Contribution & Other Deductions Section
         # -------------------------------
         with st.expander("📑 Statutory Contribution & Other Deductions", expanded=True):
-    
-            # Two images side by side
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.image("images/contribution1.png", caption="Statutory Contributions", use_container_width=True)
-            with col2:
-                st.image("images/contribution3.png", caption="Update Resignee Date in Perkeso System", use_container_width=True)
-            with col3:
-                st.image("images/contribution2.png", caption="Filing Voluntary Deductions Documents", use_container_width=True)
     
             st.markdown("""
             **Statutory Contribution**
@@ -388,7 +378,6 @@ def reward_management():
             - Voluntary deductions by agreement.
             - Examples: Zakat, Tabung Haji, Motor Vehicle Loan (MVL).
 
-            st.markdown("""
             | Category                  | Purpose                                                    | Impact on HR / Payroll                          |
             |---------------------------|------------------------------------------------------------|-------------------------------------------------|
             | **Statutory Contribution**| Mandatory by law; ensures compliance with government rules.| HR must deduct EPF, SOCSO, EIS, Income Tax → protects employees’ retirement, healthcare, and job security. |
@@ -401,14 +390,26 @@ def reward_management():
             - Filing the zakat, tabung haji, and lhdn documents according to the company.
             """)
 
+            # Two images side by side
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.image("images/contribution1.jpg", caption="Statutory Contributions", use_container_width=True)
+            with col2:
+                st.image("images/contribution3.png", caption="Update Resignee Date in Perkeso System", use_container_width=True)
+            with col3:
+                st.image("images/contribution2.png", caption="Filing Voluntary Deductions Documents", use_container_width=True)
+                                                                 
+
+                                                               
+
 # ------------------------------------------------------
 # General Affairs
 # ------------------------------------------------------
- with tab2:
+with tab2:
     
-        st.subheader(" General Affairs")
-    
-        st.divider()
+    st.subheader(" General Affairs")
+
+    st.divider()
     # ------------------------------------------------------
     # Employee Benefits
     # ------------------------------------------------------
@@ -437,14 +438,14 @@ def reward_management():
         with col1:
             st.image(
                 "images/timeslip1.jpg",
-                caption="Timeslip Sorting Process",
+                caption="Timeslip Sorting Process 1",
                 width=250
             )
             
         with col2:
         st.image(
             "images/timeslip2.jpg",
-            caption="Timeslip Sorting Process",
+            caption="Timeslip Sorting Process 2",
             width=250
         )
             
@@ -477,31 +478,31 @@ def reward_management():
         - Gained awareness of workplace health and wellness initiatives through the **Corporate Wellness Programme**.
     
         </div>
+        """, unsafe_allow_html=True)
     
         col1, col2, col3 = st.columns(3)
     
         with col1:
             st.image(
                 "images/welfare1.jpg",
-                caption="Health & Well-being Programme",
-                use_container_width=True
+                caption="Kaneka Online Health Talk: Sleep Apnea",
+                width=250
             )
     
         with col2:
             st.image(
                 "images/welfare2.jpg",
-                caption="Retirement Programme",
-                use_container_width=True
+                caption="Kaneka Online Health Talk: Mental Health, Stress & Emotional Well-Being ",
+                width=250
             )
 
         with col3:
             st.image(
                 "images/welfare3.png",
                 caption="Overall Wellness Program Participation Record",
-                use_container_width=True
+                width=250
             )
-    
-        """, unsafe_allow_html=True)
+
     
         st.divider()
     
@@ -547,28 +548,28 @@ def reward_management():
 
         with col3:
             st.image(
-                "images/events3.png",
+                "images/events3.jpg",
                 caption="Kaneka Ekiden Tshirt Distribution",
                 width=250
             )
 
         with col4:
             st.image(
-                "images/events1.jpg",
+                "images/events4.png",
                 caption="Kaneka Health Programme Poster",
                 width=250
             )
     
         with col5:
             st.image(
-                "images/events2.jpg",
+                "images/events5.png",
                 caption="KAD2025 Appreciation Token Preparation",
                 width=250
             )
 
         with col6:
             st.image(
-                "images/events3.png",
+                "images/events6.png",
                 caption="Cafeteria Clean Signage",
                 width=250
             )
@@ -686,28 +687,28 @@ def additional_page():
             st.image(
                 "images/karakuri2.png",
                 caption="Competition Project",
-                use_container_width=True
+                width=250)
             )
 
         with col2:
             st.image(
                 "images/karakuri1.png",
                 caption="Project Presentation & Demonstration",
-                use_container_width=True
+                width=250)
             )
 
         with col3:
             st.image(
                 "images/karakuri3.jpg",
                 caption="Award Ceremony",
-                use_container_width=True
+                width=250)
             )
 
         with col4:
             st.image(
                 "images/karakuri4.jpg",
                 caption="Group Photo Session",
-                use_container_width=True
+                width=250)
             )
 
         st.markdown("""
@@ -733,28 +734,28 @@ def additional_page():
             st.image(
                 "images/ekiden1.png",
                 caption="Warm-up Session",
-                use_container_width=True
+                width=250)
             )
 
         with col2:
             st.image(
                 "images/ekiden2.png",
                 caption="Race Participation",
-                use_container_width=True
+                width=250)
             )
 
         with col3:
             st.image(
                 "images/ekiden3.png",
                 caption="Award Ceremony",
-                use_container_width=True
+                width=250)
             )
 
         with col4:
             st.image(
                 "images/ekiden4.png",
                 caption="Photo Session with Interns",
-                use_container_width=True
+                width=250)
             )
 
         st.markdown("""
