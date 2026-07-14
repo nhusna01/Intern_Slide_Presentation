@@ -1003,9 +1003,9 @@ def hr_page():
     st.divider()
 
     # ==========================================================
-# Internship Contributions
-# ==========================================================
-def internship_contributions():
+    # Internship Contributions
+    # ==========================================================
+    def internship_contributions():
 
     st.title("💻 My Internship Contributions")
 
