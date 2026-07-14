@@ -579,12 +579,16 @@ with tab2:
     
         st.divider()
 
+
 # ------------------------------------------------------
 # Additional Tasks
 # ------------------------------------------------------
-def additional_page():
-    st.title("Additional Tasks")
+with tab3:
     
+    st.subheader(" Additional Tasks")
+
+    st.divider()
+
     # ------------------------------------------------------
     # Custom CSS
     # ------------------------------------------------------
@@ -612,6 +616,13 @@ def additional_page():
         font-size:20px;
     }
     </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="additional-text">
+    Besides my daily responsibilities in the Reward Management department,
+    I also participated in several company events and activities.
+    </div>
     """, unsafe_allow_html=True)
 
     # ------------------------------------------------------
