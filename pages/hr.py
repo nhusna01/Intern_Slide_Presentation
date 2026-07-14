@@ -687,7 +687,7 @@ def reward_management():
             - Assisted in assembling the PVC pipe trolley based on the approved design.
             - Presented the problem statement and explained the trolley design and its purpose.
             - Collaborated with team members throughout the competition.
-            - 🥈 **Won Second Place.**
+            - **Won Second Place.**
     
             </div>
             """, unsafe_allow_html=True)
@@ -733,7 +733,7 @@ def reward_management():
             **Achievement**
             - Participated in the **Kaneka Run Ekiden**.
             - Represented the HR Department.
-            - 🥉 **Won Third Place.**
+            - **Won Third Place.**
     
             </div>
             """, unsafe_allow_html=True)
