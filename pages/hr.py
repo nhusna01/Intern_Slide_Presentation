@@ -534,42 +534,42 @@ def reward_management():
                 st.image(
                     "images/events1.jpg",
                     caption="Kaneka Run Ekiden Preparation 1",
-                    width=200
+                    width=150
                 )
         
             with col2:
                 st.image(
                     "images/events2.jpg",
                     caption="Kaneka Ekiden Preparation 2",
-                    width=200
+                    width=150
                 )
     
             with col3:
                 st.image(
                     "images/events3.jpg",
                     caption="Kaneka Ekiden Tshirt Distribution",
-                    width=200
+                    width=150
                 )
     
             with col4:
                 st.image(
                     "images/events4.png",
                     caption="Kaneka Health Programme Poster",
-                    width=200
+                    width=150
                 )
         
             with col5:
                 st.image(
                     "images/events5.png",
                     caption="KAD2025 Appreciation Token Preparation",
-                    width=200
+                    width=150
                 )
     
             with col6:
                 st.image(
                     "images/events6.png",
                     caption="Cafeteria Clean Signage",
-                    width=200
+                    width=150
                 )
         
             st.divider()
