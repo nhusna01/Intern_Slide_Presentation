@@ -249,7 +249,7 @@ def intro_page():
             <div class="fact-icon">👩‍💼</div>
             <div class="fact-title">Supervisor</div>
             <div class="fact-value" style="text-align:left; font-size:22px;">
-                Pn. Zuraidah Ismail & Pn. Norkamariah Othman
+                Mdm Norkamariah Othman & Mdm Zuraidah Ismail
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -316,7 +316,7 @@ def intro_page():
         </style>
         <div class="about-text">
             I am the eldest of four siblings and currently 24 years old. I love desserts 🍰 and <br>
-            enjoy adventurous activities like hiking and sports that keep me active and energized. <br>
+            enjoy adventurous activities like hiking and any sports that keep me active and energized. <br>
         </div>
         """,
         unsafe_allow_html=True
@@ -518,7 +518,7 @@ def intro_page():
     
     with col3:
         st.image("images/gaming.jpg")
-        st.markdown("<div class='hobby-text'>🎮 Play Roblox with my siblings whenever we get some free time</div>", unsafe_allow_html=True)
+        st.markdown("<div class='hobby-text'>🎮 Play games with my siblings whenever we get some free time</div>", unsafe_allow_html=True)
     
     with col4:
         st.image("images/badminton.jpg")
