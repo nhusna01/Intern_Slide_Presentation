@@ -634,7 +634,7 @@ def reward_management():
     
             with col4:
                 st.image(
-                    "images/raya44.png",
+                    "images/raya44.jpg",
                     caption="Hari Raya Celebration - KAM Plant",
                     width=250
                 )
