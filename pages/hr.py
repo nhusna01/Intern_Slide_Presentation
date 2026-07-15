@@ -879,7 +879,7 @@ def tair_management():
             
                 - Coordinated seating arrangements and prepared documents during domestic inquiry.<br>
                 - Converted the Employee Engagement Survey into Google Form using the provided template to ease distribution.<br>
-                - Participated in briefing sessions on the employee engagement survey.<br>
+                - Participated in briefing sessions on the employee engagement survey (KEP & KAM).<br>
                 - Attended briefing at the Modifier Plant covering:<br>
                   • Disciplinary procedures<br>
                   • Grievance handling<br>
