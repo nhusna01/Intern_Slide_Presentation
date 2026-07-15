@@ -714,7 +714,7 @@ def reward_management():
     
             with col3:
                 st.image(
-                    "images/ekiden3.png",
+                    "images/ekiden3.jpg",
                     caption="Award Ceremony",
                     width=250
                 )
