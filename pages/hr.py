@@ -635,7 +635,7 @@ def reward_management():
             with col4:
                 st.image(
                     "images/raya44.png",
-                    caption="Hari Raya Celebration - Engineering",
+                    caption="Hari Raya Celebration - KAM Plant",
                     width=250
                 )
 
@@ -700,14 +700,14 @@ def reward_management():
     
             with col1:
                 st.image(
-                    "images/ekiden1.png",
+                    "images/ekiden1.JPG",
                     caption="Warm-up Session",
                     width=250
                 )
     
             with col2:
                 st.image(
-                    "images/ekiden2.png",
+                    "images/ekiden2.JPG",
                     caption="Race Participation",
                     width=250
                 )
