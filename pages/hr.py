@@ -933,31 +933,73 @@ def hr_page():
     # ======================================================
     # 🎯 Internship Objectives
     # ======================================================
-    
     st.header("🎯 Internship Objectives")
-    
+
     st.markdown("""
-    Before exploring the HR Division processes, I would like to share my objectives 
+    Before exploring the HR Division processes, I would like to share my objectives
     during my internship at **Kaneka Malaysia**.
     
-    As an **HR Intern** with an **IT student background**, my objectives were:
-    
-    - 💻 **Apply IT skills in HR**  
-      Support HR systems (Mendix, Oracle) and contribute to digital transformation.
-    
-    - 🏢 **Understand HR operations**  
-      Gain practical exposure to recruitment, training, compensation, and employee relations.
-    
-    - 🤝 **Improve communication & teamwork**  
-      Strengthen collaboration with HR staff, supervisors, and fellow interns.
-    
-    - 🚀 **Bridge HR and IT knowledge**  
-      Explore how IT solutions can enhance HR efficiency, reporting, and employee engagement.
+    As an **IT student** interning in the **Human Resources Department**, my objectives were:
     """)
     
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.info("""
+    ### 🌱 Adapt to the Working Environment
+    
+    Learn to adjust to a professional workplace, understand corporate culture, and gain confidence working in a new environment outside my academic field.
+    """)
+    
+        st.warning("""
+    ### 💻 Apply My IT Knowledge
+    
+    Utilize my IT skills to support HR digitalization initiatives and contribute to improving work processes where possible.
+    """)
+    
+    with col2:
+        st.success("""
+    ### 🏢 Learn HR Functions
+    
+    Gain practical exposure to HR operations and understand how different HR functions contribute to the organization.
+    """)
+    
+        st.error("""
+    ### 🤝 Develop Professional Skills
+    
+    Improve my communication, teamwork, problem-solving, and adaptability by working closely with supervisors and colleagues from different backgrounds.
+    """)
     st.divider()
     
+    # ======================================================
+    # 🏢 HR Division
+    # ======================================================
     
+    # Custom CSS (define once at the top of your app)
+    st.markdown(
+        """
+        <style>
+        .big-font {
+            font-size:32px !important;
+            font-weight: bold;
+        }
+        .medium-font {
+            font-size:24px !important;
+            font-weight: bold;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    # Use styled markdown instead of st.header
+    st.markdown('<p class="big-font">🏢 HR Division</p>', unsafe_allow_html=True)
+    
+    st.image(
+        "images/hr_org_chart.png",
+        caption="HR Organizational Structure",
+        use_container_width=True
+    )
     
     # ======================================================
     # 💻 Internship Contributions
@@ -1042,13 +1084,13 @@ def hr_page():
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.image("images/spl_stress.png", caption="Stress Management", width=200)
+        st.image("images/spl_stress.png", caption="Stress Management", width=220)
     with col2:
-        st.image("images/spl_ethics.png", caption="Ethics At Work", width=200)
+        st.image("images/spl_ethics.png", caption="Ethics At Work", width=220)
     with col3:
-        st.image("images/spl_time.png", caption="Time Management", width=200)
+        st.image("images/spl_time.png", caption="Time Management", width=220)
     with col4:
-        st.image("images/spl_presentation.png", caption="Presentation Skills", width=200)
+        st.image("images/spl_presentation.png", caption="Presentation Skills", width=220)
     
     st.success("These external modules supported employee growth beyond HR policies, focusing on workplace well-being and skill development.")
     
