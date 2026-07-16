@@ -386,7 +386,7 @@ def reward_management():
     
             **My Involvement**
             - Stamp date received, segregate according to company (documents: LHDN, Tabung Haji, Zakat).
-            - Identify the resignee employee in Excel file, and then update the resignee date in the Perkeso system (Perkeso Assist Portal).
+            - Identify the resignee in Excel file, and then update the resignee date in the Perkeso system (Perkeso Assist Portal).
             - Filing the zakat, tabung haji, and lhdn documents according to the company.
             """)
 
@@ -398,8 +398,40 @@ def reward_management():
                 st.image("images/contribution3.png", caption="Update Resignee Date in Perkeso System", use_container_width=True)
             with col3:
                 st.image("images/contribution2.png", caption="Filing Voluntary Deductions Documents", use_container_width=True)
-                                                                 
 
+        # -------------------------------
+        # Other Tasks Section
+        # -------------------------------
+        with st.expander("🗂️ Other Tasks", expanded=True):
+        
+            st.markdown("""
+            **Key HR & Administrative Tasks**
+            - Designed retirement appreciation posters for employees: Mr. Mat Bahrim (FPW Plant), Mr. Lam Siew Yin (FPW Plant), and Wan Aminudin (SHEQ Division).
+            - Developed process flows in Canva for SOCSO expatriate contributions, CP21 submission, and expatriate termination.
+            - Assisted in identifying EPF contribution records for employees with 3 and 10 years of service, as part of retirement benefit analysis.
+            - Supported administrative tasks during preparation for confirmation and promotion exercises.
+            - Assisted in administrative preparation of employee ID cards.
+            - Assisted in identifying and calculating employee award eligibility (Special Award, Technical Award, Team Award, Kaizen Award, Safe Act Award) in Excel, categorized by company.
+            """)
+        
+            # First row of images
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.image("images/task1.png", caption="Retirement Poster Design", width=220)
+            with col2:
+                st.image("images/task2.png", caption="Process Flow in Canva", width=220)
+            with col3:
+                st.image("images/task3.png", caption="EPF Contribution Analysis", width=220)
+        
+            # Second row of images
+            col4, col5, col6 = st.columns(3)
+            with col4:
+                st.image("images/task4.png", caption="Promotion Preparation", width=220)
+            with col5:
+                st.image("images/task5.png", caption="Employee ID Card Preparation", width=220)
+            with col6:
+                st.image("images/task6.png", caption="Award Eligibility Calculation", width=220)
+          
                                                                
     # ------------------------------------------------------
     # General Affairs
@@ -1040,7 +1072,8 @@ def hr_page():
     
     1. **Self-Paced Learning (SPL) Module Development**  
        - Designed and published interactive modules using iSpring Suite.  
-       - Created both **internal modules** (for HR policies and assessments) and **external modules** (for general employee development).  
+       - Created both **internal modules** (for HR policies and assessments) and **external modules** (for general employee development).
+       - Learn on how to use the Ispring Suite
     
     2. **Flowchart Redesigns**  
        - Improved clarity and usability of HR-related process flowcharts.  
