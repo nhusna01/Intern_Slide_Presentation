@@ -249,7 +249,7 @@ def intro_page():
             <div class="fact-icon">👩‍💼</div>
             <div class="fact-title">Supervisor</div>
             <div class="fact-value" style="text-align:left; font-size:22px;">
-                Mdm Norkamariah Othman & Mdm Zuraidah Ismail
+                Mdm Norkamariah & Mdm Zuraidah 
             </div>
         </div>
         """, unsafe_allow_html=True)
