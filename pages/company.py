@@ -50,32 +50,32 @@ def company_page():
     companies = {
         "Kaneka Malaysia": {
             "establishment": "August, 1995",
-            "founder": "Kanehide Sakurada",
+            "origin": "Kanegafuchi Spinning Co., Ltd. (Kanebo)",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Innovative Fibers": {
             "establishment": "September, 2010",
-            "founder": "Kanehide Sakurada",
+            "origin": "Kanegafuchi Spinning Co., Ltd. (Kanebo)",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Eperan": {
             "establishment": "July, 1996",
-            "founder": "Kanehide Sakurada",
+            "origin": "Kanegafuchi Spinning Co., Ltd. (Kanebo)",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka MS Malaysia": {
             "establishment": "May, 2015",
-            "founder": "Kanehide Sakurada",
+            "origin": "Kanegafuchi Spinning Co., Ltd. (Kanebo)",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Apical Malaysia": {
             "establishment": "February, 2012",
-            "founder": "Kanehide Sakurada",
+            "origin": "Kanegafuchi Spinning Co., Ltd. (Kanebo)",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Paste Polymers Malaysia": {
             "establishment": "January, 1999",
-            "founder": "Kanehide Sakurada",
+            "origin": "Kanegafuchi Spinning Co., Ltd. (Kanebo)",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
     }
@@ -232,8 +232,8 @@ def company_page():
             st.markdown("<div class='expander-text'>- Originated with vinyl chloride production (Kanevinyl)</div>", unsafe_allow_html=True)
         
         with st.expander("👤 Management"):
-            st.markdown("<div class='expander-text'>- Current President: Kazuhiko Fujii</div>", unsafe_allow_html=True)
-            st.markdown("<div class='expander-text'>- Core business segments: Chemicals, Foods, Healthcare, Sustainability</div>", unsafe_allow_html=True)
+            st.markdown("<div class='expander-text'>- </b>Current President:</b> Kazuhiko Fujii</div>", unsafe_allow_html=True)
+            st.markdown("<div class='expander-text'>- </b>Core business segments:</b> Chemicals, Foods, Healthcare, Sustainability</div>", unsafe_allow_html=True)
         
         with st.expander("📍 Headquarters"):
             st.markdown("<div class='expander-text'>- <b>Osaka Head Office:</b> Nakanoshima, Kita‑ku, Osaka</div>", unsafe_allow_html=True)
@@ -558,24 +558,100 @@ def company_page():
         )
 
         products = [
-            {"name": "Modifiers", "image": "images/modifiers1.png",
-             "desc": "Impact modifiers used in plastics for toughness and durability.",
-             "link": "https://www.kaneka.com.my/product/modifier"},
-            {"name": "Polyimide Film", "image": "images/polyimide_film1.png",
-             "desc": "High-performance film for aerospace and electronics.",
-             "link": "https://www.kaneka.com.my/product/polyimide-film"},
-            {"name": "PVC Paste Resins", "image": "images/pvc_paste_resins.png",
-             "desc": "Resins for flooring, wall coverings, and synthetic leather.",
-             "link": "https://www.kaneka.com.my/product/pvc-paste-resin"},
-            {"name": "Expandable Foam", "image": "images/expandable_foam.png",
-             "desc": "Lightweight foam material for automotive and packaging.",
-             "link": "https://www.kaneka.com.my/product/expandable-foam"},
-            {"name": "Synthetic Fibers", "image": "images/synthetic_fibers.png",
-             "desc": "Heat-resistant synthetic hair fiber for wigs and extensions.",
-             "link": "https://www.kanekalon.com/en/"},
-            {"name": "MS Polymer", "image": "images/ms_polymer1.png",
-             "desc": "Base material for adhesives and sealants.",
-             "link": "https://www.kaneka.com.my/product/ms-polymer/"}
+            {
+                "name": "Modifiers",
+                "image": "images/modifiers1.png",
+                "desc": """
+                **Company:** Kaneka (Malaysia) Sdn. Bhd.  
+                **Product:** Kane Ace™ Impact Modifiers  
+        
+                **Applications:**
+                - Improves toughness and impact resistance of plastics
+                - Used in PVC pipes, profiles, and construction materials
+                - Enhances durability and performance of plastic products
+                """,
+                "link": "https://www.kaneka.com.my/product/modifier"
+            },
+        
+            {
+                "name": "Polyimide Film",
+                "image": "images/polyimide_film1.png",
+                "desc": """
+                **Company:** Kaneka Apical Malaysia Sdn.Bhd.
+        
+                **Product:** Apical™ Polyimide Film  
+        
+                **Applications:**
+                - Used in electronic components and flexible printed circuits (FPC)
+                - Provides heat resistance and electrical insulation
+                - Applied in aerospace and advanced technology industries
+                """,
+                "link": "https://www.kaneka.com.my/product/polyimide-film"
+            },
+        
+            {
+                "name": "PVC Paste Resins",
+                "image": "images/pvc_paste_resins.png",
+                "desc": """
+                **Company:** Kaneka Paste Polymers Sdn. Bhd.  
+        
+                **Product:** PVC Paste Resin  
+        
+                **Applications:**
+                - Used for flooring and wall covering materials
+                - Applied in synthetic leather production
+                - Used in gloves and automotive interior products
+                """,
+                "link": "https://www.kaneka.com.my/product/pvc-paste-resin"
+            },
+        
+            {
+                "name": "Expandable Foam",
+                "image": "images/expandable_foam.png",
+                "desc": """
+                **Company:** Kaneka Eperan Sdn. Bhd.  
+        
+                **Product:** Eperan™ Expandable Foam  
+        
+                **Applications:**
+                - Used in automotive components
+                - Provides lightweight and protective packaging solutions
+                - Applied for insulation and cushioning materials
+                """,
+                "link": "https://www.kaneka.com.my/product/expandable-foam"
+            },
+        
+            {
+                "name": "Synthetic Fibers",
+                "image": "images/synthetic_fibers.png",
+                "desc": """
+                **Company:** Kaneka Innovative Fibers Sdn. Bhd.
+        
+                **Product:** Kanekalon™ Synthetic Fiber  
+        
+                **Applications:**
+                - Used for wigs and hair extensions
+                - Provides heat resistance and natural appearance
+                - Applied in fashion and beauty products
+                """,
+                "link": "https://www.kanekalon.com/en/"
+            },
+        
+            {
+                "name": "MS Polymer",
+                "image": "images/ms_polymer1.png",
+                "desc": """
+                **Company:** Kaneka MS Malaysia Sdn. Bhd.
+        
+                **Product:** Kaneka MS Polymer™  
+        
+                **Applications:**
+                - Used as a base material for adhesives and sealants
+                - Applied in construction and automotive industries
+                - Provides flexibility and strong bonding performance
+                """,
+                "link": "https://www.kaneka.com.my/product/ms-polymer/"
+            }
         ]
 
         # Display products in a grid
