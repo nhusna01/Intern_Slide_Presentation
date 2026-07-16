@@ -972,7 +972,7 @@ def hr_page():
     Before exploring the HR Division processes, I would like to share my objectives
     during my internship at **Kaneka Malaysia**.
     
-    As an **IT student** interning in the **Human Resources Department**, my objectives were:
+    As an **IT student** interning in the **Human Resources Division**, my objectives were:
     """)
     
     col1, col2 = st.columns(2)
