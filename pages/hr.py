@@ -797,7 +797,7 @@ def tair_management():
     
         # Display Recruitment Flowchart
         st.image(
-            "images/iv.png",
+            "images/recruitment.png",
             caption="Recruitment Process Flow",
             use_container_width=True
         )
