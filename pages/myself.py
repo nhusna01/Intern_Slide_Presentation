@@ -100,16 +100,19 @@ def myself_page():
         st.table({
             "Common Practice": [
                 "Data Analysis",
+                "Reporting",
                 "Use of AI Tools",
                 "Process Improvement",
-                "Data-Driven Decision Making"
+                "Survey Analysis"
             ],
     
             "Application in HR & IT": [
-                "Both HR and IT analyze real data to identify trends, solve problems, and support informed decision-making.",
-                "Both HR and IT leverage generative AI tools to improve productivity, generate ideas, prepare documentation, and streamline daily tasks.",
-                "Both HR and IT use process flows and flowcharts to standardize workflows, improve efficiency, and ensure processes are well-organized and easy to manage.",
-                "Both departments rely on data and analytical insights to support planning, evaluate outcomes, and drive continuous improvement."
+                "Both HR and IT use data to identify trends and support decision-making. HR uses Excel, while IT applies tools like Python and Power BI for deeper analysis.",
+                "Both HR and IT prepare reports to monitor performance. HR commonly uses Excel reports, while IT supports automated reports and interactive dashboards.",
+                "Both HR and IT use AI tools to improve productivity, prepare documents, and generate ideas.",
+                "Both HR and IT use process flows to organize workflows. IT can further support process improvement through digital solutions.",
+                "Both HR and IT use data insights for planning, evaluation, and continuous improvement."
+
             ]
         })
     
