@@ -294,7 +294,7 @@ if st.session_state.page == "Home":
                 <h2 style="font-size:45px; font-weight:600; color:#006699; margin-top:15px;">
                     Kaneka Malaysia – HR Internship Experience
                 </h2>
-                <p style="font-size:28px; font-weight:bold; color:#444444; margin-top:20px;">
+                <p style="font-size:45px; font-weight:bold; color:#444444; margin-top:20px;">
                     Presented by Nurul Husna | UMK – IT Undergraduate
                 </p>
             </div>
