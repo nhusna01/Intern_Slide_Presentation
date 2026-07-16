@@ -1073,11 +1073,14 @@ def hr_page():
     1. **Self-Paced Learning (SPL) Module Development**  
        - Designed and published interactive modules using iSpring Suite.  
        - Created both **internal modules** (for HR policies and assessments) and **external modules** (for general employee development).
-       - Learn on how to use the Ispring Suite
+       - Learn on how to use the Ispring Suite software application, suitable for e-learning tool. (self-learning)
+       - Understand and identif the objectives and content (scope, method) before developing the module.
     
     2. **Flowchart Redesigns**  
-       - Improved clarity and usability of HR-related process flowcharts.  
-       - Enhanced visual communication for Learning & Development, Kaneka Crae, and Performance & Competency Assessment processes.  
+       - Improved clarity and usability of HR-related process flowcharts. Convert the current process flow of L&D using draw.io.
+       - Enhanced visual communication for Learning & Development process flow, Kaneka Care, and Performance & Competency Assessment processes.
+       - Maintain a consistent process flow to make interpretation and application easier.
+       - Completed process flow: SPL Internal, Onboarding, Training (Internal & External), Internship, TNA, HRDF.
     """)
     
     st.divider()
@@ -1138,7 +1141,7 @@ def hr_page():
     st.markdown("""
     I redesigned several HR process flowcharts to improve clarity and communication:
     - **Learning & Development Process Flowchart**  
-    - **Kaneka Crae Flowchart**  
+    - **Kaneka Care Flowchart**  
     - **Performance & Competency Assessment Process Flowchart**  
     """)
     
@@ -1146,7 +1149,7 @@ def hr_page():
     with col1:
         st.image("images/onboarding_flowchart.png", caption="Learning & Development Flowchart", width=220)
     with col2:
-        st.image("images/Kaneka_care_flowchart.png", caption="Kaneka Crae Flowchart", width=220)
+        st.image("images/Kaneka_care_flowchart.png", caption="Kaneka Care Flowchart", width=220)
     with col3:
         st.image("images/pc_flowchart.png", caption="Performance & Competency Assessment Flowchart", width=220)
     
