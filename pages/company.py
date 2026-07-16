@@ -125,7 +125,7 @@ def company_page():
                     st.metric("Established", data["establishment"])
 
                 with col2:
-                    st.metric("Founder", data["founder"])
+                    st.metric("Origin", data["origin"])
 
                 with col3:
                     st.metric("Country", "Malaysia")
