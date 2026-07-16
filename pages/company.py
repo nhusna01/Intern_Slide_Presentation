@@ -22,7 +22,7 @@ def company_page():
             margin-bottom: 6px;
         }
         .subtitle-caption {
-            font-size: 18px;
+            font-size: 20px;
             font-family: 'Poppins', sans-serif;
             text-align: left;
             color: #444; /* softer corporate gray */
@@ -49,32 +49,32 @@ def company_page():
     # ==============================
     companies = {
         "Kaneka Malaysia": {
-            "establishment": "September 1, 1949 (Osaka, Japan)",
+            "establishment": "August, 1995",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Innovative Fibers": {
-            "establishment": "September 1, 1949 (Osaka, Japan)",
+            "establishment": "September, 2010 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Eperan": {
-            "establishment": "September 1, 1949 (Osaka, Japan)",
+            "establishment": "July, 1996 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka MS Malaysia": {
-            "establishment": "September 1, 1949 (Osaka, Japan)",
+            "establishment": "May, 2015 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Apical Malaysia": {
-            "establishment": "September 1, 1949 (Osaka, Japan)",
+            "establishment": "February, 2012 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Paste Polymers Malaysia": {
-            "establishment": "September 1, 1949 (Osaka, Japan)",
+            "establishment": "January, 1999 (Osaka, Japan)",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
@@ -186,8 +186,8 @@ def company_page():
             <div style="background: linear-gradient(90deg, #023e8a, #0096c7);
                         padding: 40px; border-radius: 15px; color: white; text-align: center;">
                 <h2 style="font-size: 50px; margin-bottom: 15px;">Kaneka Corporation</h2>
-                <p style="font-size: 24px; margin: 8px 0;">Founded in 1949 • Headquarters in Osaka & Tokyo</p>
-                <p style="font-size: 24px; margin: 8px 0;">Innovative technologies • Healthcare • Food • Sustainability</p>
+                <p style="font-size: 28px; margin: 8px 0;">Founded in 1949 • Headquarters in Osaka & Tokyo</p>
+                <p style="font-size: 28px; margin: 8px 0;">Innovative technologies • Healthcare • Food • Sustainability</p>
             </div>
             """,
             unsafe_allow_html=True
@@ -203,7 +203,7 @@ def company_page():
             <style>
                 /* Target expander headers */
                 div.streamlit-expanderHeader {
-                    font-size: 24px;        /* Larger font size */
+                    font-size: 30px;        /* Larger font size */
                     font-weight: 700;       /* Bold */
                     color: #023e8a;         /* Dark blue text */
                     background: linear-gradient(90deg, #89CFF0, #7EC8E3); /* Gradient background */
@@ -216,6 +216,11 @@ def company_page():
                     padding: 12px;
                     border-radius: 8px;
                 }
+                /* Increase explanation text size */
+                .expander-text {
+                    font-size: 24px;
+                    line-height: 1.8;
+                }    
             </style>
             """,
             unsafe_allow_html=True
@@ -237,7 +242,19 @@ def company_page():
         with st.expander("🌍 Global Presence"):
             st.markdown("<div class='expander-text'>- Subsidiaries across Asia, Europe, Africa, the Americas, and the Middle East</div>", unsafe_allow_html=True)
         
-            
+        # -----------------------------------
+        # Company Information Tabs
+        # -----------------------------------
+        tab1, tab2 = st.tabs(["👥 Employees", "🌍 Group Companies"])
+
+        with tab1:
+            st.write("**Kaneka Corporation:** 3,485 employees")
+            st.write("**Kaneka Group (including consolidated subsidiaries):** 11,762 employees")
+            st.caption("As of 31 March 2026")
+        
+        with tab2:
+            st.write("**Group Companies:** 112 subsidiaries worldwide")
+            st.caption("Operating across Asia, Europe, the Americas, the Middle East, and Africa.")
 
     elif section == "Corporate Philosophy":
         st.header("🧭 Corporate Philosophy")
@@ -246,7 +263,7 @@ def company_page():
             """
             <style>
             .philosophy {
-                font-size: 24px;
+                font-size: 28px;
                 line-height: 1.6;
                 text-align: center;
                 padding: 20px;
@@ -267,7 +284,7 @@ def company_page():
             }
 
             .interpretation {
-                font-size: 24px;
+                font-size: 28px;
                 line-height: 1.6;
                 text-align: left;
                 padding: 15px;
@@ -325,7 +342,7 @@ def company_page():
             st.markdown(
                 """
                 <div class="interpretation" style="
-                    font-size:20px;
+                    font-size:26px;
                     line-height:1.6;
                     text-align:left;
                     padding:15px;
@@ -409,7 +426,7 @@ def company_page():
                 "2015-05-01",
             ],
             "Companies": [
-                "Kaneka (Malaysia)<br>Sdn. Bhd.",
+                "Kaneka (Malaysia) Sdn. Bhd.",
                 "Kaneka Eperan Sdn. Bhd.",
                 "Kaneka Paste Polymers Sdn. Bhd.",
                 "Kaneka Innovative Fibers Sdn. Bhd.",
