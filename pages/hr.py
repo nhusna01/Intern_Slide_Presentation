@@ -300,22 +300,23 @@ def reward_management():
             st.markdown("""
     
             **Overtime Definition**
-            - Work exceeding **8 hours per day** is considered overtime.
-            - Only after completing **30 minutes of extra work** does it count as OT.
+            - Work exceeding normal hours of work per day is considered overtime.
+            - If working more than **30 minutes of extra work** from normal working hour does it count as OT.
 
             **Attendance Award**
             - Recognition for employees with consistent attendance
-
+            - Two type: Quarterly Attendance (Payment by quarter - RM50) and Perfect Attendance (Payment if perfect attendance for all fourth quarter - RM200)
+                
+            **My Involvement**
+            - Assist calculate compulsory extra overtime in one work week for the security guard according to their shift group (>45 hours).
+            - Assist check eligibility for list of employee that take leave for more than 7 days (not received Attendance Award).
+            - Assist to check work schedule in Excel file for shift employees (iMODA plant). There some movement change between shift members in their shift groups.
+            
             | Activity                  | Purpose                                       | Impact on HR / Payroll                  |
             |---------------------------|-----------------------------------------------|-----------------------------------------|
             | **Overtime Calculation**  | Ensures fair pay for extra hours worked.      | Prevents disputes, keeps payroll accurate. |
             | **Shift Schedule Mgmt**   | Keeps rosters correct for shift employees.    | Ensures proper tracking and wage calculation. |
             | **Attendance Award Check**| Recognizes reliable employees.                | Boosts morale, encourages punctuality.   |
-                
-            **My Involvement**
-            - Assist calculate the overtime for the security guard according to their shift group.
-            - Assist check eligibility for list of employee that take leave for more than 7 days (not received Attendance Award).
-            - Assist change work schedule in Excel file for shift employees (iMODA plant).
             """)
             
             # Two images side by side
@@ -350,7 +351,7 @@ def reward_management():
             **My Involvement**
             - Assist in monthly medical invoice received from TPA (Third Party Administration).
             - Assist verifying invoice amount, stamp VOP, segregate according to company.
-            - Standardize the format and compile the IP and OP medical report into each excel sheet.
+            - Compile the IP and OP medical report into each excel sheet to standardize the format. To have a good data and easy for C&B team to analyze.
             """)
 
 
@@ -371,21 +372,21 @@ def reward_management():
             st.markdown("""
             **Statutory Contribution**
             - Mandatory deductions required by law.
-            - Examples: EPF, SOCSO, Income Tax, Employment Insurance System (EIS).
+            - Examples: EPF, SOCSO, Income Tax, Employment Insurance System (EIS), HRDF.
     
             **Other Deductions**
             - Voluntary deductions by agreement.
-            - Examples: Zakat, Tabung Haji, Motor Vehicle Loan (MVL).
+            - Examples: Zakat, Tabung Haji, Motor Vehicle Loan (MVL), ASNB, Union Memebership.
 
             | Category                  | Purpose                                                    | Impact on HR / Payroll                          |
             |---------------------------|------------------------------------------------------------|-------------------------------------------------|
-            | **Statutory Contribution**| Mandatory by law, ensures compliance with government rules.| HR must deduct EPF, SOCSO, EIS, Income Tax. To protects retirement, healthcare, and job security for the employees. |
-            | **Other Deductions**      | Voluntary, based on employee agreement or choice.          | HR processes Zakat, Tabung Haji, ASNB, Union Fees, MVL. To supports religious, financial, and personal commitments of employees. |
+            | **Statutory Contribution**| Mandatory by law, ensures compliance with government rules.| HR compulsory deduct EPF, SOCSO, EIS, Income Tax. To protects retirement, healthcare, and job security for the employees. |
+            | **Other Deductions**      | Voluntary, based on employee agreement or choice.          | HR processes Zakat, Tabung Haji, ASNB, Union Fees, MVL. To supports religious, financial, and personal commitments of employers. |
             
     
             **My Involvement**
-            - Stamp date received, segregate according to organization (LHDN, Tabung Haji, Zakat).
-            - Identify the resignee employee in Excel file, and then update the resignee date in the Perkeso system (Perkeso Assist).
+            - Stamp date received, segregate according to company (documents: LHDN, Tabung Haji, Zakat).
+            - Identify the resignee employee in Excel file, and then update the resignee date in the Perkeso system (Perkeso Assist Portal).
             - Filing the zakat, tabung haji, and lhdn documents according to the company.
             """)
 
@@ -731,7 +732,7 @@ def reward_management():
     
             **Achievement**
             - Participated in the **Kaneka Run Ekiden**.
-            - Represented the HR Department.
+            - Represented the HR Division.
             - **Won Third Place.**
     
             </div>
@@ -866,7 +867,7 @@ def tair_management():
                 <b>Employee Engagement</b><br>
                 - HR Policy Briefings<br>
                 - Business Code of Conduct Sessions<br>
-                - Employee Awareness & Communication Programs<br>
+                - Employee Awareness & Engagement Programs<br>
                 </div>
                 """, unsafe_allow_html=True)
         
@@ -924,7 +925,7 @@ def hr_page():
         </style>
     """, unsafe_allow_html=True)
     
-    st.markdown("<div class='chapter-title'>📖 Chapter 3 – Internship Journey IN HR Division</div>", unsafe_allow_html=True)
+    st.markdown("<div class='chapter-title'>📖 Chapter 3 – Internship Journey in HR Division</div>", unsafe_allow_html=True)
     st.markdown("<div class='chapter-caption'>✨ Flip through my internship journey as HR intern like a digital book ✨</div>", unsafe_allow_html=True)
     
     st.divider()
@@ -972,7 +973,7 @@ def hr_page():
     st.divider()
     
     # ======================================================
-    # 🏢 HR Division
+    # 🏢 HR Division Organizational Chart
     # ======================================================
     
     # Custom CSS (define once at the top of your app)
@@ -993,7 +994,7 @@ def hr_page():
     )
     
     # Use styled markdown instead of st.header
-    st.markdown('<p class="big-font">🏢 HR Division</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">🏢 HR Division Organizational Chart</p>', unsafe_allow_html=True)
     
     st.image(
         "images/hr_org_chart.png",
@@ -1015,10 +1016,10 @@ def hr_page():
             font-weight: bold;
         }
         .medium-font {
-            font-size:22px !important;
+            font-size:26px !important;
         }
         .small-font {
-            font-size:16px !important;
+            font-size:24px !important;
         }
         </style>
         """,
@@ -1119,37 +1120,6 @@ def hr_page():
     st.info("These redesigns improved communication, training efficiency, and employee understanding of HR workflows.")
     
     st.divider()
-    
-    
-    # ======================================================
-    # 🏢 HR Division
-    # ======================================================
-    
-    # Custom CSS (define once at the top of your app)
-    st.markdown(
-        """
-        <style>
-        .big-font {
-            font-size:32px !important;
-            font-weight: bold;
-        }
-        .medium-font {
-            font-size:24px !important;
-            font-weight: bold;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-    
-    # Use styled markdown instead of st.header
-    st.markdown('<p class="big-font">🏢 HR Division</p>', unsafe_allow_html=True)
-    
-    st.image(
-        "images/hr_org_chart.png",
-        caption="HR Organizational Structure",
-        use_container_width=True
-    )
     
     st.write("Select HR Department")
     
