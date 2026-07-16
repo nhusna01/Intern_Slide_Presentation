@@ -380,8 +380,8 @@ def reward_management():
 
             | Category                  | Purpose                                                    | Impact on HR / Payroll                          |
             |---------------------------|------------------------------------------------------------|-------------------------------------------------|
-            | **Statutory Contribution**| Mandatory by law, ensures compliance with government rules.| HR compulsory deduct EPF, SOCSO, EIS, Income Tax. To protects retirement, healthcare, and job security for the employees. |
-            | **Other Deductions**      | Voluntary, based on employee agreement or choice.          | HR processes Zakat, Tabung Haji, ASNB, Union Fees, MVL. To supports religious, financial, and personal commitments of employers. |
+            | **Statutory Contribution**| Mandatory by law, ensures compliance with government rules.| HR is compulsory to deduct EPF, SOCSO, EIS, Income Tax, HRDF every month. This means HR must ensure accuracy, timely submission, and compliance with government regulations. |
+            | **Other Deductions**      | Voluntary, based on employee agreement or choice.          | HR processes Zakat, Tabung Haji, ASNB, Union Fees, MVL when requested. This requires HR to manage records, verify employee consent, and coordinate with external institutions. |
             
     
             **My Involvement**
