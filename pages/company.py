@@ -54,27 +54,27 @@ def company_page():
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Innovative Fibers": {
-            "establishment": "September, 2010 (Osaka, Japan)",
+            "establishment": "September, 2010",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Eperan": {
-            "establishment": "July, 1996 (Osaka, Japan)",
+            "establishment": "July, 1996",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka MS Malaysia": {
-            "establishment": "May, 2015 (Osaka, Japan)",
+            "establishment": "May, 2015",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Apical Malaysia": {
-            "establishment": "February, 2012 (Osaka, Japan)",
+            "establishment": "February, 2012",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
         "Kaneka Paste Polymers Malaysia": {
-            "establishment": "January, 1999 (Osaka, Japan)",
+            "establishment": "January, 1999",
             "founder": "Kanehide Sakurada",
             "address": "Lot 123-124, Gebeng Industrial Area, Kuantan,Pahang, Malaysia",
         },
