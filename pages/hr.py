@@ -40,7 +40,7 @@ def learning_development():
         
             4: "The Head of Department (HOD) evaluates the proposed candidate's qualifications and approves the internship request before the recruitment process continues.",
         
-            5: "Successful applicants are contacted by the HR Person-in-Charge (PIC) via phone call or email to confirm their acceptance, internship schedule, and reporting details.",
+            5: "Data collection required like JD before call interns. Successful applicants are contacted by the HR Person-in-Charge (PIC) via phone call or email to confirm their acceptance, internship schedule, and reporting details.",
         
             6: "HR prepares all necessary internship documents, including the Offer Letter, Placement Letter, Reply Letter, and any additional administrative documents required before reporting.",
         
@@ -50,9 +50,9 @@ def learning_development():
         
             9: "Interns carry out their internship by completing assigned projects, participating in departmental activities, learning company processes, and gaining practical working experience under the supervision of their mentors.",
         
-            10: "Upon successful completion of the internship, HR prepares and presents an Internship Certificate together with a token of appreciation as recognition of the intern's contribution.",
+            10: "Before the internship ends, the department supervisor completes an evaluation form to assess the intern's overall performance, technical skills, communication, teamwork, discipline, and professionalism.", 
         
-            11: "Before the internship ends, the department supervisor completes an evaluation form to assess the intern's overall performance, technical skills, communication, teamwork, discipline, and professionalism."
+            11: "Upon successful completion of the internship, HR prepares and presents an Internship Certificate together with a token of appreciation as recognition of the intern's contribution."
         }
 
         cols = st.columns(11)
@@ -87,7 +87,7 @@ def learning_development():
 
             st.video("images/internship2.mp4")
 
-        elif step == 10:
+        elif step == 11:
 
             st.success("Activities I was involved in")
 
@@ -519,12 +519,12 @@ def reward_management():
             - Participated in company activities that strengthened employee engagement, collaboration, and teamwork.
         
             **Activities**
-            - Prepare the draft poster of the events 
+            - Prepare the draft poster of the Recorded Fitness Activities, Kaneka Cafeteria healthy menu incentive, Kaneka Cafeteria "No Sugar Day", 1 Hour Nature Walk.
             - Participated in KAD2025 Committee Appreciation Luncheon at De Rhu Beach Resort and assist in preparing the token for KAD2025 committee.
             - Assisted in improving the cafeteria environment by organizing and removing outdated signage on table top.
-            - Assisted in calculating participation fees for the Kaneka Run Ekiden.
-            - Assist in preparing the token number for the winners.
-            - Assist in sorting the Kaneka Tshirt and bit according to the respective departments/plants.
+            - Assisted in calculatin participation fees for the Kaneka Ekiden. Check whether the total amount is accurate or not based on the listing.
+            - Assist in preparing the token number for the winners by organized them based on respective categories.
+            - Assist in sorting the Kaneka Tshirt and race bib according to the respective departments/plants.
         
             </div>
             """, unsafe_allow_html=True)
@@ -547,8 +547,8 @@ def reward_management():
     
             with col3:
                 st.image(
-                    "images/events3.jpg",
-                    caption="Kaneka Ekiden Tshirt Distribution",
+                    "images/events5.png",
+                    caption="KAD2025 Appreciation Token Preparation",
                     width=150
                 )
     
@@ -561,8 +561,8 @@ def reward_management():
         
             with col5:
                 st.image(
-                    "images/events5.png",
-                    caption="KAD2025 Appreciation Token Preparation",
+                    "images/events3.jpg",
+                    caption="Kaneka Ekiden Tshirt Distribution",
                     width=150
                 )
     
@@ -654,7 +654,7 @@ def reward_management():
             - Assisted in assembling the PVC pipe trolley based on the approved design.
             - Presented the problem statement and explained the trolley design and its purpose.
             - Collaborated with team members throughout the competition.
-            - **Won Second Place.**
+            - 🥈**Won Second Place.**
     
             </div>
             """, unsafe_allow_html=True)
@@ -733,7 +733,7 @@ def reward_management():
             **Achievement**
             - Participated in the **Kaneka Run Ekiden**.
             - Represented the HR Division.
-            - **Won Third Place.**
+            - 🥉**Won Third Place.**
     
             </div>
             """, unsafe_allow_html=True)
