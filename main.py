@@ -301,6 +301,29 @@ if st.session_state.page == "Home":
             """,
             unsafe_allow_html=True
         )
+        # Table of Contents Section
+        st.markdown(
+            """
+            <div style="
+                text-align: left;
+                margin-top: 3rem;
+                margin-left: 5rem;
+            ">
+                <h2 style="font-size:40px; font-weight:bold; color:#003366;">
+                    📑 Table of Contents
+                </h2>
+                <ol style="font-size:28px; color:#444444; line-height:2;">
+                    <li>Chapter 1 – SELF-INTRODUCTION</li>
+                    <li>Chapter 2 – COMPANY BACKGROUND</li>
+                    <li>Chapter 3 – HR DIVISION & INTERNSHIP TASKS</li>
+                    <li>Chapter 4 – ESG</li>
+                    <li>Chapter 5 – CHALLENGES, REFLECTION & CONCLUSION</li>
+                </ol>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
 
     page_container(home_content, bg_color="#e6f7ff")
 
