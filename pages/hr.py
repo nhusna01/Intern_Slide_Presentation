@@ -6,7 +6,6 @@ import streamlit as st
 # ==========================================================
 def learning_development():
 
-    st.write("Focuses on employee training, skill enhancement, and career growth.")
     # Replace st.write with styled markdown
     st.markdown(
         """
@@ -16,27 +15,6 @@ def learning_development():
         """,
         unsafe_allow_html=True
     )
-    
-    # For subheaders with bigger font
-    st.markdown(
-        """
-        <h2 style="font-size:32px; font-weight:bold; color:#003366;">
-            Internship Process Flow
-        </h2>
-        """,
-        unsafe_allow_html=True
-    )
-    
-    # For info boxes with larger text
-    st.markdown(
-        """
-        <div style="font-size:30px; color:#444444; line-height:1.6;">
-            Students submit their internship applications through email or the official Kaneka Malaysia website...
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
 
     tab1, tab2, tab3 = st.tabs(
         ["🎓 Internship", "🏫 Training", "📝 BLA"]
@@ -1074,14 +1052,14 @@ def hr_page():
         """
         <style>
         .big-font {
-            font-size:30px !important;
+            font-size:35px !important;
             font-weight: bold;
         }
         .medium-font {
-            font-size:26px !important;
+            font-size:30px !important;
         }
         .small-font {
-            font-size:24px !important;
+            font-size:28px !important;
         }
         </style>
         """,
