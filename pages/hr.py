@@ -1082,33 +1082,23 @@ def hr_page():
     # -------------------------------
     # Detailed Explanation
     # -------------------------------
-    st.markdown(
-        """
-        <div style="font-size:26px; line-height:1.6; color:#333333;">
-            During my internship at <b>Kaneka Malaysia</b>, I was assigned to develop and redesign 
-            several learning and HR process materials. My contributions focused on two main areas:
-            <br><br>
-            
-            <b>1. Self-Paced Learning (SPL) Module Development</b>
-            <ul>
-                <li>Designed and published interactive modules using iSpring Suite.</li>
-                <li>Created both <b>internal modules</b> (for HR policies and assessments) and <b>external modules</b> (for general employee development).</li>
-                <li>Learned how to use the iSpring Suite software application, suitable for e-learning tools (self-learning).</li>
-                <li>Understood and identified the objectives and content (scope, method) before developing the module.</li>
-            </ul>
-            <br>
-            
-            <b>2. Flowchart Redesigns</b>
-            <ul>
-                <li>Improved clarity and usability of HR-related process flowcharts; converted the current process flow of L&D using draw.io.</li>
-                <li>Enhanced visual communication for Learning & Development process flow, Kaneka Care, and Performance & Competency Assessment processes.</li>
-                <li>Maintained a consistent process flow to make interpretation and application easier.</li>
-                <li>Completed process flows: SPL Internal, Onboarding, Training (Internal & External), Internship, TNA, HRDF.</li>
-            </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown("""
+    During my internship at **Kaneka Malaysia**, I was assigned to develop and redesign 
+    several learning and HR process materials. My contributions focused on two main areas:
+    
+    1. **Self-Paced Learning (SPL) Module Development**  
+       - Designed and published interactive modules using iSpring Suite.  
+       - Created both **internal modules** (for HR policies and assessments) and **external modules** (for general employee development).  
+       - Learned how to use the iSpring Suite software application, suitable for e-learning tools (self-learning).  
+       - Understood and identified the objectives and content (scope, method) before developing the module.  
+    
+    2. **Flowchart Redesigns**  
+       - Improved clarity and usability of HR-related process flowcharts; converted the current process flow of L&D using draw.io.  
+       - Enhanced visual communication for Learning & Development process flow, Kaneka Care, and Performance & Competency Assessment processes.  
+       - Maintained a consistent process flow to make interpretation and application easier.  
+       - Completed process flows: SPL Internal, Onboarding, Training (Internal & External), Internship, TNA, HRDF.  
+    """)
+    
 
 
     st.divider()
