@@ -10,7 +10,7 @@ def learning_development():
     st.markdown(
         """
         <p style="font-size:30px; font-weight:500; color:#333333;">
-            Focuses on employee training, skill enhancement, and career growth.
+            Focuses on the workflow processes of Internship, Training, and Baseline Assessment (BLA).
         </p>
         """,
         unsafe_allow_html=True
@@ -281,7 +281,15 @@ def learning_development():
 # ==========================================================
 def reward_management():
 
-    st.write("Ensures fair compensation and employee benefits.")
+    st.markdown(
+        """
+        <p style="font-size:30px; font-weight:500; color:#333333;">
+            Ensures fair compensation and employee benefits.
+        </p>
+        """,
+        unsafe_allow_html=True
+    )
+
 
     tab1, tab2, tab3 = st.tabs(
         [
@@ -874,7 +882,7 @@ def tair_management():
             # Disciplinary & Misconduct Management
             with st.expander("⚖️ Disciplinary & Misconduct Management", expanded=True):
                 st.markdown("""
-                <div style="font-size:24px;">
+                <div style="font-size:28px;">
                 <b>Definition</b><br><br>
                 Misconduct refers to any act or behavior that violates the company's Terms and Conditions of Employment or Company Rules.<br><br>
             
@@ -915,7 +923,7 @@ def tair_management():
             # Activities Involved
             with st.expander("📝 Activities I Involved In", expanded=True):
                 st.markdown("""
-                <div style="font-size:24px;">
+                <div style="font-size:28px;">
                 Here are the activities I participated in under Discipline Management:<br><br>
             
                 - Coordinated seating arrangements and prepared documents during domestic inquiry.<br>
@@ -1074,23 +1082,28 @@ def hr_page():
     # -------------------------------
     # Detailed Explanation
     # -------------------------------
-    st.markdown("""
-    During my internship at **Kaneka Malaysia**, I was assigned to develop and redesign 
-    several learning and HR process materials. My contributions focused on two main areas:
-    
-    1. **Self-Paced Learning (SPL) Module Development**  
-       - Designed and published interactive modules using iSpring Suite.  
-       - Created both **internal modules** (for HR policies and assessments) and **external modules** (for general employee development).
-       - Learn on how to use the Ispring Suite software application, suitable for e-learning tool. (self-learning)
-       - Understand and identif the objectives and content (scope, method) before developing the module.
-    
-    2. **Flowchart Redesigns**  
-       - Improved clarity and usability of HR-related process flowcharts. Convert the current process flow of L&D using draw.io.
-       - Enhanced visual communication for Learning & Development process flow, Kaneka Care, and Performance & Competency Assessment processes.
-       - Maintain a consistent process flow to make interpretation and application easier.
-       - Completed process flow: SPL Internal, Onboarding, Training (Internal & External), Internship, TNA, HRDF.
-    """)
-    
+    st.markdown(
+        """
+        <div style="font-size:28px; line-height:1.6; color:#333333;">
+            During my internship at <b>Kaneka Malaysia</b>, I was assigned to develop and redesign 
+            several learning and HR process materials. My contributions focused on two main areas:
+            <br><br>
+            <b>1. Self-Paced Learning (SPL) Module Development</b><br>
+            - Designed and published interactive modules using iSpring Suite.<br>
+            - Created both <b>internal modules</b> (for HR policies and assessments) and <b>external modules</b> (for general employee development).<br>
+            - Learned how to use the iSpring Suite software application, suitable for e-learning tools (self-learning).<br>
+            - Understood and identified the objectives and content (scope, method) before developing the module.<br><br>
+            
+            <b>2. Flowchart Redesigns</b><br>
+            - Improved clarity and usability of HR-related process flowcharts; converted the current process flow of L&D using draw.io.<br>
+            - Enhanced visual communication for Learning & Development process flow, Kaneka Care, and Performance & Competency Assessment processes.<br>
+            - Maintained a consistent process flow to make interpretation and application easier.<br>
+            - Completed process flows: SPL Internal, Onboarding, Training (Internal & External), Internship, TNA, HRDF.<br>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     st.divider()
     
     # -------------------------------
@@ -1098,11 +1111,18 @@ def hr_page():
     # -------------------------------
     st.markdown('<p class="medium-font">📚 Internal SPL Modules</p>', unsafe_allow_html=True)
 
-    st.markdown("""
-    These modules were designed to support HR policies and employee assessments:
-    - **Baseline Assessment (BLA)**: Evaluate competency gaps and plan development activities.  
-    - **Leave Provision**: Guide employees on leave entitlements and procedures.  
-    """)
+    st.markdown(
+        """
+        <div style="font-size:28px; line-height:1.6; color:#333333;">
+            These modules were designed to support HR policies and employee assessments:
+            <br><br>
+            <b>• Baseline Assessment (BLA)</b>: Evaluate competency gaps and plan development activities.<br>
+            <b>• Leave Provision</b>: Guide employees on leave entitlements and procedures.<br>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     
     col1, col2 = st.columns(2)
     with col1:
@@ -1119,13 +1139,20 @@ def hr_page():
     # -------------------------------
     st.markdown('<p class="medium-font">🌍 External SPL Modules</p>', unsafe_allow_html=True)
 
-    st.markdown("""
-    These modules were developed to enhance employees' personal and professional skills:
-    - **Stress Management**  
-    - **Ethics At Work**  
-    - **Time Management**  
-    - **Presentation Skills**  
-    """)
+    st.markdown(
+        """
+        <div style="font-size:22px; line-height:1.6; color:#333333;">
+            These modules were developed to enhance employees' personal and professional skills:
+            <br><br>
+            <b>• Stress Management</b><br>
+            <b>• Ethics At Work</b><br>
+            <b>• Time Management</b><br>
+            <b>• Presentation Skills</b><br>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -1146,12 +1173,19 @@ def hr_page():
     # -------------------------------
     st.markdown('<p class="medium-font">📊 Flowchart Redesign Contributions</p>', unsafe_allow_html=True)
 
-    st.markdown("""
-    I redesigned several HR process flowcharts to improve clarity and communication:
-    - **Learning & Development Process Flowchart**  
-    - **Kaneka Care Flowchart**  
-    - **Performance & Competency Assessment Process Flowchart**  
-    """)
+    st.markdown(
+        """
+        <div style="font-size:22px; line-height:1.6; color:#333333;">
+            I redesigned several HR process flowcharts to improve clarity and communication:
+            <br><br>
+            <b>• Learning & Development Process Flowchart</b><br>
+            <b>• Kaneka Care Flowchart</b><br>
+            <b>• Performance & Competency Assessment Process Flowchart</b><br>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     
     col1, col2, col3 = st.columns(3)
     with col1:
