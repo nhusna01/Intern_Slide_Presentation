@@ -882,7 +882,7 @@ def tair_management():
             # Disciplinary & Misconduct Management
             with st.expander("⚖️ Disciplinary & Misconduct Management", expanded=True):
                 st.markdown("""
-                <div style="font-size:28px;">
+                <div style="font-size:26px;">
                 <b>Definition</b><br><br>
                 Misconduct refers to any act or behavior that violates the company's Terms and Conditions of Employment or Company Rules.<br><br>
             
@@ -906,7 +906,7 @@ def tair_management():
             # Employee Engagement & Support
             with st.expander("📢 Employee Engagement & Support", expanded=True):
                 st.markdown("""
-                <div style="font-size:24px;">
+                <div style="font-size:26px;">
                 <b>Support Channels</b><br>
                 - 📞 Kaneka Care<br>
                 - 📧 HR Helpdesk<br>
@@ -923,7 +923,7 @@ def tair_management():
             # Activities Involved
             with st.expander("📝 Activities I Involved In", expanded=True):
                 st.markdown("""
-                <div style="font-size:28px;">
+                <div style="font-size:26px;">
                 Here are the activities I participated in under Discipline Management:<br><br>
             
                 - Coordinated seating arrangements and prepared documents during domestic inquiry.<br>
@@ -1084,25 +1084,32 @@ def hr_page():
     # -------------------------------
     st.markdown(
         """
-        <div style="font-size:28px; line-height:1.6; color:#333333;">
+        <div style="font-size:26px; line-height:1.6; color:#333333;">
             During my internship at <b>Kaneka Malaysia</b>, I was assigned to develop and redesign 
             several learning and HR process materials. My contributions focused on two main areas:
             <br><br>
-            <b>1. Self-Paced Learning (SPL) Module Development</b><br>
-            - Designed and published interactive modules using iSpring Suite.<br>
-            - Created both <b>internal modules</b> (for HR policies and assessments) and <b>external modules</b> (for general employee development).<br>
-            - Learned how to use the iSpring Suite software application, suitable for e-learning tools (self-learning).<br>
-            - Understood and identified the objectives and content (scope, method) before developing the module.<br><br>
             
-            <b>2. Flowchart Redesigns</b><br>
-            - Improved clarity and usability of HR-related process flowcharts; converted the current process flow of L&D using draw.io.<br>
-            - Enhanced visual communication for Learning & Development process flow, Kaneka Care, and Performance & Competency Assessment processes.<br>
-            - Maintained a consistent process flow to make interpretation and application easier.<br>
-            - Completed process flows: SPL Internal, Onboarding, Training (Internal & External), Internship, TNA, HRDF.<br>
+            <b>1. Self-Paced Learning (SPL) Module Development</b>
+            <ul>
+                <li>Designed and published interactive modules using iSpring Suite.</li>
+                <li>Created both <b>internal modules</b> (for HR policies and assessments) and <b>external modules</b> (for general employee development).</li>
+                <li>Learned how to use the iSpring Suite software application, suitable for e-learning tools (self-learning).</li>
+                <li>Understood and identified the objectives and content (scope, method) before developing the module.</li>
+            </ul>
+            <br>
+            
+            <b>2. Flowchart Redesigns</b>
+            <ul>
+                <li>Improved clarity and usability of HR-related process flowcharts; converted the current process flow of L&D using draw.io.</li>
+                <li>Enhanced visual communication for Learning & Development process flow, Kaneka Care, and Performance & Competency Assessment processes.</li>
+                <li>Maintained a consistent process flow to make interpretation and application easier.</li>
+                <li>Completed process flows: SPL Internal, Onboarding, Training (Internal & External), Internship, TNA, HRDF.</li>
+            </ul>
         </div>
         """,
         unsafe_allow_html=True
     )
+
 
     st.divider()
     
@@ -1113,7 +1120,7 @@ def hr_page():
 
     st.markdown(
         """
-        <div style="font-size:28px; line-height:1.6; color:#333333;">
+        <div style="font-size:26px; line-height:1.6; color:#333333;">
             These modules were designed to support HR policies and employee assessments:
             <br><br>
             <b>• Baseline Assessment (BLA)</b>: Evaluate competency gaps and plan development activities.<br>
@@ -1141,7 +1148,7 @@ def hr_page():
 
     st.markdown(
         """
-        <div style="font-size:22px; line-height:1.6; color:#333333;">
+        <div style="font-size:26px; line-height:1.6; color:#333333;">
             These modules were developed to enhance employees' personal and professional skills:
             <br><br>
             <b>• Stress Management</b><br>
@@ -1175,7 +1182,7 @@ def hr_page():
 
     st.markdown(
         """
-        <div style="font-size:22px; line-height:1.6; color:#333333;">
+        <div style="font-size:26px; line-height:1.6; color:#333333;">
             I redesigned several HR process flowcharts to improve clarity and communication:
             <br><br>
             <b>• Learning & Development Process Flowchart</b><br>
