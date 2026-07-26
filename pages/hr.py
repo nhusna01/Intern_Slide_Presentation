@@ -1060,13 +1060,13 @@ def hr_page():
             "name": "Madam Norkamariah Othman",
             "role": "HR Field Supervisor",
             "position": "Technical Service",
-            "image": "ME_1.jpg"  # replace with actual image file path
+            "image": "images/ME_1.jpg"  # replace with actual image file path
         },
         {
             "name": "Madam Zuraidah Ismail",
             "role": "HR Field Supervisor",
             "position": "HR Business Partner (Centre of Excellence) & Department Head of L&D",
-            "image": "ME_2.jpg"  # replace with actual image file path
+            "image": "images/ME_2.jpg"  # replace with actual image file path
         }
     ]
     
@@ -1075,7 +1075,7 @@ def hr_page():
         st.image(supervisor["image"], caption=supervisor["name"], width=200)
         st.write(f"**{supervisor['name']}**")
         st.write(f"Role: {supervisor['role']}")
-        st.write(f"Department: {supervisor['department']}")
+        st.write(f"Position: {supervisor['position']}")
         st.write("---")
 
     
