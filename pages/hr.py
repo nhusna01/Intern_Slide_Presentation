@@ -1060,13 +1060,13 @@ def hr_page():
             "name": "Madam Norkamariah Othman",
             "role": "HR Field Supervisor",
             "position": "Technical Service",
-            "image": "norkamariah.jpg"  # replace with actual image file path
+            "image": "ME_1.jpg"  # replace with actual image file path
         },
         {
             "name": "Madam Zuraidah Ismail",
             "role": "HR Field Supervisor",
             "position": "HR Business Partner (Centre of Excellence) & Department Head of L&D",
-            "image": "zuraidah.jpg"  # replace with actual image file path
+            "image": "ME_2.jpg"  # replace with actual image file path
         }
     ]
     
