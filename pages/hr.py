@@ -1049,6 +1049,35 @@ def hr_page():
         caption="HR Organizational Structure",
         use_container_width=True
     )
+
+    # ===========================
+    # 🏢 HR Field Supervisor
+    # ===========================
+
+    # HR Field Supervisors Section
+    supervisors = [
+        {
+            "name": "Madam Norkamariah Othman",
+            "role": "HR Field Supervisor",
+            "position": "Technical Service",
+            "image": "norkamariah.jpg"  # replace with actual image file path
+        },
+        {
+            "name": "Madam Zuraidah Ismail",
+            "role": "HR Field Supervisor",
+            "position": "HR Business Partner (Centre of Excellence) & Department Head of L&D",
+            "image": "zuraidah.jpg"  # replace with actual image file path
+        }
+    ]
+    
+    # Display supervisors with images
+    for supervisor in supervisors:
+        st.image(supervisor["image"], caption=supervisor["name"], width=200)
+        st.write(f"**{supervisor['name']}**")
+        st.write(f"Role: {supervisor['role']}")
+        st.write(f"Department: {supervisor['department']}")
+        st.write("---")
+
     
     # ======================================================
     # 💻 Internship Contributions
