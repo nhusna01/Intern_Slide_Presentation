@@ -1070,7 +1070,7 @@ def hr_page():
             "name": "Madam Zuraidah Ismail",
             "role": "HR Field Supervisor",
             "position": "HR Business Partner (Centre of Excellence) & Department Head of L&D",
-            "image": "images/ME_2uraidah.jpg"  # update with correct path
+            "image": "images/ME_2.jpg"  # update with correct path
         }
     ]
     
