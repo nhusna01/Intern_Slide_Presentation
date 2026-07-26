@@ -1053,30 +1053,36 @@ def hr_page():
     # ===========================
     # 🏢 HR Field Supervisor
     # ===========================
-
+ 
+    # Title and separator
+    st.title("HR Field Supervisor")
+    st.write("---")
+    
     # HR Field Supervisors Section
     supervisors = [
         {
             "name": "Madam Norkamariah Othman",
             "role": "HR Field Supervisor",
             "position": "Technical Service",
-            "image": "images/ME_1.jpg"  # replace with actual image file path
+            "image": "images/ME_1.jpg"  # update with correct path
         },
         {
             "name": "Madam Zuraidah Ismail",
             "role": "HR Field Supervisor",
             "position": "HR Business Partner (Centre of Excellence) & Department Head of L&D",
-            "image": "images/ME_2.jpg"  # replace with actual image file path
+            "image": "images/ME_2uraidah.jpg"  # update with correct path
         }
     ]
     
-    # Display supervisors with images
-    for supervisor in supervisors:
-        st.image(supervisor["image"], caption=supervisor["name"], width=200)
-        st.write(f"**{supervisor['name']}**")
-        st.write(f"Role: {supervisor['role']}")
-        st.write(f"Position: {supervisor['position']}")
-        st.write("---")
+    # Display supervisors side by side
+    cols = st.columns(2)
+    for col, supervisor in zip(cols, supervisors):
+        with col:
+            st.image(supervisor["image"], width=200)
+            st.markdown(f"**{supervisor['name']}**")
+            st.write(f"Role: {supervisor['role']}")
+            st.write(f"Position: {supervisor['position']}")
+
 
     
     # ======================================================
