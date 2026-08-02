@@ -70,7 +70,7 @@ def myself_page():
         """, unsafe_allow_html=True)
     
     # Slider navigation
-    page = st.slider("📖 Flip a page", 1, 6, 1)
+    page = st.slider("📖 Flip a page", 1, 5, 1)
 
     # Page content
     if page == 1:
@@ -161,8 +161,17 @@ def myself_page():
 
         st.markdown("</div>", unsafe_allow_html=True)
 
-    elif page == 6:
-        st.markdown("<div class='book-page'><h3>🎥 Internship Memories</h3>", unsafe_allow_html=True)
-        st.video("videos/internship_memories.mp4")
-        st.success("🎬 This video captures my favorite moments during the internship journey.")
+    elif page == 5:
+
+        st.markdown("<div class='book-page'><h3>📸 Internship Memories</h3>", unsafe_allow_html=True)
+    
+        st.write("""
+        The following video showcases some of the memorable moments throughout my
+        internship at Kaneka Malaysia. It highlights my daily responsibilities,
+        participation in company events, project involvement, learning experiences,
+        and collaborations with colleagues from different departments.
+        """)
+    
+        st.success("🎥 The internship memories are presented through another video clip, capturing my overall journey and experiences.")
+    
         st.markdown("</div>", unsafe_allow_html=True)
