@@ -35,7 +35,7 @@ def intro_page():
             padding: 8px 16px;
             border-radius: 20px;
             margin: 5px;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: bold;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
