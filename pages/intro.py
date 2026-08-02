@@ -35,7 +35,7 @@ def intro_page():
             padding: 8px 16px;
             border-radius: 20px;
             margin: 5px;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: bold;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -189,7 +189,7 @@ def intro_page():
     }
     
     .fact-value {
-        font-size: 22px;
+        font-size: 18px;
         font-weight: bold;
     }
     
