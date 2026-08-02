@@ -182,14 +182,14 @@ def intro_page():
     }
     
     .fact-title {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: bold;
         color: #FFD700;
         margin-bottom: 12px;
     }
     
     .fact-value {
-        font-size: 18px;
+        font-size: 15px;
         font-weight: bold;
     }
     
