@@ -189,7 +189,7 @@ def intro_page():
     }
     
     .fact-value {
-        font-size: 15px;
+        font-size: 20px;
         font-weight: bold;
     }
     
@@ -248,7 +248,7 @@ def intro_page():
             </div>
             <div class="fact-icon">👩‍💼</div>
             <div class="fact-title">Supervisor</div>
-            <div class="fact-value" style="text-align:left; font-size:22px;">
+            <div class="fact-value" style="text-align:left; font-size:18px;">
                 Mdm Norkamariah & Mdm Zuraidah 
             </div>
         </div>
